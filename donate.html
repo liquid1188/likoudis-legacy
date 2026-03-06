@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Give — Likoudis Legacy Foundation</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.donate-intro { padding: 7rem 2rem; text-align: center; }
+.donate-intro-inner { max-width: 760px; margin: 0 auto; }
+.donate-intro-inner p { color: var(--muted); line-height: 1.85; font-size: 0.95rem; margin: 1.5rem 0; }
+.tiers { padding: 7rem 2rem; background: var(--navy); }
+.tiers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2px; margin-top: 3.5rem; }
+.tier-card { background: var(--navy-mid); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.12); display: flex; flex-direction: column; gap: 1rem; }
+.tier-amount { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--gold); font-weight: 300; }
+.tier-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,237,224,0.4); }
+.tier-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--cream); }
+.tier-card p { font-size: 0.83rem; color: rgba(244,237,224,0.5); line-height: 1.75; }
+.give-cta { padding: 7rem 2rem; background: var(--cream); text-align: center; }
+.give-cta-inner { max-width: 760px; margin: 0 auto; }
+.give-cta-inner p { color: var(--muted); line-height: 1.85; font-size: 0.95rem; margin: 1.5rem 0 2.5rem; }
+.give-methods-full { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2px; margin-top: 3.5rem; }
+.give-method-card { background: var(--ivory); padding: 2rem; border: 1px solid rgba(200,169,110,0.12); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; text-decoration: none; transition: border-color 0.2s, transform 0.15s; }
+.give-method-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.give-method-card img { width: 56px; height: 56px; object-fit: contain; }
+.give-method-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--navy); }
+.give-method-card p { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+.impact { padding: 7rem 2rem; }
+.impact-inner { max-width: 1100px; margin: 0 auto; }
+.impact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2px; margin-top: 3.5rem; }
+.impact-item { padding: 2rem; border: 1px solid rgba(200,169,110,0.12); background: var(--ivory); }
+.impact-item p { font-size: 0.85rem; color: var(--muted); line-height: 1.75; padding-left: 1rem; position: relative; }
+.impact-item p::before { content: '—'; position: absolute; left: 0; color: var(--gold); opacity: 0.6; }
+.planned-giving { padding: 7rem 2rem; background: var(--navy); }
+.planned-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; margin-top: 3.5rem; }
+.planned-card { background: var(--navy-mid); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.12); }
+.planned-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--cream); margin-bottom: 0.75rem; }
+.planned-card p { font-size: 0.85rem; color: rgba(244,237,224,0.5); line-height: 1.75; }
+@media(max-width:900px){ .planned-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF">
+    <span>Likoudis Legacy<br>Foundation</span>
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown"><a href="about.html">About ▾</a><div class="nav-dropdown-menu"><a href="about.html">About</a><a href="team.html">Team</a><a href="events.html">Events</a><a href="contact.html">Contact</a></div></li>
+    <li><a href="fellows.html">Fellows Program</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
+    <li><a href="kydones.html">Kydones Review</a></li>
+    <li class="nav-dropdown"><a href="#">Media ▾</a><div class="nav-dropdown-menu"><a href="https://likoudislegacy.com/videos/" target="_blank">Video Archive</a><a href="https://likoudislegacy.com/essay-archive/" target="_blank">Essay Archive</a></div></li>
+    <li><a href="https://likoudislegacy.com/shop/" target="_blank">Books</a></li>
+    <li><a href="donate.html" class="nav-give">Give</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <span class="eyebrow">Support the Foundation</span>
+  <h1>Honor the Legacy.<br><em>Advance the Work.</em></h1>
+  <p>Champion religious liberty, uphold human dignity, and build ecumenical unity</p>
+  <div class="header-divider"></div>
+</div>
+
+<!-- INTRO -->
+<section class="donate-intro">
+  <div class="donate-intro-inner reveal">
+    <span class="section-label">Why Give</span>
+    <h2 class="section-title">Your Gift Makes a Difference</h2>
+    <div class="divider center"></div>
+    <p>By supporting the Likoudis Legacy Foundation, you honor James Likoudis' legacy and meaningfully contribute to the advancement of the faith in contemporary society. As a donor, you'll receive recognition and play a part in advancing theological scholarship, ecumenical and interfaith dialogue, and the betterment of society.</p>
+    <a href="https://donate.stripe.com/8x200beyMgHugS84Xla3u00" class="btn-primary" target="_blank" style="margin-top:1rem;">Make a Gift via Stripe</a>
+  </div>
+</section>
+
+<!-- MONTHLY TIERS -->
+<section class="tiers">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">Recurring Gifts</span>
+      <h2 class="section-title" style="color:var(--cream)">Monthly Gift Tiers</h2>
+      <div class="divider center"></div>
+      <p style="color:rgba(244,237,224,0.5);font-size:0.9rem;margin-top:0.5rem;">Consider making a recurring monthly gift to make an ongoing, meaningful impact.</p>
+    </div>
+    <div class="tiers-grid">
+      <div class="tier-card reveal"><div class="tier-amount">$10</div><div class="tier-label">/ month</div><h3>Archive Supporter</h3><p>Ships archival scans to our partner library.</p></div>
+      <div class="tier-card reveal reveal-delay-1"><div class="tier-amount">$25</div><div class="tier-label">/ month</div><h3>Journal Patron</h3><p>Prints 10 physical copies of the Kydones Review.</p></div>
+      <div class="tier-card reveal reveal-delay-2"><div class="tier-amount">$50</div><div class="tier-label">/ month</div><h3>Research Backer</h3><p>Underwrites a micro-grant for graduate research.</p></div>
+      <div class="tier-card reveal"><div class="tier-amount">$75</div><div class="tier-label">/ month</div><h3>Infrastructure Supporter</h3><p>Funds one month of web hosting and operational costs.</p></div>
+      <div class="tier-card reveal reveal-delay-1"><div class="tier-amount">$100</div><div class="tier-label">/ month</div><h3>Media Patron</h3><p>Funds the production of a Digital Lecture Series.</p></div>
+      <div class="tier-card reveal reveal-delay-2"><div class="tier-amount">$200</div><div class="tier-label">/ month</div><h3>Fellowship Sponsor</h3><p>Funds a Fellow's Scholarship for one month.</p></div>
+    </div>
+    <p style="color:rgba(244,237,224,0.35);font-size:0.78rem;text-align:center;margin-top:2rem;">All recurring donations are safely handled via Stripe.</p>
+  </div>
+</section>
+
+<!-- OTHER WAYS TO GIVE -->
+<section class="give-cta">
+  <div class="give-cta-inner reveal">
+    <span class="section-label">Other Ways to Give</span>
+    <h2 class="section-title">Choose Your Method</h2>
+    <div class="divider center"></div>
+    <p>We accept gifts through multiple platforms. One-time gifts above $1,000 go towards endowing an Academic Chair at a Catholic University.</p>
+  </div>
+  <div class="container">
+    <div class="give-methods-full">
+      <a href="https://donate.stripe.com/8x200beyMgHugS84Xla3u00" class="give-method-card reveal" target="_blank">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/05/likoudis-stripe.png?resize=150%2C150&ssl=1" alt="Stripe">
+        <h3>Stripe</h3><p>Secure online donation</p>
+      </a>
+      <a href="https://account.venmo.com/u/Andrew-likoudis" class="give-method-card reveal reveal-delay-1" target="_blank">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/venmo-likoudis-square.png?resize=150%2C150&ssl=1" alt="Venmo">
+        <h3>Venmo</h3><p>@Andrew-likoudis</p>
+      </a>
+      <a href="https://www.paypal.com/paypalme/LikoudisLegacy" class="give-method-card reveal reveal-delay-2" target="_blank">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_pp.png?resize=150%2C150&ssl=1" alt="PayPal">
+        <h3>PayPal</h3><p>PayPal.me/LikoudisLegacy</p>
+      </a>
+      <a href="https://www.patreon.com/profile/creators?u=34254725" class="give-method-card reveal" target="_blank">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_patreon.png?resize=150%2C150&ssl=1" alt="Patreon">
+        <h3>Patreon</h3><p>Monthly membership</p>
+      </a>
+      <a href="https://www.gofundme.com/f/launch-the-likoudis-legacy-foundation" class="give-method-card reveal reveal-delay-1" target="_blank">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_gofundme.png?resize=150%2C150&ssl=1" alt="GoFundMe">
+        <h3>GoFundMe</h3><p>One-time campaign gift</p>
+      </a>
+      <div class="give-method-card reveal reveal-delay-2">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);">✉</div>
+        <h3>Mail a Check</h3>
+        <p>Make checks payable to "Likoudis Legacy Foundation." Contact us for mailing address.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="impact">
+  <div class="impact-inner">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">Your Impact</span>
+      <h2 class="section-title">What Your Support Makes Possible</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-item reveal"><p>Hosting costs for our website</p></div>
+      <div class="impact-item reveal reveal-delay-1"><p>Compliance and legal costs</p></div>
+      <div class="impact-item reveal reveal-delay-2"><p>Translating & editing archival texts</p></div>
+      <div class="impact-item reveal"><p>Converting print to digital</p></div>
+      <div class="impact-item reveal reveal-delay-1"><p>Producing digital courses and lectures</p></div>
+      <div class="impact-item reveal reveal-delay-2"><p>Conference & lecture hosting costs</p></div>
+      <div class="impact-item reveal"><p>Commissioning a comprehensive biography of James Likoudis</p></div>
+      <div class="impact-item reveal reveal-delay-1"><p>Establishing the James Likoudis Professorial Chair</p></div>
+      <div class="impact-item reveal reveal-delay-2"><p>Organizing seminars and academic symposia</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANNED GIVING -->
+<section class="planned-giving">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:0;">
+      <span class="section-label">Long-Term Giving</span>
+      <h2 class="section-title" style="color:var(--cream)">Planned Giving Options</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="planned-grid">
+      <div class="planned-card reveal">
+        <h3>Stock Gift</h3>
+        <p>You can donate stock to the Likoudis Legacy Foundation. Please contact Andrew Likoudis at <a href="mailto:andrew@likoudislegacy.com" style="color:var(--gold);">andrew@likoudislegacy.com</a> for information on transferring stock.</p>
+      </div>
+      <div class="planned-card reveal reveal-delay-1">
+        <h3>IRA Charitable Rollover</h3>
+        <p>Talk to your financial advisor about the possibility of making a charitable rollover gift from your IRA.</p>
+      </div>
+      <div class="planned-card reveal reveal-delay-2">
+        <h3>Estate Planning</h3>
+        <p>Include the Likoudis Legacy Foundation in your will. Talk to your financial advisor or contact Andrew Likoudis at <a href="mailto:andrew@likoudislegacy.com" style="color:var(--gold);">andrew@likoudislegacy.com</a>.</p>
+      </div>
+    </div>
+    <p style="color:rgba(244,237,224,0.35);font-size:0.78rem;text-align:center;margin-top:3rem;">The Likoudis Legacy Foundation is organized exclusively for charitable, educational, and scientific purposes under Section 501(c)(3) of the Internal Revenue Code. Tax ID: 99-3126276</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF Logo"><p>A 501(c)(3) dedicated to ecumenical scholarship and Christian unity.</p><address>Baltimore, MD · 410-409-1695</address></div>
+    <div class="footer-col"><h4>Foundation</h4><ul><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="fellows.html">Fellows Program</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Publications</h4><ul><li><a href="kydones.html">Kydones Review</a></li><li><a href="https://likoudislegacy.com/essay-archive/" target="_blank">Essay Archive</a></li><li><a href="https://likoudislegacy.com/shop/" target="_blank">Books</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="consulting.html">Consulting</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacyF" target="_blank">𝕏</a></div></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
