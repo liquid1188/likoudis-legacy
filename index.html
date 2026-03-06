@@ -825,24 +825,32 @@
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
   }
   .give-method {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: transform 0.15s;
+  }
+  .give-method:hover { transform: translateY(-2px); }
+  .give-method:hover .give-method-circle { border-color: var(--gold); }
+  .give-method-circle {
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 88px;
-    height: 88px;
+    width: 80px;
+    height: 80px;
     border: 1px solid rgba(200,169,110,0.25);
     background: white;
-    padding: 16px;
+    padding: 14px;
     border-radius: 50%;
     overflow: hidden;
-    transition: border-color 0.2s, transform 0.15s;
-    text-decoration: none;
+    transition: border-color 0.2s;
   }
-  .give-method:hover { border-color: var(--gold); transform: translateY(-2px); }
-  .give-method img { width: 100%; height: 100%; object-fit: contain; }
+  .give-method-circle img { width: 100%; height: 100%; object-fit: contain; }
 
   /* ─── FOOTER ─── */
   footer {
@@ -1372,23 +1380,23 @@
       <p class="give-methods-label">One-time gift</p>
       <div class="give-methods">
         <a href="https://donate.stripe.com/8x200beyMgHugS84Xla3u00" class="give-method" target="_blank">
-          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/05/likoudis-stripe.png?resize=150%2C150&ssl=1" alt="Stripe">
+          <div class="give-method-circle"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/05/likoudis-stripe.png?resize=150%2C150&ssl=1" alt="Stripe"></div>
           <span class="give-method-name">Credit Card</span>
         </a>
         <a href="https://www.paypal.com/paypalme/LikoudisLegacy" class="give-method" target="_blank">
-          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_pp.png?resize=150%2C150&ssl=1" alt="PayPal">
+          <div class="give-method-circle"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_pp.png?resize=150%2C150&ssl=1" alt="PayPal"></div>
           <span class="give-method-name">PayPal</span>
         </a>
         <a href="https://account.venmo.com/u/Andrew-likoudis" class="give-method" target="_blank">
-          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/venmo-likoudis-square.png?resize=150%2C150&ssl=1" alt="Venmo">
+          <div class="give-method-circle"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/venmo-likoudis-square.png?resize=150%2C150&ssl=1" alt="Venmo"></div>
           <span class="give-method-name">Venmo</span>
         </a>
         <a href="https://www.zellepay.com/" class="give-method" target="_blank">
-          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/zelle2.png?resize=150%2C150&ssl=1" alt="Zelle">
+          <div class="give-method-circle"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/zelle2.png?resize=150%2C150&ssl=1" alt="Zelle"></div>
           <span class="give-method-name">Zelle</span>
         </a>
         <a href="https://www.gofundme.com/f/launch-the-likoudis-legacy-foundation" class="give-method" target="_blank">
-          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_gofundme.png?resize=150%2C150&ssl=1" alt="GoFundMe">
+          <div class="give-method-circle"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_gofundme.png?resize=150%2C150&ssl=1" alt="GoFundMe"></div>
           <span class="give-method-name">GoFundMe</span>
         </a>
       </div>
@@ -1397,7 +1405,7 @@
       </div>
       <div class="give-methods">
         <a href="https://www.patreon.com/profile/creators?u=34254725" class="give-method" target="_blank">
-          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_patreon.png?resize=150%2C150&ssl=1" alt="Patreon">
+          <div class="give-method-circle"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_patreon.png?resize=150%2C150&ssl=1" alt="Patreon"></div>
           <span class="give-method-name">Patreon</span>
         </a>
       </div>
@@ -1462,6 +1470,7 @@
       <p>© 2025 Likoudis Legacy Foundation. All rights reserved.</p>
       <div class="footer-social">
         <a href="https://twitter.com/LikoudisLegacyF" target="_blank" title="X / Twitter">𝕏</a>
+        <a href="https://www.linkedin.com/in/andrewlikoudis/" target="_blank" title="LinkedIn" style="font-size:0.75rem;font-weight:600;letter-spacing:0.04em;">in</a>
         <a href="https://traditionandrenewal.substack.com" target="_blank" title="Tradition & Renewal Substack" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.75rem;letter-spacing:0.05em;">T&R</a>
         <a href="https://andrewlikoudis.com" target="_blank" title="Andrew Likoudis" style="font-family:'Cormorant Garamond',serif;font-size:0.75rem;letter-spacing:0.04em;">AL</a>
       </div>
