@@ -3,75 +3,37 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Photo Archive — Likoudis Legacy Foundation</title>
-<meta name="description" content="Historical photographs of Dr. James Likoudis — theologian, apologist, and pioneer of Catholic-Orthodox ecumenism.">
+<meta name="description" content="Historical photographs from the life and apostolate of James Likoudis — theologian, apologist, and pioneer of Catholic-Orthodox ecumenism.">
 <link rel="stylesheet" href="style.css">
 <style>
-.photos-section { padding: 7rem 2rem; background: var(--navy); }
-.photos-inner { max-width: 1100px; margin: 0 auto; }
-.photos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  margin-top: 3.5rem;
-}
-.photo-card {
-  background: var(--navy-mid);
-  border: 1px solid rgba(200,169,110,0.1);
-  display: flex;
-  flex-direction: column;
-  transition: border-color 0.2s;
-  cursor: pointer;
-}
-.photo-card:hover { border-color: var(--gold); }
-.photo-card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-  filter: sepia(10%) brightness(0.95);
-  transition: filter 0.3s;
-}
-.photo-card:hover img { filter: sepia(0%) brightness(1); }
-.photo-caption {
-  padding: 1.25rem 1.5rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: rgba(244,237,224,0.55);
-  line-height: 1.5;
-}
-
-/* Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.92);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 2rem;
-}
-.lightbox.active { display: flex; }
-.lightbox img { max-width: 90vw; max-height: 80vh; object-fit: contain; border: 1px solid rgba(200,169,110,0.2); }
-.lightbox-caption { font-family: 'Cormorant Garamond', serif; font-style: italic; color: rgba(244,237,224,0.6); font-size: 1rem; text-align: center; }
-.lightbox-close { position: fixed; top: 1.5rem; right: 2rem; font-size: 2rem; color: rgba(244,237,224,0.5); cursor: pointer; background: none; border: none; transition: color 0.2s; }
-.lightbox-close:hover { color: var(--gold); }
-
-@media(max-width: 800px) { .photos-grid { grid-template-columns: repeat(2, 1fr); } }
-@media(max-width: 500px) { .photos-grid { grid-template-columns: 1fr; } }
+.photos-section{padding:7rem 2rem;background:var(--navy)}
+.photos-inner{max-width:1200px;margin:0 auto}
+.gallery-section-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:4rem 0 1.5rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(200,169,110,.15)}
+.gallery-section-label:first-of-type{margin-top:0}
+.photos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:.5rem}
+.photos-grid.wide{grid-template-columns:repeat(3,1fr)}
+.photo-card{background:var(--navy-mid);border:1px solid rgba(200,169,110,.08);display:flex;flex-direction:column;cursor:pointer;transition:border-color .2s}
+.photo-card:hover{border-color:rgba(200,169,110,.4)}
+.photo-card img{width:100%;height:220px;object-fit:cover;object-position:top;display:block;filter:sepia(8%) brightness(.95);transition:filter .3s}
+.photo-card:hover img{filter:sepia(0%) brightness(1.05)}
+.photo-caption{padding:1rem 1.25rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85rem;color:rgba(244,237,224,.5);line-height:1.5;flex:1}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:1000;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;padding:2rem}
+.lightbox.active{display:flex}
+.lightbox img{max-width:90vw;max-height:80vh;object-fit:contain;border:1px solid rgba(200,169,110,.2)}
+.lightbox-caption{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(244,237,224,.6);font-size:1rem;text-align:center;max-width:600px}
+.lightbox-nav{display:flex;gap:1rem;margin-top:.5rem}
+.lightbox-nav button{background:none;border:1px solid rgba(200,169,110,.3);color:rgba(244,237,224,.6);padding:.5rem 1.25rem;cursor:pointer;font-family:'Jost',sans-serif;font-size:.75rem;letter-spacing:.1em;transition:all .2s}
+.lightbox-nav button:hover{border-color:var(--gold);color:var(--gold)}
+.lightbox-close{position:fixed;top:1.5rem;right:2rem;font-size:2rem;color:rgba(244,237,224,.4);cursor:pointer;background:none;border:none;transition:color .2s;z-index:1001}
+.lightbox-close:hover{color:var(--gold)}
+@media(max-width:900px){.photos-grid{grid-template-columns:repeat(2,1fr)}.photos-grid.wide{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.photos-grid{grid-template-columns:1fr}.photos-grid.wide{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">
-    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF">
-    <span>Likoudis Legacy<br>Foundation</span>
-  </a>
+  <a href="index.html" class="nav-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF"><span>Likoudis Legacy<br>Foundation</span></a>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="about.html">About ▾</a><div class="nav-dropdown-menu"><a href="about.html">About</a><a href="james-likoudis.html">James Likoudis</a><a href="team.html">Team</a><a href="events.html">Events</a><a href="contact.html">Contact</a></div></li>
     <li><a href="fellows.html">Fellows Program</a></li>
@@ -87,67 +49,181 @@
 <div class="page-header">
   <span class="eyebrow">Media Archive</span>
   <h1>Photo <em>Archive</em></h1>
-  <p>Historical photographs from the life and apostolate of James Likoudis</p>
+  <p>Historical photographs from the life and apostolate of James Likoudis (1928–2024)</p>
   <div class="header-divider"></div>
 </div>
 
 <section class="photos-section">
   <div class="photos-inner">
-    <div class="reveal" style="text-align:center;margin-bottom:0;">
-      <span class="section-label">James Likoudis</span>
-      <h2 class="section-title" style="color:var(--cream)">A Life in Photographs</h2>
-      <div class="divider center"></div>
-    </div>
-    <div class="photos-grid">
 
-      <div class="photo-card reveal" onclick="openLightbox(this)">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6745.jpeg?fit=772%2C1024&ssl=1" alt="James Likoudis, c. 1970s" data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6745.jpeg?fit=772%2C1024&ssl=1" data-caption="James Likoudis, c. 1970s">
+    <span class="gallery-section-label">Early Life &amp; Portrait</span>
+    <div class="photos-grid" id="gallery">
+
+      <!-- 1 -->
+      <div class="photo-card reveal" onclick="openLightbox(0)">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6745.jpeg?fit=772%2C1024&ssl=1"
+             data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6745.jpeg?fit=772%2C1024&ssl=1"
+             data-caption="James Likoudis, c. 1970s" alt="James Likoudis, c. 1970s">
         <p class="photo-caption">James Likoudis, c. 1970s</p>
       </div>
 
-      <div class="photo-card reveal reveal-delay-1" onclick="openLightbox(this)">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6948.jpeg?fit=717%2C1024&ssl=1" alt="James Likoudis teaching at Rosary Hill College, c. 1970" data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6948.jpeg?fit=717%2C1024&ssl=1" data-caption="James Likoudis teaching history and government at Rosary Hill College, c. 1970">
-        <p class="photo-caption">Teaching history and government, Rosary Hill College, c. 1970</p>
-      </div>
-
-      <div class="photo-card reveal reveal-delay-2" onclick="openLightbox(this)">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6950.jpeg?fit=800%2C493&ssl=1" alt="James Likoudis on the Mother Angelica Show, Nov 6, 1996" data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6950.jpeg?fit=800%2C493&ssl=1" data-caption="James Likoudis on the Mother Angelica Live program, November 6, 1996">
-        <p class="photo-caption">On the Mother Angelica Live program, November 6, 1996</p>
-      </div>
-
-      <div class="photo-card reveal" onclick="openLightbox(this)">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-1.png?fit=800%2C588&ssl=1" alt="James and Ruth Likoudis with Pope John Paul II" data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-1.png?fit=800%2C588&ssl=1" data-caption="James and Ruth Likoudis meeting Pope St. John Paul II, 1980s">
-        <p class="photo-caption">Meeting Pope St. John Paul II, 1980s</p>
-      </div>
-
-      <div class="photo-card reveal reveal-delay-1" onclick="openLightbox(this)">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-2.png?fit=800%2C394&ssl=1" alt="James and Ruth Likoudis with St. Mother Teresa" data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-2.png?fit=800%2C394&ssl=1" data-caption="James and Ruth Likoudis meeting St. Mother Teresa of Calcutta, 1980s">
-        <p class="photo-caption">Meeting St. Mother Teresa of Calcutta, 1980s</p>
-      </div>
-
-      <div class="photo-card reveal reveal-delay-2" onclick="openLightbox(this)">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-3.png?fit=800%2C399&ssl=1" alt="James and Ruth Likoudis" data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-3.png?fit=800%2C399&ssl=1" data-caption="James and Ruth Likoudis">
-        <p class="photo-caption">James and Ruth Likoudis</p>
-      </div>
-
-      <div class="photo-card reveal" onclick="openLightbox(this)">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-4.png?fit=662%2C819&ssl=1" alt="James Likoudis" data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-4.png?fit=662%2C819&ssl=1" data-caption="James Likoudis">
+      <!-- 2 -->
+      <div class="photo-card reveal reveal-delay-1" onclick="openLightbox(1)">
+        <img src="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0513.jpeg"
+             data-full="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0513.jpeg"
+             data-caption="James Likoudis" alt="James Likoudis">
         <p class="photo-caption">James Likoudis</p>
       </div>
 
-      <!-- Spacer for even 3-col grid (7 items → add 2 spacers) -->
-      <div style="background:transparent;border:none;pointer-events:none;"></div>
-      <div style="background:transparent;border:none;pointer-events:none;"></div>
+      <!-- 3 -->
+      <div class="photo-card reveal reveal-delay-2" onclick="openLightbox(2)">
+        <img src="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0568.jpeg"
+             data-full="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0568.jpeg"
+             data-caption="James Likoudis" alt="James Likoudis">
+        <p class="photo-caption">James Likoudis</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="photo-card reveal reveal-delay-3" onclick="openLightbox(3)">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-4.png?fit=662%2C819&ssl=1"
+             data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-4.png?fit=662%2C819&ssl=1"
+             data-caption="James Likoudis" alt="James Likoudis">
+        <p class="photo-caption">James Likoudis</p>
+      </div>
 
     </div>
+
+    <span class="gallery-section-label">Educator &amp; Public Life</span>
+    <div class="photos-grid wide">
+
+      <!-- 5 -->
+      <div class="photo-card reveal" onclick="openLightbox(4)">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6948.jpeg?fit=717%2C1024&ssl=1"
+             data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6948.jpeg?fit=717%2C1024&ssl=1"
+             data-caption="James Likoudis teaching history and government at Rosary Hill College, c. 1970" alt="James Likoudis teaching at Rosary Hill College">
+        <p class="photo-caption">Teaching history and government, Rosary Hill College, c. 1970</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="photo-card reveal reveal-delay-1" onclick="openLightbox(5)">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6950.jpeg?fit=800%2C493&ssl=1"
+             data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6950.jpeg?fit=800%2C493&ssl=1"
+             data-caption="James Likoudis on the Mother Angelica Live program, November 6, 1996" alt="James Likoudis on Mother Angelica Live">
+        <p class="photo-caption">On the Mother Angelica Live program, November 6, 1996</p>
+      </div>
+
+      <!-- 7 -->
+      <div class="photo-card reveal reveal-delay-2" onclick="openLightbox(6)">
+        <img src="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0536.jpeg"
+             data-full="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0536.jpeg"
+             data-caption="James Likoudis with colleagues" alt="James Likoudis with colleagues">
+        <p class="photo-caption">James Likoudis with colleagues</p>
+      </div>
+
+    </div>
+
+    <span class="gallery-section-label">Vatican &amp; Rome</span>
+    <div class="photos-grid">
+
+      <!-- 8 -->
+      <div class="photo-card reveal" onclick="openLightbox(7)">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-1.png?fit=800%2C588&ssl=1"
+             data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-1.png?fit=800%2C588&ssl=1"
+             data-caption="James and Ruth Likoudis meeting Pope St. John Paul II, 1980s" alt="James and Ruth Likoudis meeting Pope John Paul II">
+        <p class="photo-caption">Meeting Pope St. John Paul II, 1980s</p>
+      </div>
+
+      <!-- 9 -->
+      <div class="photo-card reveal reveal-delay-1" onclick="openLightbox(8)">
+        <img src="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0516.jpeg"
+             data-full="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0516.jpeg"
+             data-caption="James Likoudis in Rome" alt="James Likoudis in Rome">
+        <p class="photo-caption">James Likoudis in Rome</p>
+      </div>
+
+      <!-- 10 -->
+      <div class="photo-card reveal reveal-delay-2" onclick="openLightbox(9)">
+        <img src="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0517.jpeg"
+             data-full="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0517.jpeg"
+             data-caption="James Likoudis at a Vatican meeting" alt="James Likoudis at Vatican meeting">
+        <p class="photo-caption">James Likoudis at a Vatican meeting</p>
+      </div>
+
+      <!-- 11 -->
+      <div class="photo-card reveal reveal-delay-3" onclick="openLightbox(10)">
+        <img src="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0569.jpeg"
+             data-full="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0569.jpeg"
+             data-caption="James Likoudis" alt="James Likoudis">
+        <p class="photo-caption">James Likoudis</p>
+      </div>
+
+    </div>
+
+    <span class="gallery-section-label">Mother Teresa &amp; Apostolate</span>
+    <div class="photos-grid wide">
+
+      <!-- 12 -->
+      <div class="photo-card reveal" onclick="openLightbox(11)">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-2.png?fit=800%2C394&ssl=1"
+             data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-2.png?fit=800%2C394&ssl=1"
+             data-caption="James and Ruth Likoudis meeting St. Mother Teresa of Calcutta, 1980s" alt="James and Ruth Likoudis meeting Mother Teresa">
+        <p class="photo-caption">Meeting St. Mother Teresa of Calcutta, 1980s</p>
+      </div>
+
+      <!-- 13 -->
+      <div class="photo-card reveal reveal-delay-1" onclick="openLightbox(12)">
+        <img src="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0534.jpeg"
+             data-full="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_0534.jpeg"
+             data-caption="James Likoudis with friends and collaborators" alt="James Likoudis with friends">
+        <p class="photo-caption">James Likoudis with friends and collaborators</p>
+      </div>
+
+      <!-- 14 -->
+      <div class="photo-card reveal reveal-delay-2" onclick="openLightbox(13)">
+        <img src="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_7666.jpeg"
+             data-full="https://wp-media.patheos.com/blogs/sites/1507/2025/09/IMG_7666.jpeg"
+             data-caption="James Likoudis in his later years" alt="James Likoudis in later years">
+        <p class="photo-caption">James Likoudis in his later years</p>
+      </div>
+
+    </div>
+
+    <span class="gallery-section-label">Family</span>
+    <div class="photos-grid wide">
+
+      <!-- 15 -->
+      <div class="photo-card reveal" onclick="openLightbox(14)">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-3.png?fit=800%2C399&ssl=1"
+             data-full="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-3.png?fit=800%2C399&ssl=1"
+             data-caption="James and Ruth Likoudis — married 71 years" alt="James and Ruth Likoudis">
+        <p class="photo-caption">James and Ruth Likoudis — married 71 years</p>
+      </div>
+
+      <!-- 16 -->
+      <div class="photo-card reveal reveal-delay-1" onclick="openLightbox(15)">
+        <img src="https://wp-media.patheos.com/blogs/sites/1507/2024/09/20240913100912_f4b2f6a3c3125b75815361fa3b18d39de052693ad2a7d5713369d68a702305b0.jpg"
+             data-full="https://wp-media.patheos.com/blogs/sites/1507/2024/09/20240913100912_f4b2f6a3c3125b75815361fa3b18d39de052693ad2a7d5713369d68a702305b0.jpg"
+             data-caption="James Likoudis speaking with Pope St. John Paul II (National Catholic Register, 2024)" alt="James Likoudis speaking with Pope John Paul II">
+        <p class="photo-caption">James Likoudis speaking with Pope St. John Paul II</p>
+      </div>
+
+      <!-- spacer -->
+      <div style="pointer-events:none;border:none;background:transparent"></div>
+
+    </div>
+
   </div>
 </section>
 
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
   <img id="lightbox-img" src="" alt="">
   <p class="lightbox-caption" id="lightbox-caption"></p>
+  <div class="lightbox-nav">
+    <button onclick="navLightbox(-1);event.stopPropagation()">← Prev</button>
+    <button onclick="navLightbox(1);event.stopPropagation()">Next →</button>
+  </div>
 </div>
 
 <footer>
@@ -155,24 +231,43 @@
     <div class="footer-brand"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF Logo"><p>A 501(c)(3) dedicated to ecumenical scholarship and Christian unity.</p><address>Baltimore, MD · 410-409-1695</address></div>
     <div class="footer-col"><h4>Foundation</h4><ul><li><a href="about.html">About</a></li><li><a href="james-likoudis.html">James Likoudis</a></li><li><a href="team.html">Team</a></li><li><a href="fellows.html">Fellows Program</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Media</h4><ul><li><a href="videos.html">Video Archive</a></li><li><a href="essays.html">Essay Archive</a></li><li><a href="photos.html">Photo Archive</a></li><li><a href="books.html">Books</a></li><li><a href="kydones.html">Kydones Review</a></li></ul></div>
-    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="consulting.html">Consulting</a></li><li><a href="press.html">Press & Media Kit</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="consulting.html">Consulting</a></li><li><a href="press.html">Press &amp; Media Kit</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p>© 2025 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacyF" target="_blank">𝕏</a></div></div>
 </footer>
 <script src="main.js"></script>
 <script>
-function openLightbox(card) {
-  const img = card.querySelector('img');
+let currentIdx = 0;
+const cards = Array.from(document.querySelectorAll('.photo-card'));
+
+function openLightbox(idx) {
+  currentIdx = idx;
+  const img = cards[idx].querySelector('img');
   document.getElementById('lightbox-img').src = img.dataset.full;
   document.getElementById('lightbox-caption').textContent = img.dataset.caption;
   document.getElementById('lightbox').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
-function closeLightbox() {
+
+function closeLightbox(e) {
+  if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
   document.getElementById('lightbox').classList.remove('active');
   document.body.style.overflow = '';
 }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+function navLightbox(dir) {
+  currentIdx = (currentIdx + dir + cards.length) % cards.length;
+  const img = cards[currentIdx].querySelector('img');
+  document.getElementById('lightbox-img').src = img.dataset.full;
+  document.getElementById('lightbox-caption').textContent = img.dataset.caption;
+}
+
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('active')) return;
+  if (e.key === 'Escape') { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow=''; }
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
+});
 </script>
 </body>
 </html>
