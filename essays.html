@@ -3,70 +3,38 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Essay Archive — Likoudis Legacy Foundation</title>
+<meta name="description" content="Over 300 essays by James Likoudis on Catholic theology, ecumenism, liturgy, and the defense of the magisterium.">
 <link rel="stylesheet" href="style.css">
 <style>
-.essays-section { padding: 7rem 2rem; }
-.essays-inner { max-width: 1100px; margin: 0 auto; }
-.essays-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  margin-top: 3.5rem;
-}
-.essay-card {
-  background: var(--ivory);
-  border: 1px solid rgba(200,169,110,0.12);
-  padding: 2.25rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  text-decoration: none;
-  transition: border-color 0.2s, transform 0.15s;
-}
-.essay-card:hover { border-color: var(--gold); transform: translateY(-2px); }
-.essay-date {
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gold);
-  opacity: 0.8;
-}
-.essay-card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
-  color: var(--navy);
-  font-weight: 500;
-  line-height: 1.3;
-}
-.essay-card p {
-  font-size: 0.83rem;
-  color: var(--muted);
-  line-height: 1.7;
-  flex: 1;
-}
-.essay-read {
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-top: 0.5rem;
-  opacity: 0.75;
-  transition: opacity 0.2s;
-}
-.essay-card:hover .essay-read { opacity: 1; }
-.essays-cta { background: var(--navy); padding: 5rem 2rem; text-align: center; }
-.essays-cta-inner { max-width: 600px; margin: 0 auto; }
-.essays-cta p { color: rgba(244,237,224,0.55); font-size: 0.9rem; line-height: 1.8; margin: 1.25rem 0 2rem; }
-@media(max-width: 700px) { .essays-grid { grid-template-columns: 1fr; } }
+.essays-section{padding:6rem 2rem 8rem;background:var(--ivory)}
+.essays-inner{max-width:1100px;margin:0 auto}
+.filter-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:3rem 0 3.5rem;align-items:center}
+.filter-label{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-right:.5rem}
+.yr-btn{background:none;border:1px solid rgba(30,43,72,.18);color:var(--muted);font-family:'Jost',sans-serif;font-size:.7rem;letter-spacing:.1em;padding:.4rem .9rem;cursor:pointer;transition:all .2s}
+.yr-btn:hover,.yr-btn.active{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+.yr-btn[data-year="all"]{border-color:var(--gold);color:var(--gold)}
+.yr-btn[data-year="all"].active{background:var(--gold);color:var(--navy)}
+.search-wrap{margin-left:auto}
+.search-wrap input{border:1px solid rgba(30,43,72,.18);padding:.45rem 1rem;font-family:'Jost',sans-serif;font-size:.78rem;color:var(--navy);background:white;outline:none;width:220px}
+.search-wrap input:focus{border-color:var(--gold)}
+.essays-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.essay-card{background:white;border:1px solid rgba(200,169,110,.12);padding:2rem;display:flex;flex-direction:column}
+.essay-meta{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.essay-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;line-height:1.3;margin-bottom:.75rem;flex:1}
+.essay-title a{color:var(--navy);text-decoration:none}
+.essay-title a:hover{color:var(--gold)}
+.essay-preview{font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem}
+.essay-read{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;margin-top:auto}
+.essay-read:hover{color:var(--navy)}
+.essay-card.hidden{display:none}
+.results-count{font-size:.75rem;color:var(--muted);margin-bottom:1.5rem}
+@media(max-width:900px){.essays-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.essays-grid{grid-template-columns:1fr}.search-wrap input{width:160px}}
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="index.html" class="nav-logo">
-    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF">
-    <span>Likoudis Legacy<br>Foundation</span>
-  </a>
+  <a href="index.html" class="nav-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF"><span>Likoudis Legacy<br>Foundation</span></a>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="about.html">About ▾</a><div class="nav-dropdown-menu"><a href="about.html">About</a><a href="james-likoudis.html">James Likoudis</a><a href="team.html">Team</a><a href="events.html">Events</a><a href="contact.html">Contact</a></div></li>
     <li><a href="fellows.html">Fellows Program</a></li>
@@ -82,170 +50,516 @@
 <div class="page-header">
   <span class="eyebrow">Media Archive</span>
   <h1>Essay <em>Archive</em></h1>
-  <p>The writings of Dr. James Likoudis — theology, apologetics, and the defense of the faith</p>
+  <p>82 essays by James Likoudis on Catholic theology, ecumenism, liturgy, and the defense of the magisterium</p>
   <div class="header-divider"></div>
 </div>
 
 <section class="essays-section">
   <div class="essays-inner">
-    <div class="reveal" style="text-align:center;margin-bottom:0;">
-      <span class="section-label">Recent Essays</span>
-      <h2 class="section-title">By Dr. James Likoudis</h2>
-      <div class="divider center"></div>
+    <div class="filter-bar">
+      <span class="filter-label">Filter by year</span>
+      <button class="yr-btn active" data-year="all">All</button>
+      <button class="yr-btn" data-year="2026">2026</button><button class="yr-btn" data-year="2025">2025</button>
+      <div class="search-wrap">
+        <input type="text" id="essay-search" placeholder="Search essays…" autocomplete="off">
+      </div>
     </div>
-    <div class="essays-grid">
-
-      <a href="https://likoudislegacy.com/the-anti-catholicism-of-a-population-controller/" class="essay-card reveal" target="_blank">
-        <span class="essay-date">Feb 26, 2026</span>
-        <h3>The Anti-Catholicism of a Population Controller</h3>
-        <p>Dr. Stephen D. Mumford is among the most fanatical of population controllers — an examination of the ideological roots of anti-Catholic bias in the population control movement.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/pastoral-care-for-homosexuals-must-not-bypass-doctrine/" class="essay-card reveal reveal-delay-1" target="_blank">
-        <span class="essay-date">Feb 24, 2026</span>
-        <h3>Pastoral Care for Homosexuals Must Not Bypass Doctrine</h3>
-        <p>A response to Bishop Matthew H. Clark's directives — arguing that authentic pastoral care must remain anchored in the Church's doctrinal teaching.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/the-spread-of-homosexuality-in-society/" class="essay-card reveal" target="_blank">
-        <span class="essay-date">Feb 19, 2026</span>
-        <h3>The Spread of Homosexuality in Society</h3>
-        <p>An examination of the cultural and moral dimensions of the normalization of homosexuality in American society, from a Catholic anthropological perspective.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/sex-education-catholic-doctrine-and-the-devil/" class="essay-card reveal reveal-delay-1" target="_blank">
-        <span class="essay-date">Feb 17, 2026</span>
-        <h3>Sex Education, Catholic Doctrine, and the Devil</h3>
-        <p>A survey of the American political and social landscape and the threat posed by secular sex education programs to Catholic moral teaching and family life.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/the-false-compassion-of-liberal-catholics/" class="essay-card reveal" target="_blank">
-        <span class="essay-date">Feb 12, 2026</span>
-        <h3>The False Compassion of Liberal Catholics</h3>
-        <p>On the misuse of "compassion" as a substitute for doctrinal fidelity — distinguishing authentic mercy from ideological accommodation.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/education-in-love/" class="essay-card reveal reveal-delay-1" target="_blank">
-        <span class="essay-date">Feb 10, 2026</span>
-        <h3>Education in Love</h3>
-        <p>A review article examining a volume on Catholic approaches to love and human sexuality, evaluating its pastoral and doctrinal dimensions.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/judge-not-lest-ye-be-judged/" class="essay-card reveal" target="_blank">
-        <span class="essay-date">Feb 5, 2026</span>
-        <h3>Judge Not Lest Ye Be Judged</h3>
-        <p>On the misinterpretation of Christ's command against judgment and the erosion of moral clarity among Catholics today.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/the-heretical-hymns-we-sing/" class="essay-card reveal reveal-delay-1" target="_blank">
-        <span class="essay-date">Feb 3, 2026</span>
-        <h3>The Heretical Hymns We Sing</h3>
-        <p>Examining hymns that weaken the Church's dogmatic teaching on the Holy Eucharist and the liturgical consequences of doctrinal imprecision in sacred music.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/an-eastern-catholic-examines-liturgical-problems/" class="essay-card reveal" target="_blank">
-        <span class="essay-date">Jan 29, 2026</span>
-        <h3>An Eastern Catholic Examines "Liturgical Problems"</h3>
-        <p>Fr. Archimandrite Serge Keleher's perspective on liturgical problems in the post-conciliar Church, examined through an Eastern Catholic lens.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/the-splendor-of-latin-and-sacred-music/" class="essay-card reveal reveal-delay-1" target="_blank">
-        <span class="essay-date">Jan 27, 2026</span>
-        <h3>The Splendor of Latin and Sacred Music</h3>
-        <p>Address to the Latin Liturgy Association Conference, 2004 — on the irreplaceable role of Latin and sacred polyphony in the Church's worship.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/vatican-ii-vs-the-liturgical-terrorists/" class="essay-card reveal" target="_blank">
-        <span class="essay-date">Jan 22, 2026</span>
-        <h3>Vatican II vs. the Liturgical Terrorists</h3>
-        <p><em>Sacrosanctum Concilium</em> was meant to revitalize the Church's liturgy — an argument that the Council's authentic vision was betrayed by radical post-conciliar experimentation.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/toward-a-reform-of-the-reform/" class="essay-card reveal reveal-delay-1" target="_blank">
-        <span class="essay-date">Jan 20, 2026</span>
-        <h3>Toward a "Reform of the Reform"</h3>
-        <p>CUF welcomes Pope Benedict XVI's Motu Proprio — on the theological and pastoral significance of <em>Summorum Pontificum</em> and the path toward liturgical renewal.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/the-latin-liturgy-quo-vadis/" class="essay-card reveal" target="_blank">
-        <span class="essay-date">Jan 15, 2026</span>
-        <h3>The Latin Liturgy: Quo Vadis?</h3>
-        <p>Address to the Latin Liturgy Association Convention, June 26, 1997 — surveying the state of the Roman Rite and the prospects for authentic liturgical reform.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/to-shepherds-under-siege/" class="essay-card reveal reveal-delay-1" target="_blank">
-        <span class="essay-date">Jan 13, 2026</span>
-        <h3>To Shepherds Under Siege</h3>
-        <p>Drawing on the address of Alphonse Salmeron — an exhortation to bishops and priests facing the pressures of doctrinal dissent and cultural accommodation.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/a-note-on-how-catholic-liturgy-is-falsified/" class="essay-card reveal" target="_blank">
-        <span class="essay-date">Jan 8, 2026</span>
-        <h3>A Note on How Catholic Liturgy Is Falsified</h3>
-        <p>From the foreword of <em>Instruction Concerning Worship of the Eucharistic Mystery</em> — on the mechanisms by which authentic liturgical tradition is distorted.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/part-viii-via-american-inculturation/" class="essay-card reveal reveal-delay-1" target="_blank">
-        <span class="essay-date">Jan 6, 2026</span>
-        <h3>The Degradation of Catholic Worship: Via American "Inculturation"</h3>
-        <p>Part VIII of a multi-part series on the degradation of Catholic worship — examining how American cultural assumptions have distorted the liturgy.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/part-vii-time-to-end-modern-liturgy-gone-mad/" class="essay-card reveal" target="_blank">
-        <span class="essay-date">Jan 2, 2026</span>
-        <h3>Time to End "Modern Liturgy" Gone Mad</h3>
-        <p>Part VII of the series on the degradation of Catholic worship — a direct critique of liturgical experimentation unmoored from tradition and doctrine.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/part-vi-desacralized-liturgy/" class="essay-card reveal reveal-delay-1" target="_blank">
-        <span class="essay-date">Dec 30, 2025</span>
-        <h3>Desacralized Liturgy — A Scandal to Catholics and Non-Catholics</h3>
-        <p>Part VI — on the pastoral and ecumenical damage wrought by the desacralization of the liturgy and the loss of transcendence in Catholic worship.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/part-v-bad-liturgy-an-obstacle-to-ecumenism/" class="essay-card reveal" target="_blank">
-        <span class="essay-date">Dec 26, 2025</span>
-        <h3>Bad Liturgy — An Obstacle to Ecumenism</h3>
-        <p>Part V — arguing that authentic ecumenical dialogue requires the recovery of a beautiful, reverent liturgy as a witness to the fullness of Catholic faith.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
-      <a href="https://likoudislegacy.com/part-iv-the-pope-on-the-beauty-of-the-liturgy/" class="essay-card reveal reveal-delay-1" target="_blank">
-        <span class="essay-date">Dec 23, 2025</span>
-        <h3>The Pope on the Beauty of the Liturgy</h3>
-        <p>Part IV — drawing on papal teaching to argue for the centrality of liturgical beauty as an expression of the Church's faith and a witness to the world.</p>
-        <span class="essay-read">Read Essay →</span>
-      </a>
-
+    <div class="results-count" id="results-count">82 essays</div>
+    <div class="essays-grid" id="essays-grid">
+      
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">February 26, 2026</div>
+        <h3 class="essay-title"><a href="essays/the-anti-catholicism-of-a-population-controller.html">THE ANTI-CATHOLICISM OF A POPULATION CONTROLLER</a></h3>
+        <p class="essay-preview">THE ANTI-CATHOLICISM OF A POPULATION CONTROLLER By Dr. JAMES LIKOUDIS Dr. Stephen D. Mumford is among the most fanatical devotees of the population control lobby that has had its hands in the federal government’s trough.</p>
+        <a href="essays/the-anti-catholicism-of-a-population-controller.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">February 24, 2026</div>
+        <h3 class="essay-title"><a href="essays/pastoral-care-for-homosexuals-must-not-bypass-doctrine.html">PASTORAL CARE FOR HOMOSEXUALS MUST NOT BYPASS DOCTRINE</a></h3>
+        <p class="essay-preview">PASTORAL CARE FOR HOMOSEXUALS MUST NOT BYPASS DOCTRINE By Dr. JAMES LIKOUDIS Bishop Matthew H. Clark has distributed in all parishes his “We All Need Redeeming” letter to justify his welcoming, this week, a conference of</p>
+        <a href="essays/pastoral-care-for-homosexuals-must-not-bypass-doctrine.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">February 19, 2026</div>
+        <h3 class="essay-title"><a href="essays/the-spread-of-homosexuality-in-society.html">The Spread Of Homosexuality In Society</a></h3>
+        <p class="essay-preview">The Spread Of Homosexuality In Society By Dr. JAMES LIKOUDIS It is simply incredible what has come to pass in American society. A recent decision of the New Jersey Supreme Court on August 4, 1999 ordering the Boy Scouts </p>
+        <a href="essays/the-spread-of-homosexuality-in-society.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">February 17, 2026</div>
+        <h3 class="essay-title"><a href="essays/sex-education-catholic-doctrine-and-the-devil.html">SEX EDUCATION, CATHOLIC DOCTRINE, AND THE DEVIL</a></h3>
+        <p class="essay-preview">SEX EDUCATION, CATHOLIC DOCTRINE, AND THE DEVIL By Dr. JAMES LIKOUDIS As we look about the American political, social, and cultural scene today, we cannot but be impressed at the extent of moral decay in evidence. The wo</p>
+        <a href="essays/sex-education-catholic-doctrine-and-the-devil.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">February 12, 2026</div>
+        <h3 class="essay-title"><a href="essays/the-false-compassion-of-liberal-catholics.html">THE FALSE COMPASSION OF LIBERAL CATHOLICS</a></h3>
+        <p class="essay-preview">THE FALSE COMPASSION OF LIBERAL CATHOLICS By Dr. JAMES LIKOUDIS “Compassion” is defined in the dictionary as: “sorrow for the sufferings or troubles of another or others, accompanied by the urge to help; deep sympathy; p</p>
+        <a href="essays/the-false-compassion-of-liberal-catholics.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">February 10, 2026</div>
+        <h3 class="essay-title"><a href="essays/education-in-love.html">EDUCATION IN LOVE</a></h3>
+        <p class="essay-preview">EDUCATION IN LOVE – A Review Article – By Dr. JAMES LIKOUDIS A small volume, “ Education in Love “, by Rev. William N. Seifert, William F. Urbine and Rev. Michael P. Orsi, with a Foreword by Bishop James T. McHugh (now B</p>
+        <a href="essays/education-in-love.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">February 5, 2026</div>
+        <h3 class="essay-title"><a href="essays/judge-not-lest-ye-be-judged.html">JUDGE NOT LEST YE BE JUDGED</a></h3>
+        <p class="essay-preview">JUDGE NOT LEST YE BE JUDGED By Dr. JAMES LIKOUDIS It is really astonishing where some Catholics are today. They are found sanctioning every sin that is glorified in what Pope John-Paul II has termed our ‘culture of death</p>
+        <a href="essays/judge-not-lest-ye-be-judged.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">February 3, 2026</div>
+        <h3 class="essay-title"><a href="essays/the-heretical-hymns-we-sing.html">The Heretical Hymns We Sing</a></h3>
+        <p class="essay-preview">The Heretical Hymns We Sing By Dr. JAMES LIKOUDIS There is an indisputable consensus among trained musicians, liturgists, and informed laity that the sacred liturgy in our parishes is conspicuous by its poor and impoveri</p>
+        <a href="essays/the-heretical-hymns-we-sing.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">January 29, 2026</div>
+        <h3 class="essay-title"><a href="essays/an-eastern-catholic-examines-liturgical-problems.html">An Eastern Catholic Examines “Liturgical Problems”</a></h3>
+        <p class="essay-preview">An Eastern Catholic Examines &quot;Liturgical Problems&quot; By Dr. JAMES LIKOUDIS Fr. Archimandrite Serge Keleher is one of the best informed and scholarly authorities regarding events taking place in both the Eastern Catholic an</p>
+        <a href="essays/an-eastern-catholic-examines-liturgical-problems.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">January 27, 2026</div>
+        <h3 class="essay-title"><a href="essays/the-splendor-of-latin-and-sacred-music.html">THE SPLENDOR OF LATIN AND SACRED MUSIC</a></h3>
+        <p class="essay-preview">THE SPLENDOR OF LATIN AND SACRED MUSIC By Dr. JAMES LIKOUDIS – 2004′ Conference of The Latin Liturgy Association Explores “The Splendor of Latin and Sacred Music” – If there were any doubt concerning the desire of the Ch</p>
+        <a href="essays/the-splendor-of-latin-and-sacred-music.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">January 22, 2026</div>
+        <h3 class="essay-title"><a href="essays/vatican-ii-vs-the-liturgical-terrorists.html">Vatican II vs. The Liturgical Terrorists</a></h3>
+        <p class="essay-preview">Vatican II vs. The Liturgical Terrorists Sacrosanctum Concilium was meant to revitalize the Church&#x27;s liturgy, but it led to liturgical collapse instead. What went wrong? By Dr. JAMES LIKOUDIS It is interesting that the l</p>
+        <a href="essays/vatican-ii-vs-the-liturgical-terrorists.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">January 20, 2026</div>
+        <h3 class="essay-title"><a href="essays/toward-a-reform-of-the-reform.html">Toward a “Reform of the Reform”</a></h3>
+        <p class="essay-preview">Toward a &quot;Reform of the Reform&quot; By Dr. JAMES LIKOUDIS – CUF Welcomes Pope Benedict XVI’s Motu Proprio – In his Apostolic Letter Summorum Pontificum , given motu proprio on July 7, 2007, Pope Benedict XVI has honored the </p>
+        <a href="essays/toward-a-reform-of-the-reform.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">January 15, 2026</div>
+        <h3 class="essay-title"><a href="essays/the-latin-liturgy-quo-vadis.html">THE LATIN LITURGY :  QUO VADIS?</a></h3>
+        <p class="essay-preview">THE LATIN LITURGY : QUO VADIS? By Dr. JAMES LIKOUDIS – Address to the Latin Liturgy Association Convention, June 26-27, 2004 Indianapolis, IN – It is a great honor to have been asked to speak at this LLA Convention. I ha</p>
+        <a href="essays/the-latin-liturgy-quo-vadis.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">January 13, 2026</div>
+        <h3 class="essay-title"><a href="essays/to-shepherds-under-siege.html">TO SHEPHERDS UNDER SIEGE</a></h3>
+        <p class="essay-preview">TO SHEPHERDS UNDER SIEGE By Dr. JAMES LIKOUDIS The article below is an extract from the address of Alphonse Salmeron, one of the first Jesuits, and a prominent theologian at the Council of Trent (1545-1563). Speaking to </p>
+        <a href="essays/to-shepherds-under-siege.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">January 8, 2026</div>
+        <h3 class="essay-title"><a href="essays/a-note-on-how-catholic-liturgy-is-falsified.html">A Note On How Catholic Liturgy Is Falsified</a></h3>
+        <p class="essay-preview">A Note On How Catholic Liturgy Is Falsified From the Foreword of: INSTRUCTION CONCERNING WORSHIP of the EUCHARISTIC MYSTERY – INAESTIMABILE DONUM – Prepared by the Sacred Congregation for the Sacraments and Divine Worshi</p>
+        <a href="essays/a-note-on-how-catholic-liturgy-is-falsified.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">January 6, 2026</div>
+        <h3 class="essay-title"><a href="essays/part-viii-via-american-inculturation.html">Part VIII VIA AMERICAN “INCULTURATION”</a></h3>
+        <p class="essay-preview">THE DEGRADATION OF CATHOLIC WORSHIP: VIA AMERICAN &quot;INCULTURATION&quot; By Dr. JAMES LIKOUDIS – Part VIII – As our previous columns observed, more and more voices are being heard regarding the liturgical decadence and malaise </p>
+        <a href="essays/part-viii-via-american-inculturation.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2026">
+        <div class="essay-meta">January 2, 2026</div>
+        <h3 class="essay-title"><a href="essays/part-vii-time-to-end-modern-liturgy-gone-mad.html">PART VII: TIME TO END “MODERN LITURGY” GONE MAD</a></h3>
+        <p class="essay-preview">THE DEGRADATION OF CATHOLIC WORSHIP: TIME TO END &quot;MODERN LITURGY&quot; GONE MAD By Dr. JAMES LIKOUDIS – Part VII – When Cardinal Joseph Ratzinger took occasion to note the ‘ collapse of the Liturgy ‘ in various sections of th</p>
+        <a href="essays/part-vii-time-to-end-modern-liturgy-gone-mad.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">December 30, 2025</div>
+        <h3 class="essay-title"><a href="essays/part-vi-desacralized-liturgy.html">PART VI: DESACRALIZED LITURGY</a></h3>
+        <p class="essay-preview">THE DEGRADATION OF CATHOLIC WORSHIP: &quot;DESACRALIZED LITURGY - A SCANDAL TO BOTH CATHOLICS AND NON-CATHOLICS&quot; By Dr. JAMES LIKOUDIS – Part VI – Previous articles have noted the depth and scope of the liturgical malaise aff</p>
+        <a href="essays/part-vi-desacralized-liturgy.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">December 26, 2025</div>
+        <h3 class="essay-title"><a href="essays/part-v-bad-liturgy-an-obstacle-to-ecumenism.html">PART V: “BAD LITURGY – AN OBSTACLE TO ECUMENISM”</a></h3>
+        <p class="essay-preview">THE DEGRADATION OF CATHOLIC WORSHIP: &quot;BAD LITURGY - AN OBSTACLE TO ECUMENISM&quot; By Dr. JAMES LIKOUDIS – Part V – In our last issue (Sep./Oct. 1997) note was taken of the Pope’s comments on the beauty and splendor of authen</p>
+        <a href="essays/part-v-bad-liturgy-an-obstacle-to-ecumenism.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">December 23, 2025</div>
+        <h3 class="essay-title"><a href="essays/part-iv-the-pope-on-the-beauty-of-the-liturgy.html">PART IV: “THE POPE ON THE BEAUTY OF THE LITURGY”</a></h3>
+        <p class="essay-preview">THE DEGRADATION OF CATHOLIC WORSHIP: &quot;THE POPE ON THE BEAUTY OF THE LITURGY&quot; By Dr. JAMES LIKOUDIS – Part IV – In one of his Angelus addresses last year (11/3/96) Pope John Paul II took occasion to comment on the beauty </p>
+        <a href="essays/part-iv-the-pope-on-the-beauty-of-the-liturgy.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">December 18, 2025</div>
+        <h3 class="essay-title"><a href="essays/part-iii-how-our-eastern-brethren-see-us.html">PART III: “HOW OUR EASTERN BRETHREN SEE US”</a></h3>
+        <p class="essay-preview">THE DEGRADATION OF CATHOLIC WORSHIP: EASTERN-RITE CATHOLICS ALSO SPEAK OUT, &quot;HOW OUR EASTERN BRETHREN SEE US&quot; By Dr. JAMES LIKOUDIS – Part III – It is interesting to observe that Eastern rite Catholics have not been hesi</p>
+        <a href="essays/part-iii-how-our-eastern-brethren-see-us.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">December 16, 2025</div>
+        <h3 class="essay-title"><a href="essays/part-ii-how-we-see-ourselves.html">PART II: “HOW WE SEE OURSELVES”</a></h3>
+        <p class="essay-preview">THE DEGRADATION OF CATHOLIC WORSHIP: &quot;HOW WE SEE OURSELVES&quot; By Dr. JAMES LIKOUDIS – Part II – In Part I we expressed general agreement with Eastern Orthodox writer Frankie Schaeffer in his denouncing what passes for litu</p>
+        <a href="essays/part-ii-how-we-see-ourselves.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">December 11, 2025</div>
+        <h3 class="essay-title"><a href="essays/part-i-how-others-see-us.html">PART I: “HOW OTHERS SEE US”</a></h3>
+        <p class="essay-preview">THE DEGRADATION OF CATHOLIC WORSHIP: &quot;HOW OTHERS SEE US&quot; By Dr. JAMES LIKOUDIS THE DEGRADATION OF CATHOLIC WORSHIP “The Degradation of Catholic Worship..” is the general and comprehensive title given to each of the eight</p>
+        <a href="essays/part-i-how-others-see-us.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">December 9, 2025</div>
+        <h3 class="essay-title"><a href="essays/christopher-dawson.html">CHRISTOPHER DAWSON</a></h3>
+        <p class="essay-preview">CHRISTOPHER DAWSON HISTORIAN OF CHRISTIAN DIVISIONS AND PROPHET OF CHRISTIAN UNITY Address to the Society of Catholic Social Scientists’ Conference By Dr. JAMES LIKOUDIS This address was delivered at the 8th Annual Chris</p>
+        <a href="essays/christopher-dawson.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">December 4, 2025</div>
+        <h3 class="essay-title"><a href="essays/attempt-to-justify-divorce-and-remarriage.html">Attempt To Justify Divorce And Remarriage</a></h3>
+        <p class="essay-preview">My Reply . . . An Eastern Orthodox Writer&#x27;s Attempt To Justify Divorce And Remarriage By Dr. JAMES LIKOUDIS N.B.: The following was written in response to assertions made by an Eastern Orthodox individual, with whom Dr. </p>
+        <a href="essays/attempt-to-justify-divorce-and-remarriage.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">December 2, 2025</div>
+        <h3 class="essay-title"><a href="essays/more-on-the-particular-judgment.html">MORE ON THE PARTICULAR JUDGMENT</a></h3>
+        <p class="essay-preview">MORE ON THE PARTICULAR JUDGMENT By Dr. JAMES LIKOUDIS As pointed out in a previous article ( “Is There Still A Particular Judgment?” published in The Wanderer , July 3, 2014, p. 8B), the: “silence regarding this particul</p>
+        <a href="essays/more-on-the-particular-judgment.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">November 28, 2025</div>
+        <h3 class="essay-title"><a href="essays/collegial-consecration-to-the-ihm.html">COLLEGIAL CONSECRATION TO THE IHM</a></h3>
+        <p class="essay-preview">THE US BISHOPS AND THE COLLEGIAL CONSECRATION TO THE IHM By Dr. JAMES LIKOUDIS The following article is also reproduced in the Marian section of the Indexes How many Catholic bishops of the United States joined Pope John</p>
+        <a href="essays/collegial-consecration-to-the-ihm.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">November 25, 2025</div>
+        <h3 class="essay-title"><a href="essays/sign-of-the-states-dysfunction.html">SIGN OF THE STATE’s DYSFUNCTION</a></h3>
+        <p class="essay-preview">SIGN OF THE STATE&#x27;s DYSFUNCTION... A CALIFORNIA PARISH&#x27;s &quot;FOUR MINUTE SPECIALS&quot; By Dr. JAMES LIKOUDIS Anyone who is knowledgeable about political affairs is aware of the dysfunctional state of California’s politics. The </p>
+        <a href="essays/sign-of-the-states-dysfunction.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">November 20, 2025</div>
+        <h3 class="essay-title"><a href="essays/call-to-action-once-again.html">CALL TO ACTION… ONCE AGAIN​</a></h3>
+        <p class="essay-preview">CALL TO ACTION... ONCE AGAIN By Dr. JAMES LIKOUDIS Leading dissenters from Catholic teaching will be gathered together for three days, November 1-3, in downtown Milwaukee. Many are well known to readers of The Wanderer w</p>
+        <a href="essays/call-to-action-once-again.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">November 18, 2025</div>
+        <h3 class="essay-title"><a href="essays/religious-freedom.html">RELIGIOUS FREEDOM</a></h3>
+        <p class="essay-preview">RELIGIOUS FREEDOM: DID VATICAN II CONTRADICT TRADITIONAL CATHOLIC DOCTRINE? By Dr. JAMES LIKOUDIS N.B.: The following is an incisive and detailed book critique, which exposes many of the objections that have plagued the </p>
+        <a href="essays/religious-freedom.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">November 13, 2025</div>
+        <h3 class="essay-title"><a href="essays/you-are-either-catholic-or-you-are-not.html">YOU ARE EITHER CATHOLIC, OR YOU ARE NOT!</a></h3>
+        <p class="essay-preview">YOU ARE EITHER CATHOLIC, OR YOU ARE NOT! By Dr. JAMES LIKOUDIS I vividly recall attending a parish catechetical program featuring a De-Sales Program film on the Creeds of the Church. Together with various historical inac</p>
+        <a href="essays/you-are-either-catholic-or-you-are-not.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">November 11, 2025</div>
+        <h3 class="essay-title"><a href="essays/theology-of-ambiguity.html">Theology Of Ambiguity</a></h3>
+        <p class="essay-preview">How The &quot;Theology Of Ambiguity&quot;… Has Undermined Post-Conciliar Catechesis By Dr. JAMES LIKOUDIS Since the Second Vatican Council (1962-1965), a tidal wave of theological error — and even heresy — has struck the Catholic </p>
+        <a href="essays/theology-of-ambiguity.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">November 6, 2025</div>
+        <h3 class="essay-title"><a href="essays/on-original-sin.html">ON ORIGINAL SIN</a></h3>
+        <p class="essay-preview">ON ORIGINAL SIN... Are Some Eastern Orthodox Posing Another Obstacle To Reunion? By Dr. JAMES LIKOUDIS NB: The following article being of interest to Catholics as well as Orthodox, is replicated also in the INDEX of arti</p>
+        <a href="essays/on-original-sin.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">November 4, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-pope-the-byzantine-emperor-and-islam.html">THE POPE, THE BYZANTINE EMPEROR, AND ISLAM</a></h3>
+        <p class="essay-preview">THE POPE, THE BYZANTINE EMPEROR, AND ISLAM By Dr. JAMES LIKOUDIS A worldwide denunciation coupled with acts of murder and mayhem by Muslims followed Pope Benedict XVI’s “Regensburg Address” for his quotation of a sentenc</p>
+        <a href="essays/the-pope-the-byzantine-emperor-and-islam.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">October 30, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-magisterium-was-not-silent-as-dissent-spread.html">The Magisterium Was NOT SILENT as DISSENT SPREAD</a></h3>
+        <p class="essay-preview">The Magisterium Was NOT SILENT As DISSENT SPREAD By Dr. JAMES LIKOUDIS Despite the successes of “the world, flesh, and the devil” seeking to obscure the unique nature of Christ’s Catholic Church and to wreak confusion am</p>
+        <a href="essays/the-magisterium-was-not-silent-as-dissent-spread.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">October 28, 2025</div>
+        <h3 class="essay-title"><a href="essays/apostolic-succession-and-the-apostolic-activity-of-the-laity.html">Apostolic Succession and the Apostolic Activity of the Laity</a></h3>
+        <p class="essay-preview">Apostolic Succession and the Apostolic Activity of the Laity By Dr. JAMES LIKOUDIS “ Apostolic Succession ” has been handily defined in Fr. Peter Stravinskas’ book “Catholic Dictionary” (OSV, 2002): “Bishops of the Churc</p>
+        <a href="essays/apostolic-succession-and-the-apostolic-activity-of-the-laity.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">October 23, 2025</div>
+        <h3 class="essay-title"><a href="essays/atheism-and-the-divinity-of-christ.html">Atheism And The Divinity of Christ</a></h3>
+        <p class="essay-preview">Atheism And The Divinity of Christ - Quod Christus Sit Deus - By Dr. JAMES LIKOUDIS In his famous 1983 Templeton Address at Harvard University, Alexander Solzhenitsyn noted that in the West: “The concepts of good and evi</p>
+        <a href="essays/atheism-and-the-divinity-of-christ.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">October 21, 2025</div>
+        <h3 class="essay-title"><a href="essays/decree-on-ecumenism.html">DECREE ON ECUMENISM</a></h3>
+        <p class="essay-preview">VATICAN II&#x27;s DECREE ON ECUMENISM – Post-Conciliar Misinterpretations, and – THE QUEST FOR CHRISTIAN UNITY By Dr. JAMES LIKOUDIS Vatican II’s formal introduction into the modern world of Ecumenism (originally set into mot</p>
+        <a href="essays/decree-on-ecumenism.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">October 16, 2025</div>
+        <h3 class="essay-title"><a href="essays/cardinal-kaspers-disbelief.html">Cardinal Kasper’s Disbelief</a></h3>
+        <p class="essay-preview">Cardinal Kasper&#x27;s Disbelief In The Gospel Accounts Of Christ&#x27;s Miracles By Dr. JAMES LIKOUDIS Walter Cardinal Kasper has been regarded in liberal circles as a profound theologian and an expert on ecumenism and Jewish-Cat</p>
+        <a href="essays/cardinal-kaspers-disbelief.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">October 14, 2025</div>
+        <h3 class="essay-title"><a href="essays/a-fatally-flawed-portayal-of-jesus.html">A FATALLY FLAWED PORTAYAL OF JESUS</a></h3>
+        <p class="essay-preview">A FATALLY FLAWED PORTAYAL OF JESUS &quot;Killing Jesus: A History&quot; by Bill O’Reilly and Martin Dugard. Henry Holt and Company, NY (2013) By Dr. JAMES LIKOUDIS N.B.: Ordinarily the following article would be categorized under </p>
+        <a href="essays/a-fatally-flawed-portayal-of-jesus.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">October 9, 2025</div>
+        <h3 class="essay-title"><a href="essays/is-there-still-a-particular-judgment.html">Is There Still A Particular Judgment?</a></h3>
+        <p class="essay-preview">Is There Still A Particular Judgment? By Dr. JAMES LIKOUDIS Yes, there is. But silence regarding this dogma from all too many pulpits together with Funeral Masses that focus on celebrating the life of the deceased and ar</p>
+        <a href="essays/is-there-still-a-particular-judgment.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">October 7, 2025</div>
+        <h3 class="essay-title"><a href="essays/solidarity-in-dissent.html">SOLIDARITY IN DISSENT</a></h3>
+        <p class="essay-preview">SOLIDARITY IN DISSENT Fr. Curran And His Allies By Dr. JAMES LIKOUDIS Since the 1968 rejection of “ Humanae Vitae ” by Catholic University of America professor Charles E. Curran and hundreds of other academics in Catholi</p>
+        <a href="essays/solidarity-in-dissent.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">October 2, 2025</div>
+        <h3 class="essay-title"><a href="essays/splendor-of-truth.html">SPLENDOR OF TRUTH</a></h3>
+        <p class="essay-preview">THE SPLENDOR OF TRUTH MORE RELEVANT THAN EVER By Dr. JAMES LIKOUDIS There is no question that Pope John Paul II’s encyclical “ Veritatis Splendor ” (August 6, 1993) was one of the most important writings of his pontifica</p>
+        <a href="essays/splendor-of-truth.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">September 30, 2025</div>
+        <h3 class="essay-title"><a href="essays/anti-catholic-mole.html">Anti-Catholic Mole</a></h3>
+        <p class="essay-preview">Anti-Catholic Mole in Honorable Garb A Catholic Deacon and Family Court Judge Belies His Faith By Dr. JAMES LIKOUDIS “ The City ” ( Rochester’s Alternative Newspaper ) featured an Interview (September 4-10, 2013) with no</p>
+        <a href="essays/anti-catholic-mole.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">September 25, 2025</div>
+        <h3 class="essay-title"><a href="essays/perpetual-virginity.html">Perpetual Virginity</a></h3>
+        <p class="essay-preview">Contemporary Modernism and... The Perpetual Virginity of The Mother of God By Dr. JAMES LIKOUDIS In some Catholic parishes will be found “ Give Us This Day: Daily Prayers for Today’s Catholics ” published by Liturgical P</p>
+        <a href="essays/perpetual-virginity.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">September 23, 2025</div>
+        <h3 class="essay-title"><a href="essays/reflections-on-luther.html">Reflections on Luther</a></h3>
+        <p class="essay-preview">Reflections on Luther: The Man and the Myth By Dr. JAMES LIKOUDIS Theaters nation-wide have shown the 2003 MGM film “ LUTHER ” (also available as a DVD) and produced by the Lutheran-owned insurance company “ Thrivent ” w</p>
+        <a href="essays/reflections-on-luther.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">September 18, 2025</div>
+        <h3 class="essay-title"><a href="essays/charismatic-experiences.html">CHARISMATIC EXPERIENCES</a></h3>
+        <p class="essay-preview">WHAT TO THINK OF &quot;CHARISMATIC EXPERIENCES&quot; By Fr. Bertrand de Margerie, S.J. EDITOR’s NOTE: The following article reproduces the comments of one of the finest theologians of the post-conciliar period, the internationally</p>
+        <a href="essays/charismatic-experiences.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">September 16, 2025</div>
+        <h3 class="essay-title"><a href="essays/champlin-as-liturgist.html">Champlin as Liturgist</a></h3>
+        <p class="essay-preview">Msgr. Joseph M. Champlin as Liturgist; His latest book: &quot;The Breaking of the Bread...&quot; By Dr. JAMES LIKOUDIS As Buffalo’s “ Western New York Catholic ” diocesan paper (November 1998) reported: “The name Champlin may not </p>
+        <a href="essays/champlin-as-liturgist.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">September 11, 2025</div>
+        <h3 class="essay-title"><a href="essays/sin-in-marriage-preparation.html">Sin In Marriage Preparation</a></h3>
+        <p class="essay-preview">– More On Msgr. Joseph Champlin – Countering The Eclipse Of Sin In Marriage Preparation By Dr. JAMES LIKOUDIS At last! An attractively issued and very handy Marriage Preparation booklet that should be put into the hands </p>
+        <a href="essays/sin-in-marriage-preparation.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">September 9, 2025</div>
+        <h3 class="essay-title"><a href="essays/rochester-dissenter.html">Rochester’ Dissenter</a></h3>
+        <p class="essay-preview">Rochester’ Dissenter Sr. Patricia Schoelles, CSJ By Dr. JAMES LIKOUDIS Sr. Patricia Schoelles is a well known Sister of St. Joseph and one of the leading dissenters in the Diocese of Rochester, NY. Her column used to app</p>
+        <a href="essays/rochester-dissenter.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">September 4, 2025</div>
+        <h3 class="essay-title"><a href="essays/confusion-concerning-subsistit.html">CONFUSION CONCERNING “SUBSISTIT”</a></h3>
+        <p class="essay-preview">CONTINUING CONFUSION CONCERNING &quot;SUBSISTIT&quot; - George Weigel on &quot;SUBSISTIT&quot; - By Dr. JAMES LIKOUDIS The well-known biographer of Pope John Paul II and the author of some fine books and columns, George Weigel, has written </p>
+        <a href="essays/confusion-concerning-subsistit.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">September 2, 2025</div>
+        <h3 class="essay-title"><a href="essays/a-strange-missiology.html">A STRANGE MISSIOLOGY</a></h3>
+        <p class="essay-preview">A STRANGE MISSIOLOGY Fr. Peter C. Phan’s Essay Redefining the Meaning of Evangelization By Dr. JAMES LIKOUDIS Fr. Peter C. Phan is a theology professor at Georgetown University. He formerly taught in the Religious Studie</p>
+        <a href="essays/a-strange-missiology.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">August 28, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-modernized-jesus-of-the-renew-process.html">The Modernized Jesus of the RENEW “Process”</a></h3>
+        <p class="essay-preview">The Modernized Jesus of the RENEW &quot;Process&quot; By Dr. JAMES LIKOUDIS The RENEW program (or “process”) of the Archdiocese of Newark promising the development of “vibrant faith communities” has now spread into 70 Catholic dio</p>
+        <a href="essays/the-modernized-jesus-of-the-renew-process.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">August 26, 2025</div>
+        <h3 class="essay-title"><a href="essays/abortion-and-limbo.html">Abortion And Limbo</a></h3>
+        <p class="essay-preview">Abortion And Limbo By Dr. JAMES LIKOUDIS At the Tenth Ordinary General Assembly of the Synod of Bishops last year, Archbishop George Pell of Sydney, Australia, noted: “the considerable silence and some confusion [regardi</p>
+        <a href="essays/abortion-and-limbo.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">August 21, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-post-conciliar-attacks-on-celibacy.html">The Post-Conciliar Attacks on Celibacy​</a></h3>
+        <p class="essay-preview">The Post-Conciliar Attacks on Celibacy By Dr. JAMES LIKOUDIS It is disconcerting that vicious attacks on Celibacy continue to trouble the Church today. This is a bizarre phenomenon in the post-conciliar renewal of the pa</p>
+        <a href="essays/the-post-conciliar-attacks-on-celibacy.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">August 19, 2025</div>
+        <h3 class="essay-title"><a href="essays/how-humanae-vitae-continues-to-be-subverted.html">How  ‘Humanæ Vitæ’  Continues To Be Subverted</a></h3>
+        <p class="essay-preview">How &#x27;Humanæ Vitæ&#x27; Continues To Be Subverted By Dr. JAMES LIKOUDIS In a recent article in “ Homiletic and Pastoral Review ” (January 2002), well-known Catholic author K. D. Whitehead noted that: “A large majority of Ameri</p>
+        <a href="essays/how-humanae-vitae-continues-to-be-subverted.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">August 14, 2025</div>
+        <h3 class="essay-title"><a href="essays/catholic-morality-revisited-and-thrashed.html">Catholic Morality Revisited – and Thrashed</a></h3>
+        <p class="essay-preview">Catholic Morality Revisited – and Thrashed By Dr. JAMES LIKOUDIS Twenty-Third Publications did another disservice to the Church by its publication of Gerard S. Sloyan’s “ Catholic Morality Revisited: Origins and Contempo</p>
+        <a href="essays/catholic-morality-revisited-and-thrashed.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">August 12, 2025</div>
+        <h3 class="essay-title"><a href="essays/rochester-dissenter-now-undermines-christs-resurrection.html">ROCHESTER DISSENTER NOW UNDERMINES CHRIST’S RESURRECTION​</a></h3>
+        <p class="essay-preview">ROCHESTER DISSENTER NOW UNDERMINES CHRIST&#x27;S RESURRECTION By Dr. JAMES LIKOUDIS Msgr. William H. Shannon is no stranger to Rochester, N.Y., Catholics. An emeritus professor of theology at Nazareth College, a stronghold of</p>
+        <a href="essays/rochester-dissenter-now-undermines-christs-resurrection.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">August 7, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-civil-war-in-american-catholicism.html">The Civil War In American Catholicism</a></h3>
+        <p class="essay-preview">The Civil War In American Catholicism By Dr. JAMES LIKOUDIS An excellent article “ Self-Inflicted Wounds ” by Mike Aquilina appeared in “ Our Sunday Visitor ” (3/9/97) wherein Protestant historian Thomas Reeves was inter</p>
+        <a href="essays/the-civil-war-in-american-catholicism.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">August 5, 2025</div>
+        <h3 class="essay-title"><a href="essays/a-questionable-catechist-and-spiritual-guide.html">A Questionable Catechist and Spiritual Guide​</a></h3>
+        <p class="essay-preview">A Questionable Catechist and Spiritual Guide By Dr. JAMES LIKOUDIS Philip St. Romain has been a well-known writer specializing in “ Personal Growth Issues ” and has served as an assistant director of the Religious Studie</p>
+        <a href="essays/a-questionable-catechist-and-spiritual-guide.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">July 31, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-return-of-the-nestorian-heresy-in-the-priest-magazine.html">The Return of the Nestorian Heresy in “The Priest” Magazine</a></h3>
+        <p class="essay-preview">A Grievous Distortion of &quot;The Catechism of The Catholic Church&quot;, or... the Return of the Nestorian Heresy in &quot;The Priest&quot; Magazine By Dr. JAMES LIKOUDIS It is incredible that “ The Priest ” magazine (April 1993) should p</p>
+        <a href="essays/the-return-of-the-nestorian-heresy-in-the-priest-magazine.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">July 29, 2025</div>
+        <h3 class="essay-title"><a href="essays/were-the-apostle-peter-and-cephas-of-antioch-the-same-person.html">Were the Apostle Peter and Cephas of Antioch the same person?</a></h3>
+        <p class="essay-preview">Were the Apostle Peter and Cephas of Antioch the same person? By Dr. JAMES LIKOUDIS There is no question that mainstream opinion in the Church has held that the Apostle Peter and the Cephas whom St. Paul rebuked in [the </p>
+        <a href="essays/were-the-apostle-peter-and-cephas-of-antioch-the-same-person.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">July 24, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-gospel-according-to-judas-jesus-christ-superstar.html">THE GOSPEL ACCORDING TO JUDAS: * JESUS CHRIST, SUPERSTAR… *​</a></h3>
+        <p class="essay-preview">THE GOSPEL ACCORDING TO JUDAS: * JESUS CHRIST, SUPERSTAR... * By Dr. JAMES LIKOUDIS and NEIL STAFFORD Authors’ Note: This article written in 1971 remains as relevant today. It reveals much concerning the deplorable catec</p>
+        <a href="essays/the-gospel-according-to-judas-jesus-christ-superstar.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">July 22, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-disgrace-of-rochesters-diocesan-paper.html">THE DISGRACE OF ROCHESTER’S DIOCESAN PAPER</a></h3>
+        <p class="essay-preview">THE DISGRACE OF ROCHESTER&#x27;S DIOCESAN PAPER By Dr. JAMES LIKOUDIS It was hoped by some of our Rochester laity that its diocesan paper the “ Catholic Courier ” would reform its ways and begin defending with vigor the clear</p>
+        <a href="essays/the-disgrace-of-rochesters-diocesan-paper.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">July 17, 2025</div>
+        <h3 class="essay-title"><a href="essays/catechesis-and-ecumenism.html">CATECHESIS AND ECUMENISM</a></h3>
+        <p class="essay-preview">CATECHESIS AND ECUMENISM By Dr. JAMES LIKOUDIS Pope John Paul II has often noted the parameters of that genuine ecumenism which was promoted by the Second Vatican Council. Indeed, “the restoration of the perfect unity wi</p>
+        <a href="essays/catechesis-and-ecumenism.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">July 15, 2025</div>
+        <h3 class="essay-title"><a href="essays/blasphemy-too-has-its-theologians.html">Blasphemy, Too, Has Its Theologians</a></h3>
+        <p class="essay-preview">Blasphemy, Too, Has Its Theologians By Dr. JAMES LIKOUDIS In a recent syndicated column featured in many Catholic diocesan papers, dissenter Fr. Richard P. McBrien registered his decided agreement with dissenter Andrew G</p>
+        <a href="essays/blasphemy-too-has-its-theologians.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">July 10, 2025</div>
+        <h3 class="essay-title"><a href="essays/what-they-are-saying-about-mary-to-destroy-the-faith-of-catholics.html">What They Are Saying About Mary To Destroy The Faith Of Catholics​</a></h3>
+        <p class="essay-preview">What They Are Saying About Mary To Destroy The Faith Of Catholics By Dr. JAMES LIKOUDIS Every Catholic has been aware of the fact that Marian devotion and piety have declined drastically in some of the Western nations si</p>
+        <a href="essays/what-they-are-saying-about-mary-to-destroy-the-faith-of-catholics.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">July 8, 2025</div>
+        <h3 class="essay-title"><a href="essays/anthony-j-tambascos-modernist-video-course-in-the-time-of-jesus.html">Anthony J. Tambasco’s Modernist Video-Course: ” In The Time Of Jesus “</a></h3>
+        <p class="essay-preview">Anthony J. Tambasco&#x27;s Modernist Video-Course: &quot; In The Time Of Jesus &quot; By Dr. JAMES LIKOUDIS In our May 1988 issue [ “Serviam” ] we reviewed Anthony J. Tambasco’s “WHAT ARE THEY SAYING ABOUT MARY?” (Paulist Press, 1984) </p>
+        <a href="essays/anthony-j-tambascos-modernist-video-course-in-the-time-of-jesus.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">July 3, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-gospel-according-to-joshua-spirituality-for-an-american-church.html">The Gospel According to Joshua: Spirituality for an ” American Church”?</a></h3>
+        <p class="essay-preview">The Gospel According to Joshua: Spirituality for an &quot; American Church&quot;? By Dr. JAMES LIKOUDIS Editorial Note : Since the following article was published, Joseph Girzone has written four other books starring his “JOSHUA” </p>
+        <a href="essays/the-gospel-according-to-joshua-spirituality-for-an-american-church.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">July 1, 2025</div>
+        <h3 class="essay-title"><a href="essays/contraception-and-the-catholic-conscience-the-betrayal-continues.html">Contraception And The Catholic Conscience: The Betrayal Continues</a></h3>
+        <p class="essay-preview">Contraception And The Catholic Conscience: The Betrayal Continues By Dr. JAMES LIKOUDIS As everyone knows, the Catholic Church has undergone violent attacks even from within its own body for its teaching on the intrinsic</p>
+        <a href="essays/contraception-and-the-catholic-conscience-the-betrayal-continues.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">June 26, 2025</div>
+        <h3 class="essay-title"><a href="essays/christ-keeps-his-church-incorrupt-and-ever-faithful.html">CHRIST KEEPS HIS CHURCH INCORRUPT AND EVER-FAITHFUL</a></h3>
+        <p class="essay-preview">CHRIST KEEPS HIS CHURCH INCORRUPT AND EVER-FAITHFUL By Dr. JAMES LIKOUDIS Recently, “ The Christian News (April 5 th , 1993), edited by Herman J. Otten, printed my article, “ The Bible Is Not the Ultimate Authority .” Th</p>
+        <a href="essays/christ-keeps-his-church-incorrupt-and-ever-faithful.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">June 24, 2025</div>
+        <h3 class="essay-title"><a href="essays/msgr-joseph-champlins-together-for-life.html">Msgr. Joseph Champlin’s  ‘TOGETHER FOR LIFE’: Is it Faithful to Magisterial Teaching on Contraception?</a></h3>
+        <p class="essay-preview">Msgr. Joseph Champlin&#x27;s &#x27;TOGETHER FOR LIFE&#x27;: Is it Faithful to Magisterial Teaching on Contraception? By Dr. JAMES LIKOUDIS As the Buffalo Diocesan paper “Western New York Catholic” (November 1988) noted: “The name Champ</p>
+        <a href="essays/msgr-joseph-champlins-together-for-life.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">June 19, 2025</div>
+        <h3 class="essay-title"><a href="essays/a-scripture-scholars-blasphemy-and-other-falsehoods.html">A Scripture Scholar’s Blasphemy And Other Falsehoods</a></h3>
+        <p class="essay-preview">A Scripture Scholar&#x27;s Blasphemy And Other Falsehoods By Dr. JAMES LIKOUDIS The Catholic Catechism defines blasphemy as follows: Blasphemy is directly opposed to the 2nd Commandment. It consists in uttering against God – </p>
+        <a href="essays/a-scripture-scholars-blasphemy-and-other-falsehoods.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">June 17, 2025</div>
+        <h3 class="essay-title"><a href="essays/neo-modernist-theology-for-teachers-in-canada.html">NEO-MODERNIST THEOLOGY FOR TEACHERS IN CANADA</a></h3>
+        <p class="essay-preview">NEO-MODERNIST THEOLOGY FOR TEACHERS IN CANADA By Dr. JAMES LIKOUDIS Fr. Ian Knox, C.S.Sp., is the author of a work [titled] “ Theology for Teachers ” (Novalis, St. Paul University, Ottawa, Canada, 2nd ed., 1994). Incredi</p>
+        <a href="essays/neo-modernist-theology-for-teachers-in-canada.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">June 12, 2025</div>
+        <h3 class="essay-title"><a href="essays/pope-john-paul-ii-yes-fr-charles-curran-no.html">Pope John Paul II, Yes! Fr. Charles Curran, No!</a></h3>
+        <p class="essay-preview">Pope John Paul II, Yes! Fr. Charles Curran, No! By Dr. JAMES LIKOUDIS “Pope John Paul II, Yes! Fr. Charles E. Curran, No!” So stated a recent large advertisement in the “Rochester Democrat-Chronicle” (March 23, 1986) by </p>
+        <a href="essays/pope-john-paul-ii-yes-fr-charles-curran-no.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">June 10, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-catechism-and-the-catholic-church-both-teach-transubstantiation.html">THE CATECHISM AND THE CATHOLIC CHURCH BOTH TEACH ‘TRANSUBSTANTIATION’</a></h3>
+        <p class="essay-preview">THE CATECHISM AND THE CATHOLIC CHURCH BOTH TEACH &#x27;TRANSUBSTANTIATION&#x27; By Dr. JAMES LIKOUDIS In one of his recent syndicated columns ( The Catholic Advance , 1/15/93), Fr. John Dietzen properly notes in reply to an inquir</p>
+        <a href="essays/the-catechism-and-the-catholic-church-both-teach-transubstantiation.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">June 5, 2025</div>
+        <h3 class="essay-title"><a href="essays/what-to-think-of-small-faith-communities.html">What to Think of ‘Small Faith Communities’</a></h3>
+        <p class="essay-preview">What to Think of &#x27;Small Faith Communities&#x27; By Dr. JAMES LIKOUDIS First, it must be said that “Small Faith Communities” (SFC’s) are an ambiguous phenomenon. There is nothing wrong with gatherings of Catholics who meet in </p>
+        <a href="essays/what-to-think-of-small-faith-communities.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">June 3, 2025</div>
+        <h3 class="essay-title"><a href="essays/why-catholics-have-been-lost-to-the-church.html">Why Catholics Have Been Lost to the Church</a></h3>
+        <p class="essay-preview">Why Catholics Have Been Lost to the Church By Dr. JAMES LIKOUDIS As Catholics prepare for the Millennium celebration of Jubilee 2,000 and the spiritual renewal which Lent 1999 calls us to, it would do well to meditate on</p>
+        <a href="essays/why-catholics-have-been-lost-to-the-church.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">May 29, 2025</div>
+        <h3 class="essay-title"><a href="essays/the-meaning-of-papal-infallibility.html">The Meaning of Papal Infallibility</a></h3>
+        <p class="essay-preview">The Meaning of Papal Infallibility By Dr. JAMES LIKOUDIS There is little doubt that Papal Infallibility has been badly misunderstood. Dissenters from Catholic Teaching such as Hans Küng, Rosemary Radford Ruether, Charles</p>
+        <a href="essays/the-meaning-of-papal-infallibility.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">May 27, 2025</div>
+        <h3 class="essay-title"><a href="essays/on-monika-the-modernist.html">On Monika the Modernist</a></h3>
+        <p class="essay-preview">On Monika the Modernist By Dr. JAMES LIKOUDIS EDITORIAL NOTE: Laity in the Diocese of Buffalo have found incomprehensible our diocesan Christ the King Seminary having awarded Dr. Monika Hellwig an honorary Doctorate in 1</p>
+        <a href="essays/on-monika-the-modernist.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">May 22, 2025</div>
+        <h3 class="essay-title"><a href="essays/diluting-the-divinity-of-christ.html">Diluting The Divinity Of Christ</a></h3>
+        <p class="essay-preview">Diluting The Divinity Of Christ By Dr. JAMES LIKOUDIS Our previous article highlighted Sr. Elizabeth Johnson’s interview in ” U.S. Catholic ” magazine (April 1992) wherein she denied that Our Blessed Lord was always awar</p>
+        <a href="essays/diluting-the-divinity-of-christ.html" class="essay-read">Read Essay →</a>
+      </div>
+      <div class="essay-card reveal" data-year="2025">
+        <div class="essay-meta">May 20, 2025</div>
+        <h3 class="essay-title"><a href="essays/was-christ-a-layman.html">Was Christ a Layman?</a></h3>
+        <p class="essay-preview">Was Christ a Layman? By Dr. JAMES LIKOUDIS At a 3-day Retreat for Priests held in the diocese of Rochester, N.Y., the featured speaker, a priest, repeatedly referred to Our Blessed Savior as “a layman.” Alleging a “new p</p>
+        <a href="essays/was-christ-a-layman.html" class="essay-read">Read Essay →</a>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="essays-cta">
-  <div class="essays-cta-inner reveal">
-    <span class="section-label">More Essays</span>
-    <h2 class="section-title" style="color:var(--cream)">The Full Archive</h2>
-    <div class="divider center"></div>
-    <p>Dr. Likoudis produced over 300 scholarly essays across seven decades. The complete archive continues to be digitized and published on the Foundation's website.</p>
-    <a href="https://likoudislegacy.com/essay-archive/" class="btn-primary" target="_blank">View Full Archive</a>
   </div>
 </section>
 
@@ -253,11 +567,43 @@
   <div class="footer-inner">
     <div class="footer-brand"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF Logo"><p>A 501(c)(3) dedicated to ecumenical scholarship and Christian unity.</p><address>Baltimore, MD · 410-409-1695</address></div>
     <div class="footer-col"><h4>Foundation</h4><ul><li><a href="about.html">About</a></li><li><a href="james-likoudis.html">James Likoudis</a></li><li><a href="team.html">Team</a></li><li><a href="fellows.html">Fellows Program</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="footer-col"><h4>Media</h4><ul><li><a href="videos.html">Video Archive</a></li><li><a href="essays.html">Essay Archive</a></li><li><a href="photos.html">Photo Archive</a></li><li><a href="books.html">Books</a></li><li><a href="kydones.html">Kydones Review</a></li></ul></div>
-    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="consulting.html">Consulting</a></li><li><a href="press.html">Press & Media Kit</a></li></ul></div>
+    <div class="footer-col"><h4>Media</h4><ul><li><a href="videos.html">Video Archive</a></li><li><a href="essays.html">Essay Archive</a></li><li><a href="photos.html">Photo Archive</a></li><li><a href="books.html">Books</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="consulting.html">Consulting</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><p>© 2025 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacyF" target="_blank">𝕏</a></div></div>
+  <div class="footer-bottom"><p>© 2025 Likoudis Legacy Foundation · Tax ID: 99-3126276</p></div>
 </footer>
 <script src="main.js"></script>
+<script>
+const cards = Array.from(document.querySelectorAll('.essay-card'));
+const countEl = document.getElementById('results-count');
+let activeYear = 'all';
+let searchTerm = '';
+
+function update() {
+  let visible = 0;
+  cards.forEach(c => {
+    const yearMatch = activeYear === 'all' || c.dataset.year === activeYear;
+    const text = c.textContent.toLowerCase();
+    const searchMatch = !searchTerm || text.includes(searchTerm);
+    if (yearMatch && searchMatch) { c.classList.remove('hidden'); visible++; }
+    else c.classList.add('hidden');
+  });
+  countEl.textContent = visible + ' essay' + (visible !== 1 ? 's' : '');
+}
+
+document.querySelectorAll('.yr-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.yr-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeYear = btn.dataset.year;
+    update();
+  });
+});
+
+document.getElementById('essay-search').addEventListener('input', e => {
+  searchTerm = e.target.value.toLowerCase().trim();
+  update();
+});
+</script>
 </body>
 </html>
