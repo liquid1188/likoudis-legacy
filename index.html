@@ -350,6 +350,7 @@
     transition: border-color 0.2s;
   }
   .latest-link:hover { border-color: var(--gold); }
+  @media(max-width:650px) { .latest-two-col { grid-template-columns: 1fr !important; } }
   .pope-img {
     width: 120px;
     height: 160px;
@@ -996,11 +997,21 @@
 <section class="latest">
   <div class="latest-inner reveal">
     <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6745.jpeg?fit=772%2C1024&ssl=1" alt="James Likoudis" class="pope-img" style="filter:sepia(15%);">
-    <span class="section-label">Featured in the <em>Catholic Social Science Review</em></span>
-    <h2 class="section-title" style="color:var(--cream)">A Scholar Remembered</h2>
+    <span class="section-label">In Memory of James Likoudis</span>
+    <h2 class="section-title" style="color:var(--cream)">A Life Written Down</h2>
     <div class="divider center"></div>
-    <p class="latest-body">The <em>Catholic Social Science Review</em> — the peer-reviewed journal of the Society of Catholic Social Scientists — has published a tribute to Dr. James Likoudis in its 2025 volume. The piece recognizes his decades of apologetic, ecumenical, and catechetical work, his leadership with Catholics United for the Faith, and his witness to the integrity of Catholic doctrine across a full century of the Church's life.</p>
-    <a href="https://catholicsocialscientists.org/journal-cssr/" class="latest-link" target="_blank">Read in <em>CSSR</em> Vol. 30 (2025) →</a>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2rem;">
+      <div style="border-top:1px solid rgba(200,169,110,0.25);padding-top:1.5rem;">
+        <span style="font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(200,169,110,0.55);display:block;margin-bottom:0.75rem;">September 2025 · Patheos / Nature &amp; Grace</span>
+        <p class="latest-body" style="font-size:1rem;margin:0 0 1.25rem;">Andrew Likoudis's one-year tribute — written on the anniversary of his grandfather's passing — reflecting on James Likoudis's nearly hundred years of faith, scholarship, and devotion to Christian unity.</p>
+        <a href="https://www.patheos.com/blogs/natureandgrace/2025/09/james-likoudis-one-year-death-anniversary/" class="latest-link" target="_blank">Read the anniversary tribute →</a>
+      </div>
+      <div style="border-top:1px solid rgba(200,169,110,0.25);padding-top:1.5rem;">
+        <span style="font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(200,169,110,0.55);display:block;margin-bottom:0.75rem;">2025 · Catholic Social Science Review, Vol. 30</span>
+        <p class="latest-body" style="font-size:1rem;margin:0 0 1.25rem;">A scholarly tribute published in the peer-reviewed journal of the Society of Catholic Social Scientists, recognizing Likoudis's decades of apologetic, ecumenical, and catechetical work and his witness to the integrity of Catholic doctrine.</p>
+        <a href="https://catholicsocialscientists.org/journal-cssr/" class="latest-link" target="_blank">Read in <em>CSSR</em> Vol. 30 (2025) →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1292,10 +1303,6 @@
       <div class="saint">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/John_Henry_Newman_by_Sir_John_Everett_Millais%2C_1st_Bt.jpg/240px-John_Henry_Newman_by_Sir_John_Everett_Millais%2C_1st_Bt.jpg" alt="St. John Henry Newman">
         <p class="saint-name">St. John Henry<br>Newman</p>
-      </div>
-      <div class="saint">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Botticelli_augustine.jpg/240px-Botticelli_augustine.jpg" alt="St. Augustine">
-        <p class="saint-name">St. Augustine<br>of Hippo</p>
       </div>
       <div class="saint">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyril_and_Methodius2.jpg/240px-Cyril_and_Methodius2.jpg" alt="Sts. Cyril and Methodius">
