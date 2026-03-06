@@ -1,40 +1,93 @@
-// Scroll reveal
+/* ─── LLF MAIN.JS ─── */
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  /* ── 1. SCROLL REVEAL ── */
   const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-});
+  if (reveals.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => io.observe(el));
+  }
 
-// Mobile hamburger nav
-document.addEventListener('DOMContentLoaded', () => {
+  /* ── 2. NAV: shrink + highlight on scroll ── */
   const nav = document.querySelector('nav');
-  if (!nav) return;
-  const links = nav.querySelector('.nav-links');
-  if (!links) return;
+  if (nav) {
+    const onScroll = () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
-  // Create hamburger button
-  const btn = document.createElement('button');
-  btn.className = 'nav-hamburger';
-  btn.setAttribute('aria-label', 'Menu');
-  btn.innerHTML = '<span></span><span></span><span></span>';
-  nav.appendChild(btn);
+  /* ── 3. BACK-TO-TOP BUTTON ── */
+  const btt = document.createElement('button');
+  btt.className = 'back-to-top';
+  btt.setAttribute('aria-label', 'Back to top');
+  btt.innerHTML = '↑';
+  document.body.appendChild(btt);
 
-  btn.addEventListener('click', () => {
-    const open = links.classList.toggle('mobile-open');
-    btn.classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
+  window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+
+  btt.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // Close on link click
-  links.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      links.classList.remove('mobile-open');
-      btn.classList.remove('open');
-      document.body.style.overflow = '';
+  /* ── 4. MOBILE HAMBURGER NAV ── */
+  if (nav) {
+    const links = nav.querySelector('.nav-links');
+    if (links) {
+      const btn = document.createElement('button');
+      btn.className = 'nav-hamburger';
+      btn.setAttribute('aria-label', 'Menu');
+      btn.innerHTML = '<span></span><span></span><span></span>';
+      nav.appendChild(btn);
+
+      btn.addEventListener('click', () => {
+        const open = links.classList.toggle('mobile-open');
+        btn.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          links.classList.remove('mobile-open');
+          btn.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  }
+
+  /* ── 5. ACTIVE NAV LINK ── */
+  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === currentFile || (currentFile === '' && href === 'index.html')) {
+      a.classList.add('nav-active');
+    }
+  });
+
+  /* ── 6. SMOOTH ANCHOR SCROLL (offset for fixed nav) ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      const offset = 80;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+
 });
