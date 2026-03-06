@@ -497,7 +497,7 @@
   }
   .press-logos {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2px;
   }
   .press-logo {
@@ -586,7 +586,7 @@
   }
   .patrons-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2px;
     margin-top: 3.5rem;
   }
@@ -738,7 +738,7 @@
   }
   .saints-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2px;
     margin-top: 3rem;
     max-width: 1200px;
@@ -785,6 +785,41 @@
     line-height: 1.8;
     font-size: 0.95rem;
   }
+  .give-methods-section { margin-top: 2rem; }
+  .give-methods-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(244,237,224,0.35);
+    margin-bottom: 1rem;
+  }
+  .give-method-name {
+    display: block;
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(244,237,224,0.45);
+    margin-top: 5px;
+    text-align: center;
+  }
+  .give-methods-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0 1rem;
+    color: rgba(244,237,224,0.2);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .give-methods-divider::before,
+  .give-methods-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(244,237,224,0.08);
+  }
+  .give-methods-divider span { color: rgba(244,237,224,0.3); }
   .give-methods {
     display: flex;
     flex-wrap: wrap;
@@ -1223,19 +1258,19 @@
       <div class="divider center"></div>
     </div>
     <div class="projects-grid">
-      <a href="https://koinoniacatholic.com" class="project-card reveal" target="_blank">
+      <a href="https://liquid1188.github.io/koinonia" class="project-card reveal" target="_blank">
         <div class="project-icon">✦</div>
         <h3>Koinonia Catholic</h3>
         <p>A digital commons for Catholic scholarship, dialogue, and community — connecting the faithful across traditions.</p>
         <span class="project-tag">Digital Platform</span>
       </a>
-      <a href="https://theunmooredgeneration.com" class="project-card reveal reveal-delay-1" target="_blank">
+      <a href="https://liquid1188.github.io/unmoored-generation" class="project-card reveal reveal-delay-1" target="_blank">
         <div class="project-icon">✦</div>
         <h3>The Unmoored Generation</h3>
         <p>A Foundation initiative addressing the purpose crisis among young adults — integrating faith, meaning, and vocation.</p>
         <span class="project-tag">Initiative</span>
       </a>
-      <a href="https://traditionandrenewal.com" class="project-card reveal reveal-delay-2" target="_blank">
+      <a href="https://traditionandrenewal.substack.com" class="project-card reveal reveal-delay-2" target="_blank">
         <div class="project-icon">✦</div>
         <h3>Tradition & Renewal</h3>
         <p>A Substack publication offering daily roundups, analysis, and commentary on the Church's living tradition and reform.</p>
@@ -1317,7 +1352,7 @@
         <p class="saint-name">St. Thomas<br>Aquinas</p>
       </div>
       <div class="saint">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Manuel_II_Paleologus_and_his_family.jpg/120px-Manuel_II_Paleologus_and_his_family.jpg" alt="Demetrius Kydones">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Manuel_II_Paleologus_and_his_family.jpg/240px-Manuel_II_Paleologus_and_his_family.jpg" alt="Demetrius Kydones">
         <p class="saint-name">Blessed<br>Demetrios Kydones</p>
       </div>
     </div>
@@ -1332,13 +1367,39 @@
     <div class="divider center"></div>
     <p>By supporting the Likoudis Legacy Foundation, you honor James Likoudis' legacy and contribute to meaningful change — in ecumenical dialogue, theological scholarship, and the defense of religious liberty worldwide.</p>
     <a href="donate.html" class="btn-primary">Make a Gift Today</a>
-    <div class="give-methods">
-      <a href="https://donate.stripe.com/8x200beyMgHugS84Xla3u00" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/05/likoudis-stripe.png?resize=150%2C150&ssl=1" alt="Stripe"></a>
-      <a href="https://account.venmo.com/u/Andrew-likoudis" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/venmo-likoudis-square.png?resize=150%2C150&ssl=1" alt="Venmo"></a>
-      <a href="https://www.paypal.com/paypalme/LikoudisLegacy" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_pp.png?resize=150%2C150&ssl=1" alt="PayPal"></a>
-      <a href="https://www.patreon.com/profile/creators?u=34254725" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_patreon.png?resize=150%2C150&ssl=1" alt="Patreon"></a>
-      <a href="https://www.zellepay.com/" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/zelle2.png?resize=150%2C150&ssl=1" alt="Zelle"></a>
-      <a href="https://www.gofundme.com/f/launch-the-likoudis-legacy-foundation" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_gofundme.png?resize=150%2C150&ssl=1" alt="GoFundMe"></a>
+    <div class="give-methods-section">
+      <p class="give-methods-label">One-time gift</p>
+      <div class="give-methods">
+        <a href="https://donate.stripe.com/8x200beyMgHugS84Xla3u00" class="give-method" target="_blank">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/05/likoudis-stripe.png?resize=150%2C150&ssl=1" alt="Stripe">
+          <span class="give-method-name">Credit Card</span>
+        </a>
+        <a href="https://www.paypal.com/paypalme/LikoudisLegacy" class="give-method" target="_blank">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_pp.png?resize=150%2C150&ssl=1" alt="PayPal">
+          <span class="give-method-name">PayPal</span>
+        </a>
+        <a href="https://account.venmo.com/u/Andrew-likoudis" class="give-method" target="_blank">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/venmo-likoudis-square.png?resize=150%2C150&ssl=1" alt="Venmo">
+          <span class="give-method-name">Venmo</span>
+        </a>
+        <a href="https://www.zellepay.com/" class="give-method" target="_blank">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/zelle2.png?resize=150%2C150&ssl=1" alt="Zelle">
+          <span class="give-method-name">Zelle</span>
+        </a>
+        <a href="https://www.gofundme.com/f/launch-the-likoudis-legacy-foundation" class="give-method" target="_blank">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_gofundme.png?resize=150%2C150&ssl=1" alt="GoFundMe">
+          <span class="give-method-name">GoFundMe</span>
+        </a>
+      </div>
+      <div class="give-methods-divider">
+        <span>Monthly giving</span>
+      </div>
+      <div class="give-methods">
+        <a href="https://www.patreon.com/profile/creators?u=34254725" class="give-method" target="_blank">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_patreon.png?resize=150%2C150&ssl=1" alt="Patreon">
+          <span class="give-method-name">Patreon</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
