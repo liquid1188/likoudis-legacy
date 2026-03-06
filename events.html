@@ -6,12 +6,262 @@
 <link rel="stylesheet" href="style.css">
 <style>
 .events-body { padding: 7rem 2rem; }
-.events-inner { max-width: 900px; margin: 0 auto; }
-.no-events { text-align: center; padding: 5rem 2rem; border: 1px solid var(--border); margin-top: 3rem; }
-.no-events p { color: var(--muted); font-size: 0.9rem; line-height: 1.8; margin-top: 1rem; }
+.events-inner { max-width: 960px; margin: 0 auto; }
+
+/* ─── EVENT CARD ─── */
+.event-card {
+  border: 1px solid rgba(200,169,110,0.2);
+  background: var(--ivory);
+  margin-top: 3.5rem;
+  overflow: hidden;
+}
+.event-card-header {
+  background: var(--navy);
+  padding: 2.5rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+}
+.event-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(200,169,110,0.35);
+  padding: 4px 12px;
+  margin-bottom: 1.25rem;
+}
+.event-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: inline-block;
+}
+.event-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+.event-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(200,169,110,0.6);
+}
+.event-date-badge {
+  text-align: center;
+  border: 1px solid rgba(200,169,110,0.25);
+  padding: 1rem 1.5rem;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+.event-date-month {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+}
+.event-date-day {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  color: var(--cream);
+  line-height: 1;
+  display: block;
+  margin: 0.2rem 0;
+}
+.event-date-year {
+  font-size: 0.62rem;
+  color: rgba(244,237,224,0.4);
+  letter-spacing: 0.1em;
+  display: block;
+}
+.event-card-body {
+  padding: 3rem;
+}
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.event-meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+.event-meta-icon {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  margin-top: 1px;
+}
+.event-meta-text {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.event-meta-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 2px;
+}
+.event-description {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+}
+.event-description p { margin-bottom: 1.25rem; }
+.event-description p:last-child { margin-bottom: 0; }
+
+/* ─── SPEAKERS ─── */
+.event-speakers-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  opacity: 0.85;
+}
+.event-speakers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.speaker-card {
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  background: white;
+}
+.speaker-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 0.3rem;
+}
+.speaker-role {
+  font-size: 0.68rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ─── PARTNER ─── */
+.event-partner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(200,169,110,0.15);
+  background: var(--navy);
+  margin-bottom: 2.5rem;
+}
+.event-partner img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: brightness(1.1);
+  flex-shrink: 0;
+}
+.event-partner-text {}
+.event-partner-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(200,169,110,0.5);
+  display: block;
+  margin-bottom: 3px;
+}
+.event-partner-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--cream);
+}
+.event-partner-desc {
+  font-size: 0.72rem;
+  color: rgba(244,237,224,0.45);
+  margin-top: 2px;
+}
+
+/* ─── PROGRAM ─── */
+.event-program-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  opacity: 0.85;
+}
+.event-program {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+.program-item {
+  background: var(--ivory);
+  padding: 1rem 1.25rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.program-item::before {
+  content: '✦';
+  font-size: 0.5rem;
+  color: var(--gold);
+  margin-right: 0.5rem;
+  opacity: 0.7;
+}
+
+/* ─── HOTEL ─── */
+.event-hotel {
+  background: rgba(200,169,110,0.06);
+  border-left: 2px solid var(--gold);
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 2.5rem;
+}
+.event-hotel p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.event-hotel strong {
+  color: var(--navy);
+}
+
+.event-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ─── UPCOMING NOTE ─── */
 .upcoming-note { background: var(--navy); padding: 6rem 2rem; text-align: center; }
 .upcoming-note-inner { max-width: 700px; margin: 0 auto; }
 .upcoming-note p { color: rgba(244,237,224,0.6); line-height: 1.85; margin: 1.5rem 0 2.5rem; font-size: 0.95rem; }
+
+@media(max-width:700px) {
+  .event-card-header { grid-template-columns: 1fr; }
+  .event-date-badge { display: none; }
+  .event-card-body { padding: 2rem 1.5rem; }
+}
 </style>
 </head>
 <body>
@@ -42,18 +292,114 @@
 
 <section class="events-body">
   <div class="events-inner">
-    <div class="reveal">
+    <div style="margin-bottom:1rem;">
       <span class="section-label">Calendar</span>
       <h2 class="section-title">Upcoming Events</h2>
       <div class="divider"></div>
     </div>
-    <div class="no-events reveal">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--muted);">No upcoming events at this time.</p>
-      <p>Check back soon — the Foundation regularly hosts lectures, symposia, and academic programs on ecumenism, theology, and religious liberty. Sign up for our newsletter to be notified of upcoming events.</p>
-      <div style="margin-top:2rem;">
-        <a href="contact.html" class="btn-primary">Join the Newsletter</a>
+
+    <!-- ORIENTALE LUMEN CONFERENCE -->
+    <div class="event-card">
+      <div class="event-card-header">
+        <div>
+          <span class="event-status">Confirmed · Registration Opening Soon</span>
+          <h2 class="event-title">Orientale Lumen Conference on Christian Unity</h2>
+          <p class="event-subtitle">A symposium on Catholic-Orthodox ecumenism &amp; the future of Christian dialogue</p>
+        </div>
+        <div class="event-date-badge">
+          <span class="event-date-month">July</span>
+          <span class="event-date-day">20</span>
+          <span class="event-date-year">2026</span>
+        </div>
+      </div>
+
+      <div class="event-card-body">
+
+        <div class="event-meta">
+          <div class="event-meta-item">
+            <span class="event-meta-icon">📍</span>
+            <div class="event-meta-text">
+              <span class="event-meta-label">Venue</span>
+              Basilica of the National Shrine of the Assumption of the Blessed Virgin Mary<br>
+              <span style="color:var(--muted);font-size:0.72rem;">409 Cathedral St, Baltimore, MD 21201</span>
+            </div>
+          </div>
+          <div class="event-meta-item">
+            <span class="event-meta-icon">📅</span>
+            <div class="event-meta-text">
+              <span class="event-meta-label">Date</span>
+              Week of July 20, 2026
+            </div>
+          </div>
+          <div class="event-meta-item">
+            <span class="event-meta-icon">🏨</span>
+            <div class="event-meta-text">
+              <span class="event-meta-label">Partner Hotel</span>
+              Hotel Indigo Baltimore · Special 50% conference rate
+            </div>
+          </div>
+        </div>
+
+        <div class="event-description">
+          <p>The Likoudis Legacy Foundation, in collaboration with the Orientale Lumen Foundation, will host an ecumenical conference on Christian unity at the Basilica of the National Shrine of the Assumption of the Blessed Virgin Mary — America's first cathedral — in Baltimore, Maryland.</p>
+          <p>The conference will bring together Catholic and Eastern Orthodox theologians, hierarchs, and scholars for a program of academic lectures, prayer services, and sacred music, continuing the ecumenical vision that defined the life's work of James Likoudis. The event takes its name and spirit from the Orientale Lumen tradition of East-West dialogue, which has convened annually since 1994 to deepen the bonds between Catholics and Eastern Christians.</p>
+        </div>
+
+        <div class="event-partner">
+          <img src="https://olfoundation.net/wp-content/uploads/2015/11/cropped-OLF-Logo.png" alt="Orientale Lumen Foundation">
+          <div class="event-partner-text">
+            <span class="event-partner-label">Co-Presented With</span>
+            <span class="event-partner-name">Orientale Lumen Foundation</span>
+            <p class="event-partner-desc">Washington, DC · Est. 1997 · Dedicated to Catholic-Orthodox dialogue and Eastern Christian spirituality · <a href="https://olfoundation.net" target="_blank" style="color:rgba(200,169,110,0.6);text-decoration:none;">olfoundation.net</a></p>
+          </div>
+        </div>
+
+        <p class="event-speakers-label">Confirmed Speakers &amp; Participants</p>
+        <div class="event-speakers">
+          <div class="speaker-card">
+            <p class="speaker-name">Cardinal Seán O'Malley, OFM Cap.</p>
+            <p class="speaker-role">Archbishop of Boston<br>Cardinal of the Holy Roman Church</p>
+          </div>
+          <div class="speaker-card">
+            <p class="speaker-name">Archbishop Claudio Gugerotti</p>
+            <p class="speaker-role">Secretary, Dicastery for Promoting Christian Unity<br>Holy See Representative</p>
+          </div>
+          <div class="speaker-card">
+            <p class="speaker-name">Archbishop Elpidophoros of America</p>
+            <p class="speaker-role">Primate, Greek Orthodox Archdiocese of America<br>Ecumenical Patriarchate of Constantinople</p>
+          </div>
+          <div class="speaker-card">
+            <p class="speaker-name">Bishop Denis Madden</p>
+            <p class="speaker-role">Auxiliary Bishop Emeritus<br>Archdiocese of Baltimore</p>
+          </div>
+          <div class="speaker-card" style="border-style:dashed;opacity:0.65;">
+            <p class="speaker-name">Orthodox Theologians</p>
+            <p class="speaker-role">Additional Eastern Orthodox speakers currently being confirmed</p>
+          </div>
+        </div>
+
+        <p class="event-program-label">Program Elements</p>
+        <div class="event-program">
+          <div class="program-item">Academic Lectures</div>
+          <div class="program-item">Ecumenical Prayer Services</div>
+          <div class="program-item">Sacred Music Event</div>
+          <div class="program-item">Collaborative Choral Performance</div>
+          <div class="program-item">Receptions &amp; Meals, Borders Hall</div>
+          <div class="program-item">Greek Orthodox Cathedral Choir Collaboration</div>
+        </div>
+
+        <div class="event-hotel">
+          <p><strong>Accommodations:</strong> The Foundation has secured a preferred rate with Hotel Indigo Baltimore — 50% off standard room prices for conference attendees. Booking details will be shared upon registration.</p>
+        </div>
+
+        <div class="event-cta">
+          <a href="contact.html" class="btn-primary">Express Interest</a>
+          <a href="donate.html" class="btn-outline" style="color:var(--navy);">Support the Foundation</a>
+        </div>
+
       </div>
     </div>
+
   </div>
 </section>
 
@@ -62,8 +408,8 @@
     <span class="section-label">Stay Connected</span>
     <h2 class="section-title" style="color:var(--cream)">Be the First to Know</h2>
     <div class="divider center"></div>
-    <p>The Likoudis Legacy Foundation is planning academic symposia, public lectures, and ecumenical dialogues. Subscribe to our newsletter to receive updates on all Foundation activities and events.</p>
-    <a href="contact.html" class="btn-primary">Contact Us</a>
+    <p>Subscribe to our newsletter to receive updates on conference registration, speaker announcements, and all Foundation activities.</p>
+    <a href="contact.html" class="btn-primary">Join the Newsletter</a>
   </div>
 </section>
 
@@ -72,7 +418,7 @@
     <div class="footer-brand"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF Logo"><p>A 501(c)(3) dedicated to ecumenical scholarship and Christian unity.</p><address>Baltimore, MD · 410-409-1695</address></div>
     <div class="footer-col"><h4>Foundation</h4><ul><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="events.html">Events</a></li><li><a href="fellows.html">Fellows Program</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Publications</h4><ul><li><a href="kydones.html">Kydones Review</a></li><li><a href="essays.html">Essay Archive</a></li><li><a href="books.html">Books</a></li></ul></div>
-    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="consulting.html">Consulting</a></li><li><a href="press.html">Press & Media Kit</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="consulting.html">Consulting</a></li><li><a href="press.html">Press &amp; Media Kit</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p>© 2025 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacyF" target="_blank">𝕏</a></div></div>
 </footer>
