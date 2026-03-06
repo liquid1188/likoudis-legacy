@@ -13,35 +13,63 @@
   <meta name="twitter:title" content="About — Likoudis Legacy Foundation">
   <meta name="twitter:description" content="Founded to honor James Likoudis, the Likoudis Legacy Foundation advances Catholic-Orthodox dialogue, theological scholarship, and lay apostolate.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Likoudis Legacy Foundation</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <style>
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; padding: 7rem 2rem; }
-.about-grid p { color: var(--muted); line-height: 1.85; font-size: 0.95rem; margin-bottom: 1.25rem; }
+/* ── MISSION ── */
+.about-mission { padding: 7rem 2rem; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; max-width: 1100px; margin: 0 auto; }
+.about-grid p { color: var(--muted); line-height: 1.9; font-size: 0.95rem; margin-bottom: 1.25rem; }
 .pillars { display: flex; flex-direction: column; gap: 2.5rem; }
 .pillar { padding-left: 1.5rem; border-left: 1px solid var(--border); }
 .pillar-num { font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; color: var(--gold); letter-spacing: 0.15em; margin-bottom: 0.4rem; }
 .pillar h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
-.pillar p { font-size: 0.88rem; line-height: 1.75; color: var(--muted); }
+.pillar p { font-size: 0.88rem; line-height: 1.8; color: var(--muted); }
+
+/* ── PATRON ── */
 .patron { background: var(--navy); padding: 7rem 2rem; }
-.patron-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 5rem; align-items: center; }
-.patron-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; filter: sepia(15%); border: 1px solid rgba(200,169,110,0.2); }
+.patron-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 5rem; align-items: start; }
+.patron-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top center; filter: sepia(12%); border: 1px solid rgba(200,169,110,0.2); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
 .patron-text .section-title { color: var(--cream); }
-.patron-text p { color: rgba(244,237,224,0.65); line-height: 1.85; font-size: 0.95rem; margin: 1.25rem 0; }
+.patron-text p { color: rgba(244,237,224,0.65); line-height: 1.9; font-size: 0.95rem; margin: 1.25rem 0; }
 .stat-row { display: flex; gap: 3rem; margin-top: 2.5rem; flex-wrap: wrap; }
-.stat { }
 .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--gold); font-weight: 300; line-height: 1; }
-.stat-label { font-size: 0.75rem; color: rgba(244,237,224,0.45); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
-.network { background: var(--cream); padding: 7rem 2rem; text-align: center; }
-.network-inner { max-width: 900px; margin: 0 auto; }
-.network-inner p { color: var(--muted); line-height: 1.85; font-size: 0.95rem; margin: 1.5rem 0; }
-@media(max-width:900px){ .about-grid{grid-template-columns:1fr;gap:3rem;} .patron-inner{grid-template-columns:1fr;} }
+.stat-label { font-size: 0.72rem; color: rgba(244,237,224,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+.patron-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem; }
+
+/* ── PROGRAMS ── */
+.programs { background: var(--cream); padding: 7rem 2rem; }
+.programs-inner { max-width: 1100px; margin: 0 auto; }
+.programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3.5rem; }
+.program-card { background: var(--ivory); border: 1px solid rgba(200,169,110,0.12); padding: 2.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.program-card:hover { border-color: rgba(200,169,110,0.3); }
+.program-icon { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold); opacity: 0.65; }
+.program-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--navy); font-weight: 500; }
+.program-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; flex: 1; }
+.program-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
+.program-link:hover { color: var(--navy); }
+
+/* ── NETWORK ── */
+.network { background: var(--navy); padding: 7rem 2rem; }
+.network-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+.network-inner p { color: rgba(244,237,224,0.6); line-height: 1.9; font-size: 0.95rem; margin: 1.5rem 0; }
+.network-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2.5rem; }
+
+/* ── GIVE CTA ── */
+.about-give { padding: 7rem 2rem; background: var(--ivory); text-align: center; }
+.about-give-inner { max-width: 640px; margin: 0 auto; }
+.about-give-inner p { color: var(--muted); line-height: 1.9; font-size: 0.95rem; margin: 1.5rem 0 2.5rem; }
+
+@media(max-width:900px){
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .patron-inner { grid-template-columns: 1fr; }
+  .programs-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
     <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF">
@@ -60,25 +88,23 @@
   </ul>
 </nav>
 
-<!-- HEADER -->
 <div class="page-header">
   <span class="eyebrow">501(c)(3) · Est. 2023</span>
   <h1>About the <em>Foundation</em></h1>
-  <p>Advancing Ecumenical Scholarship & Christian Unity</p>
+  <p>Advancing Ecumenical Scholarship &amp; Christian Unity</p>
   <div class="header-divider"></div>
 </div>
 
-<!-- ABOUT / MISSION -->
-<section>
-  <div class="container about-grid">
+<!-- MISSION -->
+<section class="about-mission">
+  <div class="about-grid">
     <div class="reveal">
       <span class="section-label">Our Mission</span>
       <h2 class="section-title">A Foundation for the Long Work of Unity</h2>
       <div class="divider"></div>
-      <p>The Likoudis Legacy Foundation is a premier 501(c)(3) nonprofit research institute dedicated to advancing ecumenical theology, interreligious dialogue, and religious liberty.</p>
-      <p>Founded in honor of Dr. James Likoudis — a pioneering American Catholic theologian renowned for his work reconciling Eastern and Western Christian traditions — the Foundation continues his nearly century-long legacy of scholarly excellence and visionary leadership.</p>
-      <p>Inspired by Dr. Likoudis' extensive legacy — including over ten influential books and more than 300 scholarly essays — we aim to inspire and equip future generations to address contemporary challenges.</p>
-      <p>The Foundation is run by a distinguished team of academics, clergy, and researchers, supported by an esteemed network including bishops, cardinals, university and seminary professors, and research fellows from premier institutions such as Harvard Divinity School and various Pontifical Universities.</p>
+      <p>The Likoudis Legacy Foundation is a 501(c)(3) nonprofit research institute dedicated to advancing ecumenical theology, interreligious dialogue, and the lay apostolate. We were founded in 2023 to honor and extend the intellectual legacy of Dr. James Likoudis — one of the most consequential American Catholic lay theologians of the twentieth century.</p>
+      <p>Likoudis devoted more than seventy years to a single, coherent project: the reunion of the Eastern Orthodox and Catholic Churches. He argued, documented, and testified to the possibility of that reunion — through books, essays, lectures, and decades of correspondence with Orthodox clergy and scholars. His work helped define what serious ecumenism looked like at the level of the laity.</p>
+      <p>The Foundation carries that project forward through scholarship, publication, education, and institutional bridge-building. We are directed by Andrew Likoudis, James's grandson, and governed by a board of theologians, academics, and Catholic intellectuals committed to the magisterial center.</p>
       <div style="margin-top:2rem;">
         <a href="team.html" class="btn-primary">Meet the Team</a>
       </div>
@@ -86,41 +112,98 @@
     <div class="pillars reveal reveal-delay-1">
       <div class="pillar">
         <p class="pillar-num">I.</p>
-        <h3>Fostering Ecumenical Unity</h3>
-        <p>Building bridges across diverse Christian traditions to achieve a more united Church and interreligious harmony.</p>
+        <h3>Ecumenical Scholarship</h3>
+        <p>Supporting serious Catholic-Orthodox theological dialogue — not the kind that papers over real differences, but the kind that names them clearly enough that they might one day be resolved.</p>
       </div>
       <div class="pillar">
         <p class="pillar-num">II.</p>
-        <h3>Upholding Human Dignity & Peace</h3>
-        <p>Promoting principles that foster understanding, respect, and global harmony. We also support humanitarian initiatives that witness to our faith in action.</p>
+        <h3>Defense of the Magisterial Center</h3>
+        <p>Standing for Vatican II read in continuity, against both progressive reinterpretation and traditionalist rupture. The via media is harder to hold than its alternatives, and that is precisely why it needs to be held.</p>
       </div>
       <div class="pillar">
         <p class="pillar-num">III.</p>
-        <h3>Advancing Religious Liberty</h3>
-        <p>Championing the rights of communities where the Christian faith is under threat, domestically and abroad.</p>
+        <h3>The Lay Apostolate</h3>
+        <p>James Likoudis did his life's work as a layman, a father, and a husband. The Foundation honors that witness — that deep theological formation and serious Christian engagement are not the exclusive preserve of the ordained.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PATRON -->
+<!-- JAMES LIKOUDIS -->
 <section class="patron">
   <div class="patron-inner">
     <div class="reveal">
-      <img src="https://likoudislegacy.com/wp-content/uploads/2024/09/James-Likoudis-Photo-scaled.jpg" alt="Dr. James Likoudis" class="patron-img" onerror="this.style.display='none'">
+      <img src="https://likoudislegacy.com/wp-content/uploads/2024/09/James-Likoudis-Photo-scaled.jpg"
+           alt="Dr. James Likoudis (1928–2024)"
+           class="patron-img"
+           onerror="this.style.display='none'">
     </div>
     <div class="reveal reveal-delay-1">
       <span class="section-label">Our Patron</span>
       <h2 class="section-title" style="color:var(--cream)">Dr. James Likoudis<br><em>(1928–2024)</em></h2>
       <div class="divider"></div>
-      <p>Dr. James Likoudis is an internationally recognized apologist, theologian, and lecturer on religious education, sex education, and family life. He is regarded as a leading authority on Ecumenism, Liturgy, the Papacy, Catechetics, and the role of the Laity in the Church.</p>
-      <p>His expertise in Papal and Conciliar history and vast knowledge of Orthodox issues have won him particular renown. A convert to the Catholic Church in 1952 from Eastern Orthodoxy, he devoted decades to fostering the reunion of the Eastern Orthodox churches with the Catholic Church.</p>
-      <p>In 2020 he was awarded an honorary doctorate of divinity from Sacred Heart Major Seminary for his contributions to ecumenism, Catholic morality, and defense of the faith.</p>
+      <p>James Likoudis was born in 1928 in Corning, New York, to a Greek Orthodox family. He converted to Catholicism in 1952 and spent the next seven decades pursuing a single conviction: that the reunion of Eastern and Western Christendom was not merely possible, but necessary — and that it demanded honest, patient, patristically grounded argument rather than diplomatic vagueness.</p>
+      <p>He wrote more than ten books and over 300 scholarly essays, was awarded an honorary doctorate of divinity from Sacred Heart Major Seminary in 2020, and was recognized by figures ranging from Cardinal Burke to Archbishop Elpidophoros of the Greek Orthodox Archdiocese of America. His work on the papacy, the <em>filioque</em>, Mariology, and Catholic moral teaching appeared in dozens of journals and was acquired by the world's premier research libraries — from Oxford and Harvard to the Library of Congress.</p>
+      <p>He died in September 2024, having been married to his wife Ruth for 71 years. He was 95.</p>
       <div class="stat-row">
         <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Books Authored</div></div>
         <div class="stat"><div class="stat-num">300+</div><div class="stat-label">Scholarly Essays</div></div>
         <div class="stat"><div class="stat-num">70+</div><div class="stat-label">Years of Service</div></div>
-        <div class="stat"><div class="stat-num">95</div><div class="stat-label">Years of Life</div></div>
+        <div class="stat"><div class="stat-num">71</div><div class="stat-label">Years of Marriage</div></div>
+      </div>
+      <div class="patron-ctas">
+        <a href="james-likoudis.html" class="btn-primary">His Life & Work</a>
+        <a href="donate.html" class="btn-outline" style="color:var(--cream);border-color:rgba(200,169,110,0.45);">Honor His Legacy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="programs">
+  <div class="programs-inner">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Our Programs</h2>
+      <div class="divider center"></div>
+      <p style="max-width:620px;margin:1.25rem auto 0;color:var(--muted);font-size:0.95rem;line-height:1.85;">The Foundation operates across publication, education, translation, and institutional dialogue — each program rooted in the same conviction that drove James Likoudis: that good scholarship serves the Church.</p>
+    </div>
+    <div class="programs-grid">
+      <div class="program-card reveal">
+        <div class="program-icon">✦</div>
+        <h3>The Kydones Review</h3>
+        <p>A peer-reviewed academic journal of Catholic theology, ecumenism, and patristics — named for the Byzantine theologian Demetrios Kydones, who spent his life laboring for East-West reunion. Volume I is expected in 2026.</p>
+        <a href="kydones.html" class="program-link">Learn more →</a>
+      </div>
+      <div class="program-card reveal reveal-delay-1">
+        <div class="program-icon">✦</div>
+        <h3>Fellows Program</h3>
+        <p>A cohort of emerging and established scholars in theology, philosophy, and Catholic intellectual life — affiliated with the Foundation and engaged in research aligned with its mission.</p>
+        <a href="fellows.html" class="program-link">Meet the fellows →</a>
+      </div>
+      <div class="program-card reveal reveal-delay-2">
+        <div class="program-icon">✦</div>
+        <h3>LLF Book Club</h3>
+        <p>A guided reading program on Catholic theology and ecumenism, led by Liz Moncada Sandoval. Currently reading James Likoudis's <em>The Divine Primacy of the Bishop of Rome</em>.</p>
+        <a href="bookclub.html" class="program-link">Join the program →</a>
+      </div>
+      <div class="program-card reveal">
+        <div class="program-icon">✦</div>
+        <h3>Cornelius à Lapide Project</h3>
+        <p>A translation pipeline producing the first complete English rendering of Cornelius à Lapide's 21-volume <em>Commentaria in Scripturam Sacram</em> — one of the great undiscovered resources of the Catholic exegetical tradition.</p>
+        <a href="get-involved.html" class="program-link">Support the project →</a>
+      </div>
+      <div class="program-card reveal reveal-delay-1">
+        <div class="program-icon">✦</div>
+        <h3>Orientale Lumen Conference</h3>
+        <p>A conference on Catholic-Orthodox dialogue bringing together bishops, theologians, and scholars. The 2025 conference featured Archbishop Elpidophoros and Archbishop Pache as the Holy See representative.</p>
+        <a href="events.html" class="program-link">Upcoming events →</a>
+      </div>
+      <div class="program-card reveal reveal-delay-2">
+        <div class="program-icon">✦</div>
+        <h3>Publications &amp; Archives</h3>
+        <p>The Foundation maintains the digital archive of James Likoudis's essays and produces new scholarship on ecumenism, liturgy, and the lay apostolate through <em>Tradition &amp; Renewal</em> and affiliated outlets.</p>
+        <a href="essays.html" class="program-link">Browse the archive →</a>
       </div>
     </div>
   </div>
@@ -130,18 +213,28 @@
 <section class="network">
   <div class="network-inner reveal">
     <span class="section-label">Our Reach</span>
-    <h2 class="section-title">A Distinguished Network</h2>
+    <h2 class="section-title" style="color:var(--cream)">A Distinguished Network</h2>
     <div class="divider center"></div>
-    <p>The Foundation's work is supported by an esteemed network including bishops, cardinals, university and seminary professors, and research fellows from premier institutions. Dr. Likoudis' work has been endorsed by such leaders as the late Dame Alice von Hildebrand, Dr. Scott Hahn, Raymond Cardinal Burke, and Archbishop Joseph Naumann.</p>
-    <p>His books are held in the collections of Oxford, Harvard, Princeton, the British Library, the Library of Congress, and dozens of Catholic seminaries and universities worldwide.</p>
-    <div style="margin-top:2.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+    <p>The Foundation's work is supported by an esteemed network of bishops, cardinals, seminary professors, and research fellows from premier institutions. James Likoudis was endorsed by figures including Raymond Cardinal Burke, the late Alice von Hildebrand, Dr. Scott Hahn, and Archbishop Elpidophoros. His books are held in the collections of Oxford, Harvard, Princeton, the British Library, the Library of Congress, and dozens of Catholic seminaries worldwide.</p>
+    <p>The Foundation's board and advisory council include leading scholars in dogmatic theology, philosophy, and Catholic social science — drawn from Sacred Heart Major Seminary, Franciscan University of Steubenville, and beyond.</p>
+    <div class="network-ctas">
       <a href="team.html" class="btn-primary">View the Team</a>
-      <a href="fellows.html" class="btn-outline">Fellows Program</a>
+      <a href="fellows.html" class="btn-outline" style="color:var(--cream);border-color:rgba(200,169,110,0.45);">Fellows Program</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- GIVE CTA -->
+<section class="about-give">
+  <div class="about-give-inner reveal">
+    <span class="section-label">Support the Work</span>
+    <h2 class="section-title">Honor the Legacy.<br>Advance the Work.</h2>
+    <div class="divider center"></div>
+    <p>The Likoudis Legacy Foundation runs on the support of individuals who believe that Catholic intellectual life deserves to be taken seriously — and that the long ecumenical project James Likoudis devoted his life to is still worth pursuing. Your gift funds scholarship, publication, and the education of the next generation of Catholic thinkers.</p>
+    <a href="donate.html" class="btn-primary">Make a Gift</a>
+  </div>
+</section>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -149,7 +242,7 @@
       <p>A 501(c)(3) research and educational foundation dedicated to ecumenical scholarship, Christian unity, and the promotion of religious liberty worldwide.</p>
       <address>Baltimore, MD<br>410-409-1695</address>
     </div>
-    <div class="footer-col"><h4>Foundation</h4><ul><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="events.html">Events</a></li><li><a href="fellows.html">Fellows Program</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://andrewlikoudis.com" target="_blank">Chairman's Site</a></li></ul></div>
+    <div class="footer-col"><h4>Foundation</h4><ul><li><a href="about.html">About</a></li><li><a href="james-likoudis.html">James Likoudis</a></li><li><a href="team.html">Team</a></li><li><a href="fellows.html">Fellows Program</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://andrewlikoudis.com" target="_blank">Chairman's Site</a></li></ul></div>
     <div class="footer-col"><h4>Publications</h4><ul><li><a href="kydones.html">The Kydones Review</a></li><li><a href="essays.html">Essay Archive</a></li><li><a href="videos.html">Video Archive</a></li><li><a href="books.html">Books</a></li></ul></div>
     <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="consulting.html">Consulting</a></li><li><a href="https://www.patreon.com/profile/creators?u=34254725" target="_blank">Patreon</a></li></ul></div>
   </div>
