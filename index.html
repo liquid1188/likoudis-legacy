@@ -116,14 +116,14 @@
     pointer-events: none;
   }
   .hero-logo-wrap {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     animation: fadeUp 1s 0.05s ease both;
   }
   .hero-logo {
-    width: 110px;
-    height: 110px;
+    width: 160px;
+    height: 160px;
     object-fit: contain;
-    filter: drop-shadow(0 0 24px rgba(200,169,110,0.25));
+    filter: drop-shadow(0 0 32px rgba(200,169,110,0.35));
   }
   .hero-cross {
     font-family: 'Cormorant Garamond', serif;
@@ -676,69 +676,53 @@
     text-transform: uppercase;
   }
 
-  /* ─── POPE CALLOUT ─── */
-  .pope-callout {
-    background: var(--cream);
-    padding: 7rem 2rem;
-    border-top: 1px solid rgba(200,169,110,0.15);
-  }
-  .pope-callout-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 5rem;
-    align-items: center;
-  }
-  .pope-callout-text p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    line-height: 1.85;
-    color: var(--muted);
-    margin-top: 1.5rem;
-  }
-  .pope-callout-image {
+  /* ─── POPE MOTTO ACCENT ─── */
+  .papal-motto-bar {
+    background: var(--navy);
+    border-top: 1px solid rgba(200,169,110,0.12);
+    border-bottom: 1px solid rgba(200,169,110,0.12);
+    padding: 1.5rem 2rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
+    justify-content: center;
+    gap: 1.5rem;
   }
-  .pope-callout-image > img {
-    width: 200px;
-    height: 260px;
+  .papal-photo {
+    width: 52px;
+    height: 68px;
     object-fit: cover;
     object-position: top;
-    border: 1px solid rgba(200,169,110,0.25);
-    filter: sepia(10%);
+    filter: sepia(15%) brightness(0.9);
+    border: 1px solid rgba(200,169,110,0.2);
+    flex-shrink: 0;
   }
-  .pope-callout-caption {
-    text-align: center;
-  }
-  .coat-of-arms {
-    width: 80px;
+  .papal-arms {
+    width: 36px;
     height: auto;
-    margin-bottom: 0.5rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    opacity: 0.85;
+    flex-shrink: 0;
   }
-  .pope-motto-text {
+  .papal-motto-text {
+    text-align: left;
+  }
+  .papal-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(200,169,110,0.5);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .papal-motto-text p {
     font-family: 'IM Fell English', serif;
     font-style: italic;
     font-size: 0.95rem;
-    color: var(--navy);
-    margin: 0.25rem 0 0;
+    color: rgba(244,237,224,0.75);
+    margin: 0;
   }
-  .pope-motto-trans {
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin: 0.3rem 0 0;
-  }
-  @media(max-width:800px) {
-    .pope-callout-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .pope-callout-image { order: -1; }
+  @media(max-width:600px) {
+    .papal-photo, .papal-arms { display: none; }
+    .papal-motto-text { text-align: center; }
   }
 
   /* ─── SAINTS ─── */
@@ -753,10 +737,10 @@
   }
   .saints-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2px;
     margin-top: 3rem;
-    max-width: 1100px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -945,6 +929,7 @@
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="about.html">About ▾</a><div class="nav-dropdown-menu"><a href="about.html">About</a><a href="james-likoudis.html">James Likoudis</a><a href="team.html">Team</a><a href="events.html">Events</a><a href="contact.html">Contact</a></div></li>
     <li><a href="fellows.html">Fellows Program</a></li>
+    <li><a href="bookclub.html">Book Club</a></li>
     <li><a href="consulting.html">Consulting</a></li>
     <li><a href="kydones.html">Kydones Review</a></li>
     <li class="nav-dropdown"><a href="#">Media ▾</a><div class="nav-dropdown-menu"><a href="videos.html">Video Archive</a><a href="essays.html">Essay Archive</a><a href="photos.html">Photo Archive</a></div></li>
@@ -966,7 +951,7 @@
   <p class="hero-motto">In Illo Uno Unum — In the One, we are one.</p>
   <div class="hero-buttons">
     <a href="donate.html" class="btn-primary">Support the Foundation</a>
-    <a href="#about" class="btn-outline">Our Mission</a>
+    <a href="#about" class="btn-outline" style="color:var(--cream);border-color:rgba(200,169,110,0.5);">Our Mission</a>
   </div>
   <div class="hero-scroll">
     <div class="scroll-line"></div>
@@ -1020,25 +1005,15 @@
 </section>
 
 
-<!-- POPE LEO CALLOUT -->
-<section class="pope-callout">
-  <div class="pope-callout-inner reveal">
-    <div class="pope-callout-text">
-      <span class="section-label">The Papal Motto</span>
-      <h2 class="section-title">Pope Leo XIV</h2>
-      <div class="divider"></div>
-      <p>The Foundation's motto — <em>In Illo Uno Unum</em> — is also the motto of Pope Leo XIV, taken from Saint Augustine's <em>Exposition on Psalm 127</em>: "Although we Christians are many, in the one Christ we are one." It is a fitting convergence for a foundation devoted to ecumenical scholarship and Christian unity.</p>
-    </div>
-    <div class="pope-callout-image">
-      <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/pope-leo.webp?fit=473%2C610&ssl=1" alt="Pope Leo XIV">
-      <div class="pope-callout-caption">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Coat_of_arms_of_Pope_Leo_XIV.svg/200px-Coat_of_arms_of_Pope_Leo_XIV.svg.png" alt="Coat of Arms of Pope Leo XIV" class="coat-of-arms">
-        <p class="pope-motto-text"><em>In Illo Uno Unum</em></p>
-        <p class="pope-motto-trans">"In the One, we are one."</p>
-      </div>
-    </div>
+<!-- PAPAL MOTTO ACCENT -->
+<div class="papal-motto-bar">
+  <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/pope-leo.webp?fit=473%2C610&ssl=1" alt="Pope Leo XIV" class="papal-photo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Coat_of_arms_of_Pope_Leo_XIV.svg/120px-Coat_of_arms_of_Pope_Leo_XIV.svg.png" alt="Coat of Arms" class="papal-arms">
+  <div class="papal-motto-text">
+    <span class="papal-label">Pope Leo XIV · Pontifical Motto</span>
+    <p><em>In Illo Uno Unum</em> &mdash; "In the One, we are one."</p>
   </div>
-</section>
+</div>
 
 <!-- ENDORSEMENTS -->
 <section class="endorsements" id="endorsements">
@@ -1326,6 +1301,14 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyril_and_Methodius2.jpg/240px-Cyril_and_Methodius2.jpg" alt="Sts. Cyril and Methodius">
         <p class="saint-name">Sts. Cyril &<br>Methodius</p>
       </div>
+      <div class="saint">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Carlo_Crivelli_007.jpg/240px-Carlo_Crivelli_007.jpg" alt="St. Thomas Aquinas">
+        <p class="saint-name">St. Thomas<br>Aquinas</p>
+      </div>
+      <div class="saint">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Manuel_II_Paleologus_and_his_family.jpg/120px-Manuel_II_Paleologus_and_his_family.jpg" alt="Demetrius Kydones">
+        <p class="saint-name">Blessed<br>Demetrios Kydones</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1379,6 +1362,7 @@
         <li><a href="https://likoudislegacy.com/team/">Team</a></li>
         <li><a href="https://likoudislegacy.com/events/">Events</a></li>
         <li><a href="fellows.html">Fellows Program</a></li>
+    <li><a href="bookclub.html">Book Club</a></li>
         <li><a href="https://likoudislegacy.com/contact/">Contact</a></li>
       </ul>
     </div>
