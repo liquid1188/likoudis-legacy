@@ -375,7 +375,7 @@
           </div>
           <div class="speaker-card">
             <p class="speaker-name">Archbishop Pache</p>
-            <p class="speaker-role">Holy See Representative<br>Dicastery for Promoting Christian Unity</p>
+            <p class="speaker-role">Secretary<br>Dicastery for Promoting Christian Unity</p>
           </div>
           <div class="speaker-card">
             <p class="speaker-name">Archbishop Elpidophoros of America</p>
@@ -470,8 +470,16 @@
     <span class="section-label">Stay Connected</span>
     <h2 class="section-title" style="color:var(--cream)">Be the First to Know</h2>
     <div class="divider center"></div>
-    <p>Subscribe to our newsletter to receive updates on conference registration, speaker announcements, and all Foundation activities.</p>
-    <a href="contact.html" class="btn-primary">Join the Newsletter</a>
+    <p>Subscribe to our newsletter to receive updates on conference registration, speaker announcements, and Foundation activities.</p>
+    <form style="display:flex;gap:0;max-width:460px;margin:1.5rem auto 0;" action="https://formspree.io/f/xpwzgllr" method="POST" id="events-nl-form">
+      <input type="email" name="email" placeholder="your@email.com" required
+             style="flex:1;padding:0.85rem 1.2rem;background:rgba(255,255,255,0.06);border:1px solid rgba(200,169,110,0.25);border-right:none;color:var(--cream);font-size:0.88rem;outline:none;font-family:'Jost',sans-serif;"
+             onfocus="this.style.borderColor='rgba(200,169,110,0.55)'" onblur="this.style.borderColor='rgba(200,169,110,0.25)'">
+      <button type="submit"
+              style="padding:0.85rem 1.75rem;background:var(--gold);color:var(--navy);font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;font-family:'Jost',sans-serif;white-space:nowrap;transition:opacity 0.2s;"
+              onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">Subscribe →</button>
+    </form>
+    <p style="font-size:0.65rem;color:rgba(244,237,224,0.25);margin-top:0.75rem;letter-spacing:0.05em;">No spam. Unsubscribe anytime.</p>
   </div>
 </section>
 
