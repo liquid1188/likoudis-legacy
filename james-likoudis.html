@@ -2,61 +2,74 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>James Likoudis — Theologian, Apologist, Ecumenist</title>
-<meta name="description" content="Biography of James Likoudis (1928–2024), Catholic theologian, apologist, and pioneer of Catholic-Orthodox ecumenism. Author of fourteen books, president of Catholics United for the Faith, and recipient of an honorary doctorate from Sacred Heart Major Seminary.">
+<title>James Likoudis (1928–2024) — Theologian, Apologist, Ecumenist</title>
+<meta name="description" content="Biography of James Likoudis (1928–2024): Catholic theologian, apologist, and pioneer of Catholic-Orthodox ecumenism. Author, president of Catholics United for the Faith, translator, educator, and tireless defender of the magisterium over seven decades.">
 <link rel="stylesheet" href="style.css">
 <style>
-.bio-hero { background: var(--navy); padding: 8rem 2rem 6rem; }
-.bio-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 280px 1fr; gap: 5rem; align-items: center; }
-.bio-hero-photo img { width: 100%; border: 1px solid rgba(200,169,110,0.3); box-shadow: 12px 20px 48px rgba(0,0,0,0.4); }
-.bio-hero-text .section-label { margin-bottom: 0.5rem; }
-.bio-hero-text h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 400; color: var(--cream); line-height: 1.1; margin-bottom: 0.5rem; }
-.bio-hero-text h1 em { color: var(--gold); }
-.bio-hero-text .dates { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(200,169,110,0.6); margin-bottom: 1.5rem; }
-.bio-hero-text p { font-size: 1.05rem; color: rgba(244,237,224,0.7); line-height: 1.85; }
-
-.bio-body { padding: 7rem 2rem; background: var(--ivory); }
-.bio-body-inner { max-width: 820px; margin: 0 auto; }
-.bio-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; color: var(--navy); margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
-.bio-body h2:first-child { margin-top: 0; }
-.bio-body p { font-size: 0.92rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.25rem; }
-.bio-body blockquote { border-left: 3px solid var(--gold); padding: 1rem 0 1rem 2rem; margin: 2rem 0; }
-.bio-body blockquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: var(--navy); margin: 0 0 0.5rem; }
-.bio-body blockquote cite { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
-
-.bio-facts { background: var(--navy); padding: 6rem 2rem; }
-.bio-facts-inner { max-width: 1100px; margin: 0 auto; }
-.facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 3rem; }
-.fact-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,169,110,0.12); padding: 2.5rem 2rem; text-align: center; }
-.fact-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--gold); font-weight: 300; line-height: 1; }
-.fact-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(244,237,224,0.45); margin-top: 0.5rem; }
-
-.bib { padding: 7rem 2rem; background: var(--cream); }
-.bib-inner { max-width: 1100px; margin: 0 auto; }
-.bib-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3.5rem; }
-.bib-item { background: var(--ivory); border: 1px solid rgba(200,169,110,0.12); padding: 2rem; }
-.bib-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--navy); font-weight: 500; line-height: 1.3; margin-bottom: 0.5rem; }
-.bib-item p { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
-.bib-item a { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-block; margin-top: 0.75rem; }
-
-@media(max-width: 900px) {
-  .bio-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .bio-hero-photo img { max-width: 240px; }
-  .facts-grid { grid-template-columns: repeat(2, 1fr); }
-  .bib-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media(max-width: 560px) {
-  .bib-grid { grid-template-columns: 1fr; }
-}
+.bio-hero{background:var(--navy);padding:8rem 2rem 5rem}
+.bio-hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:300px 1fr;gap:5rem;align-items:center}
+.bio-hero-photo img{width:100%;border:1px solid rgba(200,169,110,.25);box-shadow:14px 22px 56px rgba(0,0,0,.5);display:block}
+.bio-hero-text .section-label{margin-bottom:.5rem}
+.bio-hero-text h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:400;color:var(--cream);line-height:1.05;margin-bottom:.4rem}
+.bio-hero-text h1 em{color:var(--gold)}
+.bio-hero-text .dates{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,169,110,.55);margin-bottom:1.5rem;display:block}
+.bio-hero-text p{font-size:1rem;color:rgba(244,237,224,.65);line-height:1.88}
+.roles{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0}
+.role-badge{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,169,110,.3);padding:.35rem .8rem}
+.facts-bar{background:rgba(200,169,110,.06);border-top:1px solid rgba(200,169,110,.1);border-bottom:1px solid rgba(200,169,110,.1);padding:3.5rem 2rem}
+.facts-bar-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+.fact-item{text-align:center;padding:1.5rem 1rem;border-right:1px solid rgba(200,169,110,.1)}
+.fact-item:last-child{border-right:none}
+.fact-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--gold);font-weight:300;line-height:1}
+.fact-label{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(244,237,224,.35);margin-top:.4rem}
+.bio-body{padding:7rem 2rem;background:var(--ivory)}
+.bio-body-inner{max-width:820px;margin:0 auto}
+.bio-section-title{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:400;color:var(--navy);margin:3.5rem 0 1rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)}
+.bio-section-title:first-child{margin-top:0}
+.bio-body p{font-size:.91rem;color:var(--muted);line-height:1.92;margin-bottom:1.25rem}
+.bio-body p strong{color:var(--navy);font-weight:600}
+blockquote.pull{border-left:3px solid var(--gold);padding:1rem 0 1rem 2.25rem;margin:2.25rem 0}
+blockquote.pull p{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-style:italic;color:var(--navy);margin:0 0 .5rem;line-height:1.55}
+blockquote.pull cite{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-style:normal}
+.timeline{padding:7rem 2rem;background:var(--navy)}
+.timeline-inner{max-width:900px;margin:0 auto}
+.tl-items{margin-top:3.5rem;position:relative}
+.tl-items::before{content:'';position:absolute;left:90px;top:0;bottom:0;width:1px;background:rgba(200,169,110,.18)}
+.tl-item{display:grid;grid-template-columns:90px 1fr;gap:2rem;padding:0 0 2.75rem 0}
+.tl-year{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold);text-align:right;padding-top:2px;position:relative}
+.tl-year::after{content:'';position:absolute;right:-2.35rem;top:8px;width:10px;height:10px;background:var(--navy);border:1px solid var(--gold);border-radius:50%}
+.tl-content h4{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream);font-weight:400;margin-bottom:.3rem}
+.tl-content p{font-size:.82rem;color:rgba(244,237,224,.5);line-height:1.75;margin:0}
+.bib{padding:7rem 2rem;background:var(--cream)}
+.bib-inner{max-width:1100px;margin:0 auto}
+.bib-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:3.5rem}
+.bib-card{background:var(--ivory);border:1px solid rgba(200,169,110,.12);padding:2.25rem;display:flex;flex-direction:column}
+.bib-card h3{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--navy);font-weight:500;line-height:1.35;margin-bottom:.5rem}
+.bib-card .co-author{font-size:.7rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:.75rem}
+.bib-card p{font-size:.8rem;color:var(--muted);line-height:1.7;flex:1}
+.bib-card a{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;margin-top:1rem;display:inline-block}
+.endorsements{padding:7rem 2rem;background:var(--ivory)}
+.endorsements-inner{max-width:1100px;margin:0 auto}
+.endr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:3.5rem}
+.endr-card{background:var(--cream);border:1px solid rgba(200,169,110,.12);padding:2.5rem}
+.endr-card p{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--navy);line-height:1.65;margin-bottom:1.25rem}
+.endr-card strong{display:block;font-family:'Jost',sans-serif;font-size:.72rem;font-weight:600;font-style:normal;color:var(--navy);letter-spacing:.08em}
+.endr-card span{font-size:.68rem;color:var(--gold);font-style:normal;font-family:'Jost',sans-serif}
+.family-section{background:var(--navy);padding:6rem 2rem}
+.family-inner{max-width:900px;margin:3rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.family-block{background:rgba(255,255,255,.03);border:1px solid rgba(200,169,110,.1);padding:2.5rem}
+.family-block h4{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.family-block p{font-size:.85rem;color:rgba(244,237,224,.6);line-height:1.8;margin:0}
+.family-block ul{list-style:none;padding:0;margin:0}
+.family-block ul li{font-size:.83rem;color:rgba(244,237,224,.55);padding:.35rem 0;border-bottom:1px solid rgba(200,169,110,.07);line-height:1.5}
+.family-block ul li:last-child{border-bottom:none}
+@media(max-width:900px){.bio-hero-inner{grid-template-columns:1fr;gap:2.5rem}.bio-hero-photo img{max-width:260px}.facts-bar-inner{grid-template-columns:repeat(3,1fr)}.fact-item:nth-child(3){border-right:none}.bib-grid,.endr-grid{grid-template-columns:repeat(2,1fr)}.family-inner{grid-template-columns:1fr;max-width:600px}.tl-items::before{left:70px}.tl-item{grid-template-columns:70px 1fr}.tl-year::after{right:-2rem}}
+@media(max-width:560px){.bib-grid{grid-template-columns:1fr}.endr-grid{grid-template-columns:1fr}.facts-bar-inner{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="index.html" class="nav-logo">
-    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF">
-    <span>Likoudis Legacy<br>Foundation</span>
-  </a>
+  <a href="index.html" class="nav-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF"><span>Likoudis Legacy<br>Foundation</span></a>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="about.html">About ▾</a><div class="nav-dropdown-menu"><a href="about.html">About</a><a href="james-likoudis.html">James Likoudis</a><a href="team.html">Team</a><a href="events.html">Events</a><a href="contact.html">Contact</a></div></li>
     <li><a href="fellows.html">Fellows Program</a></li>
@@ -77,113 +90,176 @@
     <div class="bio-hero-text reveal reveal-delay-1">
       <span class="section-label">In Memoriam</span>
       <h1>James <em>Likoudis</em></h1>
-      <p class="dates">December 11, 1928 — September 3, 2024</p>
-      <p>Theologian. Apologist. Ecumenist. Over seven decades as a Catholic, James Likoudis became one of the most prolific lay defenders of the papal magisterium and one of the foremost Catholic voices in dialogue with Eastern Orthodoxy. Born into a Greek immigrant family, baptized in the Greek Orthodox Church, and received into the Catholic Church in 1952, his life traced the very arc of reunion he spent it advocating for.</p>
+      <span class="dates">December 11, 1928 — September 3, 2024</span>
+      <div class="roles">
+        <span class="role-badge">Theologian</span>
+        <span class="role-badge">Apologist</span>
+        <span class="role-badge">Historian</span>
+        <span class="role-badge">Ecumenist</span>
+        <span class="role-badge">Educator</span>
+        <span class="role-badge">Convert</span>
+      </div>
+      <p>Over seven decades as a Catholic, James Likoudis became one of the most productive and clear-headed lay defenders of the papal magisterium in twentieth-century American Catholicism. Born to Greek immigrants in Lackawanna, New York, baptized in the Greek Orthodox Church, and received into full communion with Rome at twenty-three, his life traced the very arc of reunion he spent it advocating for. He wrote fourteen books, over 300 essays, debated in packed town halls, appeared on national television, lectured at seminaries and universities, shaped campaigns that reached the desks of Cardinal Ratzinger and the Pontifical Council for the Family — and remained, by every account, a man of warmth, humor, and personal holiness.</p>
     </div>
   </div>
 </section>
 
-<section class="bio-facts">
-  <div class="bio-facts-inner">
-    <div class="reveal" style="text-align:center;">
-      <span class="section-label">A Life in Numbers</span>
-      <h2 class="section-title" style="color:var(--cream)">The Scope of His Work</h2>
-      <div class="divider center"></div>
-    </div>
-    <div class="facts-grid">
-      <div class="fact-card reveal"><div class="fact-num">95</div><div class="fact-label">Years of Life</div></div>
-      <div class="fact-card reveal reveal-delay-1"><div class="fact-num">14</div><div class="fact-label">Books Authored or Edited</div></div>
-      <div class="fact-card reveal reveal-delay-2"><div class="fact-num">70+</div><div class="fact-label">Years as a Catholic</div></div>
-      <div class="fact-card reveal reveal-delay-3"><div class="fact-num">300+</div><div class="fact-label">Essays & Articles</div></div>
-    </div>
+<div class="facts-bar">
+  <div class="facts-bar-inner">
+    <div class="fact-item reveal"><div class="fact-num">95</div><div class="fact-label">Years of Life</div></div>
+    <div class="fact-item reveal reveal-delay-1"><div class="fact-num">14</div><div class="fact-label">Books Authored</div></div>
+    <div class="fact-item reveal reveal-delay-2"><div class="fact-num">300+</div><div class="fact-label">Essays &amp; Articles</div></div>
+    <div class="fact-item reveal reveal-delay-3"><div class="fact-num">25+</div><div class="fact-label">Years at CUF</div></div>
+    <div class="fact-item reveal reveal-delay-3"><div class="fact-num">82</div><div class="fact-label">Grandchildren &amp; Great-grandchildren</div></div>
   </div>
-</section>
+</div>
 
 <section class="bio-body">
   <div class="bio-body-inner">
 
-    <h2>Early Life & Conversion</h2>
-    <p>James Likoudis was born on December 11, 1928, in Lackawanna, New York, to Greek immigrant parents. Raised in the Greek Orthodox Church, he came of age in the ethnic Greek community of western New York. His encounter with Catholicism came through the Newman Club at the University of Buffalo, where he engaged the writings of the Church Fathers and the scholastic tradition. In 1952, at the age of 23, he was received into full communion with Rome — a decision that would define the rest of his life.</p>
-    <p>His conversion was not merely personal. It became a vocation. As a man who had lived inside Eastern Orthodoxy, who spoke its liturgical language and understood its theological instincts from within, Likoudis was uniquely positioned to serve as a Catholic interlocutor — not a polemicist, but a patient and deeply informed voice for unity.</p>
+    <h2 class="bio-section-title">Origins: Lackawanna and the Greek Orthodox Church</h2>
+    <p>James Likoudis was born on December 11, 1928, in Lackawanna, New York — a working-class steel town on the southern edge of Buffalo, built largely by immigrant communities from southern and eastern Europe. His parents were Greek immigrants, and he was raised in the Greek Orthodox Church, immersed from birth in the theological world of Byzantine Christianity: its liturgical cadences, its patristic sensibility, its fierce attachment to the conciliar tradition.</p>
+    <p>That formation never left him. In a significant sense, the whole of his subsequent Catholic life was shaped by the fact that he knew Eastern Christianity not from the outside but from within — as something he had prayed, inhabited, and eventually left behind for a reason he spent decades trying to articulate with precision and charity.</p>
 
-    <blockquote>
+    <h2 class="bio-section-title">Conversion: Buffalo, St. Thomas Aquinas, and 1952</h2>
+    <p>The decisive turn came at the <strong>University of Buffalo's Newman Club</strong>, where Likoudis encountered, apparently for the first time in depth, the Catholic intellectual tradition. The writings of <strong>St. Thomas Aquinas</strong> and <strong>Christopher Dawson</strong> — systematic, historically grounded, confident in reason's capacity to serve faith — opened a world that his Greek Orthodox upbringing had not provided in quite that form. The encounter was intellectual, but the conversion it produced was thoroughly personal.</p>
+    <p>In 1952, at twenty-three, James Likoudis was received into full communion with Rome. He had found, as he later described in his 1988 essay "To Be Truly Orthodox Is to Be in Communion with Peter's See," not an abandonment of Eastern Christianity but its proper completion. His model for this journey was <strong>St. Leopold of Castelnuovo</strong> — the gentle Capuchin confessor from the Adriatic coast who spent his life quietly reconciling souls to God and to one another. That patron saint choice says something precise about what Likoudis understood his own vocation to be.</p>
+
+    <blockquote class="pull">
       <p>"He is himself a convert, and he recognizes that conversion — any conversion — is not the matter of a moment. It is the love of a lifetime."</p>
       <cite>— Scott Hahn, PhD, President, St. Paul Center for Biblical Theology</cite>
     </blockquote>
 
-    <h2>Educator & Lecturer</h2>
-    <p>Likoudis spent significant years as an educator, teaching history and government at Rosary Hill College (now Daemen University) in the late 1960s and 1970s. His classroom work was inseparable from his apostolate: he lectured widely at parishes, conferences, seminaries, and universities across the United States on the themes of papal primacy, ecumenism, and Catholic moral teaching. He was a regular presence at the conferences of the Latin Liturgy Association and Catholics United for the Faith.</p>
-    <p>His appearance on the Mother Angelica Live program in November 1996 brought his scholarship to a national audience, making accessible to ordinary Catholics the complex theological terrain of Catholic-Orthodox dialogue.</p>
+    <h2 class="bio-section-title">Educator: Twenty Years in the Classroom</h2>
+    <p>Likoudis spent more than two decades as a teacher. He taught social studies to high school students and served as a history and government instructor at <strong>St. John's of the Atonement</strong>, the Franciscan minor seminary in New York, and at <strong>Rosary Hill College</strong> (now Daemen University) in upstate New York. Former students remembered him years later as an engaging and demanding teacher who insisted on learning to think rather than merely to recite. He lectured seminarians as well — a fact not lost on the priests who later cited his influence.</p>
+    <p>In 1977, he translated Renée Casin's <em>St. Thomas Aquinas: Orthodoxy, and Neo-Modernism in the Church</em> from French into English — an early indication of his range as a scholar willing to work in service of ideas, regardless of whether they bore his own name.</p>
 
-    <h2>Catholics United for the Faith</h2>
-    <p>Likoudis served for many years as president of Catholics United for the Faith (CUF), a lay organization founded in 1968 to support and defend the Church's magisterium in the turbulent aftermath of the Second Vatican Council. Under his leadership, CUF became a significant voice for fidelity to the ordinary magisterium at a time when dissent had become increasingly organized and visible.</p>
-    <p>His work at CUF also shaped his approach to liturgical questions. He was a consistent defender of the Novus Ordo against both those who attacked it as invalid and those who performed it carelessly. His essays from this period — many of which are preserved in the Foundation's archive — remain among the most nuanced treatments of the postconciliar liturgical situation available from a lay perspective.</p>
+    <h2 class="bio-section-title">Catholics United for the Faith</h2>
+    <p>Likoudis's most sustained institutional work was at <strong>Catholics United for the Faith (CUF)</strong>, the lay apostolate founded in 1968 — the same year as <em>Humanae Vitae</em> and the same year organized Catholic dissent began to take institutional form. He served CUF for more than twenty-five years, eventually as president. He also founded <strong>Credo of Buffalo</strong>.</p>
+    <p>At CUF, his work was simultaneously doctrinal, pastoral, and strategic. He was a leading voice for fidelity to <em>Humanae Vitae</em> at a time when that required real institutional courage. He traveled and lectured worldwide. He ran packed town halls on abortion and parental rights in the 1970s and 1980s — crowds lined up outside the doors. And he pursued specific campaigns with a tenacity that produced concrete results at the level of the Vatican itself.</p>
+    <p>His campaign against <em>Christ Among Us</em> — a catechism widely used in Catholic religious education that contained serious theological errors — eventually reached <strong>Cardinal Joseph Ratzinger</strong> and the Congregation for the Doctrine of the Faith. The CDF acted to remove the book's <em>Imprimatur</em> and <em>Nihil Obstat</em> and ultimately requested that Paulist Press cease further publication. He played a comparable role in bringing to the Vatican's attention the theological modernism being taught by <strong>Charles Curran</strong> at Catholic University of America; Curran was eventually removed from his teaching position by the Church hierarchy.</p>
+    <p>He also represented CUF at a Vatican meeting convened by <strong>Cardinal Alfonso López Trujillo</strong>, President of the Pontifical Council for the Family. That meeting produced the foundational document <em>Truth and Meaning of Human Sexuality: Guidelines for Education within the Family</em> — a text that would shape Catholic catechetical policy on sexual education for decades.</p>
 
-    <h2>Catholic-Orthodox Ecumenism</h2>
-    <p>The central thread of Likoudis' scholarly life was the question of Catholic-Orthodox reunion. His trilogy on the Byzantine tradition — <em>The Divine Primacy of the Bishop of Rome and Modern Eastern Orthodoxy</em>, <em>Eastern Orthodoxy and the See of Peter</em>, and <em>Ending the Byzantine Greek Schism</em> — constitutes the most sustained lay-scholarly engagement with these questions in twentieth-century American Catholic letters.</p>
-    <p>He worked not by assertion but by argument: engaging Orthodox theologians on their own terms, tracing the historical record of the early councils, and showing with patient precision where the Eastern objections to Rome rest on contestable historical claims. His goal was always reunion — not capitulation, but the recognition of a unity that already exists in principle and awaits full visible expression.</p>
+    <h2 class="bio-section-title">Morality in Media and the Culture Wars</h2>
+    <p>Likoudis served as <strong>president of Morality in Media</strong> — the organization now known as the National Center on Sexual Exploitation — and as moderator of the New York television series <em>Sex and Morality</em>. While living in Buffalo, he received the <strong>Morality in Media award alongside Mother Angelica</strong> herself, in recognition of his sustained public efforts against the degradation of American media culture.</p>
+    <p>He worked closely with <strong>Dietrich von Hildebrand</strong> and <strong>Alice von Hildebrand</strong> through their organization <strong>Veil of Innocence</strong>, serving as a board member, lecturer, and contributor. He wrote an essay for Dietrich's <em>Sex Education: The Basic Issues and Related Essays</em> — a volume that carries, inside its front pages, a personal letter of endorsement handwritten by <strong>Mother Teresa of Calcutta</strong>.</p>
 
-    <blockquote>
-      <p>"In the field of Catholic-Orthodox dialogue, James Likoudis figures as one of the most prominent Catholic apologists."</p>
-      <cite>— Jose Pereira, PhD, Professor Emeritus of Theology, Fordham University</cite>
-    </blockquote>
+    <h2 class="bio-section-title">The Ecumenical Trilogy</h2>
+    <p>The deepest and most original current of Likoudis's scholarly life was Catholic-Orthodox ecumenism. His trilogy on the Byzantine tradition constitutes the most sustained lay-scholarly engagement with these questions produced in twentieth-century American Catholic letters.</p>
+    <p><strong><em>The Divine Primacy of the Bishop of Rome and Modern Eastern Orthodoxy: Letters to a Greek Orthodox on the Unity of the Church</em></strong> engaged Orthodox objections to papal supremacy and infallibility at the level of patristics and conciliar history. An earlier edition responded specifically to Eastern Orthodox writer Michael Whelton's arguments in <em>Two Paths</em>. <strong><em>Eastern Orthodoxy and the See of Peter: A Journey Towards Full Communion</em></strong> (2006) extended the argument across the historical record. <strong><em>Ending the Byzantine Greek Schism</em></strong> addressed the origins and perpetuation of the great rupture with the precision of a historian and the pastoral urgency of a man who had lived on both sides.</p>
+    <p>He worked not by condescension but by argument — taking Orthodox theologians seriously enough to engage them on their own terms, tracing the patristic record with care, and showing where the historical objections to Rome rest on contestable foundations. The goal was never victory in debate but reunion in truth. By his own estimate, and by the testimony of those who knew his correspondence, he helped bring hundreds — possibly thousands — of people into full communion with the Catholic Church over his lifetime.</p>
 
-    <h2>Family & Personal Life</h2>
-    <p>James Likoudis was married to Ruth Likoudis, his lifelong companion and partner in apostolate. Together they met Pope St. John Paul II and Mother Teresa of Calcutta — encounters that reflect the depth of the Catholic network in which they moved. He was the grandfather of Andrew Likoudis, founder of the Likoudis Legacy Foundation, and the intellectual forebear of a generation of Catholic scholars who drew on his work.</p>
-
-    <h2>Recognition & Legacy</h2>
-    <p>In 2002, Likoudis received the Blessed Frederick Ozanam Award for Catholic Social Action from the Society for Catholic Social Scientists. In 2020, Sacred Heart Major Seminary awarded him an honorary doctorate of divinity in recognition of his lifetime of service to Catholic scholarship. He died on September 3, 2024, at the age of 95, having witnessed the full arc of the postconciliar Church from its hopeful beginnings through its crises and its renewals.</p>
-    <p>The Likoudis Legacy Foundation was established to ensure that his corpus — over 300 essays, fourteen books, and a lifetime of correspondence with bishops, theologians, and ordinary Catholics — remains accessible to the next generation of scholars and the faithful.</p>
-
-    <blockquote>
-      <p>"Likoudis occupies a singular place in the literature of his time. Faithful, yet not crazy. Very few people got it so right."</p>
+    <blockquote class="pull">
+      <p>"James Likoudis really does occupy a singular place in the literature of his time; faithful, yet not crazy. Very few people got it so right."</p>
       <cite>— Mike Aquilina, Executive Vice President, St. Paul Center for Biblical Theology</cite>
     </blockquote>
+
+    <h2 class="bio-section-title">The Defense of Vatican II</h2>
+    <p>Perhaps the most widely read of Likoudis's books is <em>The Pope, the Council, and the Mass: Answers to Questions the Traditionalists Have Asked</em>, co-authored with <strong>Kenneth Whitehead</strong>. Published in 1981, it was a direct, charitable, and thoroughly documented response to the Traditionalist critique of the Second Vatican Council and the Novus Ordo Mass — addressing precisely the arguments being made by followers of Archbishop Lefebvre and others who contested the Council's authority.</p>
+    <p>Likoudis brought a specific authority to this work: he was no liberal accommodationist. His entire career had been spent defending the magisterium against progressive dissent. His argument for the Council was not that it represented a rupture with tradition but exactly the opposite — that to reject the Council was to reject the very principle of magisterial authority that traditionalists claimed to be defending. The book has never been adequately answered.</p>
+
+    <h2 class="bio-section-title">Friendships, Vatican Visits, and the Catholic Network</h2>
+    <p>Likoudis helped <strong>Father John Hardon, SJ</strong> found the organization <em>Eternal Life</em>, and contributed to Hardon's books — penning the foreword to Hardon's published doctoral dissertation on "Bellarmine's Doctrine of the Relation of Sincere Non-Catholics to the Catholic Church."</p>
+    <p>He was a mentor to <strong>Jeffrey Mirus</strong> of CatholicCulture.org, who credits Likoudis with shaping his early formation as a Catholic apologist. He was a close friend of <strong>Scott Hahn</strong>. He traveled to Rome regularly — meeting <strong>Pope St. John Paul II</strong> on multiple occasions, presenting him with his books, and on at least one occasion attending a private Mass with the Pope. He met <strong>Mother Teresa of Calcutta</strong>. At the Vatican he also met <strong>Dr. Robert Fastiggi</strong>, who became a lifelong friend and who later, together with <strong>Dr. Philip Blosser</strong> of Sacred Heart Major Seminary, petitioned the seminary to award Likoudis an honorary doctorate in recognition of his lifetime of service. The degree was conferred in 2020.</p>
+
+    <blockquote class="pull">
+      <p>"James Likoudis was one of several mentors from whom I was privileged to learn when I was struggling to become more effective in defending and advancing the Catholic faith in my 20s."</p>
+      <cite>— Jeffrey Mirus, PhD, Founder, CatholicCulture.org</cite>
+    </blockquote>
+
+    <h2 class="bio-section-title">Public Life: Television, Town Halls, and Mayoral Politics</h2>
+    <p>Likoudis was a public intellectual in a form that has largely disappeared: he went where the argument was. He debated in town halls that drew standing crowds. He appeared on <em>Geraldo</em> and <em>The Phil Donahue Show</em> — programs that were, in their era, among the sharpest arenas for contested public argument. He appeared regularly on EWTN. His November 6, 1996 appearance on <em>Mother Angelica Live</em> reached hundreds of thousands. His episode on <em>The Journey Home</em> with Marcus Grodi continues to move viewers toward Rome. He ran as a <strong>mayoral candidate in Watkins Glen</strong>, New York — evidence of a man who understood that faith has a civic dimension and was willing to act on it.</p>
+
+    <h2 class="bio-section-title">Faith at Home: The Life Behind the Books</h2>
+    <p>Those who knew him personally remember what does not appear in bibliographies. His grandson Andrew Likoudis, who lived with him during his junior and senior years of high school, recalls a man who prayed the Rosary each day without fail, who drove him to school in the mornings and talked theology at the dinner table, who took him to parishes outside the county because he valued beauty in worship too much to settle for what was nearby, who stopped for donuts at Walgreens and went to breakfast with his friends afterward. He and Ruth never fought. They quibbled, affectionately, about whether prayer hands should be folded or held straight.</p>
+
+    <h2 class="bio-section-title">Recognition and Death</h2>
+    <p>In 2002, Likoudis received the <strong>Blessed Frederic Ozanam Award for Catholic Social Action</strong> from the Society of Catholic Social Scientists — the organization's recognition for a lay Catholic whose work integrated faith and scholarship in service of the common good. In 2020, <strong>Sacred Heart Major Seminary</strong> awarded him an honorary Doctorate of Divinity. His works are held at Oxford, Harvard, Princeton, Georgetown, Johns Hopkins, Columbia, Notre Dame, the British Library, and the Library of Congress.</p>
+    <p>After Ruth's death, James moved to <strong>Ann Arbor, Michigan</strong>. He died there on September 3, 2024, at the age of 95. His funeral — a Solemn High Mass — was celebrated on September 14 at <strong>Assumption Grotto Catholic Church</strong> in Detroit. The Society of Catholic Social Scientists described him as "the consummate Catholic intellectual who dedicated his life to finding the light and sharing it in an age in sore need of such illumination."</p>
 
   </div>
 </section>
 
-<section class="bib">
-  <div class="bib-inner">
-    <div class="reveal" style="text-align:center;">
-      <span class="section-label">Selected Bibliography</span>
-      <h2 class="section-title">Major Works</h2>
+<!-- TIMELINE -->
+<section class="timeline">
+  <div class="timeline-inner">
+    <div class="reveal" style="text-align:center">
+      <span class="section-label">Chronology</span>
+      <h2 class="section-title" style="color:var(--cream)">A Life in Order</h2>
       <div class="divider center"></div>
     </div>
-    <div class="bib-grid">
-      <div class="bib-item reveal">
-        <h3>The Divine Primacy of the Bishop of Rome and Modern Eastern Orthodoxy</h3>
-        <p>The foundational text of Likoudis' ecumenical trilogy — a detailed engagement with Eastern Orthodox objections to papal supremacy, infallibility, and the <em>filioque</em>.</p>
-        <a href="https://a.co/d/7OLUE9y" target="_blank">View on Amazon →</a>
-      </div>
-      <div class="bib-item reveal reveal-delay-1">
-        <h3>Ending the Byzantine Greek Schism</h3>
-        <p>A historical and theological examination of the origins and persistence of the Catholic-Orthodox rupture, and the path toward its healing.</p>
-        <a href="https://a.co/d/2PCM3KR" target="_blank">View on Amazon →</a>
-      </div>
-      <div class="bib-item reveal reveal-delay-2">
-        <h3>Eastern Orthodoxy and the See of Peter</h3>
-        <p>The third volume of the ecumenical trilogy — tracing the theological and historical case for full Orthodox communion with Rome.</p>
-        <a href="https://www.amazon.com/Eastern-Orthodoxy-See-Peter-Communion/dp/B0011TU7KC" target="_blank">View on Amazon →</a>
-      </div>
-      <div class="bib-item reveal">
-        <h3>The Pope, the Council, and the Mass</h3>
-        <p>Co-authored with Kenneth Whitehead. The definitive Catholic response to Traditionalist objections to Vatican II and the Novus Ordo Mass.</p>
-        <a href="https://a.co/d/hIdci6z" target="_blank">View on Amazon →</a>
-      </div>
-      <div class="bib-item reveal reveal-delay-1">
-        <h3>Heralds of a Catholic Russia</h3>
-        <p>Twelve intellectual and spiritual journeys from Eastern Orthodoxy to full communion with Rome — a testament to the attraction of Catholic unity.</p>
-        <a href="https://www.amazon.com/dp/B0CTCYZB2T" target="_blank">View on Amazon →</a>
-      </div>
-      <div class="bib-item reveal reveal-delay-2">
-        <h3>The Divine Mosaic</h3>
-        <p>Seven decades of essays, speeches, and presentations — the fullest single-volume portrait of Likoudis' apologetical and ecumenical mind.</p>
-        <a href="https://a.co/d/6Zr7Qvt" target="_blank">View on Amazon →</a>
-      </div>
+    <div class="tl-items">
+      <div class="tl-item reveal"><div class="tl-year">1928</div><div class="tl-content"><h4>Born in Lackawanna, New York</h4><p>December 11. Son of Greek immigrants. Baptized in the Greek Orthodox Church.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">1940s</div><div class="tl-content"><h4>University of Buffalo — Newman Club</h4><p>Encounters St. Thomas Aquinas and Christopher Dawson. Begins the intellectual journey toward Rome.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">1952</div><div class="tl-content"><h4>Received into the Catholic Church</h4><p>Age 23. Marries Ruth (née Hickleton). Begins teaching career and lay apostolate work.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">1960s–70s</div><div class="tl-content"><h4>Teaching at St. John's and Rosary Hill College</h4><p>History and government instructor at St. John's of the Atonement (Franciscan minor seminary) and at Rosary Hill College (now Daemen University). Social studies teacher to high school students.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">1968</div><div class="tl-content"><h4>Joins Catholics United for the Faith</h4><p>Begins what becomes a 25+ year association with CUF. Founds Credo of Buffalo. Becomes president of Morality in Media.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">1977</div><div class="tl-content"><h4>Translation Published</h4><p>Translates Renée Casin's <em>St. Thomas Aquinas: Orthodoxy, and Neo-Modernism in the Church</em> from French to English.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">1981</div><div class="tl-content"><h4><em>The Pope, the Council, and the Mass</em></h4><p>Published with Kenneth Whitehead. The definitive lay Catholic response to Traditionalist critiques of Vatican II and the Novus Ordo. Presented to Pope St. John Paul II on a subsequent Vatican visit.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">1980s</div><div class="tl-content"><h4>Vatican, Ecumenical Trilogy, and Public Life</h4><p>Multiple visits to Rome; meets John Paul II and Mother Teresa; works with Cardinal López Trujillo on "Truth and Meaning of Human Sexuality." Completes major ecumenical works. Runs for Mayor of Watkins Glen. Receives Morality in Media award alongside Mother Angelica. Town hall debates on abortion and parental rights fill auditoriums.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">1988</div><div class="tl-content"><h4>"To Be Truly Orthodox Is to Be in Communion with Peter's See"</h4><p>Essay published — a personal account of his journey from Greek Orthodoxy through to full Roman communion.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">1990s</div><div class="tl-content"><h4>National Television</h4><p>Appears on <em>Geraldo</em>, <em>The Phil Donahue Show</em>, and EWTN. November 6, 1996: <em>Mother Angelica Live</em>. Records <em>The Journey Home</em> with Marcus Grodi — still widely circulated. Moderates New York TV series <em>Sex and Morality</em>.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">2002</div><div class="tl-content"><h4>Blessed Frederic Ozanam Award</h4><p>Receives the SCSS's highest recognition for Catholic Social Action. Meets Dr. Robert Fastiggi in Rome — a friendship that will produce his honorary doctorate eighteen years later.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">2006</div><div class="tl-content"><h4><em>Eastern Orthodoxy and the See of Peter</em></h4><p>Completes the Byzantine ecumenical trilogy with this final volume on the case for Orthodox full communion with Rome.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">2020</div><div class="tl-content"><h4>Honorary Doctorate of Divinity</h4><p>Sacred Heart Major Seminary, Detroit, confers an honorary Doctorate of Divinity — secured by Dr. Fastiggi and Dr. Blosser. He is in his 91st year.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">2023</div><div class="tl-content"><h4>Likoudis Legacy Foundation Established</h4><p>Grandson Andrew Likoudis founds the Foundation in Baltimore to preserve and extend his intellectual legacy.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-year">2024</div><div class="tl-content"><h4>September 3, 2024 — Eternal Rest</h4><p>Died at 95 in Ann Arbor, Michigan. Solemn High Mass at Assumption Grotto Church, Detroit, September 14. Survived by 6 children, 35 grandchildren, and 47 great-grandchildren.</p></div></div>
     </div>
-    <div style="text-align:center;margin-top:3rem;" class="reveal">
-      <a href="books.html" class="btn-primary">View All Books</a>
+  </div>
+</section>
+
+<!-- BIBLIOGRAPHY -->
+<section class="bib">
+  <div class="bib-inner">
+    <div class="reveal" style="text-align:center">
+      <span class="section-label">Selected Works</span>
+      <h2 class="section-title">The Published Legacy</h2>
+      <div class="divider center"></div>
+      <p style="max-width:640px;margin:1.5rem auto 0;font-size:.88rem;color:var(--muted)">Fourteen books and 300+ essays spanning ecumenism, liturgy, sex education, catechetics, and the defense of Vatican II. Works held at Oxford, Harvard, Princeton, the British Library, and the Library of Congress.</p>
+    </div>
+    <div class="bib-grid">
+      <div class="bib-card reveal"><h3>The Pope, the Council, and the Mass</h3><div class="co-author">Co-authored with Kenneth Whitehead</div><p>The definitive lay Catholic response to Traditionalist critiques of Vatican II and the Novus Ordo Mass. Presented personally to Pope St. John Paul II. Still the most thorough treatment available.</p><a href="https://a.co/d/hIdci6z" target="_blank">View on Amazon →</a></div>
+      <div class="bib-card reveal reveal-delay-1"><h3>The Divine Primacy of the Bishop of Rome and Modern Eastern Orthodoxy</h3><p>Letters to a Greek Orthodox on the Unity of the Church. Engages Orthodox objections to papal supremacy on patristic and conciliar historical grounds. Responds directly to Michael Whelton's <em>Two Paths</em>.</p><a href="https://a.co/d/7OLUE9y" target="_blank">View on Amazon →</a></div>
+      <div class="bib-card reveal reveal-delay-2"><h3>Eastern Orthodoxy and the See of Peter</h3><p>A Journey Towards Full Communion (2006). The third volume of the Byzantine ecumenical trilogy — the theological and historical case for Orthodox reunion with Rome.</p><a href="https://www.amazon.com/Eastern-Orthodoxy-See-Peter-Communion/dp/B0011TU7KC" target="_blank">View on Amazon →</a></div>
+      <div class="bib-card reveal"><h3>Ending the Byzantine Greek Schism</h3><p>A sustained historical and theological examination of the origins and perpetuation of the Catholic-Orthodox rupture, and the path — intellectual and spiritual — toward its healing.</p><a href="https://a.co/d/2PCM3KR" target="_blank">View on Amazon →</a></div>
+      <div class="bib-card reveal reveal-delay-1"><h3>Heralds of a Catholic Russia</h3><p>Twelve spiritual pilgrims from Byzantium to Rome — personal accounts of conversion from Eastern Orthodoxy to full communion. A testament to the attraction of unity, and to Likoudis's decades of patient correspondence.</p><a href="https://www.amazon.com/dp/B0CTCYZB2T" target="_blank">View on Amazon →</a></div>
+      <div class="bib-card reveal reveal-delay-2"><h3>The Divine Mosaic</h3><p>A collected volume of essays, addresses, and shorter works spanning Likoudis's full apostolate — the most comprehensive single-volume portrait of his ecumenical and apologetical mind.</p><a href="https://a.co/d/6Zr7Qvt" target="_blank">View on Amazon →</a></div>
+    </div>
+    <div style="text-align:center;margin-top:3rem" class="reveal"><a href="books.html" class="btn-primary">View Complete Catalog</a></div>
+  </div>
+</section>
+
+<!-- ENDORSEMENTS -->
+<section class="endorsements">
+  <div class="endorsements-inner">
+    <div class="reveal" style="text-align:center">
+      <span class="section-label">In Their Words</span>
+      <h2 class="section-title">What Others Said</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="endr-grid">
+      <div class="endr-card reveal"><p>"James Likoudis really does occupy a singular place in the literature of his time; faithful, yet not crazy. I think a good many people appreciate him for his careful judgments about the postconciliar situation as it was developing. Very few people got it so right."</p><strong>Mike Aquilina</strong><span>Executive Vice President, St. Paul Center for Biblical Theology</span></div>
+      <div class="endr-card reveal reveal-delay-1"><p>"I have been working in the Catholic world for almost four decades now, but I've known few people who have such a passion for the apostolate and for Christian unity."</p><strong>Scott Hahn, PhD</strong><span>President, St. Paul Center for Biblical Theology</span></div>
+      <div class="endr-card reveal reveal-delay-2"><p>"James Likoudis was one of several mentors from whom I was privileged to learn when I was struggling to become more effective in defending and advancing the Catholic faith in my 20s. Likoudis was already established as a proponent of authentic Catholic renewal, a leading opponent of sex education in schools, and a champion of the magisterium."</p><strong>Jeffrey Mirus, PhD</strong><span>Founder, CatholicCulture.org</span></div>
+      <div class="endr-card reveal"><p>"I knew Dr. Likoudis for some twenty-five years and had the occasion, almost annually, to visit with him about theological questions. I was always edified by the depth and charity of his conversations with me."</p><strong>Raymond Cardinal Burke</strong><span>Prefect Emeritus of the Apostolic Signatura</span></div>
+      <div class="endr-card reveal reveal-delay-1"><p>"In the field of Catholic-Orthodox dialogue, James Likoudis figures as one of the most prominent Catholic apologists."</p><strong>Jose Pereira, PhD</strong><span>Professor Emeritus of Theology, Fordham University</span></div>
+      <div class="endr-card reveal reveal-delay-2"><p>"For many years, James Likoudis has been a tireless laborer for fraternal dialogue between Catholic and Orthodox Christians. Few know these two ecclesial worlds so thoroughly and few can so successfully untie the knots of misunderstanding that have gotten in the way of reconciliation."</p><strong>Marcellino D'Ambrosio, PhD</strong><span>Senior Fellow, St. Paul Center for Biblical Theology</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY -->
+<section class="family-section">
+  <div style="max-width:900px;margin:0 auto">
+    <div class="reveal" style="text-align:center">
+      <span class="section-label">Family</span>
+      <h2 class="section-title" style="color:var(--cream)">Ruth, Six Children, and Eighty-Two Descendants</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="family-inner">
+      <div class="family-block reveal"><h4>Marriage</h4><p>James married <strong style="color:var(--cream)">Ruth (née Hickleton)</strong>, with whom he shared 71 years of married life. Ruth predeceased him. In his final years, James lived in Ann Arbor, Michigan, where he died September 3, 2024. He is survived by his brother <strong style="color:var(--cream)">Michael Likoudis</strong>.</p></div>
+      <div class="family-block reveal reveal-delay-1"><h4>Children</h4><ul><li>Therese (Johnny) Williams</li><li>Paul †  (Paulette) Likoudis</li><li>Mark (Kathryn) Likoudis</li><li>Celine (Mark) Schanzer</li><li>Catharine (Thomas) Kader</li><li>Margaret (David) Byerley</li></ul></div>
+      <div class="family-block reveal" style="grid-column:1 / -1"><h4>Descendants</h4><p>James Likoudis is survived by <strong style="color:var(--cream)">35 grandchildren</strong> and <strong style="color:var(--cream)">47 great-grandchildren</strong> — 82 descendants, a living continuation of the faith he embodied. His grandson <strong style="color:var(--cream)">Andrew Likoudis</strong>, who lived with him through high school, founded the Likoudis Legacy Foundation in 2023 to carry his intellectual work forward.</p></div>
     </div>
   </div>
 </section>
@@ -193,7 +269,7 @@
     <div class="footer-brand"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF Logo"><p>A 501(c)(3) dedicated to ecumenical scholarship and Christian unity.</p><address>Baltimore, MD · 410-409-1695</address></div>
     <div class="footer-col"><h4>Foundation</h4><ul><li><a href="about.html">About</a></li><li><a href="james-likoudis.html">James Likoudis</a></li><li><a href="team.html">Team</a></li><li><a href="fellows.html">Fellows Program</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Media</h4><ul><li><a href="videos.html">Video Archive</a></li><li><a href="essays.html">Essay Archive</a></li><li><a href="photos.html">Photo Archive</a></li><li><a href="books.html">Books</a></li><li><a href="kydones.html">Kydones Review</a></li></ul></div>
-    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="consulting.html">Consulting</a></li><li><a href="press.html">Press & Media Kit</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="consulting.html">Consulting</a></li><li><a href="press.html">Press &amp; Media Kit</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p>© 2025 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacyF" target="_blank">𝕏</a></div></div>
 </footer>
