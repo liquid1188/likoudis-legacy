@@ -564,14 +564,14 @@
     padding: 7rem 2rem;
   }
   .patrons-inner {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     text-align: center;
   }
   .patrons-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
     margin-top: 3.5rem;
   }
   .patron-card {
@@ -579,7 +579,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1.5rem;
     border: 1px solid rgba(200,169,110,0.15);
     background: var(--ivory);
     text-decoration: none;
@@ -593,10 +593,66 @@
     filter: grayscale(30%);
   }
   .patron-name {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     color: var(--muted);
     text-align: center;
     letter-spacing: 0.03em;
+    line-height: 1.4;
+  }
+  /* Foundation Projects */
+  .projects {
+    background: var(--navy);
+    padding: 7rem 2rem;
+  }
+  .projects-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 3.5rem;
+  }
+  .project-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(200,169,110,0.15);
+    padding: 3rem 2.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .project-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+  .project-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+  .project-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--cream);
+    font-weight: 400;
+  }
+  .project-card p {
+    font-size: 0.83rem;
+    color: rgba(244,237,224,0.5);
+    line-height: 1.75;
+  }
+  .project-tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(200,169,110,0.3);
+    padding: 3px 12px;
+    margin-top: auto;
   }
   .patron-role {
     font-size: 0.65rem;
@@ -1052,6 +1108,37 @@
       <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/ab.jpg?resize=150%2C150&ssl=1" alt="Georgetown"><span class="lib-name">Georgetown</span></div>
       <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/c.png?resize=150%2C150&ssl=1" alt="Library of Congress"><span class="lib-name">Library of Congress</span></div>
       <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8511.jpg?resize=150%2C150&ssl=1" alt="Franciscan University"><span class="lib-name">Franciscan University</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDATION PROJECTS -->
+<section class="projects">
+  <div class="projects-inner">
+    <div class="reveal">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-title" style="color:var(--cream)">Foundation Projects</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="projects-grid">
+      <a href="https://koinoniacatholic.com" class="project-card reveal" target="_blank">
+        <div class="project-icon">✦</div>
+        <h3>Koinonia Catholic</h3>
+        <p>A digital commons for Catholic scholarship, dialogue, and community — connecting the faithful across traditions.</p>
+        <span class="project-tag">Digital Platform</span>
+      </a>
+      <a href="https://theunmooredgeneration.com" class="project-card reveal reveal-delay-1" target="_blank">
+        <div class="project-icon">✦</div>
+        <h3>The Unmoored Generation</h3>
+        <p>A Foundation initiative addressing the purpose crisis among young adults — integrating faith, meaning, and vocation.</p>
+        <span class="project-tag">Initiative</span>
+      </a>
+      <a href="https://traditionandrenewal.com" class="project-card reveal reveal-delay-2" target="_blank">
+        <div class="project-icon">✦</div>
+        <h3>Tradition & Renewal</h3>
+        <p>A Substack publication offering daily roundups, analysis, and commentary on the Church's living tradition and reform.</p>
+        <span class="project-tag">Publication</span>
+      </a>
     </div>
   </div>
 </section>
