@@ -410,7 +410,9 @@
     line-height: 1;
     font-family: 'Cormorant Garamond', serif;
   }
-  .endorse-person { margin-top: auto; border-top: 1px solid rgba(200,169,110,0.12); padding-top: 1rem; }
+  .endorse-person { margin-top: auto; border-top: 1px solid rgba(200,169,110,0.12); padding-top: 1rem; display: flex; align-items: center; gap: 0.85rem; }
+  .endorse-person img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: top center; flex-shrink: 0; border: 1px solid rgba(200,169,110,0.25); }
+  .endorse-person > div { flex: 1; min-width: 0; }
   .endorse-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1rem;
@@ -1130,6 +1132,7 @@
       <div class="endorsement-card reveal">
         <p class="endorse-quote">In the field of Catholic-Orthodox dialogue, James Likoudis figures as one of the most prominent Catholic apologists.</p>
         <div class="endorse-person">
+          <img src="https://liquid1188.github.io/likoudis-legacy/images/jose-pereira.jpg" alt="Jose Pereira">
           <div>
             <p class="endorse-name">Jose Pereira, PhD</p>
             <p class="endorse-title">Professor Emeritus of Theology, Fordham University</p>
