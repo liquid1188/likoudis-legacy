@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fellows Program — Likoudis Legacy Foundation</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.fellows-intro { padding: 7rem 2rem; }
+.fellows-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.fellows-grid p { color: var(--muted); line-height: 1.85; font-size: 0.95rem; margin-bottom: 1.25rem; }
+.criteria { padding: 6rem 2rem; background: var(--navy); }
+.criteria-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.5rem; }
+.criteria-card { border-left: 1px solid var(--border); padding-left: 1.5rem; }
+.criteria-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--cream); margin-bottom: 0.75rem; }
+.criteria-card ul { list-style: none; }
+.criteria-card ul li { color: rgba(244,237,224,0.55); font-size: 0.85rem; line-height: 1.8; padding-left: 1rem; position: relative; }
+.criteria-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); opacity: 0.6; }
+.scholarships { padding: 7rem 2rem; background: var(--cream); }
+.stipend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3.5rem; }
+.stipend-card { background: var(--ivory); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.12); }
+.stipend-amount { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--gold); font-weight: 300; margin-bottom: 0.5rem; }
+.stipend-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 0.75rem; }
+.stipend-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.75; }
+.fellows-list { padding: 7rem 2rem; }
+.fellows-list-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2px; margin-top: 3.5rem; }
+.fellow-card { background: var(--ivory); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.12); }
+.fellow-card img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); margin-bottom: 1rem; }
+.fellow-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 3px; }
+.fellow-card .role { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.fellow-card ul { list-style: none; }
+.fellow-card ul li { font-size: 0.82rem; color: var(--muted); line-height: 1.75; padding-left: 1rem; position: relative; }
+.fellow-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); opacity: 0.5; }
+.apply { background: var(--navy); padding: 7rem 2rem; text-align: center; }
+.apply-inner { max-width: 700px; margin: 0 auto; }
+.apply-inner p { color: rgba(244,237,224,0.6); line-height: 1.85; margin: 1.5rem 0 2.5rem; font-size: 0.95rem; }
+.apply-docs { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,169,110,0.15); padding: 2rem; margin: 2rem 0; text-align: left; }
+.apply-docs h4 { font-family: 'Cormorant Garamond', serif; color: var(--gold-light); font-size: 1rem; margin-bottom: 1rem; }
+.apply-docs ol { padding-left: 1.5rem; }
+.apply-docs ol li { color: rgba(244,237,224,0.55); font-size: 0.85rem; line-height: 2; }
+@media(max-width:900px){ .fellows-grid{grid-template-columns:1fr;gap:3rem;} .criteria-inner{grid-template-columns:1fr;} .stipend-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF">
+    <span>Likoudis Legacy<br>Foundation</span>
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown"><a href="about.html">About ▾</a><div class="nav-dropdown-menu"><a href="about.html">About</a><a href="team.html">Team</a><a href="events.html">Events</a><a href="contact.html">Contact</a></div></li>
+    <li><a href="fellows.html">Fellows Program</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
+    <li><a href="kydones.html">Kydones Review</a></li>
+    <li class="nav-dropdown"><a href="#">Media ▾</a><div class="nav-dropdown-menu"><a href="https://likoudislegacy.com/videos/" target="_blank">Video Archive</a><a href="https://likoudislegacy.com/essay-archive/" target="_blank">Essay Archive</a></div></li>
+    <li><a href="https://likoudislegacy.com/shop/" target="_blank">Books</a></li>
+    <li><a href="donate.html" class="nav-give">Give</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <span class="eyebrow">Research & Scholarship</span>
+  <h1>Fellows <em>Program</em></h1>
+  <p>Supporting scholars who advance the work of James Likoudis</p>
+  <div class="header-divider"></div>
+</div>
+
+<!-- INTRO -->
+<section class="fellows-intro">
+  <div class="container fellows-grid">
+    <div class="reveal">
+      <span class="section-label">About the Program</span>
+      <h2 class="section-title">Concentrated Research on a Living Tradition</h2>
+      <div class="divider"></div>
+      <p>The Likoudis Legacy Foundation is working towards offering a Fellows Program for scholars desiring to concentrate for 2 to 8 weeks on research and writing on a topic related to the work of James Likoudis.</p>
+      <p>Candidates who are admitted as Fellows are provided a stipend of between $1,000 to $2,000 depending on qualifications and scope of research.</p>
+      <p>The program is still under development, and more specific details are forthcoming. We welcome inquiries from qualified scholars in theology, philosophy, history, and related disciplines.</p>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <span class="section-label">Scholarly Criteria</span>
+      <h2 class="section-title">Who Should Apply</h2>
+      <div class="divider"></div>
+      <p>The following criteria will be taken into account when considering applications. The lack of any one criterion should not be considered a disqualification:</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:1rem;">
+        <li style="padding-left:1.5rem;position:relative;font-size:0.9rem;color:var(--muted);line-height:1.7;"><span style="position:absolute;left:0;color:var(--gold);">—</span>MA thesis or Ph.D. dissertation, completed or in-progress</li>
+        <li style="padding-left:1.5rem;position:relative;font-size:0.9rem;color:var(--muted);line-height:1.7;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Conference presentations</li>
+        <li style="padding-left:1.5rem;position:relative;font-size:0.9rem;color:var(--muted);line-height:1.7;"><span style="position:absolute;left:0;color:var(--gold);">—</span>College courses taught</li>
+        <li style="padding-left:1.5rem;position:relative;font-size:0.9rem;color:var(--muted);line-height:1.7;"><span style="position:absolute;left:0;color:var(--gold);">—</span>Peer-reviewed publications, including books and journal articles</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOLARSHIPS -->
+<section class="scholarships">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:0;">
+      <span class="section-label">Financial Support</span>
+      <h2 class="section-title">Stipends & Grants</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="stipend-grid">
+      <div class="stipend-card reveal">
+        <div class="stipend-amount">$1,000–2,000</div>
+        <h3>Research Stipend</h3>
+        <p>Provided as a lump sum for all accepted fellows, ranging based on qualifications and length of participation.</p>
+      </div>
+      <div class="stipend-card reveal reveal-delay-1">
+        <div class="stipend-amount">$500</div>
+        <h3>Lodging Grant</h3>
+        <p>Available to students who do not live within 50 miles of Washington, DC.</p>
+      </div>
+      <div class="stipend-card reveal reveal-delay-2">
+        <div class="stipend-amount">$500</div>
+        <h3>Travel Grant</h3>
+        <p>Available to students traveling from outside of North America.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+<section class="apply">
+  <div class="apply-inner reveal">
+    <span class="section-label">How to Apply</span>
+    <h2 class="section-title" style="color:var(--cream)">Application Process</h2>
+    <div class="divider center"></div>
+    <p>Applications are submitted through the Likoudis Legacy Application Portal (coming soon). The following documents are required:</p>
+    <div class="apply-docs">
+      <h4>Required Documents</h4>
+      <ol>
+        <li>Complete application form</li>
+        <li>Curriculum Vitae, including a complete list of publications</li>
+        <li>Two letters of recommendation from professors or mentors</li>
+        <li>Research proposal clearly detailing the topic of study and research plan</li>
+      </ol>
+    </div>
+    <a href="contact.html" class="btn-primary">Inquire About the Program</a>
+  </div>
+</section>
+
+<!-- CURRENT FELLOWS -->
+<section class="fellows-list" style="background:var(--cream);">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Current Fellows</span>
+      <h2 class="section-title">The Fellowship Community</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="fellows-list-grid">
+      <div class="fellow-card reveal">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/Michael-Lofton-e1698773454915.jpg?fit=362%2C360&ssl=1" alt="Michael Lofton">
+        <h3>Michael Lofton, MA</h3>
+        <p class="role">Fellow</p>
+        <ul><li>Host & Founder, Reason and Theology</li><li>Author, <em>Answering Orthodoxy</em></li><li>Affiliate Apologist, Catholic Answers</li></ul>
+      </div>
+      <div class="fellow-card reveal reveal-delay-1">
+        <img src="https://ui-avatars.com/api/?name=Suan+Sonna&background=162236&color=c8a96e&size=60" alt="Suan Sonna">
+        <h3>Suan Sonna</h3>
+        <p class="role">Fellow</p>
+        <ul><li>President, Intellectual Catholicism</li><li>MTS Candidate, New Testament & Early Christianity, Harvard Divinity School</li></ul>
+      </div>
+      <div class="fellow-card reveal reveal-delay-2">
+        <img src="https://ui-avatars.com/api/?name=Pedro+Gabriel&background=162236&color=c8a96e&size=60" alt="Pedro Gabriel">
+        <h3>Pedro Gabriel, MD</h3>
+        <p class="role">Fellow</p>
+        <ul><li>Co-founder, Where Peter Is</li><li>Author, <em>The Orthodoxy of Amoris Laetitia</em></li></ul>
+      </div>
+      <div class="fellow-card reveal">
+        <img src="https://ui-avatars.com/api/?name=James+Griffin&background=162236&color=c8a96e&size=60" alt="James Griffin">
+        <h3>James T. M. Griffin</h3>
+        <p class="role">Fellow</p>
+        <ul><li>Co-founder & Executive Director, Durandus Institute for Sacred Liturgy and Music</li></ul>
+      </div>
+      <div class="fellow-card reveal reveal-delay-1">
+        <img src="https://ui-avatars.com/api/?name=Abel+Thomas&background=162236&color=c8a96e&size=60" alt="Abel Thomas">
+        <h3>Abel Thomas, MA, JD</h3>
+        <p class="role">Fellow</p>
+        <ul><li>Contract Attorney</li></ul>
+      </div>
+      <div class="fellow-card reveal reveal-delay-2">
+        <img src="https://ui-avatars.com/api/?name=Andrew+Mioni&background=162236&color=c8a96e&size=60" alt="Andrew Mioni">
+        <h3>Andrew Mioni</h3>
+        <p class="role">Fellow</p>
+        <ul><li>Administrator, TradRecovery.com</li><li>Test Developer</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF Logo"><p>A 501(c)(3) dedicated to ecumenical scholarship and Christian unity.</p><address>Baltimore, MD · 410-409-1695</address></div>
+    <div class="footer-col"><h4>Foundation</h4><ul><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="fellows.html">Fellows Program</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Publications</h4><ul><li><a href="kydones.html">Kydones Review</a></li><li><a href="https://likoudislegacy.com/essay-archive/" target="_blank">Essay Archive</a></li><li><a href="https://likoudislegacy.com/shop/" target="_blank">Books</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="consulting.html">Consulting</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacyF" target="_blank">𝕏</a></div></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
