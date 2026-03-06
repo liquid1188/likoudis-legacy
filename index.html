@@ -501,34 +501,40 @@
   }
   .press-logos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
   }
   .press-logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 72px;
-    padding: 10px 14px;
-    border: 1px solid rgba(200,169,110,0.15);
+    height: 90px;
+    padding: 14px 16px;
+    border: 1px solid rgba(200,169,110,0.18);
     background: white;
-    transition: border-color 0.2s, transform 0.15s;
+    border-radius: 4px;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    gap: 6px;
   }
-  .press-logo:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .press-logo:hover { border-color: rgba(200,169,110,0.5); box-shadow: 0 4px 12px rgba(0,0,0,0.07); transform: translateY(-2px); }
   .press-logo img {
     max-width: 100%;
-    max-height: 36px;
+    max-height: 44px;
+    width: auto;
     object-fit: contain;
-    opacity: 0.85;
+    opacity: 0.8;
     transition: opacity 0.2s;
   }
   .press-logo:hover img { opacity: 1; }
-  .press-logo-text {
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
+  .press-logo-name {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--muted);
     text-align: center;
-    font-weight: 400;
+    line-height: 1.2;
   }
 
   /* ─── LIBRARIES ─── */
@@ -590,8 +596,8 @@
   }
   .patrons-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
     margin-top: 3.5rem;
   }
   .patron-card {
@@ -607,11 +613,13 @@
   }
   .patron-card:hover { border-color: var(--gold); transform: translateY(-2px); }
   .patron-card img {
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     object-fit: contain;
-    filter: grayscale(30%);
+    filter: grayscale(20%);
+    transition: filter 0.2s;
   }
+  .patron-card:hover img { filter: grayscale(0%); }
   .patron-name {
     font-size: 0.78rem;
     color: var(--muted);
@@ -759,10 +767,13 @@
   }
   .saint img {
     width: 90px;
-    height: 120px;
+    height: 112px;
     object-fit: cover;
-    border: 1px solid var(--border);
-    filter: sepia(20%);
+    object-position: top center;
+    border: 1px solid rgba(200,169,110,0.25);
+    border-radius: 2px;
+    filter: sepia(15%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   .saint-name {
     font-family: 'Cormorant Garamond', serif;
@@ -1211,21 +1222,21 @@
       <div class="divider center"></div>
     </div>
     <div class="press-logos reveal">
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-nyt.png?resize=150%2C150&ssl=1" alt="NYT"><span class="press-logo-text" style="display:none">New York Times</span></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-wpi.png?resize=150%2C150&ssl=1" alt="Where Peter Is"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-cc.png?resize=150%2C150&ssl=1" alt="Catholic Culture"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-ewtn.png?resize=150%2C150&ssl=1" alt="EWTN"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-ca.png?resize=150%2C150&ssl=1" alt="Catholic Answers"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press5.jpeg?resize=150%2C150&ssl=1" alt="Patheos"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press.png?resize=150%2C150&ssl=1" alt="Human Life Review"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press2.jpeg?resize=150%2C150&ssl=1" alt="Catholic Exchange"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press3.jpeg?resize=150%2C150&ssl=1" alt="National Catholic Register"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/a2.png?resize=150%2C150&ssl=1" alt="Aleteia"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8512.jpeg?resize=150%2C150&ssl=1" alt="New Oxford Review"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8514.jpeg?resize=150%2C150&ssl=1" alt="Homiletic and Pastoral Review"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8516.jpg?resize=150%2C150&ssl=1" alt="Catholic World News"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/Copy-of-lik-cc-4.png?resize=150%2C150&ssl=1" alt="Crisis Magazine"></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8508.jpeg?resize=150%2C150&ssl=1" alt="The Wanderer"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-nyt.png?resize=150%2C150&ssl=1" alt="New York Times"><span class="press-logo-name">New York Times</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press3.jpeg?resize=150%2C150&ssl=1" alt="National Catholic Register"><span class="press-logo-name">Nat'l Catholic Register</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-ewtn.png?resize=150%2C150&ssl=1" alt="EWTN"><span class="press-logo-name">EWTN</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-ca.png?resize=150%2C150&ssl=1" alt="Catholic Answers"><span class="press-logo-name">Catholic Answers</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-wpi.png?resize=150%2C150&ssl=1" alt="Where Peter Is"><span class="press-logo-name">Where Peter Is</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-cc.png?resize=150%2C150&ssl=1" alt="Catholic Culture"><span class="press-logo-name">Catholic Culture</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press5.jpeg?resize=150%2C150&ssl=1" alt="Patheos"><span class="press-logo-name">Patheos</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press2.jpeg?resize=150%2C150&ssl=1" alt="Catholic Exchange"><span class="press-logo-name">Catholic Exchange</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/a2.png?resize=150%2C150&ssl=1" alt="Aleteia"><span class="press-logo-name">Aleteia</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/Copy-of-lik-cc-4.png?resize=150%2C150&ssl=1" alt="Crisis Magazine"><span class="press-logo-name">Crisis Magazine</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8514.jpeg?resize=150%2C150&ssl=1" alt="Homiletic & Pastoral Review"><span class="press-logo-name">Hom. &amp; Pastoral Review</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8512.jpeg?resize=150%2C150&ssl=1" alt="New Oxford Review"><span class="press-logo-name">New Oxford Review</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8516.jpg?resize=150%2C150&ssl=1" alt="Catholic World News"><span class="press-logo-name">Catholic World News</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press.png?resize=150%2C150&ssl=1" alt="Human Life Review"><span class="press-logo-name">Human Life Review</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8508.jpeg?resize=150%2C150&ssl=1" alt="The Wanderer"><span class="press-logo-name">The Wanderer</span></div>
     </div>
   </div>
 </section>
