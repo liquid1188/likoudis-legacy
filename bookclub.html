@@ -23,7 +23,7 @@
 .bc-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 300; color: var(--cream); margin-bottom: 1rem; line-height: 1.1; }
 .bc-hero p { font-family: 'Cormorant Garamond', serif; font-style: italic; color: rgba(244,237,224,0.6); font-size: 1.15rem; line-height: 1.75; margin-bottom: 2.5rem; }
 
-.bc-body { padding: 7rem 2rem; background: var(--ivory); }
+.bc-body { padding: 8rem 2rem; background: var(--ivory); }
 .bc-inner { max-width: 960px; margin: 0 auto; }
 .bc-grid { display: grid; grid-template-columns: 1fr 340px; gap: 5rem; align-items: start; }
 .bc-book-cover { position: sticky; top: 2rem; }
@@ -31,7 +31,7 @@
 .bc-book-title { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--muted); text-align: center; margin-top: 1rem; font-style: italic; line-height: 1.5; }
 
 .bc-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 400; color: var(--navy); line-height: 1.2; margin-bottom: 1.5rem; }
-.bc-text p { font-size: 0.9rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.25rem; }
+.bc-text p { font-size: 0.95rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.35rem; }
 
 .bc-leader { display: flex; align-items: center; gap: 1.25rem; border: 1px solid var(--border); padding: 1.5rem; margin: 2.5rem 0; background: white; }
 .bc-leader-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 3px; }
@@ -39,8 +39,8 @@
 
 .bc-details { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.5rem 0; }
 .bc-detail { border-left: 2px solid rgba(200,169,110,0.3); padding: 0.75rem 1.25rem; }
-.bc-detail-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 4px; }
-.bc-detail-val { font-size: 0.85rem; color: var(--navy); }
+.bc-detail-label { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 5px; }
+.bc-detail-val { font-size: 0.88rem; color: var(--navy); }
 
 .bc-seminars { background: var(--navy); padding: 7rem 2rem; }
 .bc-seminars-inner { max-width: 960px; margin: 0 auto; }
@@ -77,8 +77,8 @@
     <span class="section-label" style="opacity:0.7;">Foundation Programs</span>
     <h1>The LLF<br>Book Club</h1>
     <p style="margin-bottom:0.75rem;">A guided reading program on Catholic theology and ecumenism — led by Liz Moncada Sandoval.</p>
-    <p style="font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(200,169,110,0.7);margin-bottom:2.5rem;">Currently reading: <em style="text-transform:none;letter-spacing:0;">The Divine Primacy</em> — James Likoudis</p>
-    <a href="contact.html" class="btn-primary">Express Interest</a>
+    <p style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(200,169,110,0.6);margin-bottom:2.5rem;">Current Text &ensp;·&ensp; <em style="text-transform:none;letter-spacing:0;font-style:italic;">The Divine Primacy</em> &ensp;·&ensp; James Likoudis</p>
+    <a href="contact.html" class="btn-primary">Join the Reading Group</a>
   </div>
 </div>
 
@@ -94,9 +94,12 @@
         <p>The Book Club is designed to equip participants to engage these questions substantively, to understand why Likoudis thought them decisive, and to bring his thinking into conversation with contemporary ecumenical dialogue.</p>
 
         <div class="bc-leader">
+          <div style="width:52px;height:52px;border-radius:50%;background:var(--navy);border:1px solid rgba(200,169,110,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);">LM</span>
+          </div>
           <div>
             <p class="bc-leader-name">Liz Moncada Sandoval</p>
-            <p class="bc-leader-role">Book Club Lead</p>
+            <p class="bc-leader-role">Book Club Lead &amp; Discussion Facilitator</p>
           </div>
         </div>
 
@@ -119,9 +122,10 @@
           </div>
         </div>
 
-        <a href="https://a.co/d/7OLUE9y" class="btn-primary" target="_blank">Get the Book</a>
-        &nbsp;&nbsp;
-        <a href="contact.html" class="btn-outline" style="color:var(--navy);margin-top:1rem;">Register Interest</a>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;">
+          <a href="https://a.co/d/7OLUE9y" class="btn-primary" target="_blank">Get the Book</a>
+          <a href="contact.html" class="btn-outline" style="color:var(--navy);">Join the Reading Group</a>
+        </div>
       </div>
 
       <div class="bc-book-cover">
@@ -171,7 +175,7 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:3rem;">
-      <a href="contact.html" class="btn-primary">Express Interest</a>
+      <a href="contact.html" class="btn-primary">Request to Join</a>
     </div>
   </div>
 </section>
