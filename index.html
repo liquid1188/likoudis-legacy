@@ -114,6 +114,16 @@
       radial-gradient(ellipse 60% 80% at 80% 100%, rgba(200,169,110,0.05) 0%, transparent 50%);
     pointer-events: none;
   }
+  .hero-logo-wrap {
+    margin-bottom: 2rem;
+    animation: fadeUp 1s 0.05s ease both;
+  }
+  .hero-logo {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 24px rgba(200,169,110,0.25));
+  }
   .hero-cross {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
@@ -664,6 +674,71 @@
     text-transform: uppercase;
   }
 
+  /* ─── POPE CALLOUT ─── */
+  .pope-callout {
+    background: var(--cream);
+    padding: 7rem 2rem;
+    border-top: 1px solid rgba(200,169,110,0.15);
+  }
+  .pope-callout-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 5rem;
+    align-items: center;
+  }
+  .pope-callout-text p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--muted);
+    margin-top: 1.5rem;
+  }
+  .pope-callout-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .pope-callout-image > img {
+    width: 200px;
+    height: 260px;
+    object-fit: cover;
+    object-position: top;
+    border: 1px solid rgba(200,169,110,0.25);
+    filter: sepia(10%);
+  }
+  .pope-callout-caption {
+    text-align: center;
+  }
+  .coat-of-arms {
+    width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pope-motto-text {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin: 0.25rem 0 0;
+  }
+  .pope-motto-trans {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0.3rem 0 0;
+  }
+  @media(max-width:800px) {
+    .pope-callout-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .pope-callout-image { order: -1; }
+  }
+
   /* ─── SAINTS ─── */
   .saints {
     background: var(--ivory);
@@ -679,6 +754,9 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2px;
     margin-top: 3rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .saint {
     display: flex;
@@ -721,21 +799,21 @@
     font-size: 0.95rem;
   }
   .give-methods {
-    display: grid;
-    grid-template-columns: repeat(3, 72px);
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     justify-content: center;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
   }
   .give-method {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 72px;
-    height: 72px;
+    width: 88px;
+    height: 88px;
     border: 1px solid rgba(200,169,110,0.25);
     background: white;
-    padding: 14px;
+    padding: 16px;
     border-radius: 50%;
     overflow: hidden;
     transition: border-color 0.2s, transform 0.15s;
@@ -877,6 +955,9 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-cross">✦</div>
+  <div class="hero-logo-wrap">
+    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="Likoudis Legacy Foundation" class="hero-logo">
+  </div>
   <p class="hero-eyebrow">501(c)(3) · Est. 2023 · Baltimore, MD</p>
   <h1><em>Likoudis</em> Legacy<br>Foundation</h1>
   <p class="hero-sub">Advancing Ecumenical Scholarship & Christian Unity</p>
@@ -927,12 +1008,33 @@
 <!-- LATEST MESSAGE -->
 <section class="latest">
   <div class="latest-inner reveal">
-    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/pope-leo.webp?fit=473%2C610&ssl=1" alt="Pope Leo" class="pope-img">
+    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6745.jpeg?fit=772%2C1024&ssl=1" alt="James Likoudis" class="pope-img">
     <span class="section-label">Latest Message</span>
     <h2 class="section-title" style="color:var(--cream)">One Year Anniversary</h2>
     <div class="divider center"></div>
     <p class="latest-body">On September 3, 2025, the Likoudis Legacy Foundation marked the one-year anniversary of theologian James Likoudis' passing into eternal life. Andrew Likoudis' tribute, reflecting on the lasting impact of his grandfather's nearly one hundred years of faith, scholarship, and devotion to Christian unity, can be found at the link below.</p>
     <a href="https://www.patheos.com/blogs/natureandgrace/2025/09/james-likoudis-one-year-death-anniversary/" class="latest-link" target="_blank">Read the tribute →</a>
+  </div>
+</section>
+
+
+<!-- POPE LEO CALLOUT -->
+<section class="pope-callout">
+  <div class="pope-callout-inner reveal">
+    <div class="pope-callout-text">
+      <span class="section-label">The Papal Motto</span>
+      <h2 class="section-title">Pope Leo XIV</h2>
+      <div class="divider"></div>
+      <p>The Foundation's motto — <em>In Illo Uno Unum</em> — is also the motto of Pope Leo XIV, taken from Saint Augustine's <em>Exposition on Psalm 127</em>: "Although we Christians are many, in the one Christ we are one." It is a fitting convergence for a foundation devoted to ecumenical scholarship and Christian unity.</p>
+    </div>
+    <div class="pope-callout-image">
+      <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/pope-leo.webp?fit=473%2C610&ssl=1" alt="Pope Leo XIV">
+      <div class="pope-callout-caption">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Coat_of_arms_of_Pope_Leo_XIV.svg/200px-Coat_of_arms_of_Pope_Leo_XIV.svg.png" alt="Coat of Arms of Pope Leo XIV" class="coat-of-arms">
+        <p class="pope-motto-text"><em>In Illo Uno Unum</em></p>
+        <p class="pope-motto-trans">"In the One, we are one."</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1209,6 +1311,18 @@
       <div class="saint">
         <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/Therese-e1707187813222.jpg?fit=274%2C356&ssl=1" alt="St. Thérèse">
         <p class="saint-name">St. Thérèse<br>of Lisieux</p>
+      </div>
+      <div class="saint">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/John_Henry_Newman_by_Sir_John_Everett_Millais%2C_1st_Bt.jpg/240px-John_Henry_Newman_by_Sir_John_Everett_Millais%2C_1st_Bt.jpg" alt="St. John Henry Newman">
+        <p class="saint-name">St. John Henry<br>Newman</p>
+      </div>
+      <div class="saint">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Botticelli_augustine.jpg/240px-Botticelli_augustine.jpg" alt="St. Augustine">
+        <p class="saint-name">St. Augustine<br>of Hippo</p>
+      </div>
+      <div class="saint">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyril_and_Methodius2.jpg/240px-Cyril_and_Methodius2.jpg" alt="Sts. Cyril and Methodius">
+        <p class="saint-name">Sts. Cyril &<br>Methodius</p>
       </div>
     </div>
   </div>
