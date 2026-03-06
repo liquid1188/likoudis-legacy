@@ -174,12 +174,7 @@ footer {
 }
 .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
 
-/* ─── SCROLL REVEAL ─── */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
+/* ─── SCROLL REVEAL ─── (see bottom) */
 
 /* ─── RESPONSIVE ─── */
 
@@ -248,3 +243,49 @@ footer {
   .footer-inner { grid-template-columns: 1fr; }
   .page-header { padding: 110px 1.5rem 50px; }
 }
+
+/* ─── NAV SCROLLED STATE ─── */
+nav.nav-scrolled {
+  height: 54px;
+  border-bottom-color: rgba(200,169,110,0.28);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.28);
+  background: rgba(10,20,36,0.99);
+  transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+nav { transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; }
+
+/* ─── ACTIVE NAV LINK ─── */
+.nav-links a.nav-active { color: var(--gold) !important; }
+
+/* ─── BACK-TO-TOP ─── */
+.back-to-top {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
+  width: 40px; height: 40px;
+  background: var(--navy);
+  border: 1px solid rgba(200,169,110,0.35);
+  color: rgba(200,169,110,0.7);
+  font-size: 1rem; font-family: 'Jost', sans-serif;
+  cursor: pointer; border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s, color 0.2s, border-color 0.2s, transform 0.2s;
+  transform: translateY(6px);
+}
+.back-to-top.visible {
+  opacity: 1; pointer-events: auto; transform: translateY(0);
+}
+.back-to-top:hover { color: var(--gold); border-color: var(--gold); }
+
+/* ─── REVEAL: smoother stagger ─── */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s cubic-bezier(0.22,0.6,0.36,1), transform 0.65s cubic-bezier(0.22,0.6,0.36,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+
+/* ─── SECTION DIVIDERS: breathing room ─── */
+.divider { width: 40px; height: 1px; background: var(--gold); opacity: 0.4; margin: 1.5rem 0; }
+.divider.center { margin-left: auto; margin-right: auto; }
+
+/* ─── SELECTION COLOR ─── */
+::selection { background: rgba(200,169,110,0.25); color: var(--navy); }
