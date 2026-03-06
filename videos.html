@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Archive — Likoudis Legacy Foundation</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.videos-section { padding: 7rem 2rem; }
+.videos-inner { max-width: 1100px; margin: 0 auto; }
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 3.5rem;
+}
+.video-card {
+  background: var(--navy-mid);
+  border: 1px solid rgba(200,169,110,0.12);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.video-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.video-thumb {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  overflow: hidden;
+}
+.video-thumb iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.video-thumb-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.video-thumb-img:hover { opacity: 0.85; }
+.play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px; height: 56px;
+  background: rgba(200,169,110,0.9);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none;
+  transition: background 0.2s;
+}
+.video-thumb:hover .play-btn { background: var(--gold); }
+.play-btn::after {
+  content: '';
+  border-style: solid;
+  border-width: 10px 0 10px 18px;
+  border-color: transparent transparent transparent var(--navy);
+  margin-left: 4px;
+}
+.video-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+.video-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--cream);
+  font-weight: 400;
+  line-height: 1.35;
+}
+.video-info a {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  margin-top: auto;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.video-info a:hover { opacity: 1; }
+@media(max-width: 900px) { .videos-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width: 560px) { .videos-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF">
+    <span>Likoudis Legacy<br>Foundation</span>
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown"><a href="about.html">About ▾</a><div class="nav-dropdown-menu"><a href="about.html">About</a><a href="team.html">Team</a><a href="events.html">Events</a><a href="contact.html">Contact</a></div></li>
+    <li><a href="fellows.html">Fellows Program</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
+    <li><a href="kydones.html">Kydones Review</a></li>
+    <li class="nav-dropdown"><a href="#">Media ▾</a><div class="nav-dropdown-menu"><a href="videos.html">Video Archive</a><a href="essays.html">Essay Archive</a><a href="https://likoudislegacy.com/photos/" target="_blank">Photo Archive</a></div></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="donate.html" class="nav-give">Give</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <span class="eyebrow">Media Archive</span>
+  <h1>Video <em>Archive</em></h1>
+  <p>Lectures, debates, and interviews featuring Dr. James Likoudis</p>
+  <div class="header-divider"></div>
+</div>
+
+<section class="videos-section" style="background:var(--navy);">
+  <div class="videos-inner">
+    <div class="reveal" style="text-align:center;margin-bottom:0;">
+      <span class="section-label">On Record</span>
+      <h2 class="section-title" style="color:var(--cream)">Lectures & Interviews</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="videos-grid">
+
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/47aHVctgJEU/hqdefault.jpg" alt="At the Origins of the Byzantine Greco-Slav Schism" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/47aHVctgJEU?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>At the Origins of the Byzantine Greco-Slav Schism</h3>
+          <a href="https://youtu.be/47aHVctgJEU" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal reveal-delay-1">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/5qtcCm6g-XA/hqdefault.jpg" alt="Former Greek Orthodox - The Journey Home Program" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/5qtcCm6g-XA?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>Former Greek Orthodox — The Journey Home Program</h3>
+          <a href="https://youtu.be/5qtcCm6g-XA" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal reveal-delay-2">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/Hwz62uU0K_I/hqdefault.jpg" alt="Dr. James Likoudis on the Orthodox and the Papacy" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/Hwz62uU0K_I?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>Dr. James Likoudis on the Orthodox and the Papacy</h3>
+          <a href="https://youtu.be/Hwz62uU0K_I" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/JjwTxIl3CL0/hqdefault.jpg" alt="The Donation of Constantine and Pope Hadrian at Nicaea II" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/JjwTxIl3CL0?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>The Donation of Constantine and Pope Hadrian at Nicaea II</h3>
+          <a href="https://youtu.be/JjwTxIl3CL0" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal reveal-delay-1">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/MHV_IyZWvb4/hqdefault.jpg" alt="Papacy Debate: Pope St. Agatho, the 6th EC & Papal Infallibility" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/MHV_IyZWvb4?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>Papacy Debate: Pope St. Agatho, the 6th EC & Papal Infallibility</h3>
+          <a href="https://youtu.be/MHV_IyZWvb4" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal reveal-delay-2">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/_XMT32Gv2nk/hqdefault.jpg" alt="Likoudis/Ubi Papacy Debate Debrief" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/_XMT32Gv2nk?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>Likoudis/Ubi Papacy Debate Debrief</h3>
+          <a href="https://youtu.be/_XMT32Gv2nk" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/cGVct2bD-GA/hqdefault.jpg" alt="Debate: Does Nicea 2 Teach Papal Supremacy?" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/cGVct2bD-GA?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>Debate: Does Nicea 2 Teach Papal Supremacy?</h3>
+          <a href="https://youtu.be/cGVct2bD-GA" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal reveal-delay-1">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/mxhCkdHLbv0/hqdefault.jpg" alt="Testimony Tuesday with Dr. James Likoudis" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/mxhCkdHLbv0?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>Testimony Tuesday with Dr. James Likoudis — Eastern Orthodox to Roman Catholic</h3>
+          <a href="https://youtu.be/mxhCkdHLbv0" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal reveal-delay-2">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/pfUCIcLUALg/hqdefault.jpg" alt="Heralds of a Catholic Russia" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/pfUCIcLUALg?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>Heralds of a Catholic Russia</h3>
+          <a href="https://youtu.be/pfUCIcLUALg" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/qk8bDz_tPoU/hqdefault.jpg" alt="Joe Indelicato interviews Jim Likoudis on Catechetics, Sex Ed, and Liturgy" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/qk8bDz_tPoU?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>Joe Indelicato Interviews Jim Likoudis on Catechetics, Sex Ed, and Liturgy</h3>
+          <a href="https://youtu.be/qk8bDz_tPoU" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal reveal-delay-1">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/ziHR_8GGKUE/hqdefault.jpg" alt="R&T Round Table on the Motu Proprio" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/ziHR_8GGKUE?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>R&T Round Table on the Motu Proprio</h3>
+          <a href="https://youtu.be/ziHR_8GGKUE" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+      <div class="video-card reveal reveal-delay-2">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/V-c3KCYHsUQ/hqdefault.jpg" alt="Mother Angelica and James Likoudis" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/V-c3KCYHsUQ?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <h3>Mother Angelica and James Likoudis</h3>
+          <a href="https://youtu.be/V-c3KCYHsUQ" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF Logo"><p>A 501(c)(3) dedicated to ecumenical scholarship and Christian unity.</p><address>Baltimore, MD · 410-409-1695</address></div>
+    <div class="footer-col"><h4>Foundation</h4><ul><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="fellows.html">Fellows Program</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Media</h4><ul><li><a href="videos.html">Video Archive</a></li><li><a href="essays.html">Essay Archive</a></li><li><a href="books.html">Books</a></li><li><a href="kydones.html">Kydones Review</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="consulting.html">Consulting</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacyF" target="_blank">𝕏</a></div></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
