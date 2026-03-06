@@ -1428,18 +1428,207 @@
 <!-- FOOTER -->
 
 <!-- EMAIL CAPTURE -->
-<section style="background:var(--navy);padding:5rem 2rem;border-top:1px solid rgba(200,169,110,0.1);">
-  <div style="max-width:580px;margin:0 auto;text-align:center;" class="reveal">
-    <span class="section-label">Stay Connected</span>
-    <h2 class="section-title" style="color:var(--cream)">Join Our Mailing List</h2>
-    <div class="divider center"></div>
-    <p style="color:rgba(244,237,224,0.5);font-size:0.88rem;line-height:1.85;margin:1.25rem 0 2rem;">Events, publications, and fellows announcements — one to two emails per month. No spam.</p>
-    <form style="display:flex;gap:0;max-width:440px;margin:0 auto;" action="https://formspree.io/f/alikoudis@likoudislegacy.com" method="POST">
-      <input type="email" name="email" placeholder="your@email.com" required style="flex:1;padding:0.8rem 1.2rem;background:rgba(255,255,255,0.06);border:1px solid rgba(200,169,110,0.25);border-right:none;color:var(--cream);font-size:0.85rem;outline:none;font-family:'Jost',sans-serif;">
-      <button type="submit" style="padding:0.8rem 1.5rem;background:var(--gold);color:var(--navy);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;font-family:'Jost',sans-serif;">Subscribe</button>
-    </form>
+<section class="email-capture-section">
+  <div class="email-capture-inner reveal">
+    <div class="email-capture-text">
+      <span class="section-label" style="opacity:0.7;">Stay Connected</span>
+      <h2 class="section-title" style="color:var(--cream);">The LLF<br><em>Newsletter</em></h2>
+      <div class="divider"></div>
+      <p>Scholarship, events, and fellows updates — delivered one to two times per month. No noise, no filler.</p>
+      <ul class="capture-bullets">
+        <li>Conference &amp; event announcements</li>
+        <li>New publications &amp; essays</li>
+        <li>Fellows program updates</li>
+        <li>Foundation news</li>
+      </ul>
+    </div>
+    <div class="email-capture-form-wrap">
+      <p class="capture-form-label">Enter your email to subscribe</p>
+      <form class="capture-form" action="https://formspree.io/f/xpwzgllr" method="POST" id="newsletter-form">
+        <div class="capture-field-wrap">
+          <label for="capture-name" class="capture-label">First Name</label>
+          <input type="text" id="capture-name" name="name" placeholder="Your first name" autocomplete="given-name">
+        </div>
+        <div class="capture-field-wrap">
+          <label for="capture-email" class="capture-label">Email Address</label>
+          <input type="email" id="capture-email" name="email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+        <button type="submit" class="capture-submit">
+          <span class="capture-submit-text">Subscribe to the Newsletter</span>
+          <span class="capture-submit-arrow">→</span>
+        </button>
+      </form>
+      <p class="capture-disclaimer">No spam. Unsubscribe anytime.</p>
+      <div class="capture-success" id="capture-success" style="display:none;">
+        <span style="color:var(--gold);font-size:1.1rem;">✓</span>&ensp;You're subscribed. Welcome.
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+.email-capture-section {
+  background: var(--navy);
+  padding: 7rem 2rem;
+  border-top: 1px solid rgba(200,169,110,0.1);
+}
+.email-capture-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.email-capture-text p {
+  color: rgba(244,237,224,0.55);
+  font-size: 0.9rem;
+  line-height: 1.85;
+  margin: 1.25rem 0 1.5rem;
+}
+.capture-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.capture-bullets li {
+  font-size: 0.8rem;
+  color: rgba(244,237,224,0.4);
+  letter-spacing: 0.04em;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.capture-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  opacity: 0.5;
+}
+.email-capture-form-wrap {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(200,169,110,0.18);
+  padding: 2.5rem;
+}
+.capture-form-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(200,169,110,0.55);
+  margin-bottom: 1.75rem;
+  display: block;
+}
+.capture-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.capture-field-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.capture-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(244,237,224,0.35);
+}
+.capture-field-wrap input {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(200,169,110,0.2);
+  color: var(--cream);
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem;
+  font-family: 'Jost', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.capture-field-wrap input::placeholder {
+  color: rgba(244,237,224,0.2);
+}
+.capture-field-wrap input:focus {
+  border-color: rgba(200,169,110,0.5);
+  background: rgba(255,255,255,0.07);
+}
+.capture-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Jost', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  margin-top: 0.25rem;
+}
+.capture-submit:hover {
+  opacity: 0.88;
+  transform: translateX(2px);
+}
+.capture-submit-arrow {
+  font-size: 1rem;
+  font-weight: 300;
+  transition: transform 0.2s;
+}
+.capture-submit:hover .capture-submit-arrow {
+  transform: translateX(4px);
+}
+.capture-disclaimer {
+  font-size: 0.65rem;
+  color: rgba(244,237,224,0.25);
+  margin-top: 1rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.capture-success {
+  background: rgba(200,169,110,0.08);
+  border: 1px solid rgba(200,169,110,0.25);
+  padding: 1.25rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(244,237,224,0.75);
+  letter-spacing: 0.04em;
+}
+@media(max-width:800px) {
+  .email-capture-inner { grid-template-columns: 1fr; gap: 3rem; }
+}
+</style>
+<script>
+(function(){
+  const form = document.getElementById('newsletter-form');
+  if(!form) return;
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const btn = form.querySelector('.capture-submit-text');
+    btn.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if(res.ok) {
+        form.style.display = 'none';
+        form.previousElementSibling.style.display = 'none';
+        document.getElementById('capture-success').style.display = 'block';
+      } else {
+        btn.textContent = 'Try Again';
+      }
+    } catch(err) {
+      btn.textContent = 'Try Again';
+    }
+  });
+})();
+</script>
 
 <footer>
   <div class="footer-inner">
