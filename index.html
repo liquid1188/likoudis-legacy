@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Likoudis Legacy Foundation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0e1b2e;
+    --navy-mid: #162236;
+    --gold: #c8a96e;
+    --gold-light: #e0c992;
+    --cream: #f4ede0;
+    --ivory: #faf7f2;
+    --text: #1a1a1a;
+    --muted: #6b6258;
+    --border: rgba(200,169,110,0.25);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--ivory);
+    color: var(--text);
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(14,27,46,0.97);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    height: 64px;
+    border-bottom: 1px solid rgba(200,169,110,0.2);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    height: 36px;
+    width: 36px;
+    object-fit: contain;
+    filter: brightness(1.1);
+  }
+  .nav-logo span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gold-light);
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(244,237,224,0.75);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-give {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold) !important;
+    padding: 6px 18px;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.12em !important;
+    transition: background 0.2s, color 0.2s !important;
+  }
+  .nav-give:hover { background: var(--gold) !important; color: var(--navy) !important; }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 2rem 80px;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(200,169,110,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 80% 100%, rgba(200,169,110,0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-cross {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 2.5rem;
+    opacity: 0.7;
+    letter-spacing: 0.3em;
+    animation: fadeUp 1s ease both;
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 1s 0.1s ease both;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    animation: fadeUp 1s 0.2s ease both;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    color: rgba(244,237,224,0.55);
+    font-style: italic;
+    margin-bottom: 3rem;
+    animation: fadeUp 1s 0.3s ease both;
+  }
+  .hero-motto {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    opacity: 0.8;
+    letter-spacing: 0.05em;
+    margin-bottom: 3.5rem;
+    animation: fadeUp 1s 0.35s ease both;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeUp 1s 0.45s ease both;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    padding: 14px 38px;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline {
+    border: 1px solid rgba(200,169,110,0.5);
+    color: var(--cream);
+    text-decoration: none;
+    padding: 14px 38px;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); }
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.4;
+    animation: fadeUp 1s 0.8s ease both;
+  }
+  .hero-scroll span {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  /* ─── SECTIONS ─── */
+  section { position: relative; }
+  .section-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 300;
+    line-height: 1.15;
+  }
+  .divider {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 1.5rem 0;
+    opacity: 0.6;
+  }
+  .divider.center { margin-left: auto; margin-right: auto; }
+
+  /* ─── PURPOSE ─── */
+  .purpose {
+    background: var(--ivory);
+    padding: 8rem 2rem;
+  }
+  .purpose-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+  .purpose-left {}
+  .purpose-left p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+  }
+  .purpose-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .pillar {
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--border);
+  }
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+  }
+  .pillar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+  }
+  .pillar p {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: var(--muted);
+  }
+
+  /* ─── LATEST MESSAGE ─── */
+  .latest {
+    background: var(--navy);
+    padding: 6rem 2rem;
+    overflow: hidden;
+  }
+  .latest-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .latest .section-label { opacity: 0.7; }
+  .latest .section-title { color: var(--cream); }
+  .latest-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: rgba(244,237,224,0.7);
+    line-height: 1.9;
+    margin: 2rem 0;
+  }
+  .latest-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(200,169,110,0.4);
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+  }
+  .latest-link:hover { border-color: var(--gold); }
+  .pope-img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    margin: 0 auto 2rem;
+    display: block;
+    border: 1px solid var(--border);
+    filter: sepia(0.15);
+  }
+
+  /* ─── ENDORSEMENTS ─── */
+  .endorsements {
+    background: var(--cream);
+    padding: 8rem 2rem;
+  }
+  .endorsements-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .endorsements-header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .endorsements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2px;
+  }
+  .endorsement-card {
+    background: var(--ivory);
+    padding: 2.5rem;
+    transition: transform 0.2s;
+    border: 1px solid rgba(200,169,110,0.12);
+  }
+  .endorsement-card:hover { transform: translateY(-3px); }
+  .endorse-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .endorse-quote::before {
+    content: '\201C';
+    font-size: 4rem;
+    color: var(--gold);
+    opacity: 0.3;
+    position: absolute;
+    top: -1rem;
+    left: -0.5rem;
+    line-height: 1;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .endorse-person {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .endorse-person img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(20%);
+    border: 1px solid var(--border);
+  }
+  .endorse-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .endorse-title {
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.4;
+    margin-top: 2px;
+  }
+
+  /* ─── BOOKS ─── */
+  .books {
+    background: var(--navy);
+    padding: 8rem 2rem;
+  }
+  .books-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .books-header {
+    margin-bottom: 4rem;
+  }
+  .books-header .section-title { color: var(--cream); }
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+  .book-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border: 1px solid rgba(200,169,110,0.2);
+    transition: transform 0.2s;
+  }
+  .book-card:hover img { transform: translateY(-4px); }
+  .book-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--cream);
+    font-weight: 400;
+  }
+  .book-link {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200,169,110,0.4);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .book-link:hover { color: var(--gold-light); border-color: var(--gold-light); }
+
+  /* ─── PRESS ─── */
+  .press {
+    background: var(--ivory);
+    padding: 7rem 2rem;
+  }
+  .press-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .press-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .press-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .press-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 56px;
+    padding: 8px;
+    border: 1px solid rgba(200,169,110,0.15);
+    background: white;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .press-logo:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .press-logo img {
+    max-width: 100%;
+    max-height: 36px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.65;
+    transition: filter 0.2s, opacity 0.2s;
+  }
+  .press-logo:hover img { filter: none; opacity: 1; }
+  .press-logo-text {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    text-align: center;
+    font-weight: 400;
+  }
+
+  /* ─── LIBRARIES ─── */
+  .libraries {
+    background: var(--navy);
+    padding: 7rem 2rem;
+  }
+  .libraries-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .libraries .section-title { color: var(--cream); }
+  .libraries-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: rgba(244,237,224,0.55);
+    font-size: 1.05rem;
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
+  }
+  .libraries-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2.5rem;
+  }
+  .lib-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .lib-item img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(40%) brightness(0.9);
+    border: 1px solid rgba(200,169,110,0.2);
+  }
+  .lib-name {
+    font-size: 0.8rem;
+    color: rgba(244,237,224,0.65);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── PATRONS ─── */
+  .patrons {
+    background: var(--cream);
+    padding: 7rem 2rem;
+  }
+  .patrons-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .patrons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+  .patron-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1.5rem 1rem;
+    border: 1px solid rgba(200,169,110,0.15);
+    background: var(--ivory);
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .patron-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .patron-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: grayscale(30%);
+  }
+  .patron-name {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  .patron-role {
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ─── SAINTS ─── */
+  .saints {
+    background: var(--ivory);
+    padding: 6rem 2rem;
+  }
+  .saints-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .saints-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+  .saint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .saint img {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    filter: sepia(20%);
+  }
+  .saint-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--navy);
+    text-align: center;
+  }
+
+  /* ─── GIVE CTA ─── */
+  .give-cta {
+    background: var(--cream);
+    padding: 7rem 2rem;
+  }
+  .give-cta-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .give-cta .section-title { color: var(--navy); }
+  .give-cta p {
+    color: var(--muted);
+    margin: 1.5rem 0 2.5rem;
+    line-height: 1.8;
+    font-size: 0.95rem;
+  }
+  .give-methods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  .give-method {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border: 1px solid rgba(200,169,110,0.2);
+    background: white;
+    padding: 10px;
+    transition: border-color 0.2s;
+    text-decoration: none;
+  }
+  .give-method:hover { border-color: var(--gold); }
+  .give-method img { width: 100%; height: 100%; object-fit: contain; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy);
+    padding: 4rem 2rem 2.5rem;
+    border-top: 1px solid rgba(200,169,110,0.15);
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .footer-brand img {
+    height: 44px;
+    width: 44px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: brightness(0.9);
+  }
+  .footer-brand p {
+    font-size: 0.8rem;
+    color: rgba(244,237,224,0.45);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .footer-brand address {
+    font-style: normal;
+    font-size: 0.78rem;
+    color: rgba(244,237,224,0.4);
+    line-height: 1.8;
+  }
+  .footer-col h4 {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    opacity: 0.8;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 0.6rem; }
+  .footer-col ul a {
+    color: rgba(244,237,224,0.5);
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: color 0.2s;
+  }
+  .footer-col ul a:hover { color: var(--gold-light); }
+  .footer-bottom {
+    border-top: 1px solid rgba(200,169,110,0.1);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom p {
+    font-size: 0.72rem;
+    color: rgba(244,237,224,0.3);
+  }
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+  }
+  .footer-social a {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(200,169,110,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(244,237,224,0.4);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    .purpose-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .books-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    nav { padding: 0 1rem; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .endorsements-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF">
+    <span>Likoudis Legacy<br>Foundation</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#endorsements">Endorsements</a></li>
+    <li><a href="#books">Books</a></li>
+    <li><a href="#press">Press</a></li>
+    <li><a href="https://likoudislegacy.com/the-kydones-review/" target="_blank">Kydones Review</a></li>
+    <li><a href="https://likoudislegacy.com/donate/" class="nav-give">Give</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-cross">✦</div>
+  <p class="hero-eyebrow">501(c)(3) · Est. 2023 · Baltimore, MD</p>
+  <h1><em>Likoudis</em> Legacy<br>Foundation</h1>
+  <p class="hero-sub">Advancing Ecumenical Scholarship & Christian Unity</p>
+  <p class="hero-motto">In Illo Uno Unum — In the One, we are one.</p>
+  <div class="hero-buttons">
+    <a href="https://likoudislegacy.com/donate/" class="btn-primary">Support the Foundation</a>
+    <a href="#about" class="btn-outline">Our Mission</a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- PURPOSE -->
+<section class="purpose" id="about">
+  <div class="purpose-inner">
+    <div class="purpose-left reveal">
+      <span class="section-label">Our Mission</span>
+      <h2 class="section-title">A Foundation for the<br>Long Work of Unity</h2>
+      <div class="divider"></div>
+      <p>The Likoudis Legacy Foundation is organized exclusively for charitable, educational, and scientific purposes under Section 501(c)(3). It carries forward the intellectual heritage of theologian James Likoudis — nearly a century of faith, scholarship, and devotion to Christian unity.</p>
+      <p style="margin-top:1rem;">Established in his memory, the Foundation continues his advocacy for the Church's unity, the dignity of the human person, and the freedom of the faith to flourish in every corner of the world.</p>
+      <div style="margin-top:2.5rem;">
+        <a href="https://likoudislegacy.com/about/" class="book-link">Learn about the Foundation →</a>
+      </div>
+    </div>
+    <div class="purpose-pillars reveal reveal-delay-1">
+      <div class="pillar">
+        <p class="pillar-num">I.</p>
+        <h3>Ecumenical Dialogue</h3>
+        <p>To foster ecumenical dialogue by building bridges across diverse Christian traditions in pursuit of greater Christian unity.</p>
+      </div>
+      <div class="pillar">
+        <p class="pillar-num">II.</p>
+        <h3>Human Dignity & Peace</h3>
+        <p>To uphold human dignity and peace by promoting principles that foster understanding, respect, and global harmony.</p>
+      </div>
+      <div class="pillar">
+        <p class="pillar-num">III.</p>
+        <h3>Religious Liberty</h3>
+        <p>To advance religious liberty by championing the rights of communities where the Christian faith is under threat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST MESSAGE -->
+<section class="latest">
+  <div class="latest-inner reveal">
+    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/pope-leo.webp?fit=473%2C610&ssl=1" alt="Pope Leo" class="pope-img">
+    <span class="section-label">Latest Message</span>
+    <h2 class="section-title" style="color:var(--cream)">One Year Anniversary</h2>
+    <div class="divider center"></div>
+    <p class="latest-body">On September 3, 2025, the Likoudis Legacy Foundation marked the one-year anniversary of theologian James Likoudis' passing into eternal life. Andrew Likoudis' tribute, reflecting on the lasting impact of his grandfather's nearly one hundred years of faith, scholarship, and devotion to Christian unity, can be found at the link below.</p>
+    <a href="https://www.patheos.com/blogs/natureandgrace/2025/09/james-likoudis-one-year-death-anniversary/" class="latest-link" target="_blank">Read the tribute →</a>
+  </div>
+</section>
+
+<!-- ENDORSEMENTS -->
+<section class="endorsements" id="endorsements">
+  <div class="endorsements-inner">
+    <div class="endorsements-header reveal">
+      <span class="section-label">Endorsements</span>
+      <h2 class="section-title">Voices for the Legacy</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="endorsements-grid">
+      <div class="endorsement-card reveal">
+        <p class="endorse-quote">I knew Dr. Likoudis for some twenty-five years… Dr. Likoudis' work as the author of numerous books and articles significantly contributed to clarifying and enhancing the relations between the Roman Catholic Church and the Eastern Orthodox Churches. He is regarded as a true Christian scholar.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/01/burke.jpeg?fit=500%2C627&ssl=1" alt="Cardinal Burke">
+          <div>
+            <p class="endorse-name">Raymond Cardinal Burke</p>
+            <p class="endorse-title">Prefect Emeritus of the Apostolic Signatura</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal reveal-delay-1">
+        <p class="endorse-quote">James Likoudis was a courageous defender of the faith and a gentle 'man of the Church.' It is praiseworthy that this new Foundation has been established in his honor… May this initiative enrich the Church's pursuit of Christian unity.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/Archbishop-Joseph-F.-Naumann-Photo-e1741117520725.jpg?fit=1286%2C1317&ssl=1" alt="Archbishop Naumann">
+          <div>
+            <p class="endorse-name">Archbishop Joseph F. Naumann</p>
+            <p class="endorse-title">Archbishop of Kansas City</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal reveal-delay-2">
+        <p class="endorse-quote">I have known James Likoudis for half of my life and a third of his… He recognizes that conversion—any conversion—is not the matter of a moment. It is the love of a lifetime.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/09/Scott-Hahn-Headshot-1-240x300-1.jpeg?fit=240%2C300&ssl=1" alt="Scott Hahn">
+          <div>
+            <p class="endorse-name">Scott Hahn, PhD</p>
+            <p class="endorse-title">President, St. Paul Center for Biblical Theology</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal">
+        <p class="endorse-quote">Likoudis occupies a singular place in the literature of his time. Faithful, yet not crazy. Very few people got it so right.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/MIke-Aquilina-e1698774017601.jpg?fit=260%2C260&ssl=1" alt="Mike Aquilina">
+          <div>
+            <p class="endorse-name">Mike Aquilina</p>
+            <p class="endorse-title">Executive Vice President, St. Paul Center for Biblical Theology</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal reveal-delay-1">
+        <p class="endorse-quote">Dr. Likoudis is a wonderful example of how to dialogue with the Orthodox about important differences without falling into a rigid fundamentalism that refuses to see grace present in the Orthodox church.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/Michael-Lofton-e1698773454915.jpg?fit=362%2C360&ssl=1" alt="Michael Lofton">
+          <div>
+            <p class="endorse-name">Michael Lofton</p>
+            <p class="endorse-title">Founder, Reason and Theology</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal reveal-delay-2">
+        <p class="endorse-quote">James Likoudis was one of several mentors from whom I was privileged to learn… Likoudis was already established as a proponent of authentic Catholic renewal, a leading opponent of sex education in schools, and a champion of the Magisterium.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/09/Jeffrey-Mirus.jpeg?fit=247%2C300&ssl=1" alt="Jeffrey Mirus">
+          <div>
+            <p class="endorse-name">Jeffrey Mirus, PhD</p>
+            <p class="endorse-title">Founder, CatholicCulture.org</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal">
+        <p class="endorse-quote">In the field of Catholic-Orthodox dialogue, James Likoudis figures as one of the most prominent Catholic apologists.</p>
+        <div class="endorse-person">
+          <div>
+            <p class="endorse-name">Jose Pereira, PhD</p>
+            <p class="endorse-title">Professor Emeritus of Theology, Fordham University</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal reveal-delay-1">
+        <p class="endorse-quote">In our modern era of mass communication, the Ecumenical work of reunion will not be carried out in full without lay involvement. And there is, perhaps, no member of the laity of either of the 'two lungs' of apostolic faith that has done more to further the dialogue than James Likoudis.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/tim-staples-e1698774140194.jpg?fit=200%2C200&ssl=1" alt="Tim Staples">
+          <div>
+            <p class="endorse-name">Tim Staples</p>
+            <p class="endorse-title">Senior Apologist, Catholic Answers</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal reveal-delay-2">
+        <p class="endorse-quote">For many years… James Likoudis has been a tireless laborer for fraternal dialogue between Catholic and Orthodox Christians. Few know these two ecclesial worlds so thoroughly.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/06/dr-italy-top-copy-1024x700-1.jpeg?fit=420%2C420&ssl=1" alt="Marcellino D'Ambrosio">
+          <div>
+            <p class="endorse-name">Marcellino D'Ambrosio, PhD</p>
+            <p class="endorse-title">Senior Fellow, St. Paul Center for Biblical Theology</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section class="books" id="books">
+  <div class="books-inner">
+    <div class="books-header reveal">
+      <span class="section-label">Featured Titles</span>
+      <h2 class="section-title" style="color:var(--cream)">Works from the Tradition</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="books-grid">
+      <div class="book-card reveal">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_5885.jpeg?resize=600%2C919&ssl=1" alt="Faith in Crisis">
+        <h3>Faith in Crisis</h3>
+        <p style="font-size:0.82rem;color:rgba(244,237,224,0.45);line-height:1.7;">Critical Dialogues in Catholic Traditionalism, Church Authority, and Reform</p>
+        <a href="https://enroutebooksandmedia.com/faithincrisis/" class="book-link" target="_blank">Buy Online →</a>
+      </div>
+      <div class="book-card reveal reveal-delay-1">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/the_divine_primacy.jpg?resize=338%2C522&ssl=1" alt="The Divine Primacy">
+        <h3>The Divine Primacy</h3>
+        <p style="font-size:0.82rem;color:rgba(244,237,224,0.45);line-height:1.7;">The Bishop of Rome and Modern Eastern Orthodoxy</p>
+        <a href="https://a.co/d/7OLUE9y" class="book-link" target="_blank">View on Amazon →</a>
+      </div>
+      <div class="book-card reveal reveal-delay-2">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/51VZTXV670L._SY445_SX342_.jpg?resize=284%2C442&ssl=1" alt="The Pope, The Council, and The Mass">
+        <h3>The Pope, The Council, and The Mass</h3>
+        <p style="font-size:0.82rem;color:rgba(244,237,224,0.45);line-height:1.7;">Answers to Questions the Traditionalists Have Asked</p>
+        <a href="https://a.co/d/hIdci6z" class="book-link" target="_blank">View on Amazon →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section class="press" id="press">
+  <div class="press-inner">
+    <div class="press-header reveal">
+      <span class="section-label">In the Press</span>
+      <h2 class="section-title">Outlets That Have Cited the Likoudis Name</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="press-logos reveal">
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-nyt.png?resize=150%2C150&ssl=1" alt="NYT"><span class="press-logo-text" style="display:none">New York Times</span></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-wpi.png?resize=150%2C150&ssl=1" alt="Where Peter Is"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-cc.png?resize=150%2C150&ssl=1" alt="Catholic Culture"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-ewtn.png?resize=150%2C150&ssl=1" alt="EWTN"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-ca.png?resize=150%2C150&ssl=1" alt="Catholic Answers"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press5.jpeg?resize=150%2C150&ssl=1" alt="Patheos"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press.png?resize=150%2C150&ssl=1" alt="Human Life Review"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press2.jpeg?resize=150%2C150&ssl=1" alt="Catholic Exchange"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press3.jpeg?resize=150%2C150&ssl=1" alt="National Catholic Register"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/a2.png?resize=150%2C150&ssl=1" alt="Aleteia"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8512.jpeg?resize=150%2C150&ssl=1" alt="New Oxford Review"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8514.jpeg?resize=150%2C150&ssl=1" alt="Homiletic and Pastoral Review"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8516.jpg?resize=150%2C150&ssl=1" alt="Catholic World News"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/Copy-of-lik-cc-4.png?resize=150%2C150&ssl=1" alt="Crisis Magazine"></div>
+      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8508.jpeg?resize=150%2C150&ssl=1" alt="The Wanderer"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIBRARIES -->
+<section class="libraries">
+  <div class="libraries-inner reveal">
+    <span class="section-label">Scholarly Reach</span>
+    <h2 class="section-title">On the Shelves of the World's Premier Libraries</h2>
+    <p class="libraries-sub">From Oxford to the Library of Congress, James Likoudis' works sit where scholars look first.</p>
+    <div class="libraries-grid">
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/2.jpg?resize=150%2C150&ssl=1" alt="Oxford"><span class="lib-name">Oxford</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/1.jpg?resize=150%2C150&ssl=1" alt="Harvard"><span class="lib-name">Harvard</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/4-scaled.png?resize=150%2C150&ssl=1" alt="Princeton"><span class="lib-name">Princeton</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/aa.jpg?resize=150%2C150&ssl=1" alt="Johns Hopkins"><span class="lib-name">Johns Hopkins</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/6.jpg?resize=150%2C150&ssl=1" alt="Columbia"><span class="lib-name">Columbia</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/ac.jpeg?resize=150%2C150&ssl=1" alt="Notre Dame"><span class="lib-name">Notre Dame</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/8.png?resize=150%2C150&ssl=1" alt="Univ. of Chicago"><span class="lib-name">Univ. of Chicago</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/13.jpg?resize=150%2C150&ssl=1" alt="British Library"><span class="lib-name">British Library</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/10.png?resize=150%2C150&ssl=1" alt="CUA"><span class="lib-name">CUA</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/ab.jpg?resize=150%2C150&ssl=1" alt="Georgetown"><span class="lib-name">Georgetown</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/c.png?resize=150%2C150&ssl=1" alt="Library of Congress"><span class="lib-name">Library of Congress</span></div>
+      <div class="lib-item"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/IMG_8511.jpg?resize=150%2C150&ssl=1" alt="Franciscan University"><span class="lib-name">Franciscan University</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="patrons">
+  <div class="patrons-inner reveal">
+    <span class="section-label">Strategic Partners & Sponsors</span>
+    <h2 class="section-title">Our Community</h2>
+    <div class="divider center"></div>
+    <div class="patrons-grid">
+      <a href="https://enroutebooksandmedia.com/" class="patron-card" target="_blank">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/image5170.png?resize=150%2C150&ssl=1" alt="En Route">
+        <span class="patron-name">En Route Books and Media</span>
+        <span class="patron-role">Partner</span>
+      </a>
+      <a href="https://maximusinstitute.teachable.com/" class="patron-card" target="_blank">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/Screenshot-2025-06-26-at-1.54.04%E2%80%AFPM-2.png?resize=150%2C150&ssl=1" alt="Maximus Institute">
+        <span class="patron-name">Maximus the Confessor Institute</span>
+        <span class="patron-role">Partner</span>
+      </a>
+      <a href="https://wherepeteris.com/" class="patron-card" target="_blank">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-wpi.png?resize=150%2C150&ssl=1" alt="Where Peter Is">
+        <span class="patron-name">Where Peter Is</span>
+        <span class="patron-role">Partner</span>
+      </a>
+      <a href="https://www.tradrecovery.com/" class="patron-card" target="_blank">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/fe1e74_84f5d39f7c9b4b82b7e1622755ee7970mv2.webp?resize=150%2C150&ssl=1" alt="TradRecovery">
+        <span class="patron-name">TradRecovery.com</span>
+        <span class="patron-role">Sponsor</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SAINTS -->
+<section class="saints">
+  <div class="saints-inner reveal">
+    <span class="section-label">Our Patron Saints</span>
+    <h2 class="section-title">Intercessors for the Work</h2>
+    <div class="divider center"></div>
+    <div class="saints-grid">
+      <div class="saint">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/Mother-of-God-2-e1707187431497.jpg?fit=283%2C356&ssl=1" alt="Mary">
+        <p class="saint-name">Mary,<br>Mother of God</p>
+      </div>
+      <div class="saint">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/Joseph-e1707187656102.jpg?fit=273%2C356&ssl=1" alt="St. Joseph">
+        <p class="saint-name">St. Joseph</p>
+      </div>
+      <div class="saint">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/leopoldo.jpg?fit=272%2C356&ssl=1" alt="St. Leopold">
+        <p class="saint-name">St. Leopold<br>Mandić</p>
+      </div>
+      <div class="saint">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/Therese-e1707187813222.jpg?fit=274%2C356&ssl=1" alt="St. Thérèse">
+        <p class="saint-name">St. Thérèse<br>of Lisieux</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GIVE CTA -->
+<section class="give-cta">
+  <div class="give-cta-inner reveal">
+    <span class="section-label">Support the Foundation</span>
+    <h2 class="section-title">Honor the Legacy.<br>Advance the Work.</h2>
+    <div class="divider center"></div>
+    <p>By supporting the Likoudis Legacy Foundation, you honor James Likoudis' legacy and contribute to meaningful change — in ecumenical dialogue, theological scholarship, and the defense of religious liberty worldwide.</p>
+    <a href="https://likoudislegacy.com/donate/" class="btn-primary">Make a Gift Today</a>
+    <div class="give-methods">
+      <a href="https://donate.stripe.com/8x200beyMgHugS84Xla3u00" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/05/likoudis-stripe.png?resize=150%2C150&ssl=1" alt="Stripe"></a>
+      <a href="https://account.venmo.com/u/Andrew-likoudis" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/venmo-likoudis-square.png?resize=150%2C150&ssl=1" alt="Venmo"></a>
+      <a href="https://www.paypal.com/paypalme/LikoudisLegacy" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_pp.png?resize=150%2C150&ssl=1" alt="PayPal"></a>
+      <a href="https://www.patreon.com/profile/creators?u=34254725" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_patreon.png?resize=150%2C150&ssl=1" alt="Patreon"></a>
+      <a href="https://www.gofundme.com/f/launch-the-likoudis-legacy-foundation" class="give-method" target="_blank"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_gofundme.png?resize=150%2C150&ssl=1" alt="GoFundMe"></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF Logo">
+      <p>A 501(c)(3) research and educational foundation dedicated to ecumenical scholarship, Christian unity, and the promotion of religious liberty worldwide.</p>
+      <address>Baltimore, MD<br>410-409-1695</address>
+    </div>
+    <div class="footer-col">
+      <h4>Foundation</h4>
+      <ul>
+        <li><a href="https://likoudislegacy.com/about/">About</a></li>
+        <li><a href="https://likoudislegacy.com/team/">Team</a></li>
+        <li><a href="https://likoudislegacy.com/events/">Events</a></li>
+        <li><a href="https://likoudislegacy.com/scholars/">Fellows Program</a></li>
+        <li><a href="https://likoudislegacy.com/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Publications</h4>
+      <ul>
+        <li><a href="https://likoudislegacy.com/the-kydones-review/">The Kydones Review</a></li>
+        <li><a href="https://likoudislegacy.com/essay-archive/">Essay Archive</a></li>
+        <li><a href="https://likoudislegacy.com/videos/">Video Archive</a></li>
+        <li><a href="https://likoudislegacy.com/shop/">Books</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="https://likoudislegacy.com/donate/">Give</a></li>
+        <li><a href="https://likoudislegacy.com/consulting-services/">Consulting Services</a></li>
+        <li><a href="https://www.patreon.com/profile/creators?u=34254725" target="_blank">Patreon</a></li>
+      </ul>
+    </div>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="footer-bottom">
+      <p>© 2025 Likoudis Legacy Foundation. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://twitter.com/LikoudisLegacyF" target="_blank" title="X / Twitter">𝕏</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
