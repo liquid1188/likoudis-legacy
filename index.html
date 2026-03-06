@@ -836,12 +836,13 @@
   }
   .give-methods-divider span { color: rgba(244,237,224,0.3); }
   .give-methods {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 88px);
     gap: 1.5rem;
     justify-content: center;
     margin-top: 1.5rem;
   }
+  .give-methods.single { grid-template-columns: repeat(1, 88px); }
   .give-method {
     display: flex;
     flex-direction: column;
@@ -1415,7 +1416,7 @@
       <div class="give-methods-divider">
         <span>Monthly giving</span>
       </div>
-      <div class="give-methods">
+      <div class="give-methods single">
         <a href="https://www.patreon.com/profile/creators?u=34254725" class="give-method" target="_blank">
           <div class="give-method-circle"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/12/icon_patreon.png?resize=150%2C150&ssl=1" alt="Patreon"></div>
           <span class="give-method-name">Ptr</span>
@@ -1668,7 +1669,7 @@
   </div>
   <div style="max-width:1100px;margin:0 auto;">
     <div class="footer-bottom">
-      <p>© 2025 Likoudis Legacy Foundation. All rights reserved.</p>
+      <p>© 2026 Likoudis Legacy Foundation. All rights reserved.</p>
       <div class="footer-social">
         <a href="https://twitter.com/LikoudisLegacyF" target="_blank" title="X / Twitter">𝕏</a>
         <a href="https://www.linkedin.com/in/andrewlikoudis/" target="_blank" title="LinkedIn" style="font-size:0.75rem;font-weight:600;letter-spacing:0.04em;">in</a>
