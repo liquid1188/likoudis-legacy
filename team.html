@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team — Likoudis Legacy Foundation</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.team-section { padding: 7rem 2rem; }
+.team-section.alt { background: var(--cream); }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2px; margin-top: 3.5rem; }
+.person-card {
+  background: var(--ivory); padding: 2.5rem;
+  border: 1px solid rgba(200,169,110,0.12);
+  display: flex; flex-direction: column; gap: 1rem;
+  transition: transform 0.2s;
+}
+.person-card:hover { transform: translateY(-3px); }
+.person-card.dark { background: var(--navy-mid); border-color: rgba(200,169,110,0.15); }
+.person-photo {
+  width: 72px; height: 72px; border-radius: 50%; object-fit: cover;
+  border: 1px solid var(--border); filter: grayscale(20%);
+}
+.person-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--navy); }
+.person-card.dark .person-name { color: var(--cream); }
+.person-role { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-top: -6px; }
+.person-bio { font-size: 0.85rem; line-height: 1.75; color: var(--muted); }
+.person-card.dark .person-bio { color: rgba(244,237,224,0.55); }
+.person-details { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.person-details li { font-size: 0.78rem; color: var(--muted); padding-left: 1rem; position: relative; }
+.person-details li::before { content: '—'; position: absolute; left: 0; color: var(--gold); opacity: 0.6; }
+.person-card.dark .person-details li { color: rgba(244,237,224,0.45); }
+.patron-featured {
+  background: var(--navy); padding: 6rem 2rem;
+}
+.patron-featured-inner {
+  max-width: 900px; margin: 0 auto; text-align: center;
+}
+.patron-featured-inner p { color: rgba(244,237,224,0.6); line-height: 1.85; font-size: 0.95rem; margin: 1.25rem 0; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF">
+    <span>Likoudis Legacy<br>Foundation</span>
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown"><a href="about.html">About ▾</a><div class="nav-dropdown-menu"><a href="about.html">About</a><a href="team.html">Team</a><a href="events.html">Events</a><a href="contact.html">Contact</a></div></li>
+    <li><a href="fellows.html">Fellows Program</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
+    <li><a href="kydones.html">Kydones Review</a></li>
+    <li class="nav-dropdown"><a href="#">Media ▾</a><div class="nav-dropdown-menu"><a href="https://likoudislegacy.com/videos/" target="_blank">Video Archive</a><a href="https://likoudislegacy.com/essay-archive/" target="_blank">Essay Archive</a></div></li>
+    <li><a href="https://likoudislegacy.com/shop/" target="_blank">Books</a></li>
+    <li><a href="donate.html" class="nav-give">Give</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <span class="eyebrow">Leadership & Scholars</span>
+  <h1>Our <em>Team</em></h1>
+  <p>Academics, clergy, and researchers united by a common mission</p>
+  <div class="header-divider"></div>
+</div>
+
+<!-- PATRON -->
+<section class="patron-featured">
+  <div class="patron-featured-inner reveal">
+    <span class="section-label">Our Patron</span>
+    <h2 class="section-title" style="color:var(--cream)">Dr. James Likoudis <em>(1928–2024)</em></h2>
+    <div class="divider center"></div>
+    <p>Dr. James Likoudis is an internationally recognized apologist, theologian, and lecturer on religious education, sex education, and family life. He is regarded as a leading authority on Ecumenism, Liturgy, the Papacy, Catechetics and the role of the Laity in the Church.</p>
+    <p>He earned his B.A. in history and philosophy at the University of Buffalo, holds a master's degree in education from Elmira College, and was a College Instructor in History and Government with over 20 years of teaching experience, including the Franciscan minor seminary of St. John's Atonement and Rosary Hill College.</p>
+    <p>Dr. Likoudis converted to the Catholic Church in 1952 from Eastern Orthodoxy. In 2020 he was awarded an honorary doctorate of divinity from Sacred Heart Major Seminary. He is the father of six, with thirty-five grandchildren and forty-five great-grandchildren.</p>
+  </div>
+</section>
+
+<!-- BOARD OF DIRECTORS -->
+<section class="team-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Leadership</span>
+      <h2 class="section-title">Board of Directors</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="team-grid">
+      <div class="person-card reveal">
+        <img src="https://likoudislegacy.com/wp-content/uploads/2024/09/Andrew-Likoudis.jpg" alt="Andrew Likoudis" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=Andrew+Likoudis&background=0e1b2e&color=c8a96e&size=72'">
+        <div>
+          <p class="person-name">Andrew Likoudis</p>
+          <p class="person-role">Chairman & President</p>
+        </div>
+        <ul class="person-details">
+          <li>Editor of ten books, including <em>Faith in Crisis</em></li>
+          <li>Member, International Marian Association</li>
+          <li>Associate Member, Society for Catholic Liturgy</li>
+          <li>M.A. Candidate in Catholic Studies, Franciscan University</li>
+        </ul>
+      </div>
+      <div class="person-card reveal reveal-delay-1">
+        <img src="https://likoudislegacy.com/wp-content/uploads/2024/09/Philip-Blosser.jpg" alt="Philip Blosser" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=Philip+Blosser&background=0e1b2e&color=c8a96e&size=72'">
+        <div>
+          <p class="person-name">Philip Blosser, PhD</p>
+          <p class="person-role">Board Member</p>
+        </div>
+        <ul class="person-details">
+          <li>Professor of Philosophy, Sacred Heart Major Seminary</li>
+          <li>Secretary, Max Scheler Society of North America</li>
+        </ul>
+      </div>
+      <div class="person-card reveal reveal-delay-2">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/MIke-Aquilina-e1698774017601.jpg?fit=260%2C260&ssl=1" alt="Mike Aquilina" class="person-photo">
+        <div>
+          <p class="person-name">Mike Aquilina</p>
+          <p class="person-role">Board Member</p>
+        </div>
+        <ul class="person-details">
+          <li>Executive Vice President, St. Paul Center</li>
+          <li>Award-winning author of over 60 books</li>
+          <li>Poet and Songwriter</li>
+        </ul>
+      </div>
+      <div class="person-card reveal">
+        <img src="https://likoudislegacy.com/wp-content/uploads/2024/09/Will-Deatherage.jpg" alt="Will Deatherage" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=Will+Deatherage&background=0e1b2e&color=c8a96e&size=72'">
+        <div>
+          <p class="person-name">Will Deatherage</p>
+          <p class="person-role">Board Member</p>
+        </div>
+        <ul class="person-details">
+          <li>CEO, Catholics for Hire LLC</li>
+          <li>Executive Director, Clarifying Catholicism</li>
+          <li>Executive Director, The New Realist Project</li>
+        </ul>
+      </div>
+      <div class="person-card reveal reveal-delay-1">
+        <img src="https://likoudislegacy.com/wp-content/uploads/2024/09/Robert-Fastiggi.jpg" alt="Robert Fastiggi" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=Robert+Fastiggi&background=0e1b2e&color=c8a96e&size=72'">
+        <div>
+          <p class="person-name">Robert Fastiggi, PhD</p>
+          <p class="person-role">Board Member</p>
+        </div>
+        <ul class="person-details">
+          <li>Bishop Kevin M. Britt Chair of Dogmatic Theology, Sacred Heart Major Seminary</li>
+          <li>President Emeritus, Mariological Society of America</li>
+        </ul>
+      </div>
+      <div class="person-card reveal reveal-delay-2">
+        <img src="https://likoudislegacy.com/wp-content/uploads/2024/09/Stephen-Krason.jpg" alt="Stephen Krason" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=Stephen+Krason&background=0e1b2e&color=c8a96e&size=72'">
+        <div>
+          <p class="person-name">Stephen Krason, PhD, JD</p>
+          <p class="person-role">Board Member</p>
+        </div>
+        <ul class="person-details">
+          <li>Chair of Political Science, Franciscan University of Steubenville</li>
+          <li>Co-Founder, President & Chairman, Society of Catholic Social Scientists</li>
+          <li>Professor Emeritus of Political Science and Legal Studies</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FELLOWS -->
+<section class="team-section alt">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Research Fellows</span>
+      <h2 class="section-title">Current Fellows</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="team-grid">
+      <div class="person-card reveal">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/Michael-Lofton-e1698773454915.jpg?fit=362%2C360&ssl=1" alt="Michael Lofton" class="person-photo">
+        <div>
+          <p class="person-name">Michael Lofton, MA</p>
+          <p class="person-role">Fellow</p>
+        </div>
+        <ul class="person-details">
+          <li>Host & Founder, Reason and Theology</li>
+          <li>Author, <em>Answering Orthodoxy</em></li>
+          <li>Affiliate Apologist, Catholic Answers</li>
+        </ul>
+      </div>
+      <div class="person-card reveal reveal-delay-1">
+        <img src="https://likoudislegacy.com/wp-content/uploads/2024/09/Suan-Sonna.jpg" alt="Suan Sonna" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=Suan+Sonna&background=162236&color=c8a96e&size=72'">
+        <div>
+          <p class="person-name">Suan Sonna</p>
+          <p class="person-role">Fellow</p>
+        </div>
+        <ul class="person-details">
+          <li>President, Intellectual Catholicism</li>
+          <li>MTS Candidate, New Testament & Early Christianity, Harvard Divinity School</li>
+        </ul>
+      </div>
+      <div class="person-card reveal reveal-delay-2">
+        <img src="https://likoudislegacy.com/wp-content/uploads/2024/09/Pedro-Gabriel.jpg" alt="Pedro Gabriel" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=Pedro+Gabriel&background=162236&color=c8a96e&size=72'">
+        <div>
+          <p class="person-name">Pedro Gabriel, MD</p>
+          <p class="person-role">Fellow</p>
+        </div>
+        <ul class="person-details">
+          <li>Co-founder, Where Peter Is</li>
+          <li>Author, <em>The Orthodoxy of Amoris Laetitia</em></li>
+        </ul>
+      </div>
+      <div class="person-card reveal">
+        <img src="https://likoudislegacy.com/wp-content/uploads/2024/09/James-Griffin.jpg" alt="James Griffin" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=James+Griffin&background=162236&color=c8a96e&size=72'">
+        <div>
+          <p class="person-name">James T. M. Griffin</p>
+          <p class="person-role">Fellow</p>
+        </div>
+        <ul class="person-details">
+          <li>Co-founder & Executive Director, Durandus Institute for Sacred Liturgy and Music</li>
+        </ul>
+      </div>
+      <div class="person-card reveal reveal-delay-1">
+        <img src="https://ui-avatars.com/api/?name=Abel+Thomas&background=162236&color=c8a96e&size=72" alt="Abel Thomas" class="person-photo">
+        <div>
+          <p class="person-name">Abel Thomas, MA, JD</p>
+          <p class="person-role">Fellow</p>
+        </div>
+        <ul class="person-details">
+          <li>Contract Attorney</li>
+        </ul>
+      </div>
+      <div class="person-card reveal reveal-delay-2">
+        <img src="https://ui-avatars.com/api/?name=Andrew+Mioni&background=162236&color=c8a96e&size=72" alt="Andrew Mioni" class="person-photo">
+        <div>
+          <p class="person-name">Andrew Mioni</p>
+          <p class="person-role">Fellow</p>
+        </div>
+        <ul class="person-details">
+          <li>Administrator, TradRecovery.com</li>
+          <li>Test Developer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVISORY COUNCIL -->
+<section class="team-section" style="background:var(--navy);">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Advisors</span>
+      <h2 class="section-title" style="color:var(--cream)">Advisory Council</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="team-grid">
+      <div class="person-card dark reveal">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/07/Dr-Mark-Miravalle-S.T.L.-S.T.D.jpg?fit=950%2C950&ssl=1" alt="Mark Miravalle" class="person-photo">
+        <div>
+          <p class="person-name">Mark Miravalle, SThD</p>
+          <p class="person-role">Advisor</p>
+        </div>
+        <ul class="person-details">
+          <li>St. John Paul II Chair of Mariology, Franciscan University of Steubenville</li>
+          <li>President, International Marian Association</li>
+        </ul>
+      </div>
+      <div class="person-card dark reveal reveal-delay-1">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/09/Jeffrey-Mirus.jpeg?fit=247%2C300&ssl=1" alt="Jeffrey Mirus" class="person-photo">
+        <div>
+          <p class="person-name">Jeffrey Mirus, PhD</p>
+          <p class="person-role">Advisor</p>
+        </div>
+        <ul class="person-details">
+          <li>Founder, CatholicCulture.org</li>
+        </ul>
+      </div>
+      <div class="person-card dark reveal reveal-delay-2">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/tim-staples-e1698774140194.jpg?fit=200%2C200&ssl=1" alt="Tim Staples" class="person-photo">
+        <div>
+          <p class="person-name">Tim Staples</p>
+          <p class="person-role">Advisor</p>
+        </div>
+        <ul class="person-details">
+          <li>Senior Apologist, Catholic Answers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/07/cropped-imgpsh_fullsize_anim-removebg-preview62.png?fit=512%2C512&ssl=1" alt="LLF Logo"><p>A 501(c)(3) dedicated to ecumenical scholarship and Christian unity.</p><address>Baltimore, MD · 410-409-1695</address></div>
+    <div class="footer-col"><h4>Foundation</h4><ul><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="events.html">Events</a></li><li><a href="fellows.html">Fellows Program</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Publications</h4><ul><li><a href="kydones.html">The Kydones Review</a></li><li><a href="https://likoudislegacy.com/essay-archive/" target="_blank">Essay Archive</a></li><li><a href="https://likoudislegacy.com/shop/" target="_blank">Books</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="consulting.html">Consulting</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacyF" target="_blank">𝕏</a></div></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
