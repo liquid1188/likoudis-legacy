@@ -362,7 +362,7 @@
   }
   .endorsements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2px;
   }
   .endorsement-card {
@@ -534,15 +534,17 @@
     margin-bottom: 3.5rem;
   }
   .libraries-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
   }
   .lib-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    padding: 1.25rem 0.5rem;
+    border: 1px solid rgba(200,169,110,0.1);
   }
   .lib-item img {
     width: 36px;
@@ -553,9 +555,10 @@
     border: 1px solid rgba(200,169,110,0.2);
   }
   .lib-name {
-    font-size: 0.8rem;
-    color: rgba(244,237,224,0.65);
-    letter-spacing: 0.05em;
+    font-size: 0.72rem;
+    color: rgba(244,237,224,0.6);
+    letter-spacing: 0.04em;
+    text-align: center;
   }
 
   /* ─── PATRONS ─── */
@@ -672,10 +675,9 @@
     text-align: center;
   }
   .saints-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
     margin-top: 3rem;
   }
   .saint {
@@ -683,6 +685,8 @@
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
+    padding: 2rem 1rem;
+    border: 1px solid rgba(200,169,110,0.1);
   }
   .saint img {
     width: 90px;
