@@ -26,8 +26,8 @@
 .bc-body { padding: 8rem 2rem; background: var(--ivory); }
 .bc-inner { max-width: 960px; margin: 0 auto; }
 .bc-grid { display: grid; grid-template-columns: 1fr 340px; gap: 5rem; align-items: start; }
-.bc-book-cover { position: sticky; top: 2rem; overflow: hidden; }
-.bc-book-cover img { width: 100%; max-width: 280px; display: block; margin: 0 auto; border: 1px solid rgba(200,169,110,0.2); box-shadow: 10px 16px 48px rgba(0,0,0,0.14); transition: transform 0.1s linear; will-change: transform; }
+.bc-book-cover { overflow: hidden; }
+.bc-book-cover img { width: 100%; max-width: 280px; display: block; margin: 0 auto; border: 1px solid rgba(200,169,110,0.2); }
 .bc-book-title { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--muted); text-align: center; margin-top: 1rem; font-style: italic; line-height: 1.6; }
 
 .bc-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 400; color: var(--navy); line-height: 1.2; margin-bottom: 1.5rem; }
@@ -220,21 +220,5 @@
 </footer>
 <script src="main.js"></script>
 
-<script>
-(function(){
-  var cover = document.querySelector('.bc-book-cover img');
-  if (!cover) return;
-  function onScroll() {
-    var rect = cover.closest('.bc-book-cover').getBoundingClientRect();
-    var windowH = window.innerHeight;
-    // progress from -1 (above viewport) to +1 (below viewport)
-    var progress = (windowH/2 - (rect.top + rect.height/2)) / (windowH * 0.8);
-    var shift = progress * 28; // max 28px shift
-    cover.style.transform = 'translateY(' + shift + 'px)';
-  }
-  window.addEventListener('scroll', onScroll, {passive: true});
-  onScroll();
-})();
-</script>
 </body>
 </html>
