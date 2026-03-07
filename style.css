@@ -334,36 +334,9 @@ nav { transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s eas
 .saints { padding: 7rem 2rem; }
 .give-cta { padding: 8rem 2rem; }
 
-/* Press logos — more refined grid */
-.press-logos {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0;
-  margin-top: 3.5rem;
-  border-top: 1px solid rgba(200,169,110,0.1);
-  border-left: 1px solid rgba(200,169,110,0.1);
-}
-.press-logo {
-  border-right: 1px solid rgba(200,169,110,0.1);
-  border-bottom: 1px solid rgba(200,169,110,0.1);
-  padding: 1.75rem 1.5rem;
-  transition: background 0.2s;
-}
-.press-logo:hover { background: rgba(200,169,110,0.04); border-color: rgba(200,169,110,0.3); }
-@media(max-width:900px) { .press-logos { grid-template-columns: repeat(3, 1fr); } }
-@media(max-width:600px) { .press-logos { grid-template-columns: repeat(2, 1fr); } }
+/* Press logos — handled in index.html inline styles */
 
-/* Libraries — same refined treatment */
-.libraries-grid {
-  border-top: 1px solid rgba(200,169,110,0.1);
-  border-left: 1px solid rgba(200,169,110,0.1);
-}
-.lib-item {
-  border-right: 1px solid rgba(200,169,110,0.1);
-  border-bottom: 1px solid rgba(200,169,110,0.1);
-  transition: background 0.2s;
-}
-.lib-item:hover { background: rgba(200,169,110,0.04); }
+/* Libraries — handled in index.html inline styles */
 
 /* Give CTA — reduce payment icon clutter */
 .give-methods {
