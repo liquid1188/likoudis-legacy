@@ -390,3 +390,36 @@ nav { transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s eas
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
+
+/* ─── DARK SECTION TEXT OVERRIDES ─────────────────────────────────
+   Apply .on-dark to any section with navy/navy-mid background
+   to ensure correct text rendering without per-element overrides. */
+.on-dark { color: var(--cream); }
+.on-dark .section-title { color: var(--cream); }
+.on-dark .section-label { color: var(--gold); opacity: 0.85; }
+.on-dark p { color: rgba(244,237,224,0.6); }
+.on-dark h3, .on-dark h4 { color: var(--cream); }
+.on-dark a { color: var(--gold-light); }
+
+/* ─── LIGHT SECTION TEXT OVERRIDES ────────────────────────────────
+   For ivory/cream sections, ensure navy headings and muted body. */
+.on-light .section-title { color: var(--navy); }
+.on-light .section-label { color: var(--gold); }
+.on-light p { color: var(--muted); }
+.on-light h3, .on-light h4 { color: var(--navy); }
+
+/* ─── STRONGER CONTEXT OVERRIDES (beat inline styles) ─────────── */
+section.on-dark p,
+section.on-dark li,
+section.on-dark address { color: rgba(244,237,224,0.6); }
+section.on-dark h2,
+section.on-dark h3,
+section.on-dark h4 { color: var(--cream); }
+section.on-dark .section-title { color: var(--cream); }
+
+section.on-light p,
+section.on-light li { color: var(--muted); }
+section.on-light h2,
+section.on-light h3,
+section.on-light h4 { color: var(--navy); }
+section.on-light .section-title { color: var(--navy); }
