@@ -29,7 +29,7 @@
 .criteria-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); opacity: 0.6; }
 .scholarships { padding: 7rem 2rem; background: var(--navy); }
 .stipend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3.5rem; }
-.stipend-card { background: rgba(255,255,255,0.04); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.18); }
+.stipend-card { background: rgba(255,255,255,0.05); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.18); }
 .stipend-amount { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--gold); font-weight: 300; margin-bottom: 0.5rem; }
 .stipend-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--cream); margin-bottom: 0.75rem; }
 .stipend-card p { font-size: 0.92rem; color: rgba(244,237,224,0.78); line-height: 1.75; }
@@ -42,13 +42,13 @@
 .fellow-card ul { list-style: none; }
 .fellow-card ul li { font-size: 0.82rem; color: var(--muted); line-height: 1.75; padding-left: 1rem; position: relative; }
 .fellow-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); opacity: 0.5; }
-.apply { background: var(--navy); padding: 7rem 2rem; text-align: center; }
+.apply { background: var(--ivory); padding: 7rem 2rem; text-align: center; }
 .apply-inner { max-width: 700px; margin: 0 auto; }
-.apply-inner p { color: rgba(244,237,224,0.88) !important; line-height: 1.85; margin: 1.5rem 0 2.5rem; font-size: 0.95rem; }
-.apply-docs { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,169,110,0.28); padding: 2rem; margin: 2rem 0; text-align: left; }
-.apply-docs h4 { font-family: 'Cormorant Garamond', serif; color: var(--gold-light); font-size: 1rem; margin-bottom: 1rem; }
+.apply-inner p { color: var(--muted) !important; line-height: 1.85; margin: 1.5rem 0 2.5rem; font-size: 0.95rem; }
+.apply-docs { background: var(--cream); border: 1px solid rgba(200,169,110,0.28); padding: 2rem; margin: 2rem 0; text-align: left; }
+.apply-docs h4 { font-family: 'Cormorant Garamond', serif; color: var(--gold); font-size: 1rem; margin-bottom: 1rem; }
 .apply-docs ol { padding-left: 1.5rem; }
-.apply-docs ol li { color: rgba(244,237,224,0.92) !important; font-size: 0.9rem; line-height: 2; }
+.apply-docs ol li { color: var(--muted) !important; font-size: 0.9rem; line-height: 2; }
   .apply-form { margin-top: 2rem; }
   .apply-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 2rem; }
   .apply-form-full { grid-column: 1 / -1; }
@@ -57,12 +57,12 @@
   .apply-form .req { color: var(--gold); margin-left: 2px; }
   .apply-form .field-note { text-transform: none; letter-spacing: 0; font-size: 0.7rem; color: rgba(244,237,224,0.35); margin-left: 4px; }
   .apply-form input, .apply-form textarea, .apply-form select {
-    background: rgba(255,255,255,0.05); border: 1px solid rgba(200,169,110,0.2);
-    color: var(--cream); padding: 0.75rem 1rem; font-family: 'Jost', sans-serif;
+    background: white; border: 1px solid rgba(200,169,110,0.35);
+    color: var(--navy); padding: 0.75rem 1rem; font-family: 'Jost', sans-serif;
     font-size: 0.85rem; font-weight: 300; width: 100%;
     transition: border-color 0.2s;
   }
-  .apply-form input::placeholder, .apply-form textarea::placeholder { color: rgba(244,237,224,0.25); }
+  .apply-form input::placeholder, .apply-form textarea::placeholder { color: rgba(14,27,46,0.35); }
   .apply-form input:focus, .apply-form textarea:focus { outline: none; border-color: rgba(200,169,110,0.5); }
   .apply-form textarea { resize: vertical; }
   .apply-toggle-btn {
@@ -162,7 +162,7 @@
 </section>
 
 <!-- APPLICATION -->
-<section class="apply on-dark">
+<section class="apply on-light">
   <div class="apply-inner reveal">
     <span class="section-label">How to Apply</span>
     <h2 class="section-title">Application Portal</h2>
@@ -344,7 +344,7 @@
 
     </div>
     <div style="text-align:center;margin-top:3rem;">
-      <a href="contact.html" class="btn-outline" style="color:var(--navy);">Apply to the Fellowship →</a>
+      <a href="fellows.html#apply" class="btn-primary">Apply to the Fellowship →</a>
     </div>
   </div>
 </section>
