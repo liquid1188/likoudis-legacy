@@ -324,7 +324,7 @@
 
   /* ─── LATEST MESSAGE ─── */
   .latest {
-    background: var(--navy);
+    background: var(--ivory);
     padding: 6rem 2rem;
     overflow: hidden;
   }
@@ -333,18 +333,18 @@
     margin: 0 auto;
     text-align: center;
   }
-  .latest .section-label { opacity: 0.7; }
-  .latest .section-title { color: var(--cream); }
+  .latest .section-label { opacity: 0.8; }
+  .latest .section-title { color: var(--navy); }
   .latest-body {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 1.15rem;
-    color: rgba(244,237,224,0.7);
+    color: var(--muted);
     line-height: 1.9;
     margin: 2rem 0;
   }
   .latest-link {
-    color: var(--gold);
+    color: var(--navy);
     text-decoration: none;
     font-size: 0.78rem;
     letter-spacing: 0.15em;
@@ -356,8 +356,8 @@
   .latest-link:hover { border-color: var(--gold); }
   @media(max-width:650px) { .latest-two-col { grid-template-columns: 1fr !important; } }
   .pope-img {
-    width: 120px;
-    height: 160px;
+    width: 160px;
+    height: 213px;
     object-fit: cover;
     margin: 0 auto 2rem;
     display: block;
@@ -776,7 +776,7 @@
 
   /* ─── GIVE CTA ─── */
   .give-cta {
-    background: var(--cream);
+    background: var(--navy);
     padding: 7rem 2rem;
   }
   .give-cta-inner {
@@ -1172,19 +1172,17 @@
   <div class="latest-inner reveal">
     <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/06/IMG_6745.jpeg?fit=772%2C1024&ssl=1" alt="James Likoudis" class="pope-img" style="filter:sepia(15%);">
     <span class="section-label">In Memory of James Likoudis</span>
-    <h2 class="section-title" style="color:var(--cream)">Honored in Print</h2>
+    <h2 class="section-title">Honored in Print</h2>
     <div class="divider center"></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2rem;">
-      <div style="border-top:1px solid rgba(200,169,110,0.25);padding-top:1.5rem;">
-        <span style="font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(200,169,110,0.55);display:block;margin-bottom:0.75rem;">September 2025 · Patheos / Nature &amp; Grace</span>
-        <p class="latest-body" style="font-size:1rem;margin:0 0 1.25rem;">Andrew Likoudis's one-year tribute — written on the anniversary of his grandfather's passing — reflecting on James Likoudis's nearly hundred years of faith, scholarship, and devotion to Christian unity.</p>
-        <a href="https://www.patheos.com/blogs/natureandgrace/2025/09/james-likoudis-one-year-death-anniversary/" class="latest-link" target="_blank">Read the anniversary tribute →</a>
-      </div>
-      <div style="border-top:1px solid rgba(200,169,110,0.25);padding-top:1.5rem;">
-        <span style="font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(200,169,100,0.55);display:block;margin-bottom:0.75rem;">2025 · Catholic Social Science Review, Vol. 30</span>
-        <p class="latest-body" style="font-size:1rem;margin:0 0 1.25rem;">A scholarly tribute published in the peer-reviewed journal of the Society of Catholic Social Scientists, recognizing Likoudis's decades of apologetic, ecumenical, and catechetical work and his witness to the integrity of Catholic doctrine.</p>
-        <a href="https://catholicsocialscientists.org/journal-cssr/" class="latest-link" target="_blank">Read in <em>CSSR</em> Vol. 30 (2025) →</a>
-      </div>
+    <div style="border-top:1px solid rgba(200,169,110,0.2);padding-top:2rem;margin-top:2rem;">
+      <span style="font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(200,169,110,0.7);display:block;margin-bottom:0.75rem;">2025 · Catholic Social Science Review, Vol. 30</span>
+      <p class="latest-body" style="font-size:1.15rem;margin:0 0 1.25rem;">A scholarly tribute published in the peer-reviewed journal of the Society of Catholic Social Scientists, recognizing Likoudis's decades of apologetic, ecumenical, and catechetical work and his witness to the integrity of Catholic doctrine.</p>
+      <a href="https://catholicsocialscientists.org/journal-cssr/" class="latest-link" target="_blank">Read in <em>CSSR</em> Vol. 30 (2025) →</a>
+    </div>
+    <div style="border-top:1px solid rgba(200,169,110,0.1);padding-top:1.25rem;margin-top:1.75rem;">
+      <span style="font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(200,169,110,0.45);display:block;margin-bottom:0.6rem;">September 2025 · Patheos / Nature &amp; Grace</span>
+      <p style="font-size:0.88rem;color:var(--muted);line-height:1.75;margin:0 0 0.75rem;">Andrew Likoudis's one-year tribute — written on the anniversary of his grandfather's passing.</p>
+      <a href="https://www.patheos.com/blogs/natureandgrace/2025/09/james-likoudis-one-year-death-anniversary/" class="latest-link" style="font-size:0.7rem;" target="_blank">Read the anniversary tribute →</a>
     </div>
     <div style="margin-top:3rem;text-align:center;">
       <a href="books.html" class="text-link">Browse the Published Legacy →</a>
@@ -1198,7 +1196,7 @@
 <section class="press" id="press">
   <div class="press-inner">
     <div class="press-header reveal">
-      <h2 class="section-title">Outlets That Have Cited the Likoudis Name</h2>
+      <h2 class="section-title" style="color:var(--cream)">Outlets That Have Cited the Likoudis Name</h2>
       <div class="divider center"></div>
     </div>
     <div class="press-logos reveal">
@@ -1333,15 +1331,15 @@
   </div>
 </section>
 
-<div class="section-ornament on-cream"><span>✦</span></div>
+<div class="section-ornament"><span>✦</span></div>
 
 <!-- GIVE CTA -->
 <section class="give-cta">
   <div class="give-cta-inner reveal">
     <span class="section-label">Support the Foundation</span>
-    <h2 class="section-title">Honor the Legacy.<br>Advance the Work.</h2>
+    <h2 class="section-title" style="color:var(--cream)">Honor the Legacy.<br>Advance the Work.</h2>
     <div class="divider center"></div>
-    <p>By supporting the Likoudis Legacy Foundation, you honor James Likoudis' legacy and contribute to meaningful change — in ecumenical dialogue, theological scholarship, and the defense of religious liberty worldwide.</p>
+    <p style="color:rgba(244,237,224,0.65);max-width:520px;margin:1rem auto 0;line-height:1.85;">By supporting the Likoudis Legacy Foundation, you honor James Likoudis' legacy and contribute to meaningful change — in ecumenical dialogue, theological scholarship, and the defense of religious liberty worldwide.</p>
     <a href="donate.html" class="btn-primary">Make a Gift Today</a>
     <div class="give-methods-section">
       <div class="give-methods">
