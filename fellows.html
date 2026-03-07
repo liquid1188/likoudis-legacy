@@ -49,6 +49,23 @@
 .apply-docs h4 { font-family: 'Cormorant Garamond', serif; color: var(--gold-light); font-size: 1rem; margin-bottom: 1rem; }
 .apply-docs ol { padding-left: 1.5rem; }
 .apply-docs ol li { color: rgba(244,237,224,0.55); font-size: 0.85rem; line-height: 2; }
+  .apply-form { margin-top: 2rem; }
+  .apply-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 2rem; }
+  .apply-form-full { grid-column: 1 / -1; }
+  .apply-form .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .apply-form label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(200,169,110,0.8); }
+  .apply-form .req { color: var(--gold); margin-left: 2px; }
+  .apply-form .field-note { text-transform: none; letter-spacing: 0; font-size: 0.7rem; color: rgba(244,237,224,0.35); margin-left: 4px; }
+  .apply-form input, .apply-form textarea, .apply-form select {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(200,169,110,0.2);
+    color: var(--cream); padding: 0.75rem 1rem; font-family: 'Jost', sans-serif;
+    font-size: 0.85rem; font-weight: 300; width: 100%;
+    transition: border-color 0.2s;
+  }
+  .apply-form input::placeholder, .apply-form textarea::placeholder { color: rgba(244,237,224,0.25); }
+  .apply-form input:focus, .apply-form textarea:focus { outline: none; border-color: rgba(200,169,110,0.5); }
+  .apply-form textarea { resize: vertical; }
+  @media(max-width:700px) { .apply-form-grid { grid-template-columns: 1fr; } }
 @media(max-width:900px){ .fellows-grid{grid-template-columns:1fr;gap:3rem;} .criteria-inner{grid-template-columns:1fr;} .stipend-grid{grid-template-columns:1fr;} }
 </style>
 </head>
@@ -137,19 +154,67 @@
 <section class="apply">
   <div class="apply-inner reveal">
     <span class="section-label">How to Apply</span>
-    <h2 class="section-title" style="color:var(--cream)">Application Process</h2>
-    <div class="divider center"></div>
-    <p>Applications are submitted through the Likoudis Legacy Application Portal (coming soon). The following documents are required:</p>
+    <h2 class="section-title" style="color:var(--cream);">Application Portal</h2>
+    <p>Submit your application below. All required documents should be provided as links (Google Drive, Dropbox, or similar) or pasted directly into the relevant fields. Applications are reviewed on a rolling basis.</p>
     <div class="apply-docs">
       <h4>Required Documents</h4>
       <ol>
-        <li>Complete application form</li>
-        <li>Curriculum Vitae, including a complete list of publications</li>
-        <li>Two letters of recommendation from professors or mentors</li>
-        <li>Research proposal clearly detailing the topic of study and research plan</li>
+        <li>CV or résumé</li>
+        <li>Writing sample (1,500–5,000 words)</li>
+        <li>Statement of research intent (500–750 words)</li>
+        <li>Two letters of recommendation (names and contact info)</li>
       </ol>
     </div>
-    <a href="contact.html" class="btn-primary">Inquire About the Program</a>
+    <form class="apply-form" action="https://formspree.io/f/alikoudis@likoudislegacy.com" method="POST">
+      <input type="hidden" name="_subject" value="LLF Fellows Program Application">
+      <input type="hidden" name="_next" value="fellows.html?applied=true">
+      <div class="apply-form-grid">
+        <div class="form-group">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" name="name" placeholder="First and last name" required>
+        </div>
+        <div class="form-group">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>Current Institution or Affiliation</label>
+          <input type="text" name="affiliation" placeholder="University, organization, or independent">
+        </div>
+        <div class="form-group">
+          <label>Degree(s) Held</label>
+          <input type="text" name="degrees" placeholder="e.g. MA Theology, JD">
+        </div>
+        <div class="form-group apply-form-full">
+          <label>Proposed Research Topic <span class="req">*</span></label>
+          <input type="text" name="research_topic" placeholder="Working title or brief description" required>
+        </div>
+        <div class="form-group apply-form-full">
+          <label>Statement of Research Intent <span class="req">*</span><span class="field-note"> — 500–750 words</span></label>
+          <textarea name="research_statement" rows="7" placeholder="Describe your proposed research, its relationship to Catholic-Orthodox ecumenism or the Likoudis legacy, and why the LLF Fellows Program is the right fit." required></textarea>
+        </div>
+        <div class="form-group apply-form-full">
+          <label>Writing Sample Link <span class="req">*</span><span class="field-note"> — 1,500–5,000 words</span></label>
+          <input type="url" name="writing_sample" placeholder="https://drive.google.com/... or direct URL" required>
+        </div>
+        <div class="form-group apply-form-full">
+          <label>CV / Résumé Link <span class="req">*</span></label>
+          <input type="url" name="cv_link" placeholder="https://drive.google.com/... or direct URL" required>
+        </div>
+        <div class="form-group apply-form-full">
+          <label>Letters of Recommendation <span class="req">*</span><span class="field-note"> — name and email for each recommender</span></label>
+          <textarea name="recommenders" rows="3" placeholder="Recommender 1: Name, Title, Email&#10;Recommender 2: Name, Title, Email" required></textarea>
+        </div>
+        <div class="form-group apply-form-full">
+          <label>Anything else you'd like us to know?</label>
+          <textarea name="additional" rows="3" placeholder="Optional"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn-primary" style="margin-top:1.5rem;">Submit Application</button>
+    </form>
+    <div id="apply-success" style="display:none;margin-top:2rem;padding:1.5rem;border:1px solid rgba(200,169,110,0.3);background:rgba(200,169,110,0.06);">
+      <p style="color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1.1rem;">Your application has been received. We will be in touch within two weeks.</p>
+    </div>
   </div>
 </section>
 
@@ -273,7 +338,7 @@
     <div class="footer-col"><h4>Publications</h4><ul><li><a href="kydones.html">Kydones Review</a></li><li><a href="essays.html">Essay Archive</a></li><li><a href="books.html">Books</a></li></ul></div>
     <div class="footer-col"><h4>Support</h4><ul><li><a href="donate.html">Give</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="consulting.html">Consulting</a></li><li><a href="press.html">Press & Media Kit</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><p>© 2026 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacyF" target="_blank" title="X / Twitter">𝕏</a><a href="https://www.linkedin.com/in/andrewlikoudis/" target="_blank" title="LinkedIn" style="font-size:0.75rem;font-weight:600;letter-spacing:0.04em;">in</a><a href="https://traditionandrenewal.substack.com" target="_blank" title="T&amp;R Substack" style="font-family:Cormorant Garamond,serif;font-style:italic;font-size:0.75rem;letter-spacing:0.05em;">T&amp;R</a><a href="https://andrewlikoudis.com" target="_blank" title="Andrew Likoudis" style="font-family:Cormorant Garamond,serif;font-size:0.75rem;letter-spacing:0.04em;">AL</a></div></div>
+  <div class="footer-bottom"><p>© 2026 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacy" target="_blank" title="X / Twitter">𝕏</a><a href="https://www.linkedin.com/in/andrewlikoudis/" target="_blank" title="LinkedIn" style="font-size:0.75rem;font-weight:600;letter-spacing:0.04em;">in</a><a href="https://traditionandrenewal.substack.com" target="_blank" title="T&amp;R Substack" style="font-family:Cormorant Garamond,serif;font-style:italic;font-size:0.75rem;letter-spacing:0.05em;">T&amp;R</a><a href="https://andrewlikoudis.com" target="_blank" title="Andrew Likoudis" style="font-family:Cormorant Garamond,serif;font-size:0.75rem;letter-spacing:0.04em;">AL</a></div></div>
 </footer>
 <script src="main.js"></script>
 </body>
