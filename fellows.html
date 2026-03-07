@@ -28,6 +28,8 @@
 .criteria-card ul li { color: rgba(244,237,224,0.72); font-size: 0.9rem; line-height: 1.8; padding-left: 1rem; position: relative; }
 .criteria-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); opacity: 0.6; }
 .scholarships { padding: 7rem 2rem; background: var(--cream); }
+.scholarships .section-title { color: var(--navy); }
+.scholarships .section-label { color: var(--gold); }
 .stipend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3.5rem; }
 .stipend-card { background: var(--ivory); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.12); }
 .stipend-amount { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--gold); font-weight: 300; margin-bottom: 0.5rem; }
@@ -44,11 +46,11 @@
 .fellow-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); opacity: 0.5; }
 .apply { background: var(--navy); padding: 7rem 2rem; text-align: center; }
 .apply-inner { max-width: 700px; margin: 0 auto; }
-.apply-inner p { color: rgba(244,237,224,0.6); line-height: 1.85; margin: 1.5rem 0 2.5rem; font-size: 0.95rem; }
+.apply-inner p { color: rgba(244,237,224,0.82); line-height: 1.85; margin: 1.5rem 0 2.5rem; font-size: 0.95rem; }
 .apply-docs { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,169,110,0.15); padding: 2rem; margin: 2rem 0; text-align: left; }
 .apply-docs h4 { font-family: 'Cormorant Garamond', serif; color: var(--gold-light); font-size: 1rem; margin-bottom: 1rem; }
 .apply-docs ol { padding-left: 1.5rem; }
-.apply-docs ol li { color: rgba(244,237,224,0.75); font-size: 0.9rem; line-height: 2; }
+.apply-docs ol li { color: rgba(244,237,224,0.88); font-size: 0.9rem; line-height: 2; }
   .apply-form { margin-top: 2rem; }
   .apply-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 2rem; }
   .apply-form-full { grid-column: 1 / -1; }
@@ -134,7 +136,7 @@
 </section>
 
 <!-- SCHOLARSHIPS -->
-<section class="scholarships on-dark">
+<section class="scholarships on-light">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:0;">
       <span class="section-label">Financial Support</span>
@@ -162,7 +164,7 @@
 </section>
 
 <!-- APPLICATION -->
-<section class="apply on-light">
+<section class="apply on-dark">
   <div class="apply-inner reveal">
     <span class="section-label">How to Apply</span>
     <h2 class="section-title">Application Portal</h2>
@@ -234,7 +236,7 @@
 </section>
 
 <!-- CURRENT FELLOWS -->
-<section class="fellows-list on-dark" style="background:var(--cream);">
+<section class="fellows-list on-light" style="background:var(--cream);">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:4rem;">
       <span class="section-label">Current Fellows</span>
@@ -245,7 +247,7 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px;background:rgba(200,169,110,0.08);">
 
       <!-- Michael Lofton -->
-      <div style="background:white;padding:2.5rem 2rem;">
+      <div style="background:var(--ivory);padding:2.5rem 2rem;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
           <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/Michael-Lofton-e1698773454915.jpg?fit=120%2C120&ssl=1"
                alt="Michael Lofton" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:1px solid rgba(200,169,110,0.2);">
@@ -263,7 +265,7 @@
       </div>
 
       <!-- Suan Sonna -->
-      <div style="background:white;padding:2.5rem 2rem;">
+      <div style="background:var(--ivory);padding:2.5rem 2rem;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
           <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Suan-Sonna-e1698773534895.jpg" alt="Suan Sonna" style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top center;border:1px solid rgba(200,169,110,0.2);flex-shrink:0;">
           <div>
@@ -272,14 +274,15 @@
           </div>
         </div>
         <ul style="list-style:none;padding:0;margin:0 0 1rem;">
-          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0.35rem 1rem;border-bottom:1px solid var(--border);position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>President, Intellectual Catholicism</li>
-          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0 1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>MTS Candidate, New Testament & Early Christianity, Harvard Divinity School</li>
+          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0.35rem 1rem;border-bottom:1px solid var(--border);position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>Director of Apologetics, Diocese of Bridgeport</li>
+          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0.35rem 1rem;border-bottom:1px solid var(--border);position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>MTS, New Testament &amp; Early Christianity, Harvard Divinity School</li>
+          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0 1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>Doctoral Candidate, Yale University</li>
         </ul>
         <a href="https://substack.com/@suansonna" target="_blank" style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(200,169,110,0.3);">Intellectual Catholicism →</a>
       </div>
 
       <!-- Pedro Gabriel -->
-      <div style="background:white;padding:2.5rem 2rem;">
+      <div style="background:var(--ivory);padding:2.5rem 2rem;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
           <img src="images/Pedro-Gabriel.jpg" alt="Pedro Gabriel" style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top center;border:1px solid rgba(200,169,110,0.2);flex-shrink:0;">
           <div>
@@ -289,13 +292,14 @@
         </div>
         <ul style="list-style:none;padding:0;margin:0 0 1rem;">
           <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0.35rem 1rem;border-bottom:1px solid var(--border);position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>Co-founder, Where Peter Is</li>
-          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0 1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>Author, <em>The Orthodoxy of Amoris Laetitia</em></li>
+          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0.35rem 1rem;border-bottom:1px solid var(--border);position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>Books: <a href="https://www.amazon.com/dp/B08P3DQTLJ" target="_blank" style="color:var(--gold);"><em>The Orthodoxy of Amoris Laetitia</em></a> · <a href="https://www.amazon.com/dp/B09XVZK8VG" target="_blank" style="color:var(--gold);"><em>Heresy Disguised as Tradition</em></a></li>
+          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0 1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>Books: <a href="https://www.amazon.com/dp/B08CJFQPVG" target="_blank" style="color:var(--gold);"><em>The Unknown Side of Pius X</em></a> · <a href="https://www.amazon.com/dp/B0C6Y3GPXK" target="_blank" style="color:var(--gold);"><em>Rigidity: Faithfulness or Heterodoxy?</em></a></li>
         </ul>
         <a href="https://wherepeteris.com" target="_blank" style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(200,169,110,0.3);">wherepeteris.com →</a>
       </div>
 
       <!-- James Griffin -->
-      <div style="background:white;padding:2.5rem 2rem;">
+      <div style="background:var(--ivory);padding:2.5rem 2rem;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
           <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/James-TM-Griffin-e1698773668585.jpg" alt="James T. M. Griffin" style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top center;border:1px solid rgba(200,169,110,0.2);flex-shrink:0;">
           <div>
@@ -310,7 +314,7 @@
       </div>
 
       <!-- Abel Thomas -->
-      <div style="background:white;padding:2.5rem 2rem;">
+      <div style="background:var(--ivory);padding:2.5rem 2rem;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
           <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Abel-Thomas-e1698773751898.jpg" alt="Abel Thomas" style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top center;border:1px solid rgba(200,169,110,0.2);flex-shrink:0;">
           <div>
@@ -324,7 +328,7 @@
       </div>
 
       <!-- Andrew Mioni -->
-      <div style="background:white;padding:2.5rem 2rem;">
+      <div style="background:var(--ivory);padding:2.5rem 2rem;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
           <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/andrew-mioni-e1698773793269.jpg" alt="Andrew Mioni" style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top center;border:1px solid rgba(200,169,110,0.2);flex-shrink:0;">
           <div>
@@ -334,7 +338,8 @@
         </div>
         <ul style="list-style:none;padding:0;margin:0 0 1rem;">
           <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0.35rem 1rem;border-bottom:1px solid var(--border);position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>Administrator, TradRecovery.com</li>
-          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0 1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>Test Developer</li>
+          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0.35rem 1rem;border-bottom:1px solid var(--border);position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>Test Developer</li>
+          <li style="font-size:0.88rem;color:var(--muted);padding:0.35rem 0 0 1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);opacity:0.75;">—</span>Books: <a href="https://www.amazon.com/dp/B0D64FF6WF" target="_blank" style="color:var(--gold);"><em>Altar Against Altar</em></a> · <a href="https://www.amazon.com/dp/B0CW1M6YRV" target="_blank" style="color:var(--gold);"><em>Ignorance of Things Divine</em></a></li>
         </ul>
         <a href="https://tradrecovery.com" target="_blank" style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(200,169,110,0.3);">tradrecovery.com →</a>
       </div>
