@@ -65,6 +65,17 @@
   .apply-form input::placeholder, .apply-form textarea::placeholder { color: rgba(244,237,224,0.25); }
   .apply-form input:focus, .apply-form textarea:focus { outline: none; border-color: rgba(200,169,110,0.5); }
   .apply-form textarea { resize: vertical; }
+  .apply-toggle-btn {
+    background: var(--gold); color: var(--navy);
+    border: none; cursor: pointer; padding: 13px 36px;
+    font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+    font-weight: 500; transition: background 0.2s, transform 0.15s;
+    display: inline-block; font-family: 'Jost', sans-serif;
+  }
+  .apply-toggle-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .apply-form-wrap { display: none; margin-top: 2rem; }
+  .apply-form-wrap.open { display: block; }
+  @media(max-width:700px) { .apply-form-grid { grid-template-columns: 1fr; } }
   @media(max-width:700px) { .apply-form-grid { grid-template-columns: 1fr; } }
 @media(max-width:900px){ .fellows-grid{grid-template-columns:1fr;gap:3rem;} .criteria-inner{grid-template-columns:1fr;} .stipend-grid{grid-template-columns:1fr;} }
 </style>
@@ -165,6 +176,8 @@
         <li>Two letters of recommendation (names and contact info)</li>
       </ol>
     </div>
+    <button class="apply-toggle-btn" id="apply-toggle" onclick="var w=document.getElementById('apply-wrap');var open=w.classList.toggle('open');this.textContent=open?'Close Application ▲':'Begin Application ▼'">Begin Application ▼</button>
+    <div class="apply-form-wrap" id="apply-wrap">
     <form class="apply-form" action="https://formspree.io/f/alikoudis@likoudislegacy.com" method="POST">
       <input type="hidden" name="_subject" value="LLF Fellows Program Application">
       <input type="hidden" name="_next" value="fellows.html?applied=true">
@@ -198,8 +211,9 @@
           <input type="url" name="writing_sample" placeholder="https://drive.google.com/... or direct URL" required>
         </div>
         <div class="form-group apply-form-full">
-          <label>CV / Résumé Link <span class="req">*</span></label>
-          <input type="url" name="cv_link" placeholder="https://drive.google.com/... or direct URL" required>
+          <label>CV / Résumé <span class="req">*</span><span class="field-note"> — upload PDF or Word document, or paste a link below</span></label>
+          <input type="file" name="cv_file" accept=".pdf,.doc,.docx" style="padding:0.5rem;color:var(--cream);">
+          <input type="url" name="cv_link" placeholder="Or paste link: https://drive.google.com/..." style="margin-top:0.5rem;">
         </div>
         <div class="form-group apply-form-full">
           <label>Letters of Recommendation <span class="req">*</span><span class="field-note"> — name and email for each recommender</span></label>
@@ -212,6 +226,7 @@
       </div>
       <button type="submit" class="btn-primary" style="margin-top:1.5rem;">Submit Application</button>
     </form>
+    </div><!-- /apply-form-wrap -->
     <div id="apply-success" style="display:none;margin-top:2rem;padding:1.5rem;border:1px solid rgba(200,169,110,0.3);background:rgba(200,169,110,0.06);">
       <p style="color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1.1rem;">Your application has been received. We will be in touch within two weeks.</p>
     </div>
