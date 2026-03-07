@@ -289,3 +289,124 @@ nav { transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s eas
 
 /* ─── SELECTION COLOR ─── */
 ::selection { background: rgba(200,169,110,0.25); color: var(--navy); }
+
+/* ─── DESIGN RHYTHM IMPROVEMENTS ─── */
+
+/* Ornamental section transition — replaces <hr class="section-rule"> */
+.section-ornament {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.2rem; padding: 0; margin: 0;
+  background: var(--ivory);
+  height: 64px;
+  position: relative;
+}
+.section-ornament::before,
+.section-ornament::after {
+  content: ''; flex: 1; max-width: 120px;
+  height: 1px; background: linear-gradient(to var(--dir, right), transparent, rgba(200,169,110,0.35));
+}
+.section-ornament::after { --dir: left; }
+.section-ornament span {
+  font-size: 0.55rem; letter-spacing: 0.4em; text-transform: uppercase;
+  color: rgba(200,169,110,0.5); white-space: nowrap;
+}
+/* Dark-to-light variant */
+.section-ornament.on-navy {
+  background: var(--navy);
+}
+.section-ornament.on-navy::before,
+.section-ornament.on-navy::after {
+  background: linear-gradient(to var(--dir, right), transparent, rgba(200,169,110,0.2));
+}
+.section-ornament.on-cream {
+  background: var(--cream);
+}
+
+/* Increased vertical breathing room */
+.purpose { padding: 8rem 2rem 7rem; }
+.latest { padding: 7rem 2rem; }
+.endorsements { padding: 8rem 2rem 7rem; }
+.books { padding: 7rem 2rem; }
+.press { padding: 7rem 2rem 6rem; }
+.libraries { padding: 6rem 2rem 7rem; }
+.projects { padding: 7rem 2rem; }
+.patrons { padding: 6rem 2rem; }
+.saints { padding: 7rem 2rem; }
+.give-cta { padding: 8rem 2rem; }
+
+/* Press logos — more refined grid */
+.press-logos {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 0;
+  margin-top: 3.5rem;
+  border-top: 1px solid rgba(200,169,110,0.1);
+  border-left: 1px solid rgba(200,169,110,0.1);
+}
+.press-logo {
+  border-right: 1px solid rgba(200,169,110,0.1);
+  border-bottom: 1px solid rgba(200,169,110,0.1);
+  padding: 1.75rem 1.5rem;
+  transition: background 0.2s;
+}
+.press-logo:hover { background: rgba(200,169,110,0.04); border-color: rgba(200,169,110,0.3); }
+
+/* Libraries — same refined treatment */
+.libraries-grid {
+  border-top: 1px solid rgba(200,169,110,0.1);
+  border-left: 1px solid rgba(200,169,110,0.1);
+}
+.lib-item {
+  border-right: 1px solid rgba(200,169,110,0.1);
+  border-bottom: 1px solid rgba(200,169,110,0.1);
+  transition: background 0.2s;
+}
+.lib-item:hover { background: rgba(200,169,110,0.04); }
+
+/* Give CTA — reduce payment icon clutter */
+.give-methods {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 2rem;
+  margin-top: 2.5rem;
+}
+.give-method-circle {
+  width: 52px; height: 52px;
+  border: 1px solid rgba(200,169,110,0.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.04);
+  transition: border-color 0.2s, background 0.2s;
+  overflow: hidden;
+}
+.give-method:hover .give-method-circle {
+  border-color: rgba(200,169,110,0.6);
+  background: rgba(200,169,110,0.08);
+}
+.give-method-name {
+  font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(244,237,224,0.4); margin-top: 0.5rem; text-align: center;
+}
+
+/* Partners — remove redundant "Partner" role label */
+.patron-role { display: none; }
+
+/* Subtle top border accent on light sections */
+.purpose::before, .books::before, .saints::before {
+  content: '';
+  display: block;
+  width: 48px; height: 2px;
+  background: var(--gold);
+  opacity: 0.3;
+  margin: 0 auto 0;
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+}
+.purpose, .books, .saints { position: relative; }
+
+/* Patron cards — cleaner */
+.patron-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.patron-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
