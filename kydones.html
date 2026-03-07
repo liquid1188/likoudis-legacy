@@ -23,21 +23,21 @@
 .offers { padding: 6rem 2rem; background: var(--navy); }
 .offers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3.5rem; }
 .offer-card { background: var(--navy-mid); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.12); }
-.offer-icon { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); opacity: 0.7; margin-bottom: 1rem; }
-.offer-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--cream); margin-bottom: 0.75rem; }
-.offer-card p { font-size: 0.85rem; color: rgba(244,237,224,0.5); line-height: 1.75; }
+.offer-icon { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); opacity: 1; margin-bottom: 1rem; }
+.offer-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--cream); margin-bottom: 0.75rem; }
+.offer-card p { font-size: 0.88rem; color: rgba(244,237,224,0.82); line-height: 1.8; }
 .editorial { padding: 7rem 2rem; background: var(--cream); }
 .editorial-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2px; margin-top: 3.5rem; }
 .editor-card { background: var(--ivory); padding: 2rem; border: 1px solid rgba(200,169,110,0.12); text-align: center; }
 .editor-card img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); margin: 0 auto 1rem; display: block; }
 .editor-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 4px; }
-.editor-card p { font-size: 0.78rem; color: var(--muted); }
-.submission { padding: 7rem 2rem; }
+.editor-card p { font-size: 0.85rem; color: var(--muted); }
+.submission { padding: 7rem 2rem; background: var(--ivory); }
 .submission-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
 .sub-criteria { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
-.sub-item { padding-left: 1.5rem; border-left: 1px solid var(--border); }
+.sub-item { padding-left: 1.5rem; border-left: 2px solid rgba(200,169,110,0.35); }
 .sub-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--navy); margin-bottom: 0.4rem; }
-.sub-item p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+.sub-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.75; }
 @media(max-width:900px){ .kydones-grid{grid-template-columns:1fr;gap:3rem;} .submission-inner{grid-template-columns:1fr;} }
 </style>
 </head>
@@ -131,7 +131,7 @@
 </section>
 
 <!-- WHAT WE OFFER -->
-<section class="offers on-light">
+<section class="offers on-dark">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:0;">
       <span class="section-label">Content</span>
@@ -149,7 +149,7 @@
 </section>
 
 <!-- SUBMISSIONS -->
-<section class="submission on-dark">
+<section class="submission on-light">
   <div class="submission-inner">
     <div class="reveal">
       <span class="section-label">For Authors</span>
