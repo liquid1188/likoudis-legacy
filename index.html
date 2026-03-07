@@ -1017,7 +1017,7 @@
     background: linear-gradient(to right, transparent, rgba(200,169,110,0.15), transparent);
   }
 
-  /* ─── ENDORSEMENTS — FEATURED CARD ─── */
+  /* ─── ENDORSEMENTS — FEATURED CARDS ─── */
   .endorsement-card.featured {
     border-left: 3px solid var(--gold);
     background: var(--navy);
@@ -1033,8 +1033,23 @@
     width: 64px;
     height: 64px;
   }
+  /* Burke: spans all 3 cols */
+  .endorsement-card.featured-full {
+    border-left: 3px solid var(--gold);
+    background: var(--navy);
+    grid-column: 1 / -1;
+  }
+  .endorsement-card.featured-full .endorse-quote {
+    color: var(--cream);
+    font-size: 1.08rem;
+    max-width: 780px;
+  }
+  .endorsement-card.featured-full .endorse-name { color: var(--gold); }
+  .endorsement-card.featured-full .endorse-title { color: rgba(244,237,224,0.6); }
+  .endorsement-card.featured-full .endorse-person img { width: 64px; height: 64px; }
   @media(max-width:900px) {
-    .endorsement-card.featured { grid-column: span 1; }
+    .endorsement-card.featured,
+    .endorsement-card.featured-full { grid-column: span 1; }
   }
 </style>
 
@@ -1146,8 +1161,10 @@
       <div class="divider center"></div>
     </div>
     <div class="endorsements-grid">
-      <div class="endorsement-card featured reveal">
-        <p class="endorse-quote">I knew Dr. Likoudis for some twenty-five years… Dr. Likoudis' work as the author of numerous books and articles significantly contributed to clarifying and enhancing the relations between the Roman Catholic Church and the Eastern Orthodox Churches. He is regarded as a true Christian scholar.</p>
+
+      <!-- ROW 1: Burke — full width -->
+      <div class="endorsement-card featured-full reveal">
+        <p class="endorse-quote">I knew Dr. Likoudis for some twenty-five years and had the occasion, almost annually, to visit with him about theological questions. I was always edified by the depth and charity of his conversations with me. Dr. Likoudis' work as the author of numerous books and articles significantly contributed to clarifying and enhancing the relations between the Roman Catholic Church and the Eastern Orthodox Churches. He is regarded as a true Christian scholar.</p>
         <div class="endorse-person">
           <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/01/burke.jpeg?fit=500%2C627&ssl=1" alt="Cardinal Burke">
           <div>
@@ -1156,17 +1173,9 @@
           </div>
         </div>
       </div>
-      <div class="endorsement-card reveal reveal-delay-1">
-        <p class="endorse-quote">James Likoudis was a courageous defender of the faith and a gentle 'man of the Church.' It is praiseworthy that this new Foundation has been established in his honor… May this initiative enrich the Church's pursuit of Christian unity.</p>
-        <div class="endorse-person">
-          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/Archbishop-Joseph-F.-Naumann-Photo-e1741117520725.jpg?fit=1286%2C1317&ssl=1" alt="Archbishop Naumann">
-          <div>
-            <p class="endorse-name">Archbishop Joseph F. Naumann</p>
-            <p class="endorse-title">Archbishop of Kansas City</p>
-          </div>
-        </div>
-      </div>
-      <div class="endorsement-card reveal reveal-delay-2">
+
+      <!-- ROW 2: Hahn + Hildebrand — featured pair -->
+      <div class="endorsement-card featured reveal reveal-delay-1">
         <p class="endorse-quote">I have known James Likoudis for half of my life and a third of his… He recognizes that conversion—any conversion—is not the matter of a moment. It is the love of a lifetime.</p>
         <div class="endorse-person">
           <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/09/Scott-Hahn-Headshot-1-240x300-1.jpeg?fit=240%2C300&ssl=1" alt="Scott Hahn">
@@ -1176,7 +1185,7 @@
           </div>
         </div>
       </div>
-      <div class="endorsement-card reveal reveal-delay-1">
+      <div class="endorsement-card featured reveal reveal-delay-2">
         <p class="endorse-quote">…several thinkers I admire and respect. Let me mention, among others, . . . James Likoudis.</p>
         <div class="endorse-person">
           <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/09/In-Memoriam-_-Hildebrand-e1655150453734.jpg?fit=52%2C52&ssl=1" alt="Alice von Hildebrand">
@@ -1186,7 +1195,19 @@
           </div>
         </div>
       </div>
-      <div class="endorsement-card reveal reveal-delay-2">
+
+      <!-- ROW 3+: regular grid -->
+      <div class="endorsement-card reveal">
+        <p class="endorse-quote">James Likoudis was a courageous defender of the faith and a gentle 'man of the Church.' It is praiseworthy that this new Foundation has been established in his honor… May this initiative enrich the Church's pursuit of Christian unity.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/Archbishop-Joseph-F.-Naumann-Photo-e1741117520725.jpg?fit=1286%2C1317&ssl=1" alt="Archbishop Naumann">
+          <div>
+            <p class="endorse-name">Archbishop Joseph F. Naumann</p>
+            <p class="endorse-title">Archbishop of Kansas City</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal reveal-delay-1">
         <p class="endorse-quote">Likoudis occupies a singular place in the literature of his time. Faithful, yet not crazy. Very few people got it so right.</p>
         <div class="endorse-person">
           <img src="images/MIke-Aquilina-e1698774017601.jpg" alt="Mike Aquilina">
@@ -1196,27 +1217,37 @@
           </div>
         </div>
       </div>
-      <div class="endorsement-card reveal reveal-delay-1">
+      <div class="endorsement-card reveal reveal-delay-2">
         <p class="endorse-quote">Dr. Likoudis is a wonderful example of how to dialogue with the Orthodox about important differences without falling into a rigid fundamentalism that refuses to see grace present in the Orthodox church.</p>
         <div class="endorse-person">
-          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/Michael-Lofton-e1698773454915.jpg?fit=362%2C360&ssl=1" alt="Michael Lofton">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/Michael-Lofton-e1698773454915.jpg?fit=52%2C52&ssl=1" alt="Michael Lofton">
           <div>
             <p class="endorse-name">Michael Lofton</p>
             <p class="endorse-title">Founder, Reason and Theology</p>
           </div>
         </div>
       </div>
-      <div class="endorsement-card reveal reveal-delay-2">
-        <p class="endorse-quote">James Likoudis was one of several mentors from whom I was privileged to learn… Likoudis was already established as a proponent of authentic Catholic renewal, a leading opponent of sex education in schools, and a champion of the Magisterium.</p>
+      <div class="endorsement-card reveal">
+        <p class="endorse-quote">Of like witness to the complementary goals of defending the "whole truth about Mary" and the imperative for Christian Unity, James Likoudis comprises a contemporary theological and catechetical voice for full Mariological truth — not as an obstacle, but as a means to authentic ecumenical unity.</p>
         <div class="endorse-person">
-          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/09/Jeffrey-Mirus.jpeg?fit=247%2C300&ssl=1" alt="Jeffrey Mirus" style="object-position: center 55%;">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/07/Dr-Mark-Miravalle-S.T.L.-S.T.D.jpg?fit=52%2C52&ssl=1" alt="Dr. Mark Miravalle">
+          <div>
+            <p class="endorse-name">Dr. Mark Miravalle</p>
+            <p class="endorse-title">Mariology Chair, Franciscan University of Steubenville</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal reveal-delay-1">
+        <p class="endorse-quote">James Likoudis was one of several mentors from whom I was privileged to learn… Likoudis was already established as a proponent of authentic Catholic renewal and a champion of the Magisterium.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/09/Jeffrey-Mirus.jpeg?fit=52%2C52&ssl=1" alt="Jeffrey Mirus">
           <div>
             <p class="endorse-name">Jeffrey Mirus, PhD</p>
             <p class="endorse-title">Founder, CatholicCulture.org</p>
           </div>
         </div>
       </div>
-      <div class="endorsement-card reveal">
+      <div class="endorsement-card reveal reveal-delay-2">
         <p class="endorse-quote">In the field of Catholic-Orthodox dialogue, James Likoudis figures as one of the most prominent Catholic apologists.</p>
         <div class="endorse-person">
           <img src="https://liquid1188.github.io/likoudis-legacy/images/jose-pereira.jpg" alt="Jose Pereira">
@@ -1226,13 +1257,23 @@
           </div>
         </div>
       </div>
-      <div class="endorsement-card reveal reveal-delay-1">
+      <div class="endorsement-card reveal">
         <p class="endorse-quote">In our modern era of mass communication, the Ecumenical work of reunion will not be carried out in full without lay involvement. And there is, perhaps, no member of the laity of either of the 'two lungs' of apostolic faith that has done more to further the dialogue than James Likoudis.</p>
         <div class="endorse-person">
-          <img src="images/tim-staples-e1698774140194.jpg" alt="Tim Staples">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2023/10/tim-staples-e1698774140194.jpg?fit=52%2C52&ssl=1" alt="Tim Staples">
           <div>
             <p class="endorse-name">Tim Staples</p>
             <p class="endorse-title">Senior Apologist, Catholic Answers</p>
+          </div>
+        </div>
+      </div>
+      <div class="endorsement-card reveal reveal-delay-1">
+        <p class="endorse-quote">James Likoudis is a noted Catholic writer on the separated Eastern Churches. There is much to be learned from his stirring accounts of Easterners who embraced their true home, the Catholic Church.</p>
+        <div class="endorse-person">
+          <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/07/The-Rev.-Ray-Ryland.png?fit=52%2C52&ssl=1" alt="Rev. Ray Ryland">
+          <div>
+            <p class="endorse-name">Rev. Ray Ryland, PhD, JD</p>
+            <p class="endorse-title">Chaplain, Coming Home Network</p>
           </div>
         </div>
       </div>
@@ -1246,6 +1287,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
