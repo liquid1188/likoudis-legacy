@@ -397,7 +397,7 @@ nav { transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s eas
 .on-dark { color: var(--cream); }
 .on-dark .section-title { color: var(--cream); }
 .on-dark .section-label { color: var(--gold); opacity: 0.85; }
-.on-dark p { color: rgba(244,237,224,0.6); }
+.on-dark p { color: rgba(244,237,224,0.78); }
 .on-dark h3, .on-dark h4 { color: var(--cream); }
 .on-dark a:not(.btn-primary):not(.btn-outline) { color: var(--gold-light); }
 
@@ -411,7 +411,7 @@ nav { transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s eas
 /* ─── STRONGER CONTEXT OVERRIDES (beat inline styles) ─────────── */
 section.on-dark p,
 section.on-dark li,
-section.on-dark address { color: rgba(244,237,224,0.6); }
+section.on-dark address { color: rgba(244,237,224,0.78); }
 section.on-dark h2,
 section.on-dark h3,
 section.on-dark h4 { color: var(--cream); }

@@ -27,14 +27,12 @@
 .criteria-card ul { list-style: none; }
 .criteria-card ul li { color: rgba(244,237,224,0.72); font-size: 0.9rem; line-height: 1.8; padding-left: 1rem; position: relative; }
 .criteria-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); opacity: 0.6; }
-.scholarships { padding: 7rem 2rem; background: var(--cream); }
-.scholarships .section-title { color: var(--navy); }
-.scholarships .section-label { color: var(--gold); }
+.scholarships { padding: 7rem 2rem; background: var(--navy); }
 .stipend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3.5rem; }
-.stipend-card { background: var(--ivory); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.12); }
+.stipend-card { background: rgba(255,255,255,0.04); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.18); }
 .stipend-amount { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--gold); font-weight: 300; margin-bottom: 0.5rem; }
-.stipend-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 0.75rem; }
-.stipend-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.stipend-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--cream); margin-bottom: 0.75rem; }
+.stipend-card p { font-size: 0.92rem; color: rgba(244,237,224,0.78); line-height: 1.75; }
 .fellows-list { padding: 7rem 2rem; }
 .fellows-list-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2px; margin-top: 3.5rem; }
 .fellow-card { background: var(--ivory); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.12); }
@@ -46,11 +44,11 @@
 .fellow-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); opacity: 0.5; }
 .apply { background: var(--navy); padding: 7rem 2rem; text-align: center; }
 .apply-inner { max-width: 700px; margin: 0 auto; }
-.apply-inner p { color: rgba(244,237,224,0.82); line-height: 1.85; margin: 1.5rem 0 2.5rem; font-size: 0.95rem; }
-.apply-docs { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,169,110,0.15); padding: 2rem; margin: 2rem 0; text-align: left; }
+.apply-inner p { color: rgba(244,237,224,0.88) !important; line-height: 1.85; margin: 1.5rem 0 2.5rem; font-size: 0.95rem; }
+.apply-docs { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,169,110,0.28); padding: 2rem; margin: 2rem 0; text-align: left; }
 .apply-docs h4 { font-family: 'Cormorant Garamond', serif; color: var(--gold-light); font-size: 1rem; margin-bottom: 1rem; }
 .apply-docs ol { padding-left: 1.5rem; }
-.apply-docs ol li { color: rgba(244,237,224,0.88); font-size: 0.9rem; line-height: 2; }
+.apply-docs ol li { color: rgba(244,237,224,0.92) !important; font-size: 0.9rem; line-height: 2; }
   .apply-form { margin-top: 2rem; }
   .apply-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 2rem; }
   .apply-form-full { grid-column: 1 / -1; }
@@ -136,7 +134,7 @@
 </section>
 
 <!-- SCHOLARSHIPS -->
-<section class="scholarships on-light">
+<section class="scholarships on-dark">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:0;">
       <span class="section-label">Financial Support</span>
