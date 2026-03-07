@@ -389,8 +389,8 @@ nav { transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s eas
   background: rgba(200,169,110,0.08);
 }
 .give-method-name {
-  font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(244,237,224,0.4); margin-top: 0.5rem; text-align: center;
+  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(244,237,224,0.7); margin-top: 0.5rem; text-align: center;
 }
 
 /* Partners — remove redundant "Partner" role label */
