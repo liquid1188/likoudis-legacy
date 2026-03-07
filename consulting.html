@@ -17,7 +17,7 @@
 <title>Consulting Services — Likoudis Legacy Foundation</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.consulting-intro { padding: 7rem 2rem; }
+.consulting-intro { padding: 7rem 2rem; background: var(--ivory); }
 .consulting-inner { max-width: 900px; margin: 0 auto; }
 .consulting-inner p { color: var(--muted); line-height: 1.85; font-size: 0.95rem; margin-bottom: 1.25rem; }
 .packages { padding: 7rem 2rem; background: var(--navy); }
@@ -35,7 +35,7 @@
 .package-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--cream); margin-top: 0.5rem; }
 .package-card p { font-size: 0.85rem; color: rgba(244,237,224,0.5); line-height: 1.75; }
 .package-badge { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(200,169,110,0.4); padding: 3px 10px; display: inline-block; width: fit-content; }
-.approach { padding: 7rem 2rem; background: var(--cream); }
+.approach { padding: 7rem 2rem; background: var(--ivory); }
 .approach-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
 .approach-inner p { color: var(--muted); line-height: 1.85; font-size: 0.95rem; margin-bottom: 1.25rem; }
 .how-steps { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
@@ -120,7 +120,7 @@
     </div>
     <div style="text-align:center;margin-top:2.5rem;">
       <p style="color:rgba(244,237,224,0.45);font-size:0.85rem;margin-bottom:1.5rem;">Custom packages are available upon request.</p>
-      <a href="contact.html" class="btn-primary">Request a Consultation</a>
+      <a href="#book" class="btn-primary">Book a Session</a>
     </div>
   </div>
 </section>
@@ -169,14 +169,52 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-band on-dark">
-  <div class="cta-band-inner reveal">
-    <span class="section-label">Get Started</span>
-    <h2 class="section-title">Request Your Consultation</h2>
-    <div class="divider center"></div>
-    <p>Ready to begin? Use the form below or contact us directly. We look forward to accompanying you on your theological journey.</p>
-    <a href="contact.html" class="btn-primary">Contact Us</a>
+<!-- BOOKING FORM -->
+<section class="cta-band on-dark" id="book">
+  <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:start;">
+    <div class="reveal">
+      <span class="section-label">Book a Session</span>
+      <h2 class="section-title" style="color:var(--cream);">Start the Conversation</h2>
+      <p style="color:rgba(244,237,224,0.6);line-height:1.85;margin:1.5rem 0;font-size:0.92rem;">Tell us briefly what you're working on. All submissions are reviewed personally and you'll hear back within 3–5 business days.</p>
+      <div style="display:flex;flex-direction:column;gap:1rem;margin-top:2rem;">
+        <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="color:var(--gold);font-size:0.7rem;margin-top:3px;opacity:0.7;">—</span><p style="font-size:0.82rem;color:rgba(244,237,224,0.5);line-height:1.7;">Ecumenism &amp; Catholic-Orthodox dialogue</p></div>
+        <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="color:var(--gold);font-size:0.7rem;margin-top:3px;opacity:0.7;">—</span><p style="font-size:0.82rem;color:rgba(244,237,224,0.5);line-height:1.7;">Magisterial authority &amp; doctrinal development</p></div>
+        <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="color:var(--gold);font-size:0.7rem;margin-top:3px;opacity:0.7;">—</span><p style="font-size:0.82rem;color:rgba(244,237,224,0.5);line-height:1.7;">Nonprofit governance &amp; editorial strategy</p></div>
+        <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="color:var(--gold);font-size:0.7rem;margin-top:3px;opacity:0.7;">—</span><p style="font-size:0.82rem;color:rgba(244,237,224,0.5);line-height:1.7;">Vatican II, canon law &amp; pastoral theology</p></div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <form action="https://formsubmit.co/alikoudis@likoudislegacy.com" method="POST" style="display:flex;flex-direction:column;gap:1.25rem;">
+        <input type="hidden" name="_subject" value="Consultation Request — Likoudis Legacy Foundation">
+        <input type="hidden" name="_next" value="https://liquid1188.github.io/likoudis-legacy/consulting.html">
+        <input type="hidden" name="_captcha" value="false">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="display:flex;flex-direction:column;gap:0.4rem;">
+            <label style="font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,110,0.5);">Name</label>
+            <input type="text" name="name" required placeholder="Your name" style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,169,110,0.2);color:var(--cream);padding:0.75rem 1rem;font-size:0.88rem;font-family:'Jost',sans-serif;outline:none;" onfocus="this.style.borderColor='rgba(200,169,110,0.5)'" onblur="this.style.borderColor='rgba(200,169,110,0.2)'">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.4rem;">
+            <label style="font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,110,0.5);">Email</label>
+            <input type="email" name="email" required placeholder="your@email.com" style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,169,110,0.2);color:var(--cream);padding:0.75rem 1rem;font-size:0.88rem;font-family:'Jost',sans-serif;outline:none;" onfocus="this.style.borderColor='rgba(200,169,110,0.5)'" onblur="this.style.borderColor='rgba(200,169,110,0.2)'">
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;">
+          <label style="font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,110,0.5);">Session Type</label>
+          <select name="session_type" style="background:rgba(20,35,60,0.95);border:1px solid rgba(200,169,110,0.2);color:var(--cream);padding:0.75rem 1rem;font-size:0.88rem;font-family:'Jost',sans-serif;outline:none;">
+            <option value="">Select a package</option>
+            <option value="Basic — $50 / 30 min">Basic Consultation — $50 / 30 min</option>
+            <option value="Standard — $100 / 60 min">Standard Consultation — $100 / 60 min</option>
+            <option value="Comprehensive — $150 / 90 min + follow-up">Comprehensive Advisory — $150 / 90 min</option>
+            <option value="Custom">Custom — tell me more below</option>
+          </select>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;">
+          <label style="font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,110,0.5);">What are you working on?</label>
+          <textarea name="message" required rows="5" placeholder="Briefly describe your question or project…" style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,169,110,0.2);color:var(--cream);padding:0.75rem 1rem;font-size:0.88rem;font-family:'Jost',sans-serif;outline:none;resize:vertical;line-height:1.7;" onfocus="this.style.borderColor='rgba(200,169,110,0.5)'" onblur="this.style.borderColor='rgba(200,169,110,0.2)'"></textarea>
+        </div>
+        <button type="submit" style="background:var(--gold);color:var(--navy);border:none;padding:0.9rem 2rem;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;font-family:'Jost',sans-serif;font-weight:600;cursor:pointer;align-self:flex-start;" onmouseover="this.style.background='var(--gold-light)';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='var(--gold)';this.style.transform='translateY(0)'">Submit Request →</button>
+      </form>
+    </div>
   </div>
 </section>
 
