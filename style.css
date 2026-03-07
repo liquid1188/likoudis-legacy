@@ -367,9 +367,13 @@ nav { transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s eas
 
 /* Give CTA — reduce payment icon clutter */
 .give-methods {
-  display: flex; flex-wrap: wrap;
-  justify-content: center; gap: 2rem;
-  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 4rem;
+  margin-top: 3rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .give-method-circle {
   width: 52px; height: 52px;
