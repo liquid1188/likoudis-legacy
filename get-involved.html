@@ -20,21 +20,21 @@
 <style>
 .involve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3.5rem; }
 .involve-card { background: var(--ivory); border: 1px solid rgba(200,169,110,0.12); padding: 3rem 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
-.involve-card .involve-icon { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold); opacity: 0.7; }
+.involve-card .involve-icon { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold); opacity: 1; }
 .involve-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--navy); font-weight: 400; }
-.involve-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; flex: 1; }
+.involve-card p { font-size: 0.85rem; color: #3a3330; line-height: 1.8; flex: 1; }
 .involve-card a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); text-decoration: none; margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--border); transition: opacity 0.2s; }
-.involve-card a:hover { opacity: 0.7; }
+.involve-card a:hover { opacity: 1; }
 .newsletter-section { background: var(--navy); padding: 7rem 2rem; }
 .newsletter-inner { max-width: 600px; margin: 0 auto; text-align: center; }
-.newsletter-inner p { color: rgba(244,237,224,0.55); font-size: 0.92rem; line-height: 1.85; margin: 1.25rem 0 2.5rem; }
+.newsletter-inner p { color: rgba(244,237,224,0.88); font-size: 0.92rem; line-height: 1.85; margin: 1.25rem 0 2.5rem; }
 .newsletter-form { display: flex; gap: 0; max-width: 480px; margin: 0 auto; }
 .newsletter-form input[type="email"] { flex: 1; padding: 0.85rem 1.25rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(200,169,110,0.25); border-right: none; color: var(--cream); font-size: 0.88rem; outline: none; font-family: 'Jost', sans-serif; }
 .newsletter-form input[type="email"]::placeholder { color: rgba(244,237,224,0.3); }
 .newsletter-form input[type="email"]:focus { border-color: var(--gold); }
 .newsletter-form button { padding: 0.85rem 1.75rem; background: var(--gold); color: var(--navy); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; border: none; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; font-family: 'Jost', sans-serif; }
 .newsletter-form button:hover { opacity: 0.85; }
-.newsletter-note { font-size: 0.7rem; color: rgba(244,237,224,0.3); margin-top: 1rem; letter-spacing: 0.05em; }
+.newsletter-note { font-size: 0.7rem; color: rgba(244,237,224,0.6); margin-top: 1rem; letter-spacing: 0.05em; }
 .steps-section { padding: 7rem 2rem; background: var(--cream); }
 .steps-inner { max-width: 900px; margin: 0 auto; }
 .steps-list { margin-top: 3rem; counter-reset: steps; }
@@ -42,7 +42,7 @@
 .step-item:last-child { border-bottom: none; }
 .step-num { width: 52px; height: 52px; border: 1px solid rgba(200,169,110,0.4); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); flex-shrink: 0; }
 .step-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--navy); font-weight: 400; margin-bottom: 0.5rem; }
-.step-item p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
+.step-item p { font-size: 0.85rem; color: #3a3330; line-height: 1.8; }
 @media(max-width: 900px) { .involve-grid { grid-template-columns: repeat(2, 1fr); } }
 @media(max-width: 560px) { .involve-grid { grid-template-columns: 1fr; } .newsletter-form { flex-direction: column; } .newsletter-form input[type="email"] { border-right: 1px solid rgba(200,169,110,0.25); border-bottom: none; } }
 </style>
