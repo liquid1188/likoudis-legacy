@@ -24,10 +24,10 @@
 .tiers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2px; margin-top: 3.5rem; }
 .tier-card { background: var(--navy-mid); padding: 2.5rem; border: 1px solid rgba(200,169,110,0.12); display: flex; flex-direction: column; gap: 1rem; }
 .tier-amount { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--gold); font-weight: 300; }
-.tier-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,237,224,0.4); }
+.tier-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(244,237,224,0.75); }
 .tier-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--cream); }
 .tier-card p { font-size: 0.83rem; color: rgba(244,237,224,0.5); line-height: 1.75; }
-.give-cta { padding: 7rem 2rem; background: var(--navy); text-align: center; }
+.give-cta { padding: 7rem 2rem; background: var(--ivory); text-align: center; }
 .give-cta-inner { max-width: 760px; margin: 0 auto; }
 .give-cta-inner p { color: var(--muted); line-height: 1.85; font-size: 0.95rem; margin: 1.5rem 0 2.5rem; }
 .give-methods-full { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3.5rem; }
@@ -95,7 +95,7 @@
       <span class="section-label">Recurring Gifts</span>
       <h2 class="section-title">Monthly Gift Tiers</h2>
       <div class="divider center"></div>
-      <p style="color:rgba(244,237,224,0.5);font-size:0.9rem;margin-top:0.5rem;">Consider making a recurring monthly gift to make an ongoing, meaningful impact.</p>
+      <p style="color:rgba(244,237,224,0.85);font-size:0.9rem;margin-top:0.5rem;">Consider making a recurring monthly gift to make an ongoing, meaningful impact.</p>
     </div>
     <div class="tiers-grid">
       <div class="tier-card reveal"><div class="tier-amount">$10</div><div class="tier-label">/ month</div><h3>Archive Supporter</h3><p>Ships archival scans to our partner library.</p></div>
@@ -105,17 +105,17 @@
       <div class="tier-card reveal reveal-delay-1"><div class="tier-amount">$100</div><div class="tier-label">/ month</div><h3>Media Patron</h3><p>Funds the production of a Digital Lecture Series.</p></div>
       <div class="tier-card reveal reveal-delay-2"><div class="tier-amount">$200</div><div class="tier-label">/ month</div><h3>Fellowship Sponsor</h3><p>Funds a Fellow's Scholarship for one month.</p></div>
     </div>
-    <p style="color:rgba(244,237,224,0.35);font-size:0.78rem;text-align:center;margin-top:2rem;">All recurring donations are safely handled via Stripe.</p>
+    <p style="color:rgba(244,237,224,0.7);font-size:0.78rem;text-align:center;margin-top:2rem;">All recurring donations are safely handled via Stripe.</p>
   </div>
 </section>
 
 <!-- OTHER WAYS TO GIVE -->
-<section class="give-cta on-dark">
+<section class="give-cta on-light" style="background:var(--ivory);">
   <div class="give-cta-inner reveal">
     <span class="section-label">Other Ways to Give</span>
-    <h2 class="section-title">Choose Your Method</h2>
+    <h2 class="section-title" style="color:var(--navy);">Choose Your Method</h2>
     <div class="divider center"></div>
-    <p>We accept gifts through multiple platforms. One-time gifts above $1,000 go towards endowing an Academic Chair at a Catholic University.</p>
+    <p style="color:var(--muted);">We accept gifts through multiple platforms. One-time gifts above $1,000 go towards endowing an Academic Chair at a Catholic University.</p>
   </div>
   <div class="container">
     <div class="give-methods-full">
