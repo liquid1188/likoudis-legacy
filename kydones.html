@@ -171,6 +171,62 @@
   </div>
 </section>
 
+<!-- MANUSCRIPT SUBMISSION -->
+<section class="on-dark" style="background:var(--navy);padding:7rem 2rem;">
+  <div style="max-width:760px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:3.5rem;">
+      <span class="section-label">Manuscript Submissions</span>
+      <h2 class="section-title" style="color:var(--cream);">Submit to <em>The Kydones Review</em></h2>
+      <div class="divider center"></div>
+      <p style="color:rgba(244,237,224,0.78);font-size:0.93rem;line-height:1.85;margin-top:1.5rem;max-width:580px;margin-left:auto;margin-right:auto;">We welcome original scholarship in Catholic theology, philosophy, ecumenism, and church history. Submissions should be unpublished and not under consideration elsewhere. Please include an abstract of 150–250 words and attach your manuscript as a PDF or Word document.</p>
+    </div>
+    <form action="https://formspree.io/f/xpwzgllr" method="POST" enctype="multipart/form-data" class="reveal" style="display:flex;flex-direction:column;gap:1.25rem;">
+      <input type="hidden" name="_subject" value="Kydones Review Manuscript Submission">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+        <div style="display:flex;flex-direction:column;gap:0.4rem;">
+          <label style="font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,110,0.85);">Full Name</label>
+          <input type="text" name="name" required placeholder="Your full name"
+            style="background:rgba(255,255,255,0.06);border:1px solid rgba(200,169,110,0.2);color:var(--cream);padding:0.8rem 1rem;font-family:'Jost',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;"
+            onfocus="this.style.borderColor='rgba(200,169,110,0.6)'" onblur="this.style.borderColor='rgba(200,169,110,0.2)'">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;">
+          <label style="font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,110,0.85);">Email Address</label>
+          <input type="email" name="email" required placeholder="you@example.com"
+            style="background:rgba(255,255,255,0.06);border:1px solid rgba(200,169,110,0.2);color:var(--cream);padding:0.8rem 1rem;font-family:'Jost',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;"
+            onfocus="this.style.borderColor='rgba(200,169,110,0.6)'" onblur="this.style.borderColor='rgba(200,169,110,0.2)'">
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <label style="font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,110,0.85);">Manuscript Title</label>
+        <input type="text" name="title" required placeholder="Full title of your submission"
+          style="background:rgba(255,255,255,0.06);border:1px solid rgba(200,169,110,0.2);color:var(--cream);padding:0.8rem 1rem;font-family:'Jost',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;"
+          onfocus="this.style.borderColor='rgba(200,169,110,0.6)'" onblur="this.style.borderColor='rgba(200,169,110,0.2)'">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <label style="font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,110,0.85);">Abstract <span style="opacity:0.5;font-size:0.62rem;">(150–250 words)</span></label>
+        <textarea name="abstract" required rows="6" placeholder="Provide a summary of your manuscript's argument, methodology, and contribution..."
+          style="background:rgba(255,255,255,0.06);border:1px solid rgba(200,169,110,0.2);color:var(--cream);padding:0.8rem 1rem;font-family:'Jost',sans-serif;font-size:0.9rem;line-height:1.7;resize:vertical;outline:none;transition:border-color 0.2s;"
+          onfocus="this.style.borderColor='rgba(200,169,110,0.6)'" onblur="this.style.borderColor='rgba(200,169,110,0.2)'"></textarea>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <label style="font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,110,0.85);">Manuscript File <span style="opacity:0.5;font-size:0.62rem;">(PDF or Word)</span></label>
+        <div style="border:1px dashed rgba(200,169,110,0.3);padding:1.5rem;text-align:center;transition:border-color 0.2s;"
+          ondragover="this.style.borderColor='rgba(200,169,110,0.7)'" ondragleave="this.style.borderColor='rgba(200,169,110,0.3)'">
+          <input type="file" name="manuscript" accept=".pdf,.doc,.docx" required id="manuscript-file"
+            style="display:none;" onchange="document.getElementById('file-label').textContent=this.files[0]?this.files[0].name:'No file chosen'">
+          <label for="manuscript-file" style="cursor:pointer;">
+            <span style="color:rgba(200,169,110,0.85);font-size:0.8rem;letter-spacing:0.08em;">↑ Choose file</span><br>
+            <span id="file-label" style="color:rgba(244,237,224,0.45);font-size:0.75rem;margin-top:0.4rem;display:block;">No file chosen</span>
+          </label>
+        </div>
+      </div>
+      <div style="text-align:right;margin-top:0.5rem;">
+        <button type="submit" class="btn-primary">Submit Manuscript →</button>
+      </div>
+    </form>
+  </div>
+</section>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-brand"><img src="images/cropped-imgpsh_fullsize_anim-removebg-preview62.png" alt="LLF Logo"><p>A 501(c)(3) dedicated to ecumenical scholarship and Christian unity.</p><address>Baltimore, MD</address></div>
