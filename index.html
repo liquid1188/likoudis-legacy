@@ -479,7 +479,7 @@
 
   /* ─── PRESS ─── */
   .press {
-    background: var(--cream);
+    background: var(--navy);
     padding: 5.5rem 2rem;
   }
   .press-inner {
@@ -575,7 +575,7 @@
 
   /* ─── PATRONS ─── */
   .patrons {
-    background: var(--navy);
+    background: var(--ivory);
     padding: 5.5rem 2rem;
   }
   .patrons-inner {
@@ -777,7 +777,7 @@
 
   /* ─── GIVE CTA ─── */
   .give-cta {
-    background: var(--navy);
+    background: var(--cream);
     padding: 5.5rem 2rem;
   }
   .give-cta-inner {
@@ -788,7 +788,7 @@
     gap: 5rem;
     align-items: center;
   }
-  .give-cta-text { text-align: right; }
+  .give-cta-text { text-align: right; color: var(--navy); }
   .give-cta-text .section-label { display: block; }
   .give-cta .section-title { color: var(--cream); }
   .give-cta p {
@@ -1188,7 +1188,7 @@
 </section>
 
 <!-- PRESS -->
-<section class="press on-light on-light" id="press">
+<section class="press on-dark" id="press">
   <div class="press-inner">
     <div class="press-header reveal">
       <h2 class="section-title" style="color:var(--navy);">Outlets That Have Cited the Likoudis Name</h2>
@@ -1217,7 +1217,7 @@
 </section>
 
 <!-- PARTNERS -->
-<section class="patrons on-dark">
+<section class="patrons on-light">
   <div class="patrons-inner reveal">
     <h2 class="section-title">Our Community</h2>
     <div class="patrons-grid">
@@ -1250,49 +1250,8 @@
   </div>
 </section>
 
-<!-- SAINTS -->
-<section class="saints on-light">
-  <div class="saints-inner reveal">
-    <h2 class="section-title">Intercessors for the Work</h2>
-    <div class="saints-grid">
-      <div class="saint">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/Mother-of-God-2-e1707187431497.jpg?fit=283%2C356&ssl=1" alt="Mary">
-        <p class="saint-name">Mary,<br>Mother of God</p>
-      </div>
-      <div class="saint">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/Joseph-e1707187656102.jpg?fit=273%2C356&ssl=1" alt="St. Joseph">
-        <p class="saint-name">St. Joseph</p>
-      </div>
-      <div class="saint">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/leopoldo.jpg?fit=272%2C356&ssl=1" alt="St. Leopold">
-        <p class="saint-name">St. Leopold<br>Mandić</p>
-      </div>
-      <div class="saint">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/Therese-e1707187813222.jpg?fit=274%2C356&ssl=1" alt="St. Thérèse">
-        <p class="saint-name">St. Thérèse<br>of Lisieux</p>
-      </div>
-      <div class="saint">
-        <img src="saint-newman.jpg" alt="St. John Henry Newman">
-        <p class="saint-name">St. John Henry<br>Newman</p>
-      </div>
-      <div class="saint">
-        <img src="saint-cyril-methodius.jpg" alt="Sts. Cyril and Methodius">
-        <p class="saint-name">Sts. Cyril &<br>Methodius</p>
-      </div>
-      <div class="saint">
-        <img src="saint-aquinas.jpg" alt="St. Thomas Aquinas">
-        <p class="saint-name">St. Thomas<br>Aquinas</p>
-      </div>
-      <div class="saint">
-        <img src="saint-edith-stein.jpg" alt="St. Edith Stein">
-        <p class="saint-name">St. Teresa Benedicta<br><em style="font-size:0.75rem;">of the Cross</em></p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- GIVE CTA -->
-<section class="give-cta on-dark">
+<section class="give-cta on-light">
   <div class="give-cta-inner reveal">
     <div class="give-methods-section">
       <div class="give-methods">
@@ -1335,7 +1294,7 @@
   <div class="email-capture-inner reveal">
     <div class="email-capture-text">
       <span class="section-label">Stay Connected</span>
-      <h2 class="section-title" style="color:var(--navy);">The LLF<br><em>Newsletter</em></h2>
+      <h2 class="section-title" style="color:var(--cream);">The LLF<br><em>Newsletter</em></h2>
       <p>Scholarship, events, and fellows updates — delivered one to two times per month. No noise, no filler.</p>
       <ul class="capture-bullets">
         <li>Conference &amp; event announcements</li>
@@ -1370,9 +1329,9 @@
 
 <style>
 .email-capture-section {
-  background: var(--ivory);
+  background: var(--navy);
   padding: 5.5rem 2rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(200,169,110,0.1);
 }
 .email-capture-inner {
   max-width: 1000px;
@@ -1396,7 +1355,7 @@
 }
 .capture-bullets li {
   font-size: 0.8rem;
-  color: var(--muted);
+  color: rgba(244,237,224,0.78);
   letter-spacing: 0.04em;
   padding-left: 1.25rem;
   position: relative;
@@ -1531,6 +1490,48 @@
   });
 })();
 </script>
+
+<!-- SAINTS -->
+<section class="saints on-light">
+  <div class="saints-inner reveal">
+    <h2 class="section-title">Intercessors for the Work</h2>
+    <div class="saints-grid">
+      <div class="saint">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/Mother-of-God-2-e1707187431497.jpg?fit=283%2C356&ssl=1" alt="Mary">
+        <p class="saint-name">Mary,<br>Mother of God</p>
+      </div>
+      <div class="saint">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/Joseph-e1707187656102.jpg?fit=273%2C356&ssl=1" alt="St. Joseph">
+        <p class="saint-name">St. Joseph</p>
+      </div>
+      <div class="saint">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/leopoldo.jpg?fit=272%2C356&ssl=1" alt="St. Leopold">
+        <p class="saint-name">St. Leopold<br>Mandić</p>
+      </div>
+      <div class="saint">
+        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2024/02/Therese-e1707187813222.jpg?fit=274%2C356&ssl=1" alt="St. Thérèse">
+        <p class="saint-name">St. Thérèse<br>of Lisieux</p>
+      </div>
+      <div class="saint">
+        <img src="saint-newman.jpg" alt="St. John Henry Newman">
+        <p class="saint-name">St. John Henry<br>Newman</p>
+      </div>
+      <div class="saint">
+        <img src="saint-cyril-methodius.jpg" alt="Sts. Cyril and Methodius">
+        <p class="saint-name">Sts. Cyril &<br>Methodius</p>
+      </div>
+      <div class="saint">
+        <img src="saint-aquinas.jpg" alt="St. Thomas Aquinas">
+        <p class="saint-name">St. Thomas<br>Aquinas</p>
+      </div>
+      <div class="saint">
+        <img src="saint-edith-stein.jpg" alt="St. Edith Stein">
+        <p class="saint-name">St. Teresa Benedicta<br><em style="font-size:0.75rem;">of the Cross</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <footer>
   <div class="footer-inner">
