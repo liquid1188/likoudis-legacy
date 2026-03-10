@@ -96,22 +96,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = dropdown.querySelector('.nav-dropdown-menu');
     if (!toggle || !menu) return;
 
-    // Add chevron indicator
-    if (!toggle.querySelector('.dd-chevron')) {
-      const chev = document.createElement('span');
-      chev.className = 'dd-chevron';
-      chev.textContent = ' ▾';
-      chev.style.cssText = 'font-size:0.7em;transition:transform 0.2s;display:inline-block;';
-      toggle.appendChild(chev);
-    }
-
     toggle.addEventListener('click', function(e) {
       const isMobile = window.innerWidth <= 900;
       if (!isMobile) return; // desktop: hover handles it
       e.preventDefault();
       const isOpen = menu.classList.toggle('mobile-dd-open');
-      const chev = toggle.querySelector('.dd-chevron');
-      if (chev) chev.style.transform = isOpen ? 'rotate(180deg)' : '';
+      toggle.classList.toggle('dd-open', isOpen);
       menu.style.cssText = isOpen
         ? 'display:block !important; position:static; background:rgba(255,255,255,0.05); padding:0.25rem 0 0.25rem 1rem; margin-bottom:0.5rem;'
         : '';
