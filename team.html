@@ -49,25 +49,39 @@
 }
 .patron-featured-inner p { color: rgba(244,237,224,0.6); line-height: 1.85; font-size: 0.95rem; margin: 1.25rem 0; }
 
-  .person-card.has-bio {
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .person-card.has-bio:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  }
-  .bio-link {
-    display: inline-block;
-    margin-top: 0.75rem;
+  /* ─── BOARD BIO ACCORDION ─── */
+  .board-bio-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.85rem;
     font-family: 'Jost', sans-serif;
-    font-size: 0.65rem;
+    font-size: 0.63rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold);
-    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
   }
-  .bio-link:hover { color: var(--navy); }
+  .board-bio-toggle:hover { color: var(--navy); }
+  .board-bio-toggle .toggle-icon {
+    display: inline-block;
+    transition: transform 0.25s ease;
+    font-style: normal;
+  }
+  .board-bio-toggle.open .toggle-icon { transform: rotate(180deg); }
+  .board-bio-expanded {
+    display: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(200,169,110,0.2);
+    font-size: 0.88rem;
+    line-height: 1.85;
+    color: var(--muted);
+  }
+  .board-bio-expanded.open { display: block; }
 </style>
 </head>
 <body>
@@ -166,77 +180,119 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/andrew-likoudis-photo.jpg" alt="Andrew Likoudis, MA" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=AL&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/andrew-likoudis.html" style="color:inherit;text-decoration:none;">Andrew Likoudis, MA</a></p>
-        <a href="bios/andrew-likoudis.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Andrew Likoudis, MA</p>
           <p class="person-role">Chairman &amp; President</p>
         </div>
         <p class="person-bio">A Catholic writer, editor, and consultant based in Baltimore. As founder and chairman of the Likoudis Legacy Foundation, he carries forward the ecumenical and apologetic legacy of his grandfather, theologian James Likoudis. His work occupies the center of the intra-Catholic debate: irenic toward the tradition, critical of its ideological capture, and committed to a Vatican II read in genuine continuity with what preceded it.</p>
+        <button class="board-bio-toggle" aria-expanded="false">
+          <span class="toggle-label">Read Bio</span>
+          <span class="toggle-icon">▾</span>
+        </button>
+        <div class="board-bio-expanded">
+          <p>A Catholic writer, editor, and consultant based in Baltimore. As founder and chairman of the Likoudis Legacy Foundation, he carries forward the ecumenical and apologetic legacy of his grandfather, the late theologian James Likoudis. He serves as editor-in-chief of The Kydones Review and is completing an M.A. in Catholic Studies at Franciscan University of Steubenville. He is a contributor to the National Catholic Register, Where Peter Is, EWTN News, and Philosophy Now, and a fellow of Goldman Sachs 10,000 Small Businesses and Johns Hopkins University.</p>
+        </div>
         <ul class="person-details"><li>Editor, <em>Faith in Crisis</em> — foreword by Rocco Buttiglione (En Route Books, 2024)</li><li>Editor-in-Chief, <em>The Kydones Review</em></li><li>Contributor: <em>National Catholic Register</em>, <em>Where Peter Is</em>, EWTN News, <em>Philosophy Now</em></li></ul>
         <a href="https://andrewlikoudis.com" target="_blank" style="display:inline-block;margin-top:0.25rem;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(200,169,110,0.3);">andrewlikoudis.com →</a>
       </div>
       <div class="person-card reveal">
         <img src="images/Blosser-Phillip-e1698773972695.jpg" alt="Philip Blosser, PhD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=PB&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/philip-blosser.html" style="color:inherit;text-decoration:none;">Philip Blosser, PhD</a></p>
-        <a href="bios/philip-blosser.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Philip Blosser, PhD</p>
           
         </div>
         <p class="person-bio">Born in China and raised in Japan, Blosser earned his BA from Sophia University in Tokyo and his PhD from Duquesne University. He is the author of <em>Scheler's Critique of Kant's Ethics</em> and blogs at <em>Musings of a Pertinacious Papist</em>.</p>
+        <button class="board-bio-toggle" aria-expanded="false">
+          <span class="toggle-label">Read Bio</span>
+          <span class="toggle-icon">▾</span>
+        </button>
+        <div class="board-bio-expanded">
+          <p>Born in China and raised in Japan, Dr. Blosser earned his BA from Sophia University in Tokyo and his PhD from Duquesne University. He is the author of <em>Scheler's Critique of Kant's Ethics</em> and blogs at <em>Musings of a Pertinacious Papist</em>. He has taught philosophy at Sacred Heart Major Seminary in Detroit for many years and serves as Secretary of the Max Scheler Society of North America.</p>
+        </div>
         <ul class="person-details"><li>Professor of Philosophy, Sacred Heart Major Seminary</li><li>Secretary, Max Scheler Society of North America</li></ul>
         
       </div>
       <div class="person-card reveal">
         <img src="images/MIke-Aquilina-e1698774017601.jpg" alt="Mike Aquilina" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=MA&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/mike-aquilina.html" style="color:inherit;text-decoration:none;">Mike Aquilina</a></p>
-        <a href="bios/mike-aquilina.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Mike Aquilina</p>
           
         </div>
         <p class="person-bio">Co-founder of the St. Paul Center for Biblical Theology with Scott and Kimberly Hahn. He has hosted eleven television series on EWTN and edited <em>New Covenant</em> magazine. A songwriter whose work has been recorded by Paul Simon, Van Morrison, and Bruce Springsteen.</p>
+        <button class="board-bio-toggle" aria-expanded="false">
+          <span class="toggle-label">Read Bio</span>
+          <span class="toggle-icon">▾</span>
+        </button>
+        <div class="board-bio-expanded">
+          <p>Co-founder of the St. Paul Center for Biblical Theology with Scott and Kimberly Hahn. He has hosted eleven television series on EWTN and edited <em>New Covenant</em> magazine. A songwriter whose work has been recorded by numerous Catholic artists, he is one of the most prolific and widely read authors in contemporary Catholic letters, with over seventy books to his name.</p>
+        </div>
         <ul class="person-details"><li>Executive Vice President, St. Paul Center for Biblical Theology</li><li>Author of over 70 books on Catholic history and devotion</li><li>Contributing editor, <em>Angelus News</em></li></ul>
         
       </div>
       <div class="person-card reveal">
         <img src="images/headshot-black-e1727449393668.jpg" alt="Will Deatherage" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=WD&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/will-deatherage.html" style="color:inherit;text-decoration:none;">Will Deatherage, MA</a></p>
-        <a href="bios/will-deatherage.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Will Deatherage, MA</p>
           
         </div>
         <p class="person-bio">Deatherage holds an M.A. in Historical-Systematic Theology from The Catholic University of America. He specializes in digital marketing and development for Catholic organizations and publishes theological resources through <em>Clarifying Catholicism</em>.</p>
+        <button class="board-bio-toggle" aria-expanded="false">
+          <span class="toggle-label">Read Bio</span>
+          <span class="toggle-icon">▾</span>
+        </button>
+        <div class="board-bio-expanded">
+          <p>Deatherage holds an M.A. in Historical-Systematic Theology from The Catholic University of America. He specializes in digital marketing and development for Catholic organizations and publishes theological content through Clarifying Catholicism. He serves as CEO of Catholics for Hire LLC and Executive Director of The New Realist Project.</p>
+        </div>
         <ul class="person-details"><li>CEO, <a href="https://catholicsforhire.com" target="_blank">Catholics for Hire LLC</a></li><li>Executive Director, Clarifying Catholicism</li><li>Executive Director, The New Realist Project</li></ul>
         
       </div>
       <div class="person-card reveal">
         <img src="images/Robert-Fastiggi.jpg" alt="Robert Fastiggi, PhD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=RF&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/robert-fastiggi.html" style="color:inherit;text-decoration:none;">Robert Fastiggi, PhD</a></p>
-        <a href="bios/robert-fastiggi.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Robert Fastiggi, PhD</p>
           
         </div>
         <p class="person-bio">Dr. Fastiggi holds an M.A. and Ph.D. from Fordham and has taught at Sacred Heart Major Seminary since 1999. He co-edited the English translation of the 43rd edition of <em>Denzinger-Hünermann</em> (Ignatius Press, 2012).</p>
+        <button class="board-bio-toggle" aria-expanded="false">
+          <span class="toggle-label">Read Bio</span>
+          <span class="toggle-icon">▾</span>
+        </button>
+        <div class="board-bio-expanded">
+          <p>Dr. Fastiggi holds an M.A. and Ph.D. from Fordham University and has taught at Sacred Heart Major Seminary since 1999. He co-edited the English translation of the 43rd edition of <em>Denzinger-Hünermann</em> (Ignatius Press, 2012), the standard reference work of Catholic doctrinal sources, and is President Emeritus of the Mariological Society of America.</p>
+        </div>
         <ul class="person-details"><li>Bishop Kevin M. Britt Chair of Dogmatic Theology, Sacred Heart Major Seminary</li><li>Co-editor, <em>Denzinger-Hünermann</em> 43rd ed. (Ignatius Press, 2012)</li><li>President Emeritus, Mariological Society of America</li></ul>
         
       </div>
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Stephen-Krason.jpg" alt="Stephen Krason, PhD, JD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=SK&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/stephen-krason.html" style="color:inherit;text-decoration:none;">Stephen Krason, PhD, JD</a></p>
-        <a href="bios/stephen-krason.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Stephen Krason, PhD, JD</p>
           
         </div>
         <p class="person-bio">Dr. Krason earned his J.D. and Ph.D. in Political Science at SUNY Buffalo and an M.A. in Theology from Gannon University. He is admitted to the bar of the U.S. Supreme Court. In 1992 he co-founded the Society of Catholic Social Scientists, which he has led ever since.</p>
+        <button class="board-bio-toggle" aria-expanded="false">
+          <span class="toggle-label">Read Bio</span>
+          <span class="toggle-icon">▾</span>
+        </button>
+        <div class="board-bio-expanded">
+          <p>Dr. Krason earned his J.D. and Ph.D. in Political Science at SUNY Buffalo and an M.A. in Theology from Gannon University. He is admitted to the bar of the U.S. Supreme Court. In 1992 he co-founded the Society of Catholic Social Scientists, of which he is President and Chairman, and has been Professor of Political Science and Legal Studies at Franciscan University of Steubenville for over three decades.</p>
+        </div>
         <ul class="person-details"><li>Professor Emeritus of Political Science and Legal Studies, Franciscan University of Steubenville</li><li>Co-Founder, President &amp; Chairman, Society of Catholic Social Scientists</li><li>Admitted to the bar of the U.S. Supreme Court</li></ul>
         
       </div>
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/jack-figel.jpg" alt="Jack Figel" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=JF&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/jack-figel.html" style="color:inherit;text-decoration:none;">Jack Figel</a></p>
-        <a href="bios/jack-figel.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Jack Figel</p>
           
         </div>
         <p class="person-bio">A devoted layman-ecumenist with decades of engagement in Catholic-Orthodox dialogue. He founded Eastern Christian Publications in 1993 and has chaired the Orientale Lumen Foundation since its inception. He has been received in private audience by Ecumenical Patriarch Bartholomew.</p>
+        <button class="board-bio-toggle" aria-expanded="false">
+          <span class="toggle-label">Read Bio</span>
+          <span class="toggle-icon">▾</span>
+        </button>
+        <div class="board-bio-expanded">
+          <p>A devoted layman-ecumenist with decades of engagement in Catholic-Orthodox dialogue. He founded Eastern Christian Publications in 1993 and has chaired the Orientale Lumen Foundation since its inception, organizing the annual Orientale Lumen conferences that bring together Eastern and Western Christians for theological dialogue.</p>
+        </div>
         <ul class="person-details"><li>Publisher, Eastern Christian Publications (Fairfax, VA)</li><li>Chairman, Orientale Lumen Foundation and Conferences</li><li>Sponsor, Figel Event for Ecumenism — Washington Theological Consortium</li></ul>
         
       </div>
@@ -255,8 +311,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Michael-Lofton-e1698773454915.jpg" alt="Michael Lofton, MA" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=ML&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/michael-lofton.html" style="color:inherit;text-decoration:none;">Michael Lofton, MA</a></p>
-        <a href="bios/michael-lofton.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Michael Lofton, MA</p>
           
         </div>
         
@@ -266,8 +321,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Suan-Sonna-e1698773534895.jpg" alt="Suan Sonna" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=SS&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/suan-sonna.html" style="color:inherit;text-decoration:none;">Suan Sonna</a></p>
-        <a href="bios/suan-sonna.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Suan Sonna</p>
           
         </div>
         
@@ -277,8 +331,7 @@
       <div class="person-card reveal">
         <img src="images/Pedro-Gabriel.jpg" alt="Pedro Gabriel, MD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=PG&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/pedro-gabriel.html" style="color:inherit;text-decoration:none;">Pedro Gabriel, MD</a></p>
-        <a href="bios/pedro-gabriel.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Pedro Gabriel, MD</p>
           
         </div>
         
@@ -288,8 +341,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/James-TM-Griffin-e1698773668585.jpg" alt="James T. M. Griffin" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=JT&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/james-griffin.html" style="color:inherit;text-decoration:none;">James T. M. Griffin</a></p>
-        <a href="bios/james-griffin.html" class="bio-link">View Bio →</a>
+          <p class="person-name">James T. M. Griffin</p>
           
         </div>
         
@@ -299,8 +351,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Abel-Thomas-e1698773751898.jpg" alt="Abel Thomas, MA, JD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=AT&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/abel-thomas.html" style="color:inherit;text-decoration:none;">Abel Thomas, MA, JD</a></p>
-        <a href="bios/abel-thomas.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Abel Thomas, MA, JD</p>
           
         </div>
         
@@ -310,8 +361,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/andrew-mioni-e1698773793269.jpg" alt="Andrew Mioni" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=AM&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/andrew-mioni.html" style="color:inherit;text-decoration:none;">Andrew Mioni</a></p>
-        <a href="bios/andrew-mioni.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Andrew Mioni</p>
           
         </div>
         
@@ -333,8 +383,7 @@
       <div class="person-card dark reveal">
         <img src="images/Mark-Miravalle-e1698772723969.jpg" alt="Mark Miravalle, SThD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=MM&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/mark-miravalle.html" style="color:inherit;text-decoration:none;">Mark Miravalle, SThD</a></p>
-        <a href="bios/mark-miravalle.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Mark Miravalle, SThD</p>
           
         </div>
         
@@ -344,8 +393,7 @@
       <div class="person-card dark reveal">
         <img src="images/51kD2ihYIWL._SY600_-e1699269477784.jpg" alt="Dennis Bonnette, PhD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=DB&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/dennis-bonnette.html" style="color:inherit;text-decoration:none;">Dennis Bonnette, PhD</a></p>
-        <a href="bios/dennis-bonnette.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Dennis Bonnette, PhD</p>
           
         </div>
         
@@ -355,8 +403,7 @@
       <div class="person-card dark reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Rhonda-Chrvin-e1698772870769.jpg" alt="Ronda Chervin, PhD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=RC&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/ronda-chervin.html" style="color:inherit;text-decoration:none;">Ronda Chervin, PhD</a></p>
-        <a href="bios/ronda-chervin.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Ronda Chervin, PhD</p>
           
         </div>
         
@@ -366,8 +413,7 @@
       <div class="person-card dark reveal">
         <img src="images/Thomas-Nash-e1698772998670.jpg" alt="Thomas J. Nash, MA" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=TJ&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/thomas-nash.html" style="color:inherit;text-decoration:none;">Thomas J. Nash, MA</a></p>
-        <a href="bios/thomas-nash.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Thomas J. Nash, MA</p>
           
         </div>
         
@@ -377,8 +423,7 @@
       <div class="person-card dark reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Steven-Schloeder-e1698773054673.jpeg" alt="Steven Schloeder, PhD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=SS&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/steven-schloeder.html" style="color:inherit;text-decoration:none;">Steven Schloeder, PhD</a></p>
-        <a href="bios/steven-schloeder.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Steven Schloeder, PhD</p>
           
         </div>
         
@@ -388,8 +433,7 @@
       <div class="person-card dark reveal">
         <img src="images/Mike-Lewis.jpeg" alt="Mike Lewis, MA" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=ML&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/mike-lewis.html" style="color:inherit;text-decoration:none;">Mike Lewis, MA</a></p>
-        <a href="bios/mike-lewis.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Mike Lewis, MA</p>
           
         </div>
         
@@ -399,8 +443,7 @@
       <div class="person-card dark reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/image_2023-10-31_140523834-e1699269141394.png" alt="William Doino, Jr." class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=WD&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/william-doino.html" style="color:inherit;text-decoration:none;">William Doino, Jr.</a></p>
-        <a href="bios/william-doino.html" class="bio-link">View Bio →</a>
+          <p class="person-name">William Doino, Jr.</p>
           
         </div>
         
@@ -442,8 +485,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/IMG_7755-e1738796238261.jpeg" alt="Archbishop J. Salvatore Cordileone" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=AJ&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/archbishop-cordileone.html" style="color:inherit;text-decoration:none;">Archbishop J. Salvatore Cordileone</a></p>
-        <a href="bios/archbishop-cordileone.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Archbishop J. Salvatore Cordileone</p>
           <p class="person-role">Episcopal Advisor</p>
         </div>
         
@@ -453,8 +495,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/IMG_1163-copy.jpeg" alt="Bishop Kevin C. Rhoades" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=BK&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/bishop-rhoades.html" style="color:inherit;text-decoration:none;">Bishop Kevin C. Rhoades</a></p>
-        <a href="bios/bishop-rhoades.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Bishop Kevin C. Rhoades</p>
           <p class="person-role">Episcopal Advisor</p>
         </div>
         
@@ -464,8 +505,7 @@
       <div class="person-card reveal">
         <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/03/Archbishop-Joseph-F.-Naumann-Photo-e1741117520725.jpg" alt="Archbishop Joseph F. Naumann" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=AJ&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/archbishop-naumann.html" style="color:inherit;text-decoration:none;">Archbishop Joseph F. Naumann</a></p>
-        <a href="bios/archbishop-naumann.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Archbishop Joseph F. Naumann</p>
           <p class="person-role">Episcopal Advisor</p>
         </div>
         
@@ -475,8 +515,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Screen-Shot-2025-03-04-at-2.37.38-PM.png" alt="Fr. Francis Tiso" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=FF&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/fr-francis-tiso.html" style="color:inherit;text-decoration:none;">Fr. Francis Tiso</a></p>
-        <a href="bios/fr-francis-tiso.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Fr. Francis Tiso</p>
           <p class="person-role">Priestly Advisor</p>
         </div>
         
@@ -486,8 +525,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Arthur-calkins-e1698763621667.jpg" alt="Msgr. Arthur Calkins, STL, SThD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=MA&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/msgr-calkins.html" style="color:inherit;text-decoration:none;">Msgr. Arthur Calkins, STL, SThD</a></p>
-        <a href="bios/msgr-calkins.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Msgr. Arthur Calkins, STL, SThD</p>
           <p class="person-role">Priestly Advisor (Emeritus)</p>
         </div>
         
@@ -497,8 +535,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/mangan-headshot-e1698763708224.jpg" alt="Msgr. Charles Mangan, JCL" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=MC&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/msgr-mangan.html" style="color:inherit;text-decoration:none;">Msgr. Charles Mangan, JCL</a></p>
-        <a href="bios/msgr-mangan.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Msgr. Charles Mangan, JCL</p>
           <p class="person-role">Priestly Advisor</p>
         </div>
         
@@ -508,8 +545,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/angelo-geiger-e1698763784132.jpg" alt="Rev. Angelo Geiger, OFM Conv., STL" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=RA&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/fr-angelo-geiger.html" style="color:inherit;text-decoration:none;">Rev. Angelo Geiger, OFM Conv., STL</a></p>
-        <a href="bios/fr-angelo-geiger.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Rev. Angelo Geiger, OFM Conv., STL</p>
           <p class="person-role">Priestly Advisor</p>
         </div>
         
@@ -519,8 +555,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/Father-Daniel-Dozier-e1698763843926.jpg" alt="Fr. Daniel Gordon Dozier, MA" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=FD&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/fr-daniel-dozier.html" style="color:inherit;text-decoration:none;">Fr. Daniel Gordon Dozier, MA</a></p>
-        <a href="bios/fr-daniel-dozier.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Fr. Daniel Gordon Dozier, MA</p>
           <p class="person-role">Priestly Advisor</p>
         </div>
         
@@ -530,8 +565,7 @@
       <div class="person-card reveal">
         <img src="https://likoudislegacy.com/wp-content/uploads/2023/10/bernard-mulcahy-e1698763907812.png" alt="Fr. Bernard Mulcahy, OP, STL, PhD" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=FB&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/fr-bernard-mulcahy.html" style="color:inherit;text-decoration:none;">Fr. Bernard Mulcahy, OP, STL, PhD</a></p>
-        <a href="bios/fr-bernard-mulcahy.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Fr. Bernard Mulcahy, OP, STL, PhD</p>
           <p class="person-role">Priestly Advisor</p>
         </div>
         
@@ -584,8 +618,7 @@
       <div class="person-card reveal">
         <img src="images/gabriel-alberto-garcia.jpg" alt="Gabriel Alberto Garcia" class="person-photo" onerror="this.src='https://ui-avatars.com/api/?name=GA&background=0e1b2e&color=c8a96e&size=72'">
         <div>
-          <p class="person-name"><a href="bios/gabriel-garcia.html" style="color:inherit;text-decoration:none;">Gabriel Alberto Garcia</a></p>
-        <a href="bios/gabriel-garcia.html" class="bio-link">View Bio →</a>
+          <p class="person-name">Gabriel Alberto Garcia</p>
           
         </div>
         <p class="person-bio">A digital creator and Catholic-interested writer based in Dunedin, New Zealand. A former student of law and PPE at the University of Otago, Gabriel has been on a journey of faith toward the Catholic Church and brings a serious engagement with questions of ecclesiology and Christian unity. He serves on the board of a pro-life charity and has a deep interest in the legacy of James Likoudis and the cause of Catholic-Orthodox reunion.</p>
@@ -605,6 +638,18 @@
   <div class="footer-bottom"><p>© 2026 Likoudis Legacy Foundation · Tax ID: 99-3126276</p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacy" target="_blank" title="X / Twitter">𝕏</a><a href="https://www.linkedin.com/in/andrewlikoudis/" target="_blank" title="LinkedIn" style="font-size:0.75rem;font-weight:600;letter-spacing:0.04em;">in</a><a href="https://traditionandrenewal.substack.com" target="_blank" title="T&amp;R Substack" style="font-family:Cormorant Garamond,serif;font-style:italic;font-size:0.75rem;letter-spacing:0.05em;">T&amp;R</a><a href="https://andrewlikoudis.com" target="_blank" title="Andrew Likoudis" style="font-family:Cormorant Garamond,serif;font-size:0.75rem;letter-spacing:0.04em;">AL</a></div></div>
 </footer>
 <script src="main.js"></script>
+
+<script>
+  document.querySelectorAll('.board-bio-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.nextElementSibling;
+      var isOpen = expanded.classList.contains('open');
+      expanded.classList.toggle('open', !isOpen);
+      this.classList.toggle('open', !isOpen);
+      this.querySelector('.toggle-label').textContent = isOpen ? 'Read Bio' : 'Close';
+    });
+  });
+</script>
 </body>
 
 </html>
