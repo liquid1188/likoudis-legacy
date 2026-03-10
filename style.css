@@ -240,6 +240,113 @@ footer {
 }
 @media (max-width: 600px) {
   nav { padding: 0 1rem; }
+
+/* ═══════════════════════════════════════════════
+   MOBILE RESPONSIVE — COMPREHENSIVE FIX
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ─── TYPOGRAPHY ─── */
+  body { font-size: 15px; }
+
+  /* ─── HERO / PAGE HEADERS ─── */
+  .hero-title,
+  .page-title { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+  .hero-subtitle { font-size: 0.7rem; letter-spacing: 0.15em; }
+  .page-header { padding: 100px 1.25rem 3rem; }
+  .section-intro { font-size: 0.9rem; }
+
+  /* ─── PURPOSE / TWO-COL LAYOUTS ─── */
+  .purpose-inner,
+  .about-grid,
+  .give-cta-inner,
+  .email-capture-inner,
+  .patron-inner,
+  .patron-featured-inner,
+  .home-preview-grid { 
+    grid-template-columns: 1fr !important; 
+    gap: 2rem !important; 
+  }
+
+  /* ─── MULTI-COL GRIDS → SINGLE OR 2-COL ─── */
+  .press-logos,
+  .libraries-grid { grid-template-columns: repeat(3, 1fr) !important; }
+
+  .patrons-grid,
+  .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  .books-grid,
+  .programs-grid { grid-template-columns: 1fr !important; }
+
+  .endorsements-grid { grid-template-columns: 1fr !important; }
+
+  .titles-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  .team-grid { grid-template-columns: 1fr !important; }
+
+  .give-methods { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem !important; }
+
+  /* ─── FEATURED BOOK ─── */
+  .featured-book { 
+    grid-template-columns: 1fr !important; 
+    gap: 1.5rem !important; 
+    padding: 2rem 1.25rem !important;
+  }
+  .featured-book img { max-width: 160px; margin: 0 auto; }
+
+  /* ─── ESSAY ROWS ─── */
+  .essay-row { 
+    grid-template-columns: 1fr !important; 
+    padding: 1rem 1rem !important; 
+  }
+  .essay-date { text-align: left !important; }
+
+  /* ─── SECTIONS ─── */
+  section,
+  .team-section { padding: 3rem 1.25rem !important; }
+  .section-container { padding: 0 !important; }
+
+  /* ─── PERSON CARDS ─── */
+  .person-card { padding: 1.5rem 1.25rem !important; }
+  .person-photo { width: 64px !important; height: 64px !important; }
+
+  /* ─── BUTTONS ─── */
+  .btn-row { flex-direction: column; gap: 0.75rem; }
+  .btn { width: 100%; text-align: center; }
+
+  /* ─── FOOTER ─── */
+  .footer-inner { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+
+  /* ─── MISC ─── */
+  .home-preview-img { max-width: 100%; }
+  .back-to-top { bottom: 1rem; right: 1rem; }
+}
+
+@media (max-width: 480px) {
+
+  /* ─── PRESS LOGOS → 2-COL ─── */
+  .press-logos,
+  .libraries-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  .patrons-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  .titles-grid { grid-template-columns: 1fr !important; }
+
+  .give-methods { grid-template-columns: 1fr !important; }
+
+  /* ─── FOOTER → SINGLE COL ─── */
+  .footer-inner { grid-template-columns: 1fr !important; }
+
+  /* ─── SECTIONS ─── */
+  section,
+  .team-section { padding: 2.5rem 1rem !important; }
+
+  /* ─── TYPOGRAPHY ─── */
+  .section-title { font-size: 1.6rem !important; }
+  .page-title { font-size: 1.75rem !important; }
+}
+
   .footer-inner { grid-template-columns: 1fr; }
   .page-header { padding: 110px 1.5rem 50px; }
 }
