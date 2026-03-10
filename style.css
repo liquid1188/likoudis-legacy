@@ -235,7 +235,7 @@ footer {
     padding: 12px 28px;
     font-size: 0.75rem;
   }
-  .nav-dropdown-menu { display: none !important; }
+  .nav-dropdown-menu { display: none; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
