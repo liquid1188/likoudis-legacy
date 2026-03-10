@@ -52,6 +52,14 @@ nav {
 }
 .nav-give:hover { background: var(--gold) !important; color: var(--navy) !important; }
 .nav-dropdown { position: relative; }
+.nav-dropdown > a::after {
+  content: ' ▾';
+  font-size: 0.7em;
+  display: inline-block;
+  transition: transform 0.2s;
+  vertical-align: middle;
+}
+.nav-dropdown > a.dd-open::after { transform: rotate(180deg); }
 .nav-dropdown-menu {
   display: none; position: absolute; top: 100%; left: 0;
   background: var(--navy); min-width: 180px;
