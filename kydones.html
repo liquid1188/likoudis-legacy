@@ -39,6 +39,18 @@
 .sub-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--navy); margin-bottom: 0.4rem; }
 .sub-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.75; }
 @media(max-width:900px){ .kydones-grid{grid-template-columns:1fr;gap:3rem;} .submission-inner{grid-template-columns:1fr;} }
+
+/* JOURNAL SHOWCASE */
+.kydones-showcase { background: var(--navy); padding: 6rem 2rem; }
+.kydones-showcase-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.kydones-showcase-cover img { width: 100%; max-width: 420px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); border: 1px solid rgba(200,169,110,0.2); display: block; margin: 0 auto; }
+.kydones-showcase-cover p { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(200,169,110,0.6); text-align: center; margin-top: 1rem; }
+.kydones-portrait { text-align: center; }
+.kydones-portrait img { width: 100%; max-width: 230px; height: auto; object-fit: unset; border: 2px solid rgba(200,169,110,0.45); filter: sepia(25%) brightness(0.85); display: block; margin: 0 auto 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
+.kydones-portrait-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--cream); margin-bottom: 0.25rem; }
+.kydones-portrait-dates { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(200,169,110,0.6); }
+.kydones-portrait-desc { font-size: 0.82rem; color: rgba(244,237,224,0.55); line-height: 1.75; margin-top: 1rem; font-style: italic; }
+@media(max-width:700px){ .kydones-showcase-inner{grid-template-columns:1fr;gap:3rem;} }
 </style>
 </head>
 <body>
