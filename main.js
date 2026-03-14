@@ -56,11 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const open = links.classList.toggle('mobile-open');
         btn.classList.toggle('open', open);
         document.body.style.overflow = open ? 'hidden' : '';
+        if (open) {
+          links.style.cssText = 'display:flex!important;position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100vw!important;height:100vh!important;z-index:9999!important;background:var(--navy)!important;flex-direction:column!important;padding:5rem 2.5rem 2rem!important;gap:0!important;overflow-y:auto!important;list-style:none!important;margin:0!important;';
+        } else {
+          links.style.cssText = '';
+        }
       });
 
       links.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', () => {
           links.classList.remove('mobile-open');
+          links.style.cssText = '';
           btn.classList.remove('open');
           document.body.style.overflow = '';
         });
