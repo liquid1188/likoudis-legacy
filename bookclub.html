@@ -254,7 +254,7 @@ async function handleBookClubSignup() {
   msg.textContent = 'Sending...';
 
   try {
-    const res = await fetch('/.netlify/functions/bookclub-signup', {
+    const res = await fetch('https://likoudis-legacy-api.netlify.app/.netlify/functions/bookclub-signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email })
