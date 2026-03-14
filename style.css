@@ -208,6 +208,11 @@ footer {
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
+/* ═══════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════════════════════ */
+
+/* ── TABLET / SMALL DESKTOP (≤ 900px) ── */
 @media (max-width: 900px) {
   nav { padding: 0 1.5rem; }
   .nav-hamburger { display: flex; }
@@ -216,330 +221,112 @@ footer {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background: var(--navy);
     z-index: 150;
     padding: 6rem 2.5rem 2rem;
     gap: 0;
     overflow-y: auto;
   }
-  .nav-links.mobile-open > li {
-    border-bottom: 1px solid rgba(200,169,110,0.12);
-  }
-  .nav-links.mobile-open > li > a {
-    display: block;
-    padding: 1rem 0;
-    font-size: 1.1rem;
-    color: var(--cream);
-  }
+  .nav-links.mobile-open > li { border-bottom: 1px solid rgba(200,169,110,0.12); }
+  .nav-links.mobile-open > li > a { display: block; padding: 1rem 0; font-size: 1.1rem; color: var(--cream); }
   .nav-links.mobile-open .nav-give {
-    margin-top: 1.5rem;
-    display: inline-block;
-    background: var(--gold);
-    color: var(--navy) !important;
-    padding: 12px 28px;
-    font-size: 0.75rem;
+    margin-top: 1.5rem; display: inline-block;
+    background: var(--gold); color: var(--navy) !important;
+    padding: 12px 28px; font-size: 0.75rem;
   }
   .nav-dropdown-menu { display: none; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
+  .purpose-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .books-grid { grid-template-columns: 1fr; }
+  .kydones-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .kydones-showcase-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .tiers-grid { grid-template-columns: repeat(2, 1fr); }
+  .planned-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .give-methods-full { grid-template-columns: repeat(3, 1fr); }
 }
-@media (max-width: 600px) {
-  nav { padding: 0 1rem; }
 
-/* ═══════════════════════════════════════════════
-   MOBILE RESPONSIVE — COMPREHENSIVE FIX
-   ═══════════════════════════════════════════════ */
-
+/* ── MOBILE (≤ 768px) ── */
 @media (max-width: 768px) {
-
-  /* ─── TYPOGRAPHY ─── */
   body { font-size: 15px; }
 
-  /* ─── HERO / PAGE HEADERS ─── */
-  .hero-title,
-  .page-title { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+  /* Typography */
+  .hero-title, .page-title { font-size: clamp(1.8rem, 8vw, 2.8rem); }
   .hero-subtitle { font-size: 0.7rem; letter-spacing: 0.15em; }
   .page-header { padding: 100px 1.25rem 3rem; }
+  .section-title { font-size: clamp(1.4rem, 5vw, 2rem); }
   .section-intro { font-size: 0.9rem; }
 
-  /* ─── PURPOSE / TWO-COL LAYOUTS ─── */
-  .purpose-inner,
-  .about-grid,
-  .give-cta-inner,
-  .email-capture-inner,
-  .patron-inner,
-  .patron-featured-inner,
-  .home-preview-grid { 
-    grid-template-columns: 1fr !important; 
-    gap: 2rem !important; 
+  /* Two-col → single */
+  .purpose-inner, .about-grid, .give-cta-inner,
+  .email-capture-inner, .patron-inner,
+  .patron-featured-inner, .home-preview-grid,
+  .kydones-grid, .submission-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
   }
 
-  /* ─── MULTI-COL GRIDS → SINGLE OR 2-COL ─── */
-  .press-logos,
-  .libraries-grid { grid-template-columns: repeat(3, 1fr) !important; }
-
-  .patrons-grid,
-  .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  .books-grid,
-  .programs-grid { grid-template-columns: 1fr !important; }
-
+  /* Grids */
+  .press-logos, .libraries-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .patrons-grid, .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .books-grid, .programs-grid { grid-template-columns: 1fr !important; }
   .endorsements-grid { grid-template-columns: 1fr !important; }
-
   .titles-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
   .team-grid { grid-template-columns: 1fr !important; }
-
+  .tiers-grid { grid-template-columns: 1fr !important; }
+  .planned-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
   .give-methods { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem !important; }
+  .give-methods-full { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem !important; }
 
-  /* ─── FEATURED BOOK ─── */
-  .featured-book { 
-    grid-template-columns: 1fr !important; 
-    gap: 1.5rem !important; 
+  /* Showcase */
+  .kydones-showcase-inner { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .kydones-showcase-card { padding: 2.5rem 1.5rem !important; }
+
+  /* Featured book */
+  .featured-book {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
     padding: 2rem 1.25rem !important;
   }
   .featured-book img { max-width: 160px; margin: 0 auto; }
 
-  /* ─── ESSAY ROWS ─── */
-  .essay-row { 
-    grid-template-columns: 1fr !important; 
-    padding: 1rem 1rem !important; 
-  }
+  /* Essays */
+  .essay-row { grid-template-columns: 1fr !important; padding: 1rem 1rem !important; }
   .essay-date { text-align: left !important; }
 
-  /* ─── SECTIONS ─── */
-  section,
-  .team-section { padding: 3rem 1.25rem !important; }
+  /* Sections */
+  section, .team-section { padding: 3rem 1.25rem !important; }
   .section-container { padding: 0 !important; }
 
-  /* ─── PERSON CARDS ─── */
+  /* Person cards */
   .person-card { padding: 1.5rem 1.25rem !important; }
   .person-photo { width: 64px !important; height: 64px !important; }
 
-  /* ─── BUTTONS ─── */
+  /* Buttons */
   .btn-row { flex-direction: column; gap: 0.75rem; }
   .btn { width: 100%; text-align: center; }
+  .tier-btns { flex-direction: column !important; }
+  .tier-btns a { width: 100%; text-align: center; }
 
-  /* ─── FOOTER ─── */
+  /* Donate intro */
+  .donate-intro-inner { padding: 0 1rem; }
+
+  /* Footer */
   .footer-inner { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
-
-  /* ─── MISC ─── */
   .home-preview-img { max-width: 100%; }
   .back-to-top { bottom: 1rem; right: 1rem; }
 }
 
+/* ── SMALL MOBILE (≤ 480px) ── */
 @media (max-width: 480px) {
-
-  /* ─── PRESS LOGOS → 2-COL ─── */
-  .press-logos,
-  .libraries-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
+  .press-logos, .libraries-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .patrons-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
   .titles-grid { grid-template-columns: 1fr !important; }
-
-  .give-methods { grid-template-columns: 1fr !important; }
-
-  /* ─── FOOTER → SINGLE COL ─── */
+  .give-methods, .give-methods-full { grid-template-columns: 1fr !important; }
   .footer-inner { grid-template-columns: 1fr !important; }
-
-  /* ─── SECTIONS ─── */
-  section,
-  .team-section { padding: 2.5rem 1rem !important; }
-
-  /* ─── TYPOGRAPHY ─── */
+  section, .team-section { padding: 2.5rem 1rem !important; }
   .section-title { font-size: 1.6rem !important; }
   .page-title { font-size: 1.75rem !important; }
+  .kydones-showcase-card { padding: 1.75rem 1.25rem !important; }
+  .planned-card { padding: 1.5rem 1.25rem !important; }
 }
-
-  .footer-inner { grid-template-columns: 1fr; }
-  .page-header { padding: 110px 1.5rem 50px; }
-}
-
-/* ─── NAV SCROLLED STATE ─── */
-nav.nav-scrolled {
-  height: 62px;
-  border-bottom-color: rgba(200,169,110,0.28);
-  box-shadow: 0 2px 24px rgba(0,0,0,0.28);
-  background: rgba(10,20,36,0.99);
-  transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-}
-nav { transition: height 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; }
-
-/* ─── ACTIVE NAV LINK ─── */
-.nav-links a.nav-active { color: var(--gold) !important; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
-
-/* ─── BACK-TO-TOP ─── */
-.back-to-top {
-  position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
-  width: 40px; height: 40px;
-  background: var(--navy);
-  border: 1px solid rgba(200,169,110,0.35);
-  color: rgba(200,169,110,0.7);
-  font-size: 1rem; font-family: 'Jost', sans-serif;
-  cursor: pointer; border-radius: 2px;
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.3s, color 0.2s, border-color 0.2s, transform 0.2s;
-  transform: translateY(6px);
-}
-.back-to-top.visible {
-  opacity: 1; pointer-events: auto; transform: translateY(0);
-}
-.back-to-top:hover { color: var(--gold); border-color: var(--gold); }
-
-/* ─── REVEAL: smoother stagger ─── */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s cubic-bezier(0.22,0.6,0.36,1), transform 0.65s cubic-bezier(0.22,0.6,0.36,1); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.08s; }
-.reveal-delay-2 { transition-delay: 0.16s; }
-.reveal-delay-3 { transition-delay: 0.24s; }
-
-/* ─── SECTION DIVIDERS: breathing room ─── */
-.divider { width: 40px; height: 1px; background: var(--gold); opacity: 0.4; margin: 1.5rem 0; }
-.divider.center { margin-left: auto; margin-right: auto; }
-
-/* ─── SELECTION COLOR ─── */
-::selection { background: rgba(200,169,110,0.25); color: var(--navy); }
-
-/* ─── DESIGN RHYTHM IMPROVEMENTS ─── */
-
-/* Ornamental section transition — replaces <hr class="section-rule"> */
-.section-ornament {
-  display: flex; align-items: center; justify-content: center;
-  gap: 1.2rem; padding: 0; margin: 0;
-  background: var(--ivory);
-  height: 64px;
-  position: relative;
-}
-.section-ornament::before,
-.section-ornament::after {
-  content: ''; flex: 1; max-width: 120px;
-  height: 1px; background: linear-gradient(to var(--dir, right), transparent, rgba(200,169,110,0.35));
-}
-.section-ornament::after { --dir: left; }
-.section-ornament span {
-  font-size: 0.55rem; letter-spacing: 0.4em; text-transform: uppercase;
-  color: rgba(200,169,110,0.5); white-space: nowrap;
-}
-/* Dark-to-light variant */
-.section-ornament.on-navy {
-  background: var(--navy);
-}
-.section-ornament.on-navy::before,
-.section-ornament.on-navy::after {
-  background: linear-gradient(to var(--dir, right), transparent, rgba(200,169,110,0.2));
-}
-.section-ornament.on-cream {
-  background: var(--cream);
-}
-
-/* Increased vertical breathing room */
-.purpose { padding: 8rem 2rem 7rem; }
-.latest { padding: 7rem 2rem; }
-.endorsements { padding: 8rem 2rem 7rem; }
-.books { padding: 7rem 2rem; }
-.press { padding: 7rem 2rem 6rem; }
-.libraries { padding: 6rem 2rem 7rem; }
-.projects { padding: 7rem 2rem; }
-.patrons { padding: 6rem 2rem; }
-.saints { padding: 7rem 2rem; }
-.give-cta { padding: 8rem 2rem; }
-
-/* Press logos — handled in index.html inline styles */
-
-/* Libraries — handled in index.html inline styles */
-
-/* Give CTA — reduce payment icon clutter */
-.give-methods {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem 4rem;
-  margin-top: 3rem;
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.give-method-circle {
-  width: 52px; height: 52px;
-  border: 1px solid rgba(200,169,110,0.25);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(255,255,255,0.04);
-  transition: border-color 0.2s, background 0.2s;
-  overflow: hidden;
-}
-.give-method:hover .give-method-circle {
-  border-color: rgba(200,169,110,0.6);
-  background: rgba(200,169,110,0.08);
-}
-.give-method-name {
-  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(244,237,224,0.7); margin-top: 0.5rem; text-align: center;
-}
-
-/* Partners — remove redundant "Partner" role label */
-.patron-role { display: none; }
-
-/* Subtle top border accent on light sections */
-.purpose::before, .books::before, .saints::before {
-  content: '';
-  display: block;
-  width: 48px; height: 2px;
-  background: var(--gold);
-  opacity: 0.3;
-  margin: 0 auto 0;
-  position: absolute;
-  top: 0; left: 50%; transform: translateX(-50%);
-}
-.purpose, .books, .saints { position: relative; }
-
-/* Patron cards — cleaner */
-.patron-card {
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.patron-card img { width: 64px; height: 64px; object-fit: contain; }
-.patron-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-
-/* ─── DARK SECTION TEXT OVERRIDES ─────────────────────────────────
-   Apply .on-dark to any section with navy/navy-mid background
-   to ensure correct text rendering without per-element overrides. */
-.on-dark { color: var(--cream); }
-.on-dark .section-title { color: var(--cream); }
-.on-dark .section-label { color: var(--gold); opacity: 0.85; }
-.on-dark p { color: rgba(244,237,224,0.78); }
-.on-dark h3, .on-dark h4 { color: var(--cream); }
-.on-dark a:not(.btn-primary):not(.btn-outline) { color: var(--gold-light); }
-
-/* ─── LIGHT SECTION TEXT OVERRIDES ────────────────────────────────
-   For ivory/cream sections, ensure navy headings and muted body. */
-.on-light .section-title { color: var(--navy); }
-.on-light .section-label { color: var(--gold); }
-.on-light p { color: var(--muted); }
-.on-light h3, .on-light h4 { color: var(--navy); }
-
-/* ─── STRONGER CONTEXT OVERRIDES (beat inline styles) ─────────── */
-section.on-dark p,
-section.on-dark li,
-section.on-dark address { color: rgba(244,237,224,0.78); }
-section.on-dark h2,
-section.on-dark h3,
-section.on-dark h4 { color: var(--cream); }
-section.on-dark .section-title { color: var(--cream); }
-
-section.on-light p,
-section.on-light li { color: var(--muted); }
-section.on-light h2,
-section.on-light h3,
-section.on-light h4 { color: var(--navy); }
-section.on-light .section-title { color: var(--navy); }
-
-/* ─── DONATE INTRO ─── */
-.donate-intro-inner { max-width: 760px; margin: 0 auto; text-align: center; }
-.donate-intro-inner p { max-width: 65ch; margin: 0 auto 1.25rem; line-height: 1.85; }
