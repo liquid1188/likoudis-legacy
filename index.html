@@ -56,7 +56,7 @@
     justify-content: center;
     text-align: center;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     padding: 100px 2rem 80px;
   }
   .hero::before {
@@ -1009,37 +1009,52 @@
   /* ── MOBILE HERO ── */
   @media (max-width: 768px) {
     .hero {
-      min-height: 60vh;
-      padding: 80px 1.5rem 2.5rem;
+      min-height: auto;
+      padding: 90px 1.5rem 3rem;
+      overflow: visible;
     }
-    .hero-logo { width: 130px !important; height: 130px !important; }
-    .hero-logo-wrap { margin-bottom: 1.5rem; }
-    .hero h1 { font-size: clamp(2rem, 9vw, 3rem); line-height: 1.1; }
-    .hero-sub { font-size: 0.8rem; letter-spacing: 0.1em; }
-    .hero-motto { font-size: 0.8rem; }
-    .hero-buttons { flex-direction: column; gap: 0.75rem; width: 100%; max-width: 300px; }
-    .hero-buttons a { width: 100%; text-align: center; padding: 0.85rem 1rem; }
+    .hero-logo { width: 120px !important; height: 120px !important; }
+    .hero-logo-wrap { margin-bottom: 1.25rem; }
+    .hero h1 { font-size: clamp(1.9rem, 8vw, 2.8rem); line-height: 1.1; }
+    .hero-sub { font-size: 0.78rem; letter-spacing: 0.08em; }
+    .hero-motto { font-size: 0.78rem; margin-top: 0.5rem; }
+    .hero-buttons { flex-direction: column; gap: 0.75rem; width: 100%; max-width: 280px; margin: 1.5rem auto 0; }
+    .hero-buttons a { width: 100%; text-align: center; padding: 0.85rem 1rem; box-sizing: border-box; }
     .section-ornament { display: none; }
+    /* Purpose / Mission */
     .purpose-inner { grid-template-columns: 1fr !important; gap: 2rem !important; }
-    .projects-grid { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
-    .home-preview-grid { grid-template-columns: 1fr !important; }
-    .press-logos { grid-template-columns: repeat(3, 1fr) !important; gap: 0.75rem !important; }
-    .patrons-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem !important; }
+    /* Projects — 2 col */
+    .projects-grid { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
+    .project-card { padding: 1.5rem 1rem !important; }
+    /* Press logos — 3 col */
+    .press-logos { grid-template-columns: repeat(3, 1fr) !important; gap: 0 !important; }
+    .press-logo { padding: 1rem 0.5rem !important; }
+    .press-logo img { max-width: 60px !important; max-height: 36px !important; }
+    /* Partners — 2 col */
+    .patrons-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0.75rem !important; }
+    .patron-card { padding: 1.25rem 0.75rem !important; }
     .patron-card img { width: 48px !important; height: 48px !important; }
     .patron-name { font-size: 0.68rem !important; }
-    .give-methods { grid-template-columns: repeat(2, 1fr) !important; gap: 0.75rem !important; }
+    /* Give methods — 3 col icons */
+    .give-methods { grid-template-columns: repeat(3, 1fr) !important; gap: 0.5rem !important; }
+    .give-method-icon { width: 44px !important; height: 44px !important; }
+    /* Email capture */
     .email-capture-inner { grid-template-columns: 1fr !important; gap: 2rem !important; }
+    /* Home preview */
+    .home-preview-grid { grid-template-columns: 1fr !important; }
+    /* Footer */
     .footer-inner { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
   }
   @media (max-width: 480px) {
-    .hero { padding: 70px 1.25rem 2rem; min-height: 55vh; }
-    .hero-logo { width: 100px !important; height: 100px !important; }
-    .hero h1 { font-size: clamp(1.75rem, 8vw, 2.5rem); }
+    .hero { padding: 80px 1.25rem 2.5rem; }
+    .hero-logo { width: 90px !important; height: 90px !important; }
+    .hero h1 { font-size: clamp(1.7rem, 8vw, 2.4rem); }
     .projects-grid { grid-template-columns: 1fr !important; }
-    .footer-inner { grid-template-columns: 1fr !important; }
     .press-logos { grid-template-columns: repeat(2, 1fr) !important; }
     .patrons-grid { grid-template-columns: repeat(2, 1fr) !important; }
-    .give-methods { grid-template-columns: 1fr !important; }
+    .give-methods { grid-template-columns: repeat(2, 1fr) !important; gap: 0.5rem !important; }
+    .footer-inner { grid-template-columns: 1fr !important; }
+    .patron-card { padding: 1rem 0.5rem !important; }
   }
 
 </style>
