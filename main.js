@@ -102,31 +102,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 7. MOBILE DROPDOWN ACCORDION ── */
   document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
-    const toggle = dropdown.querySelector('a');
+    const toggle = dropdown.querySelector(':scope > a');
     const menu = dropdown.querySelector('.nav-dropdown-menu');
     if (!toggle || !menu) return;
 
     toggle.addEventListener('click', function(e) {
-      const isMobile = window.innerWidth <= 900;
-      if (!isMobile) return; // desktop: hover handles it
+      if (window.innerWidth > 900) return;
       e.preventDefault();
+      e.stopPropagation();
       const isOpen = menu.classList.toggle('mobile-dd-open');
-      toggle.classList.toggle('dd-open', isOpen);
-      menu.style.cssText = isOpen
-        ? 'display:block !important; position:static !important; background:rgba(255,255,255,0.05); padding:0.5rem 0 0.5rem 1rem; margin-bottom:0.5rem; border-left: 1px solid rgba(200,169,110,0.2);'
-        : '';
-      if (isOpen) {
-        Array.from(menu.querySelectorAll('a')).forEach(a => {
-          a.style.cssText = 'display:block;padding:0.6rem 0;font-size:0.95rem;color:rgba(244,237,224,0.75);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase;';
-        });
-      }
+      menu.style.display = isOpen ? 'block' : 'none';
+      menu.style.position = 'static';
+      menu.style.background = 'rgba(255,255,255,0.05)';
+      menu.style.padding = isOpen ? '0.5rem 0 0.5rem 1rem' : '';
+      menu.style.marginBottom = isOpen ? '0.5rem' : '';
+      menu.style.borderLeft = isOpen ? '1px solid rgba(200,169,110,0.2)' : '';
     });
 
-    Array.from(menu.querySelectorAll('a')).forEach(a => {
+    menu.querySelectorAll('a').forEach(function(a) {
       a.addEventListener('click', function() {
         menu.classList.remove('mobile-dd-open');
         menu.style.cssText = '';
-        toggle.classList.remove('dd-open');
       });
     });
   });
