@@ -82,7 +82,7 @@
   }
   .hero-logo-wrap {
     margin-bottom: 2.5rem;
-    animation: fadeUp 1s 0.05s ease both;
+    animation: fadeIn 0.8s 0.05s ease both;
   }
   .hero-logo {
     width: 220px;
@@ -196,6 +196,10 @@
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   @keyframes scrollPulse {
     0%, 100% { opacity: 0.4; }
