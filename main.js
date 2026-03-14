@@ -69,10 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ── 5. ACTIVE NAV LINK ── */
-  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  const pathParts = window.location.pathname.split('/');
+  const currentFile = pathParts.pop() || pathParts.pop() || 'index.html';
+  const normalizedFile = (currentFile === '' || currentFile === '/') ? 'index.html' : currentFile;
   document.querySelectorAll('.nav-links a').forEach(a => {
     const href = a.getAttribute('href');
-    if (href === currentFile || (currentFile === '' && href === 'index.html')) {
+    if (!href || href === '#') return;
+    const hrefFile = href.split('/').pop();
+    if (hrefFile === normalizedFile) {
       a.classList.add('nav-active');
     }
   });
