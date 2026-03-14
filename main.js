@@ -106,15 +106,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = dropdown.querySelector('.nav-dropdown-menu');
     if (!toggle || !menu) return;
 
+    // Add visual arrow indicator
+    const arrow = document.createElement('span');
+    arrow.className = 'dd-arrow';
+    arrow.innerHTML = '&#x203A;';
+    arrow.style.cssText = 'margin-left:auto;font-size:1.2rem;transition:transform 0.2s;display:inline-block;padding-left:0.5rem;color:rgba(200,169,110,0.7);';
+    toggle.appendChild(arrow);
+
     toggle.addEventListener('click', function(e) {
       const isMobile = window.innerWidth <= 900;
       if (!isMobile) return; // desktop: hover handles it
       e.preventDefault();
       const isOpen = menu.classList.toggle('mobile-dd-open');
       toggle.classList.toggle('dd-open', isOpen);
+      arrow.style.transform = isOpen ? 'rotate(90deg)' : '';
       menu.style.cssText = isOpen
-        ? 'display:block !important; position:static; background:rgba(255,255,255,0.05); padding:0.25rem 0 0.25rem 1rem; margin-bottom:0.5rem;'
+        ? 'display:block !important; position:static !important; background:rgba(255,255,255,0.05); padding:0.5rem 0 0.5rem 1rem; margin-bottom:0.5rem; border-left: 1px solid rgba(200,169,110,0.2);'
         : '';
+      // Style the submenu links
+      if (isOpen) {
+        Array.from(menu.querySelectorAll('a')).forEach(a => {
+          a.style.cssText = 'display:block;padding:0.6rem 0;font-size:0.95rem;color:rgba(244,237,224,0.75);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase;';
+        });
+      }
+    });
+
+    // Close submenu when a submenu link is clicked
+    Array.from(menu.querySelectorAll('a')).forEach(a => {
+      a.addEventListener('click', function() {
+        menu.classList.remove('mobile-dd-open');
+        menu.style.cssText = '';
+        toggle.classList.remove('dd-open');
+        arrow.style.transform = '';
+      });
     });
   });
 
