@@ -62,8 +62,11 @@ nav {
 .nav-give:hover { background: var(--gold) !important; color: var(--navy) !important; }
 .nav-dropdown { position: relative; }
 .nav-dropdown > a::after {
-  content: '';
-  display: none;
+  content: ' ▾';
+  font-size: 0.7em;
+  display: inline-block;
+  transition: transform 0.2s;
+  vertical-align: middle;
 }
 .nav-dropdown-menu {
   display: none; position: absolute; top: 100%; left: 0;
