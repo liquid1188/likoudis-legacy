@@ -224,7 +224,7 @@
         <label style="font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,110,0.85);">Manuscript File</label>
         <p style="font-size:0.82rem;color:rgba(244,237,224,0.65);line-height:1.65;margin:0;">
           After submitting this form, please email your manuscript (PDF or Word) directly to
-          <a href="mailto:editor@kydonesreview.com" style="color:rgba(200,169,110,0.9);text-decoration:underline;">editor@kydonesreview.com</a>
+          <a href="mailto:editor@likoudislegacy.com" style="color:rgba(200,169,110,0.9);text-decoration:underline;">editor@likoudislegacy.com</a>
           with your name and manuscript title in the subject line.
         </p>
       </div>
@@ -262,16 +262,16 @@
         headers: { 'Accept': 'application/json' }
       });
       if (res.ok) {
-        form.innerHTML = '<p style="color:rgba(200,169,110,0.9);font-size:1rem;line-height:1.7;padding:2rem 0;">Thank you — your submission has been received. Please send your manuscript file to <a href=\'mailto:editor@kydonesreview.com\' style=\'color:rgba(200,169,110,0.9);text-decoration:underline;\'>editor@kydonesreview.com</a> with your name and title in the subject line.</p>';
+        form.innerHTML = '<p style="color:rgba(200,169,110,0.9);font-size:1rem;line-height:1.7;padding:2rem 0;">Thank you — your submission has been received. Please send your manuscript file to <a href=\'mailto:editor@likoudislegacy.com\' style=\'color:rgba(200,169,110,0.9);text-decoration:underline;\'>editor@likoudislegacy.com</a> with your name and title in the subject line.</p>';
       } else {
         btn.textContent = orig;
         btn.disabled = false;
-        alert('Something went wrong. Please try again or email editor@kydonesreview.com directly.');
+        alert('Something went wrong. Please try again or email editor@likoudislegacy.com directly.');
       }
     } catch(err) {
       btn.textContent = orig;
       btn.disabled = false;
-      alert('Something went wrong. Please email editor@kydonesreview.com directly.');
+      alert('Something went wrong. Please email editor@likoudislegacy.com directly.');
     }
   });
 })();
