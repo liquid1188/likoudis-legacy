@@ -14,13 +14,14 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: hidden !important; max-width: 100vw; }
+html { scroll-behavior: smooth; overflow-x: hidden !important; max-width: 100%; }
 body {
   font-family: 'Jost', sans-serif;
   background: var(--ivory);
   color: var(--text);
   font-weight: 300;
   width: 100%;
+  overflow-x: hidden !important;
 }
 
 /* ─── PREVENT HORIZONTAL OVERFLOW ─── */
