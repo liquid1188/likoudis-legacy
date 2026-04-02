@@ -453,7 +453,7 @@
   }
   .press-logos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     gap: 0;
     margin-top: 3.5rem;
   }
@@ -506,7 +506,7 @@
   }
   .libraries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     gap: 0;
   }
   .lib-item {
@@ -546,7 +546,7 @@
   }
   .patrons-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 12px;
     margin-top: 3.5rem;
   }
@@ -591,7 +591,7 @@
   }
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2px;
     margin-top: 3.5rem;
   }
@@ -702,7 +702,7 @@
   }
   .saints-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 1rem;
     margin-top: 1.5rem;
@@ -1030,11 +1030,10 @@
   @media (max-width: 768px) {
     .hero {
       min-height: auto;
-      padding: max(110px, calc(72px + env(safe-area-inset-top, 0px) + 2rem)) 1.5rem 3rem;
+      padding: max(96px, calc(72px + env(safe-area-inset-top, 0px) + 1.5rem)) 1.5rem 3rem;
       overflow: visible;
     }
-    .hero-logo { width: 120px !important; height: 120px !important; }
-    .hero-logo-wrap { margin-bottom: 1.25rem; }
+    .hero-logo-wrap { display: none !important; }
     .hero h1 { font-size: clamp(1.9rem, 8vw, 2.8rem); line-height: 1.1; }
     .hero-sub { font-size: 0.78rem; letter-spacing: 0.08em; }
     .hero-motto { font-size: 0.78rem; margin-top: 0.5rem; }
@@ -1067,7 +1066,6 @@
   }
   @media (max-width: 480px) {
     .hero { padding: max(100px, calc(72px + env(safe-area-inset-top, 0px) + 1.5rem)) 1.25rem 2.5rem; }
-    .hero-logo { width: 90px !important; height: 90px !important; }
     .hero h1 { font-size: clamp(1.7rem, 8vw, 2.4rem); }
     .projects-grid { grid-template-columns: 1fr !important; }
     .press-logos { grid-template-columns: repeat(2, 1fr) !important; }
