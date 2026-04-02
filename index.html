@@ -1030,10 +1030,11 @@
   @media (max-width: 768px) {
     .hero {
       min-height: auto;
-      padding: max(96px, calc(72px + env(safe-area-inset-top, 0px) + 1.5rem)) 1.5rem 3rem;
+      padding: max(120px, calc(72px + env(safe-area-inset-top, 0px) + 3rem)) 1.5rem 3rem;
       overflow: visible;
     }
-    .hero-logo-wrap { display: none !important; }
+    .hero-logo-wrap { display: block !important; margin-bottom: 1.25rem; }
+    .hero-logo { width: 110px !important; height: 110px !important; }
     .hero h1 { font-size: clamp(1.9rem, 8vw, 2.8rem); line-height: 1.1; }
     .hero-sub { font-size: 0.78rem; letter-spacing: 0.08em; }
     .hero-motto { font-size: 0.78rem; margin-top: 0.5rem; }
@@ -1065,7 +1066,8 @@
     .footer-inner { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
   }
   @media (max-width: 480px) {
-    .hero { padding: max(100px, calc(72px + env(safe-area-inset-top, 0px) + 1.5rem)) 1.25rem 2.5rem; }
+    .hero { padding: max(120px, calc(72px + env(safe-area-inset-top, 0px) + 3rem)) 1.25rem 2.5rem; }
+    .hero-logo { width: 90px !important; height: 90px !important; }
     .hero h1 { font-size: clamp(1.7rem, 8vw, 2.4rem); }
     .projects-grid { grid-template-columns: 1fr !important; }
     .press-logos { grid-template-columns: repeat(2, 1fr) !important; }
