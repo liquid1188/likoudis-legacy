@@ -21,14 +21,10 @@
 <link rel="stylesheet" href="style.css">
 <style>
   /* Prevent horizontal scroll on mobile */
-  html {
+  html, body {
     overflow-x: hidden !important;
-    max-width: 100vw !important;
+    max-width: 100% !important;
     width: 100% !important;
-  }
-  body {
-    width: 100% !important;
-    max-width: 100vw !important;
   }
   *, *::before, *::after {
     box-sizing: border-box;
@@ -72,7 +68,7 @@
     justify-content: center;
     text-align: center;
     position: relative;
-    overflow: visible;
+    overflow: clip;
     padding: max(100px, calc(72px + env(safe-area-inset-top, 0px) + 1.5rem)) 2rem 80px;
   }
   .hero::before {
@@ -1031,7 +1027,6 @@
     .hero {
       min-height: auto;
       padding: max(110px, calc(72px + env(safe-area-inset-top, 0px) + 2rem)) 1.5rem 3rem;
-      overflow: visible;
     }
     .hero-logo { width: 120px !important; height: 120px !important; }
     .hero-logo-wrap { margin-bottom: 1.25rem; }
