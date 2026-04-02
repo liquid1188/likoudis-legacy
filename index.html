@@ -21,10 +21,14 @@
 <link rel="stylesheet" href="style.css">
 <style>
   /* Prevent horizontal scroll on mobile */
-  html, body {
+  html {
     overflow-x: hidden !important;
-    max-width: 100% !important;
+    max-width: 100vw !important;
     width: 100% !important;
+  }
+  body {
+    width: 100% !important;
+    max-width: 100vw !important;
   }
   *, *::before, *::after {
     box-sizing: border-box;
@@ -68,7 +72,7 @@
     justify-content: center;
     text-align: center;
     position: relative;
-    overflow: clip;
+    overflow: visible;
     padding: max(100px, calc(72px + env(safe-area-inset-top, 0px) + 1.5rem)) 2rem 80px;
   }
   .hero::before {
@@ -449,7 +453,7 @@
   }
   .press-logos {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 0;
     margin-top: 3.5rem;
   }
@@ -502,7 +506,7 @@
   }
   .libraries-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 0;
   }
   .lib-item {
@@ -542,7 +546,7 @@
   }
   .patrons-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 12px;
     margin-top: 3.5rem;
   }
@@ -587,7 +591,7 @@
   }
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2px;
     margin-top: 3.5rem;
   }
@@ -698,7 +702,7 @@
   }
   .saints-grid {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     margin-top: 1.5rem;
@@ -1027,6 +1031,7 @@
     .hero {
       min-height: auto;
       padding: max(110px, calc(72px + env(safe-area-inset-top, 0px) + 2rem)) 1.5rem 3rem;
+      overflow: visible;
     }
     .hero-logo { width: 120px !important; height: 120px !important; }
     .hero-logo-wrap { margin-bottom: 1.25rem; }
