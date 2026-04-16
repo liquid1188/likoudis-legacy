@@ -321,7 +321,7 @@ blockquote.pull cite{font-size:.68rem;letter-spacing:.12em;text-transform:upperc
     try {
       const name = form.querySelector('[name="name"]').value.trim();
       const email = form.querySelector('[name="email"]').value.trim();
-      const parts = name.split(/s+/);
+      const parts = name.split(/\s+/);
       const first_name = parts[0] || '';
       const last_name = parts.slice(1).join(' ') || '';
       const res = await fetch('/.netlify/functions/newsletter-signup', {
