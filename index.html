@@ -1321,10 +1321,10 @@
     </div>
     <div class="email-capture-form-wrap">
       <p class="capture-form-label">Enter your email to subscribe</p>
-      <form class="capture-form" action="https://formspree.io/f/xpwzgllr" method="POST" id="newsletter-form">
+      <form class="capture-form" id="newsletter-form">
         <div class="capture-field-wrap">
-          <label for="capture-name" class="capture-label">First Name</label>
-          <input type="text" id="capture-name" name="name" placeholder="Your first name" autocomplete="given-name">
+          <label for="capture-name" class="capture-label">Full Name</label>
+          <input type="text" id="capture-name" name="name" placeholder="Your full name" autocomplete="name">
         </div>
         <div class="capture-field-wrap">
           <label for="capture-email" class="capture-label">Email Address</label>
@@ -1488,10 +1488,15 @@
     const btn = form.querySelector('.capture-submit-text');
     btn.textContent = 'Sending…';
     try {
-      const res = await fetch(form.action, {
+      const name = form.querySelector('[name="name"]').value.trim();
+      const email = form.querySelector('[name="email"]').value.trim();
+      const parts = name.split(/\s+/);
+      const first_name = parts[0] || '';
+      const last_name = parts.slice(1).join(' ') || '';
+      const res = await fetch('/.netlify/functions/newsletter-signup', {
         method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, first_name, last_name })
       });
       if(res.ok) {
         form.style.display = 'none';
