@@ -1058,6 +1058,16 @@
     .patron-card { padding: 1.25rem 0.75rem !important; }
     .patron-card img { width: 48px !important; height: 48px !important; }
     .patron-name { font-size: 0.68rem !important; }
+    /* Saints — 4 x 2 grid (was a non-wrapping flex row that overflowed) */
+    .saints-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 1rem 0.75rem !important;
+      max-width: 100% !important;
+    }
+    .saint { width: auto !important; }
+    .saint img { width: 100% !important; max-width: 80px !important; height: auto !important; aspect-ratio: 4 / 5 !important; }
+    .saint-name { font-size: 0.7rem !important; }
     /* Give methods — 3 col icons */
     .give-methods { grid-template-columns: repeat(3, 1fr) !important; gap: 0.5rem !important; }
     .give-method-icon { width: 44px !important; height: 44px !important; }
@@ -1077,6 +1087,10 @@
     .give-methods { grid-template-columns: repeat(2, 1fr) !important; gap: 0.5rem !important; }
     .footer-inner { grid-template-columns: 1fr !important; }
     .patron-card { padding: 1rem 0.5rem !important; }
+    /* Saints — keep 4 x 2 but tighten gap and reduce text */
+    .saints-grid { gap: 0.85rem 0.5rem !important; }
+    .saint img { max-width: 68px !important; }
+    .saint-name { font-size: 0.65rem !important; line-height: 1.3 !important; }
   }
 
 </style>
@@ -1217,7 +1231,7 @@
       <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press3.jpeg?resize=150%2C150&ssl=1" alt="National Catholic Register"><span class="press-logo-name">Nat'l Catholic Register</span></div>
       <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-ewtn.png?resize=150%2C150&ssl=1" alt="EWTN"><span class="press-logo-name">EWTN</span></div>
       <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-ca.png?resize=150%2C150&ssl=1" alt="Catholic Answers"><span class="press-logo-name">Catholic Answers</span></div>
-      <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-wpi.png?resize=150%2C150&ssl=1" alt="Where Peter Is"><span class="press-logo-name">Where Peter Is</span></div>
+      <div class="press-logo"><img src="lik-wpi.png" alt="Where Peter Is"><span class="press-logo-name">Where Peter Is</span></div>
       <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-cc.png?resize=150%2C150&ssl=1" alt="Catholic Culture"><span class="press-logo-name">Catholic Culture</span></div>
       <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press5.jpeg?resize=150%2C150&ssl=1" alt="Patheos"><span class="press-logo-name">Patheos</span></div>
       <div class="press-logo"><img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-press2.jpeg?resize=150%2C150&ssl=1" alt="Catholic Exchange"><span class="press-logo-name">Catholic Exchange</span></div>
@@ -1251,7 +1265,7 @@
         <span class="patron-role">Partner</span>
       </a>
       <a href="https://wherepeteris.com/" class="patron-card" target="_blank">
-        <img src="https://i0.wp.com/likoudislegacy.com/wp-content/uploads/2025/07/lik-wpi.png?resize=150%2C150&ssl=1" alt="Where Peter Is">
+        <img src="lik-wpi.png" alt="Where Peter Is">
         <span class="patron-name">Where Peter Is</span>
         <span class="patron-role">Partner</span>
       </a>
