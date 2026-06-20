@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="pay-paypal">
-<rect width="120" height="120" rx="24" fill="#003087"/>
-<text x="60" y="60" font-family="Helvetica,Arial,sans-serif" font-size="64" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">P</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="PayPal">
+  <circle cx="60" cy="60" r="60" fill="#ffffff"/>
+  <g font-family="Georgia,'Times New Roman',serif" font-weight="700" font-style="italic" font-size="62">
+    <text x="42" y="84" fill="#003087" text-anchor="middle">P</text>
+    <text x="64" y="84" fill="#009CDE" text-anchor="middle">P</text>
+  </g>
 </svg>
