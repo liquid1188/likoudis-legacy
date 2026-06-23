@@ -128,4 +128,72 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  /* ── 6. EBGS PROMO / GIVE POPUP ── */
+  (function () {
+    var LS = 'llf_ebgs_promo_v1';   // cross-session suppression
+    var SS = 'llf_promo_shown';     // once per browsing session
+    var now = Date.now(), DAY = 864e5;
+
+    try {
+      var rec = JSON.parse(localStorage.getItem(LS) || 'null');
+      if (rec && rec.until && now < rec.until) return;   // still suppressed
+      if (sessionStorage.getItem(SS)) return;            // already shown this session
+    } catch (e) {}
+
+    function suppress(days) {
+      try { localStorage.setItem(LS, JSON.stringify({ until: Date.now() + days * DAY })); } catch (e) {}
+    }
+
+    var overlay = document.createElement('div');
+    overlay.className = 'llf-promo-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Ending the Byzantine Greek Schism');
+    overlay.innerHTML =
+      '<div class="llf-promo-card" role="document">' +
+        '<button class="llf-promo-close" aria-label="Close">\u00D7</button>' +
+        '<div class="llf-promo-media">' +
+          '<img src="/images/book-ending-schism.jpg" alt="Ending the Byzantine Greek Schism" loading="lazy">' +
+        '</div>' +
+        '<div class="llf-promo-body">' +
+          '<p class="llf-promo-eyebrow">From the Foundation</p>' +
+          '<h3 class="llf-promo-title">Ending the Byzantine Greek Schism</h3>' +
+          '<p class="llf-promo-sub">James Likoudis \u00B7 Foreword by Scott Hahn \u00B7 Third Edition</p>' +
+          '<blockquote class="llf-promo-quote">\u201CJames Likoudis left us a legacy of timely analysis and rationale for navigating a path to unity between the Catholic and Orthodox Churches.\u201D' +
+            '<cite>\u2014 Most Rev. Salvatore J. Cordileone, Archbishop of San Francisco</cite></blockquote>' +
+          '<div class="llf-promo-actions">' +
+            '<a class="llf-promo-btn llf-promo-btn-gold" href="https://a.co/d/0eh9qEv6" target="_blank" rel="noopener">Order the Book</a>' +
+            '<a class="llf-promo-btn llf-promo-btn-navy" href="/donate.html">Support the Foundation</a>' +
+          '</div>' +
+          '<button class="llf-promo-later">Maybe later</button>' +
+        '</div>' +
+      '</div>';
+
+    function onKey(e) { if (e.key === 'Escape') close(7); }
+    function close(days) {
+      overlay.classList.remove('llf-promo-visible');
+      document.body.style.overflow = '';
+      suppress(days);
+      document.removeEventListener('keydown', onKey);
+      setTimeout(function () { if (overlay.parentNode) overlay.remove(); }, 300);
+    }
+
+    overlay.querySelector('.llf-promo-close').addEventListener('click', function () { close(10); });
+    overlay.querySelector('.llf-promo-later').addEventListener('click', function () { close(7); });
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) close(7); });
+    overlay.querySelectorAll('.llf-promo-btn').forEach(function (b) {
+      b.addEventListener('click', function () { suppress(60); }); // engaged → suppress longer
+    });
+
+    setTimeout(function () {
+      document.body.appendChild(overlay);
+      try { sessionStorage.setItem(SS, '1'); } catch (e) {}
+      document.addEventListener('keydown', onKey);
+      requestAnimationFrame(function () {
+        overlay.classList.add('llf-promo-visible');
+        document.body.style.overflow = 'hidden';
+      });
+    }, 4000);
+  })();
+
 });
