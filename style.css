@@ -408,7 +408,12 @@ footer {
 .llf-promo-eyebrow{font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:.66rem;color:var(--gold,#c8a96e);margin:0 0 .5rem;}
 .llf-promo-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem;line-height:1.15;color:var(--navy,#0e1b2e);margin:0 0 .35rem;}
 .llf-promo-sub{font-family:'Jost',sans-serif;font-size:.78rem;color:var(--muted,#6b6258);margin:0 0 1rem;}
-.llf-promo-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.04rem;line-height:1.4;color:var(--text,#1a1a1a);border-left:2px solid var(--gold,#c8a96e);padding-left:.9rem;margin:0 0 1.4rem;}
+.llf-promo-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.04rem;line-height:1.4;color:var(--text,#1a1a1a);border-left:2px solid var(--gold,#c8a96e);padding-left:.9rem;margin:0 0 .95rem;}
+.llf-promo-attr{display:flex;align-items:center;gap:.7rem;margin:0 0 1.4rem;}
+.llf-promo-attr img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:top center;flex:none;border:1px solid var(--border,rgba(200,169,110,.25));}
+.llf-promo-attr-text{display:flex;flex-direction:column;line-height:1.25;}
+.llf-promo-name{font-family:'Jost',sans-serif;font-size:.88rem;font-weight:500;color:var(--navy,#0e1b2e);letter-spacing:.01em;}
+.llf-promo-role{font-family:'Jost',sans-serif;font-size:.76rem;color:var(--muted,#6b6258);margin-top:.12rem;}
 .llf-promo-quote cite{display:block;font-style:normal;font-family:'Jost',sans-serif;font-size:.72rem;color:var(--muted,#6b6258);margin-top:.5rem;letter-spacing:.02em;}
 .llf-promo-actions{display:flex;flex-wrap:wrap;gap:.6rem;}
 .llf-promo-btn{flex:1 1 auto;text-align:center;font-family:'Jost',sans-serif;font-size:.82rem;letter-spacing:.04em;padding:.7rem 1rem;border-radius:3px;text-decoration:none;transition:all .2s ease;white-space:nowrap;}

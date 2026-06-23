@@ -159,8 +159,14 @@ document.addEventListener('DOMContentLoaded', () => {
           '<p class="llf-promo-eyebrow">From the Foundation</p>' +
           '<h3 class="llf-promo-title">Ending the Byzantine Greek Schism</h3>' +
           '<p class="llf-promo-sub">James Likoudis \u00B7 Foreword by Scott Hahn \u00B7 Third Edition</p>' +
-          '<blockquote class="llf-promo-quote">\u201CJames Likoudis left us a legacy of timely analysis and rationale for navigating a path to unity between the Catholic and Orthodox Churches.\u201D' +
-            '<cite>\u2014 Most Rev. Salvatore J. Cordileone, Archbishop of San Francisco</cite></blockquote>' +
+          '<blockquote class="llf-promo-quote">\u201CJames Likoudis left us a legacy of timely analysis and rationale for navigating a path to unity between the Catholic and Orthodox Churches.\u201D</blockquote>' +
+          '<div class="llf-promo-attr">' +
+            '<img src="/images/abp-cordileone.jpg" alt="Archbishop Salvatore J. Cordileone" loading="lazy">' +
+            '<div class="llf-promo-attr-text">' +
+              '<span class="llf-promo-name">Most Rev. Salvatore J. Cordileone</span>' +
+              '<span class="llf-promo-role">Archbishop of San Francisco</span>' +
+            '</div>' +
+          '</div>' +
           '<div class="llf-promo-actions">' +
             '<a class="llf-promo-btn llf-promo-btn-gold" href="https://a.co/d/0eh9qEv6" target="_blank" rel="noopener">Order the Book</a>' +
             '<a class="llf-promo-btn llf-promo-btn-navy" href="/donate.html">Support the Foundation</a>' +
