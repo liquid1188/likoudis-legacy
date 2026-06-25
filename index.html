@@ -1035,6 +1035,45 @@
     .endorsement-card.featured-full { grid-column: span 1; }
   }
 
+  /* ─── VOICES ON THE LEGACY ─── */
+  .legacy-voices { background: var(--navy); padding: 7rem 2rem; }
+  .legacy-voices-inner { max-width: 1200px; margin: 0 auto; }
+  .legacy-voices-header { text-align: center; margin-bottom: 3.5rem; }
+  .legacy-voices-header .section-label { color: var(--gold); }
+  .legacy-voices-header h2 { color: var(--cream); }
+  .legacy-voices-sub {
+    color: rgba(244,237,224,0.6);
+    max-width: 620px; margin: 1.1rem auto 0;
+    font-size: 0.95rem; line-height: 1.65;
+  }
+  .legacy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .legacy-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(200,169,110,0.15);
+    border-top: 2px solid var(--gold);
+    padding: 2rem 1.75rem;
+    display: flex; flex-direction: column;
+  }
+  .legacy-quote {
+    color: var(--cream);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.97rem; line-height: 1.66;
+    margin: 0 0 1.5rem; flex: 1;
+  }
+  .legacy-person {
+    display: flex; align-items: center; gap: 0.85rem;
+    border-top: 1px solid rgba(200,169,110,0.12); padding-top: 1.1rem;
+  }
+  .legacy-person img {
+    width: 56px; height: 56px; border-radius: 50%;
+    object-fit: cover; flex-shrink: 0; border: 1px solid rgba(200,169,110,0.3);
+  }
+  .legacy-name { color: var(--gold); font-weight: 600; font-size: 0.9rem; line-height: 1.2; }
+  .legacy-role { color: rgba(244,237,224,0.55); font-size: 0.72rem; line-height: 1.35; margin-top: 3px; }
+  @media (max-width: 900px) { .legacy-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .legacy-grid { grid-template-columns: 1fr; } }
+
   /* ── MOBILE HERO ── */
   @media (max-width: 768px) {
     .hero {
@@ -1246,6 +1285,80 @@
           </div>
         </div>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- VOICES ON THE LEGACY -->
+<section class="legacy-voices">
+  <div class="legacy-voices-inner">
+    <div class="legacy-voices-header reveal">
+      <span class="section-label">Recognition</span>
+      <h2 class="section-title">Voices on the Legacy</h2>
+      <div class="divider center"></div>
+      <p class="legacy-voices-sub">Cardinals, bishops, and scholars on the life and work of James Likoudis &mdash; the corpus the Foundation exists to steward.</p>
+    </div>
+    <div class="legacy-grid">
+      <div class="legacy-card reveal">
+        <p class="legacy-quote">&ldquo;His work as the author of numerous books and articles significantly contributed to clarifying and enhancing the relations between the Roman Catholic Church and the Eastern Orthodox Churches&hellip; In short, he is regarded as a true Christian scholar.&rdquo;</p>
+        <div class="legacy-person">
+          <img src="images/endorse-burke.jpg" alt="Raymond Cardinal Burke">
+          <div>
+            <div class="legacy-name">Raymond Cardinal Burke</div>
+            <div class="legacy-role">Prefect Emeritus of the Apostolic Signatura</div>
+          </div>
+        </div>
+      </div>
+      <div class="legacy-card reveal">
+        <p class="legacy-quote">&ldquo;James Likoudis was a courageous defender of the faith and a gentle &lsquo;man of the Church.&rsquo; It is praiseworthy that this new Foundation has been established in his honor.&rdquo;</p>
+        <div class="legacy-person">
+          <img src="images/endorse-naumann.jpg" alt="Archbishop Joseph F. Naumann">
+          <div>
+            <div class="legacy-name">Most Rev. Joseph F. Naumann</div>
+            <div class="legacy-role">Archbishop Emeritus of Kansas City in Kansas</div>
+          </div>
+        </div>
+      </div>
+      <div class="legacy-card reveal">
+        <p class="legacy-quote">&ldquo;I have known James Likoudis for half of my life and a third of his&hellip; I&rsquo;ve known few people who have such a passion for the apostolate and for Christian unity.&rdquo;</p>
+        <div class="legacy-person">
+          <img src="images/endorse-hahn.jpg" alt="Scott Hahn">
+          <div>
+            <div class="legacy-name">Scott Hahn, PhD</div>
+            <div class="legacy-role">President, St. Paul Center for Biblical Theology</div>
+          </div>
+        </div>
+      </div>
+      <div class="legacy-card reveal">
+        <p class="legacy-quote">&ldquo;&hellip;several thinkers I admire and respect. Let me mention, among others&hellip; James Likoudis.&rdquo;</p>
+        <div class="legacy-person">
+          <img src="images/endorse-vonhildebrand.jpg" alt="Alice von Hildebrand">
+          <div>
+            <div class="legacy-name">Alice von Hildebrand</div>
+            <div class="legacy-role">Dame Grand Cross of the Order of St. Gregory the Great</div>
+          </div>
+        </div>
+      </div>
+      <div class="legacy-card reveal">
+        <p class="legacy-quote">&ldquo;James Likoudis&hellip; comprises a contemporary theological and catechetical voice for full Mariological truth, not as an obstacle, but rather as a means to authentic ecumenical unity.&rdquo;</p>
+        <div class="legacy-person">
+          <img src="images/endorse-miravalle.jpg" alt="Dr. Mark Miravalle">
+          <div>
+            <div class="legacy-name">Dr. Mark Miravalle, SThD</div>
+            <div class="legacy-role">St. John Paul II Chair of Mariology, Franciscan University of Steubenville</div>
+          </div>
+        </div>
+      </div>
+      <div class="legacy-card reveal">
+        <p class="legacy-quote">&ldquo;There is, perhaps, no member of the laity of either of the &lsquo;two lungs&rsquo; of apostolic faith that has done more to further the dialogue than James Likoudis.&rdquo;</p>
+        <div class="legacy-person">
+          <img src="images/endorse-staples.jpg" alt="Tim Staples">
+          <div>
+            <div class="legacy-name">Tim Staples</div>
+            <div class="legacy-role">Senior Apologist, Catholic Answers</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
