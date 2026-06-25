@@ -1071,6 +1071,17 @@
   }
   .legacy-name { color: var(--gold); font-weight: 600; font-size: 0.9rem; line-height: 1.2; }
   .legacy-role { color: rgba(244,237,224,0.55); font-size: 0.72rem; line-height: 1.35; margin-top: 3px; }
+  .legacy-more { text-align: center; margin-top: 3rem; }
+  .legacy-more-link {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(200,169,110,0.4);
+    padding: 0.85rem 2rem; border-radius: 2px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .legacy-more-link:hover { background: var(--gold); color: var(--navy); }
   @media (max-width: 900px) { .legacy-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 600px) { .legacy-grid { grid-template-columns: 1fr; } }
 
@@ -1209,41 +1220,7 @@
 </section>
 
 <!-- FOUNDATION PROJECTS -->
-<section class="projects on-dark">
-  <div class="projects-inner">
-    <div class="reveal">
-      <span class="section-label">Our Work</span>
-      <h2 class="section-title" style="color:var(--cream);">Foundation Projects</h2>
-    </div>
-    <div class="projects-grid">
-      <a href="kydones.html" class="project-card reveal">
-        <div class="project-icon">✦</div>
-        <h3>The Kydones Review</h3>
-        <p>A journal of Catholic theology, ecumenism, and patristics — named for the Byzantine philosopher Demetrios Kydones.</p>
-        <span class="project-tag">Journal</span>
-      </a>
-      <a href="https://liquid1188.github.io/koinonia" class="project-card reveal reveal-delay-1" target="_blank">
-        <div class="project-icon">✦</div>
-        <h3>Koinonia Catholic</h3>
-        <p>A digital commons for Catholic scholarship, dialogue, and community — connecting the faithful across traditions.</p>
-        <span class="project-tag">Digital Platform</span>
-      </a>
-      <a href="https://liquid1188.github.io/unmoored-generation" class="project-card reveal reveal-delay-2" target="_blank">
-        <div class="project-icon">✦</div>
-        <h3>The Unmoored Generation</h3>
-        <p>A Foundation initiative addressing the purpose crisis among young adults — integrating faith, meaning, and vocation.</p>
-        <span class="project-tag">Initiative</span>
-      </a>
-      <a href="https://traditionandrenewal.substack.com" class="project-card reveal reveal-delay-3" target="_blank">
-        <div class="project-icon">✦</div>
-        <h3>Tradition & Renewal</h3>
-        <p>A Substack publication offering daily roundups, analysis, and commentary on the Church's living tradition and reform.</p>
-        <span class="project-tag">Publication</span>
-      </a>
-    </div>
-  </div>
-</section>
-<div class="section-ornament on-navy"><span>✦</span></div>
+
 
 <!-- JAMES LIKOUDIS -->
 <section class="latest on-light">
@@ -1320,7 +1297,7 @@
         </div>
       </div>
       <div class="legacy-card reveal">
-        <p class="legacy-quote">&ldquo;I have known James Likoudis for half of my life and a third of his&hellip; I&rsquo;ve known few people who have such a passion for the apostolate and for Christian unity.&rdquo;</p>
+        <p class="legacy-quote">&ldquo;I knew James Likoudis for half of my life and a third of his&hellip; I&rsquo;ve known few people who had such a passion for the apostolate and for Christian unity.&rdquo;</p>
         <div class="legacy-person">
           <img src="images/endorse-hahn.jpg" alt="Scott Hahn">
           <div>
@@ -1329,36 +1306,9 @@
           </div>
         </div>
       </div>
-      <div class="legacy-card reveal">
-        <p class="legacy-quote">&ldquo;&hellip;several thinkers I admire and respect. Let me mention, among others&hellip; James Likoudis.&rdquo;</p>
-        <div class="legacy-person">
-          <img src="images/endorse-vonhildebrand.jpg" alt="Alice von Hildebrand">
-          <div>
-            <div class="legacy-name">Alice von Hildebrand</div>
-            <div class="legacy-role">Dame Grand Cross of the Order of St. Gregory the Great</div>
-          </div>
-        </div>
-      </div>
-      <div class="legacy-card reveal">
-        <p class="legacy-quote">&ldquo;James Likoudis&hellip; comprises a contemporary theological and catechetical voice for full Mariological truth, not as an obstacle, but rather as a means to authentic ecumenical unity.&rdquo;</p>
-        <div class="legacy-person">
-          <img src="images/endorse-miravalle.jpg" alt="Dr. Mark Miravalle">
-          <div>
-            <div class="legacy-name">Dr. Mark Miravalle, SThD</div>
-            <div class="legacy-role">St. John Paul II Chair of Mariology, Franciscan University of Steubenville</div>
-          </div>
-        </div>
-      </div>
-      <div class="legacy-card reveal">
-        <p class="legacy-quote">&ldquo;There is, perhaps, no member of the laity of either of the &lsquo;two lungs&rsquo; of apostolic faith that has done more to further the dialogue than James Likoudis.&rdquo;</p>
-        <div class="legacy-person">
-          <img src="images/endorse-staples.jpg" alt="Tim Staples">
-          <div>
-            <div class="legacy-name">Tim Staples</div>
-            <div class="legacy-role">Senior Apologist, Catholic Answers</div>
-          </div>
-        </div>
-      </div>
+    </div>
+    <div class="legacy-more reveal">
+      <a href="james-likoudis.html#voices" class="legacy-more-link">Read more voices on the legacy &rarr;</a>
     </div>
   </div>
 </section>
@@ -1425,6 +1375,43 @@
     </div>
   </div>
 </section>
+
+<div class="section-ornament on-navy"><span>✦</span></div>
+<section class="projects on-dark">
+  <div class="projects-inner">
+    <div class="reveal">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-title" style="color:var(--cream);">Foundation Projects</h2>
+    </div>
+    <div class="projects-grid">
+      <a href="kydones.html" class="project-card reveal">
+        <div class="project-icon">✦</div>
+        <h3>The Kydones Review</h3>
+        <p>A journal of Catholic theology, ecumenism, and patristics — named for the Byzantine philosopher Demetrios Kydones.</p>
+        <span class="project-tag">Journal</span>
+      </a>
+      <a href="https://liquid1188.github.io/koinonia" class="project-card reveal reveal-delay-1" target="_blank">
+        <div class="project-icon">✦</div>
+        <h3>Koinonia Catholic</h3>
+        <p>A digital commons for Catholic scholarship, dialogue, and community — connecting the faithful across traditions.</p>
+        <span class="project-tag">Digital Platform</span>
+      </a>
+      <a href="https://liquid1188.github.io/unmoored-generation" class="project-card reveal reveal-delay-2" target="_blank">
+        <div class="project-icon">✦</div>
+        <h3>The Unmoored Generation</h3>
+        <p>A Foundation initiative addressing the purpose crisis among young adults — integrating faith, meaning, and vocation.</p>
+        <span class="project-tag">Initiative</span>
+      </a>
+      <a href="https://traditionandrenewal.substack.com" class="project-card reveal reveal-delay-3" target="_blank">
+        <div class="project-icon">✦</div>
+        <h3>Tradition & Renewal</h3>
+        <p>A Substack publication offering daily roundups, analysis, and commentary on the Church's living tradition and reform.</p>
+        <span class="project-tag">Publication</span>
+      </a>
+    </div>
+  </div>
+</section>
+<div class="section-ornament on-navy"><span>✦</span></div>
 
 <!-- GIVE CTA -->
 <section class="give-cta on-light">

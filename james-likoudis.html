@@ -81,6 +81,11 @@ blockquote.pull cite{font-size:.68rem;letter-spacing:.12em;text-transform:upperc
 .family-block ul li:last-child{border-bottom:none}
 @media(max-width:900px){.bio-hero-inner{grid-template-columns:1fr;gap:2.5rem}.bio-hero-photo img{max-width:260px}.facts-bar-inner{grid-template-columns:repeat(3,1fr)}.fact-item:nth-child(3){border-right:none}.bib-grid,.endr-grid{grid-template-columns:repeat(2,1fr)}.family-inner{grid-template-columns:1fr;max-width:600px}.tl-items::before{left:69px}.tl-item{grid-template-columns:70px 1fr}.tl-year::after{right:-2rem}}
 @media(max-width:560px){.bib-grid{grid-template-columns:1fr}.endr-grid{grid-template-columns:1fr}.facts-bar-inner{grid-template-columns:repeat(2,1fr)}}
+.jl-voice{padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3)}
+.jl-voice-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.95rem}
+.jl-voice-person{display:flex;align-items:center;gap:0.7rem}
+.jl-voice-person img{width:50px;height:50px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid rgba(200,169,110,0.35)}
+.jl-voice-attr{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);line-height:1.45}
 </style>
 </head>
 <body>
@@ -255,56 +260,99 @@ blockquote.pull cite{font-size:.68rem;letter-spacing:.12em;text-transform:upperc
       </div>
     </div>
 
-    <div class="reveal" style="margin-top:4rem;">
+    <div class="reveal" id="voices" style="margin-top:4rem;">
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--navy);margin-bottom:1.25rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border);">Voices on the Legacy</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.75rem 3rem;">
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"I knew Dr. Likoudis for some twenty-five years and had the occasion, almost annually, to visit with him about theological questions&hellip; His work as the author of numerous books and articles significantly contributed to clarifying and enhancing the relations between the Roman Catholic Church and the Eastern Orthodox Churches&hellip; In short, he is regarded as a true Christian scholar."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Raymond Cardinal Burke, Prefect Emeritus of the Apostolic Signatura</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.75rem 2.5rem;">
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;I knew Dr. Likoudis for some twenty-five years and had the occasion, almost annually, to visit with him about theological questions&hellip; His work as the author of numerous books and articles significantly contributed to clarifying and enhancing the relations between the Roman Catholic Church and the Eastern Orthodox Churches&hellip; In short, he is regarded as a true Christian scholar.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-burke.jpg" alt="Raymond Cardinal Burke">
+            <span class="jl-voice-attr">&mdash; Raymond Cardinal Burke, Prefect Emeritus of the Apostolic Signatura</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"I have known James Likoudis for half of my life and a third of his&hellip; He is himself a convert, and he recognizes that conversion&mdash;any conversion&mdash;is not the matter of a moment. It is the love of a lifetime&hellip; I&rsquo;ve known few people who have such a passion for the apostolate and for Christian unity."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Scott Hahn, PhD, President, St. Paul Center for Biblical Theology</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;James Likoudis was a courageous defender of the faith and a gentle &lsquo;man of the Church.&rsquo; It is praiseworthy that this new Foundation has been established in his honor.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-naumann.jpg" alt="Most Rev. Joseph F. Naumann">
+            <span class="jl-voice-attr">&mdash; Most Rev. Joseph F. Naumann, Archbishop Emeritus of Kansas City in Kansas</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"Likoudis occupies a singular place in the literature of his time. Faithful, yet not crazy. I think a good many people appreciate him for his careful judgments about the post-conciliar situation as it was developing. Very few people got it so right."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Mike Aquilina, Executive Vice President, St. Paul Center for Biblical Theology</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;I knew James Likoudis for half of my life and a third of his&hellip; He was himself a convert, and he recognized that conversion&mdash;any conversion&mdash;is not the matter of a moment. It is the love of a lifetime&hellip; I&rsquo;ve known few people who had such a passion for the apostolate and for Christian unity.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-hahn.jpg" alt="Scott Hahn">
+            <span class="jl-voice-attr">&mdash; Scott Hahn, PhD, President, St. Paul Center for Biblical Theology</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"For many years&hellip; James Likoudis was a tireless laborer for fraternal dialogue between Catholic and Orthodox Christians. Few knew these two ecclesial worlds so thoroughly, and few so successfully untied the knots of misunderstanding that have gotten in the way of reconciliation."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Marcellino D&rsquo;Ambrosio, PhD, Senior Fellow, St. Paul Center for Biblical Theology</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;Likoudis occupies a singular place in the literature of his time. Faithful, yet not crazy. I think a good many people appreciate him for his careful judgments about the post-conciliar situation as it was developing. Very few people got it so right.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-aquilina.jpg" alt="Mike Aquilina">
+            <span class="jl-voice-attr">&mdash; Mike Aquilina, Executive Vice President, St. Paul Center for Biblical Theology</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"In our modern era of mass communication, the ecumenical work of reunion will not be carried out in full without lay involvement. And there is, perhaps, no member of the laity of either of the &lsquo;two lungs&rsquo; of apostolic faith that has done more to further the dialogue than James Likoudis."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Tim Staples, Senior Apologist, Catholic Answers</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;For many years&hellip; James Likoudis was a tireless laborer for fraternal dialogue between Catholic and Orthodox Christians. Few knew these two ecclesial worlds so thoroughly, and few so successfully untied the knots of misunderstanding that have gotten in the way of reconciliation.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-dambrosio.jpg" alt="Marcellino D&rsquo;Ambrosio">
+            <span class="jl-voice-attr">&mdash; Marcellino D&rsquo;Ambrosio, PhD, Senior Fellow, St. Paul Center for Biblical Theology</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"James Likoudis comprises a contemporary theological and catechetical voice for full Mariological truth&mdash;not as an obstacle, but rather as a means to authentic ecumenical unity."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Dr. Mark Miravalle, SThD, St. John Paul II Chair of Mariology, Franciscan University of Steubenville</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;In our modern era of mass communication, the ecumenical work of reunion will not be carried out in full without lay involvement. And there is, perhaps, no member of the laity of either of the &lsquo;two lungs&rsquo; of apostolic faith that has done more to further the dialogue than James Likoudis.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-staples.jpg" alt="Tim Staples">
+            <span class="jl-voice-attr">&mdash; Tim Staples, Senior Apologist, Catholic Answers</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"Dr. Likoudis is a stellar example of how to dialogue with the Orthodox about important differences without falling into a rigid fundamentalism that refuses to see grace present in the Orthodox church."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Michael Lofton, Founder, Reason and Theology</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;James Likoudis comprises a contemporary theological and catechetical voice for full Mariological truth&mdash;not as an obstacle, but rather as a means to authentic ecumenical unity.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-miravalle.jpg" alt="Dr. Mark Miravalle">
+            <span class="jl-voice-attr">&mdash; Dr. Mark Miravalle, SThD, St. John Paul II Chair of Mariology, Franciscan University of Steubenville</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"James Likoudis is a noted Catholic writer on the separated Eastern Churches. There is much to be learned from his stirring accounts of Easterners who embraced their true home, the Catholic Church."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Rev. Ray Ryland, PhD, JD, Chaplain of the Coming Home Network, EWTN</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;Dr. Likoudis is a stellar example of how to dialogue with the Orthodox about important differences without falling into a rigid fundamentalism that refuses to see grace present in the Orthodox church.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-lofton.jpg" alt="Michael Lofton">
+            <span class="jl-voice-attr">&mdash; Michael Lofton, Founder, Reason and Theology</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"Several thinkers I admire and respect&hellip; let me mention, among others&hellip; James Likoudis."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Alice von Hildebrand, Dame Grand Cross of the Order of St. Gregory the Great</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;James Likoudis is a noted Catholic writer on the separated Eastern Churches. There is much to be learned from his stirring accounts of Easterners who embraced their true home, the Catholic Church.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-ryland.jpg" alt="Rev. Ray Ryland">
+            <span class="jl-voice-attr">&mdash; Rev. Ray Ryland, PhD, JD, Chaplain of the Coming Home Network, EWTN</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"James Likoudis was one of several mentors from whom I was privileged to learn when I was struggling to become more effective in defending and advancing the Catholic faith&hellip; already established as a proponent of authentic Catholic renewal&hellip; and a champion of the Magisterium."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Jeffrey Mirus, PhD, Founder, CatholicCulture.org; co-founder, Christendom College</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;Several thinkers I admire and respect&hellip; let me mention, among others&hellip; James Likoudis.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-vonhildebrand.jpg" alt="Alice von Hildebrand">
+            <span class="jl-voice-attr">&mdash; Alice von Hildebrand, Dame Grand Cross of the Order of St. Gregory the Great</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"In the field of Catholic&ndash;Orthodox dialogue, James Likoudis figures as one of the most prominent Catholic apologists&hellip; supported by clear reasoning and ample documentation."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— José Pereira, Professor Emeritus of Theology, Fordham University</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;James Likoudis was one of several mentors from whom I was privileged to learn when I was struggling to become more effective in defending and advancing the Catholic faith&hellip; already established as a proponent of authentic Catholic renewal&hellip; and a champion of the Magisterium.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-mirus.jpg" alt="Jeffrey Mirus">
+            <span class="jl-voice-attr">&mdash; Jeffrey Mirus, PhD, Founder, CatholicCulture.org; co-founder, Christendom College</span>
+          </div>
         </div>
-        <div style="padding-left:1.25rem;border-left:2px solid rgba(200,169,110,0.3);">
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--navy);line-height:1.75;margin-bottom:0.5rem;">"There is probably no other writer in English who has so thoroughly explored Catholic&ndash;Orthodox issues as James Likoudis. This book is the fruit of over fifty years of study and prayer."</p>
-          <span style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">— Robert Fastiggi, PhD, Sacred Heart Major Seminary</span>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;In the field of Catholic&ndash;Orthodox dialogue, James Likoudis figures as one of the most prominent Catholic apologists&hellip; supported by clear reasoning and ample documentation.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-pereira.jpg" alt="Jos&eacute; Pereira">
+            <span class="jl-voice-attr">&mdash; Jos&eacute; Pereira, Professor Emeritus of Theology, Fordham University</span>
+          </div>
+        </div>
+        <div class="jl-voice">
+          <p class="jl-voice-quote">&ldquo;There is probably no other writer in English who has so thoroughly explored Catholic&ndash;Orthodox issues as James Likoudis. This book is the fruit of over fifty years of study and prayer.&rdquo;</p>
+          <div class="jl-voice-person">
+            <img src="images/endorse-fastiggi.jpg" alt="Robert Fastiggi">
+            <span class="jl-voice-attr">&mdash; Robert Fastiggi, PhD, Sacred Heart Major Seminary</span>
+          </div>
         </div>
       </div>
     </div>
