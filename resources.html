@@ -66,6 +66,9 @@
   .rg-news { margin-top: 5rem; }
   .rg-news-item { padding: 1.35rem 0; border-bottom: 1px solid rgba(14,27,46,0.08); }
   .rg-news-item:last-child { border-bottom: none; }
+  .rg-news-item { display: grid; grid-template-columns: 40px 1fr; gap: 1rem; align-items: start; }
+  .rg-news-icon img { width: 34px; height: 34px; border: 1px solid rgba(14,27,46,0.12); border-radius: 6px; display: block; margin-top: 3px; }
+  .rg-news-body { min-width: 0; }
   .rg-news-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--navy); display: inline; }
   .rg-news-item h4 a { color: inherit; text-decoration: none; }
   .rg-news-item h4 a:hover { color: var(--gold); }
@@ -253,7 +256,7 @@
     <!-- TRADRECOVERY -->
     <div class="rg-callout reveal">
       <span class="section-label">One Website Worth Knowing</span>
-      <h3>TradRecovery.com</h3>
+      <h3 style="display:flex;align-items:center;gap:0.6rem;"><img src="newsletter/navigating-schism/icon-tradrecovery.png" alt="TradRecovery" style="width:30px;height:30px;border:1px solid rgba(14,27,46,0.12);border-radius:6px;">TradRecovery.com</h3>
       <p>For those leaving the movement, or watching someone they love inside it, TradRecovery offers fellowship and practical support from people who have walked the same road home.</p>
       <a class="rg-find" href="https://www.tradrecovery.com" target="_blank" rel="noopener">Visit TradRecovery ›</a>
     </div>
@@ -263,14 +266,14 @@
       <div class="rg-section-head"><span class="section-label">Where to Read the News</span><div class="rule"></div></div>
       <p class="rg-section-blurb">A few outlets we trust for reporting on the Church, with a plain word on where each stands editorially.</p>
 
-      <div class="rg-news-item"><h4><a href="https://wherepeteris.com" target="_blank" rel="noopener">Where Peter Is</a></h4><span class="rg-news-domain">wherepeteris.com</span><p>Reporting and commentary faithful to the Magisterium, which is the site's whole mission.</p></div>
-      <div class="rg-news-item"><h4><a href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener">Vatican News</a></h4><span class="rg-news-domain">vaticannews.va</span><p>The Holy See's own news service, and the place to read what Rome has actually said before reading what anyone else says about it.</p></div>
-      <div class="rg-news-item"><h4><a href="https://www.osvnews.com" target="_blank" rel="noopener">OSV News</a></h4><span class="rg-news-domain">osvnews.com</span><p>The national Catholic news service, widely syndicated across diocesan papers and websites.</p></div>
-      <div class="rg-news-item"><h4><a href="https://www.wordonfire.org" target="_blank" rel="noopener">Word on Fire</a></h4><span class="rg-news-domain">wordonfire.org</span><p>Bishop Robert Barron's <em>Evangelization &amp; Culture</em> journal, with much of its writing available online.</p></div>
-      <div class="rg-news-item"><h4><a href="https://www.ncregister.com" target="_blank" rel="noopener">National Catholic Register</a></h4><span class="rg-news-domain">ncregister.com</span><p>Long-established national reporting and analysis; its editorial outlook leans to the conservative side.</p></div>
-      <div class="rg-news-item"><h4><a href="https://www.pillarcatholic.com" target="_blank" rel="noopener">The Pillar</a></h4><span class="rg-news-domain">pillarcatholic.com</span><p>Sharp investigative journalism on the life and governance of the Church; likewise leans to the conservative side.</p></div>
-      <div class="rg-news-item"><h4><a href="https://www.commonwealmagazine.org" target="_blank" rel="noopener">Commonweal</a></h4><span class="rg-news-domain">commonwealmagazine.org</span><p>A lay-edited review of religion, politics, and culture, written from a more progressive editorial perspective.</p></div>
-      <div class="rg-news-item"><h4><a href="https://www.thetablet.co.uk" target="_blank" rel="noopener">The Tablet</a></h4><span class="rg-news-domain">thetablet.co.uk</span><p>The British Catholic weekly, international in scope and likewise more progressive in tone.</p></div>
+      <div class="rg-news-item"><div class="rg-news-icon"><img src="newsletter/navigating-schism/icon-wpi.png" alt="Where Peter Is" loading="lazy"></div><div class="rg-news-body"><h4><a href="https://wherepeteris.com" target="_blank" rel="noopener">Where Peter Is</a></h4><span class="rg-news-domain">wherepeteris.com</span><p>Reporting and commentary faithful to the Magisterium, which is the site's whole mission.</p></div></div>
+      <div class="rg-news-item"><div class="rg-news-icon"><img src="newsletter/navigating-schism/icon-vaticannews.png" alt="Vatican News" loading="lazy"></div><div class="rg-news-body"><h4><a href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener">Vatican News</a></h4><span class="rg-news-domain">vaticannews.va</span><p>The Holy See's own news service, and the place to read what Rome has actually said before reading what anyone else says about it.</p></div></div>
+      <div class="rg-news-item"><div class="rg-news-icon"><img src="newsletter/navigating-schism/icon-osv.png" alt="OSV News" loading="lazy"></div><div class="rg-news-body"><h4><a href="https://www.osvnews.com" target="_blank" rel="noopener">OSV News</a></h4><span class="rg-news-domain">osvnews.com</span><p>The national Catholic news service, widely syndicated across diocesan papers and websites.</p></div></div>
+      <div class="rg-news-item"><div class="rg-news-icon"><img src="newsletter/navigating-schism/icon-wof.png" alt="Word on Fire" loading="lazy"></div><div class="rg-news-body"><h4><a href="https://www.wordonfire.org" target="_blank" rel="noopener">Word on Fire</a></h4><span class="rg-news-domain">wordonfire.org</span><p>Bishop Robert Barron's <em>Evangelization &amp; Culture</em> journal, with much of its writing available online.</p></div></div>
+      <div class="rg-news-item"><div class="rg-news-icon"><img src="newsletter/navigating-schism/icon-ncr.png" alt="National Catholic Register" loading="lazy"></div><div class="rg-news-body"><h4><a href="https://www.ncregister.com" target="_blank" rel="noopener">National Catholic Register</a></h4><span class="rg-news-domain">ncregister.com</span><p>Long-established national reporting and analysis; its editorial outlook leans to the conservative side.</p></div></div>
+      <div class="rg-news-item"><div class="rg-news-icon"><img src="newsletter/navigating-schism/icon-pillar.png" alt="The Pillar" loading="lazy"></div><div class="rg-news-body"><h4><a href="https://www.pillarcatholic.com" target="_blank" rel="noopener">The Pillar</a></h4><span class="rg-news-domain">pillarcatholic.com</span><p>Sharp investigative journalism on the life and governance of the Church; likewise leans to the conservative side.</p></div></div>
+      <div class="rg-news-item"><div class="rg-news-icon"><img src="newsletter/navigating-schism/icon-commonweal.png" alt="Commonweal" loading="lazy"></div><div class="rg-news-body"><h4><a href="https://www.commonwealmagazine.org" target="_blank" rel="noopener">Commonweal</a></h4><span class="rg-news-domain">commonwealmagazine.org</span><p>A lay-edited review of religion, politics, and culture, written from a more progressive editorial perspective.</p></div></div>
+      <div class="rg-news-item"><div class="rg-news-icon"><img src="newsletter/navigating-schism/icon-tablet.png" alt="The Tablet" loading="lazy"></div><div class="rg-news-body"><h4><a href="https://www.thetablet.co.uk" target="_blank" rel="noopener">The Tablet</a></h4><span class="rg-news-domain">thetablet.co.uk</span><p>The British Catholic weekly, international in scope and likewise more progressive in tone.</p></div></div>
     </div>
 
     <!-- CLOSE -->
