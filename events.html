@@ -239,15 +239,18 @@
 }
 .event-program {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-wrap: nowrap;
+  gap: 0.45rem;
   margin-bottom: 2.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+.event-program::-webkit-scrollbar { display: none; }
 .program-item {
   background: var(--ivory);
   border: 1px solid rgba(200,169,110,0.15);
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.78rem;
   color: var(--muted);
   white-space: nowrap;
 }
