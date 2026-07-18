@@ -1037,10 +1037,14 @@
     color: var(--cream);
     font-size: 1.08rem;
     max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
   .endorsement-card.featured-full .endorse-name { color: var(--gold); }
   .endorsement-card.featured-full .endorse-title { color: rgba(244,237,224,0.6); }
   .endorsement-card.featured-full .endorse-person img { width: 64px; height: 64px; }
+  .endorsement-card.featured-full .endorse-person { justify-content: center; border-top-color: rgba(200,169,110,0.25); }
   @media(max-width:900px) {
     .endorsement-card.featured,
     .endorsement-card.featured-full { grid-column: span 1; }
