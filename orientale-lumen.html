@@ -45,7 +45,13 @@
   .ol-quote cite { font-family: 'Jost', sans-serif; font-style: normal; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
   .ol-cta { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); text-decoration: none; border-bottom: 1.5px solid var(--gold); padding-bottom: 2px; }
   .ol-cta:hover { color: var(--gold); }
-  @media(max-width:640px){ .ol-two { grid-template-columns: 1fr; } }
+  .ol-two.ol-even .ol-fig img { aspect-ratio: 1/1; object-fit: cover; object-position: center; }
+  .ol-press { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 2.4rem 0; }
+  .ol-press a { display: block; text-decoration: none; background: rgba(200,169,110,0.07); border: 1px solid rgba(200,169,110,0.35); border-left: 3px solid var(--gold); padding: 1.15rem 1.3rem; transition: background .2s, border-color .2s; }
+  .ol-press a:hover { background: rgba(200,169,110,0.14); border-left-color: var(--navy); }
+  .ol-press .src { display: block; font-family: 'Jost', sans-serif; font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .ol-press .hed { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.12rem; line-height: 1.35; color: var(--navy); }
+  @media(max-width:640px){ .ol-two, .ol-press { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -87,7 +93,7 @@
 
     <p>Orientale Lumen XXX gathered at the Saint John Paul II Shrine and Retreat House in Washington from July 13 to 15, 2026, under the theme &ldquo;Ecumenism at a Crossroad: Consensus Achieved &mdash; What&rsquo;s Next?&rdquo; The plenary lectures were given by speakers including Cardinal Se&aacute;n O&rsquo;Malley. Archbishop Flavio Pace, Secretary of the Dicastery for Promoting Christian Unity, took part throughout, and Archbishop Gabriele Caccia, Apostolic Nuncio to the United States, attended. They were joined by Metropolitan Tikhon, Bishop Anthony Vrame, Bishop John Michael Botean, and Dr. John Borelli of Georgetown University, who moderated.</p>
 
-    <div class="ol-two">
+    <div class="ol-two ol-even">
       <figure class="ol-fig" style="margin:0;">
         <img src="newsletter/ol-xxx-2026/omalley-keynote.jpg" alt="Cardinal Sean O'Malley delivering his plenary lecture" loading="lazy">
         <figcaption>Cardinal Se&aacute;n O&rsquo;Malley delivers his plenary lecture.</figcaption>
@@ -97,6 +103,11 @@
         <figcaption>Three days of shared prayer and liturgy.</figcaption>
       </figure>
     </div>
+
+    <figure class="ol-fig">
+      <img src="newsletter/ol-xxx-2026/group-photo.jpg" alt="Participants of Orientale Lumen XXX at the Saint John Paul II Shrine and Retreat House" loading="lazy">
+      <figcaption>Participants of the thirtieth Orientale Lumen Conference at the Saint John Paul II Shrine and Retreat House &mdash; Cardinal Se&aacute;n O&rsquo;Malley, Metropolitan Tikhon, Archbishop Flavio Pace, Bishop John Michael Botean, Bishop Anthony Vrame, and the bishops, scholars, clergy, and laity of both churches who gathered for three days in Washington.</figcaption>
+    </figure>
 
     <div class="ol-h"><span class="section-label">A Gift from the Holy Father</span><span class="rule"></span></div>
 
@@ -138,7 +149,20 @@
 
     <p>The conference ended on July 15; the following day, July 16, marked 972 years since the mutual excommunications of 1054. The Foundation&rsquo;s reflection on the conference and on the millennium now visible on the horizon was published that day.</p>
 
-    <p><a class="ol-cta" href="https://www.ewtnnews.com/world/us/catholic-orthodox-bishops-join-in-dialogue-and-prayer-at-washington-d-c-conference" target="_blank" rel="noopener">EWTN News: Conference Coverage &rsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="ol-cta" href="https://www.ncregister.com/cna/cardinal-o-malley-at-catholic-orthodox-conference-come-together-and-pray-for-unity" target="_blank" rel="noopener">EWTN News: Cardinal O&rsquo;Malley &rsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="ol-cta" href="https://traditionandrenewal.substack.com" target="_blank" rel="noopener">Read the Essay &rsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="ol-cta" href="https://olfoundation.net" target="_blank" rel="noopener">The Orientale Lumen Foundation &rsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="ol-cta" href="east-west">The East&ndash;West Reading Guide &rsaquo;</a></p>
+    <div class="ol-h"><span class="section-label">Press Coverage</span><div class="rule"></div></div>
+
+    <div class="ol-press">
+      <a href="https://www.ewtnnews.com/world/us/catholic-orthodox-bishops-join-in-dialogue-and-prayer-at-washington-d-c-conference" target="_blank" rel="noopener">
+        <span class="src">EWTN News</span>
+        <span class="hed">Catholic and Orthodox Bishops Join in Dialogue and Prayer at Washington, D.C. Conference</span>
+      </a>
+      <a href="https://www.ncregister.com/cna/cardinal-o-malley-at-catholic-orthodox-conference-come-together-and-pray-for-unity" target="_blank" rel="noopener">
+        <span class="src">EWTN News &middot; National Catholic Register</span>
+        <span class="hed">Cardinal O&rsquo;Malley at Catholic&ndash;Orthodox Conference: &lsquo;Come Together and Pray for Unity&rsquo;</span>
+      </a>
+    </div>
+
+    <p><a class="ol-cta" href="https://olfoundation.net" target="_blank" rel="noopener">The Orientale Lumen Foundation &rsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="ol-cta" href="east-west">The East&ndash;West Reading Guide &rsaquo;</a></p>
 
     <figure class="ol-fig" style="margin-top:3.5rem;">
       <img src="newsletter/ol-xxx-2026/paulvi-meliton.jpg" alt="Paul VI kneels before Metropolitan Meliton, Sistine Chapel, December 14, 1975" loading="lazy">
