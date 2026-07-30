@@ -51,6 +51,10 @@
 .search-wrap input:focus{border-color:var(--gold)}
 .search-results{display:none;flex-direction:column}
 .search-results.active{display:flex}
+.search-count{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+.search-cat{grid-column:1;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);opacity:.75;margin-top:.35rem}
+.essay-row-preview mark{background:rgba(200,169,110,.28);color:var(--navy);padding:0 .1em}
+.no-results{font-size:.85rem;color:var(--muted);padding:1rem 0}
 .no-results{padding:2.5rem 0;color:var(--muted);font-size:.85rem}
 @media(max-width:700px){
   .tab-btn{padding:.6rem .75rem;font-size:.62rem;letter-spacing:.08em}
@@ -1587,9 +1591,67 @@ const allRows = Array.from(document.querySelectorAll('.essay-row'));
 const searchInput = document.getElementById('essay-search');
 const searchResults = document.getElementById('search-results');
 const tabUI = document.getElementById('tab-ui');
+const LABELS = {doctrine:'Catholic Doctrine & Faith',liturgy:'Liturgy & Discipline',
+  family:'Family, Morals & Education',ecumenism:'Ecumenism & Orthodoxy',dialogues:'Dialogues',
+  reviews:'Book Reviews',letters:'Letters & Replies',saints:'Saints',marian:'Marian Doctrine'};
 
-searchInput.addEventListener('input', function() {
+let INDEX = null, loading = null;
+function loadIndex(){
+  if (INDEX || loading) return loading;
+  loading = fetch('/search-index.json').then(r => r.json())
+    .then(d => { INDEX = d; return d; })
+    .catch(() => { INDEX = []; return []; });
+  return loading;
+}
+searchInput.addEventListener('focus', loadIndex, {once:true});
+
+function esc(t){ return t.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function snippet(text, q){
+  const i = text.toLowerCase().indexOf(q);
+  if (i < 0) return esc(text.slice(0, 150)) + '…';
+  let a = Math.max(0, i - 60), b = Math.min(text.length, i + q.length + 110);
+  if (a > 0) { const sp = text.indexOf(' ', a); if (sp > -1 && sp < i) a = sp + 1; }
+  return (a > 0 ? '…' : '') + esc(text.slice(a, i)) +
+         '<mark>' + esc(text.slice(i, i + q.length)) + '</mark>' +
+         esc(text.slice(i + q.length, b)) + (b < text.length ? '…' : '');
+}
+
+function render(q){
+  if (!INDEX) {                              // index still in flight: title-only fallback
+    const seen = new Set();
+    const m = allRows.filter(r => {
+      const h = r.getAttribute('href');
+      if (seen.has(h) || !r.textContent.toLowerCase().includes(q)) return false;
+      seen.add(h); return true;
+    });
+    searchResults.innerHTML = m.length ? m.map(r => r.outerHTML).join('')
+      : '<p class="no-results">Searching…</p>';
+    return;
+  }
+  const hits = [];
+  for (const d of INDEX) {
+    const inTitle = d.t.toLowerCase().includes(q);
+    const at = d.x.toLowerCase().indexOf(q);
+    if (!inTitle && at < 0) continue;
+    hits.push({d, inTitle, at: inTitle ? -1 : at});
+  }
+  hits.sort((a,b) => (b.inTitle - a.inTitle) || (a.at - b.at));
+  if (!hits.length) { searchResults.innerHTML = '<p class="no-results">No essays matched your search.</p>'; return; }
+  searchResults.innerHTML =
+    '<p class="search-count">' + hits.length + (hits.length === 1 ? ' essay' : ' essays') + '</p>' +
+    hits.map(h =>
+      '<a href="essays/' + h.d.s + '" class="essay-row">' +
+      '<div class="essay-row-title">' + esc(h.d.t) + '</div>' +
+      '<div class="essay-row-preview">' + snippet(h.d.x, q) + '</div>' +
+      (h.d.c ? '<div class="search-cat">' + esc(LABELS[h.d.c] || h.d.c) + '</div>' : '') +
+      '<span class="essay-row-arrow">→</span></a>').join('');
+}
+
+let debounce;
+searchInput.addEventListener('input', function(){
   const q = this.value.trim().toLowerCase();
+  clearTimeout(debounce);
   if (!q) {
     searchResults.classList.remove('active');
     searchResults.innerHTML = '';
@@ -1598,18 +1660,9 @@ searchInput.addEventListener('input', function() {
   }
   tabUI.style.display = 'none';
   searchResults.classList.add('active');
-  // Deduplicate by href
-  const seen = new Set();
-  const matches = allRows.filter(r => {
-    const href = r.getAttribute('href');
-    if (seen.has(href)) return false;
-    if (!r.textContent.toLowerCase().includes(q)) return false;
-    seen.add(href);
-    return true;
-  });
-  searchResults.innerHTML = matches.length
-    ? matches.map(r => r.outerHTML).join('')
-    : '<p class="no-results">No essays matched your search.</p>';
+  debounce = setTimeout(() => {
+    if (INDEX) render(q); else { render(q); loadIndex().then(() => render(q)); }
+  }, 120);
 });
 </script>
 </body>
