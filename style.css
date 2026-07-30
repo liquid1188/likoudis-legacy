@@ -433,3 +433,16 @@ footer {
   .llf-promo-close{color:#fff;opacity:.9;text-shadow:0 1px 4px rgba(0,0,0,.5);}
   .llf-promo-actions{flex-direction:column;}
 }
+
+/* ─── ESSAY & ARCHIVE LONG-FORM CONTENT ───
+   The universal reset above zeroes padding on ol/ul, which pushes list markers
+   outside the text column. Restore indentation and constrain legacy tables. */
+.essay-body ul, .essay-body ol, .ar ul, .ar ol { padding-left: 1.75rem; margin: 0 0 1.4rem; }
+.essay-body li, .ar li { font-size: .95rem; line-height: 1.95; color: var(--muted); margin-bottom: .55rem; }
+.essay-body ol ol, .essay-body ul ul, .essay-body ol ul, .essay-body ul ol { margin-top: .55rem; margin-bottom: 0; }
+.essay-body blockquote p:last-child { margin-bottom: 0; }
+.essay-body img, .ar img { max-width: 100%; height: auto; }
+.essay-body table, .ar table { width: 100%; max-width: 100%; border-collapse: collapse; margin: 1.6rem 0; font-size: .88rem; table-layout: auto; }
+.essay-body td, .essay-body th, .ar td, .ar th { padding: .45rem .6rem; vertical-align: top; line-height: 1.7; }
+.essay-body hr { border: none; border-top: 1px solid rgba(200,169,110,.3); margin: 2.2rem 0; }
+.essay-body sup, .essay-body sub { line-height: 0; }
