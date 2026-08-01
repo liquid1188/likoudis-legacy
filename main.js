@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       links.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', () => {
+          // Dropdown toggles open a submenu; they must not close the whole menu.
+          if (a.matches('.nav-dropdown > a')) return;
           links.classList.remove('mobile-open');
           links.style.cssText = '';
           btn.classList.remove('open');
@@ -106,11 +108,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = dropdown.querySelector('.nav-dropdown-menu');
     if (!toggle || !menu) return;
 
+    toggle.setAttribute('aria-expanded', 'false');
+
     toggle.addEventListener('click', function(e) {
-      if (window.innerWidth > 900) return;
+      if (window.innerWidth > 900) return;   // desktop keeps hover + normal link
       e.preventDefault();
       e.stopPropagation();
+      e.stopImmediatePropagation();          // block any other handler on this same link
+
+      // close any other open submenu first
+      document.querySelectorAll('.nav-dropdown-menu.mobile-dd-open').forEach(function(other) {
+        if (other === menu) return;
+        other.classList.remove('mobile-dd-open');
+        other.style.cssText = '';
+        const t = other.parentElement && other.parentElement.querySelector(':scope > a');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+
       const isOpen = menu.classList.toggle('mobile-dd-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       menu.style.display = isOpen ? 'block' : 'none';
       menu.style.position = 'static';
       menu.style.background = 'rgba(255,255,255,0.05)';
@@ -123,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
       a.addEventListener('click', function() {
         menu.classList.remove('mobile-dd-open');
         menu.style.cssText = '';
+        toggle.setAttribute('aria-expanded', 'false');
       });
     });
   });
