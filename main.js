@@ -1,5 +1,14 @@
 /* ─── LLF MAIN.JS ─── */
 
+/* ─── CLEAN URL: strip .html from the address bar (no reload) ─── */
+(function () {
+  var p = location.pathname;
+  if (p.indexOf('/archive/') === 0) return;
+  if (!/\.html$/.test(p)) return;
+  var clean = p.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+  history.replaceState(null, '', clean + location.search + location.hash);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 1. SCROLL REVEAL ── */
