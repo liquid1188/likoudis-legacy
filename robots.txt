@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /archive/
+Disallow: /resources/bookclub/
 
 Sitemap: https://likoudislegacy.com/sitemap.xml
