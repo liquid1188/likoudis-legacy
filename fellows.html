@@ -193,7 +193,7 @@
     </div>
     <button class="apply-toggle-btn" id="apply-toggle" onclick="var w=document.getElementById('apply-wrap');var open=w.classList.toggle('open');this.textContent=open?'Close Application ▲':'Begin Application ▼'">Begin Application ▼</button>
     <div class="apply-form-wrap" id="apply-wrap">
-    <form class="apply-form" action="https://formsubmit.co/alikoudis@likoudislegacy.com" method="POST">
+    <form class="apply-form" action="https://formsubmit.co/alikoudis@likoudislegacy.com" method="POST" data-thanks="Your application has been received. We will be in touch.">
       <input type="hidden" name="_subject" value="LLF Fellows Program Application">
       <input type="hidden" name="_next" value="https://likoudislegacy.com/fellows.html?applied=true"><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="apply-form-grid">
@@ -423,5 +423,29 @@
 </footer>
 <script src="main.js"></script>
 <script>(function(){if(new URLSearchParams(location.search).get('applied')==='true'){var f=document.querySelector('form.contact-form, form.apply-form');if(f){var n=document.createElement('p');n.className='form-sent-notice';n.style.cssText='padding:1rem 1.25rem;margin:0 0 1.5rem;border:1px solid var(--gold,#b8963e);color:var(--navy,#1b2a4a);font-weight:600;';n.textContent='Thank you. Your application has been received.';f.parentNode.insertBefore(n,f);n.scrollIntoView({block:'center'});}}})();</script>
+<script>
+(function(){
+  document.querySelectorAll('form[action^="https://formsubmit.co/"]').forEach(function(form){
+    form.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var btn=form.querySelector('button[type=submit], input[type=submit]'); if(btn){btn.disabled=true; btn.dataset.label=btn.textContent||btn.value; if(btn.tagName==='BUTTON') btn.textContent='Sending...';}
+      var data={}; new FormData(form).forEach(function(v,k){ if(k==='_next') return; data[k]=v; });
+      var url=form.action.replace('formsubmit.co/','formsubmit.co/ajax/');
+      fetch(url,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+        .then(function(r){return r.json();})
+        .then(function(res){
+          if(res && (res.success==='true' || res.success===true)){
+            var n=document.createElement('div');
+            n.setAttribute('role','status');
+            n.style.cssText='padding:1.25rem 1.5rem;border:1px solid var(--gold,#b8963e);color:var(--navy,#1b2a4a);font-weight:600;line-height:1.5;';
+            n.innerHTML='<strong>Thank you.</strong> '+(form.dataset.thanks||'Your message has been sent and we will reply soon.');
+            form.parentNode.replaceChild(n,form); n.scrollIntoView({block:'center'});
+          } else { throw new Error('not accepted'); }
+        })
+        .catch(function(){ if(btn){btn.disabled=false; if(btn.tagName==='BUTTON') btn.textContent=btn.dataset.label;} form.removeEventListener('submit',arguments.callee); form.submit(); });
+    });
+  });
+})();
+</script>
 </body>
 </html>
