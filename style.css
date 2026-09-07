@@ -525,3 +525,8 @@ footer p, .footer-tagline, .footer-desc{color:rgba(244,237,224,.85)!important;}
 .hero-compact .hero-logo{max-width:150px!important;height:auto!important;}
 .press-who{display:block;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold,#c8a96e);margin-top:.25rem;}
 @media(max-width:768px){.hero-compact{min-height:50vh!important;}}
+
+/* keep intrinsic ratio now that images carry width/height attributes */
+img[width][height]{height:auto}
+.press-logo img[width][height],.partner-logo img[width][height],.hero-logo[width][height]{width:auto;height:auto;max-height:48px}
+.hero-logo[width][height]{max-height:none}
