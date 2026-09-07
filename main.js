@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ── 7. MOBILE DROPDOWN ACCORDION ── */
-  document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
+  document.querySelectorAll('nav .nav-links .nav-dropdown').forEach(function(dropdown) {
     const toggle = dropdown.querySelector(':scope > a');
     const menu = dropdown.querySelector('.nav-dropdown-menu');
     if (!toggle || !menu) return;
@@ -123,31 +123,22 @@ document.addEventListener('DOMContentLoaded', () => {
       if (window.innerWidth > 900) return;   // desktop keeps hover + normal link
       e.preventDefault();
       e.stopPropagation();
-      e.stopImmediatePropagation();          // block any other handler on this same link
+      e.stopImmediatePropagation();
 
-      // close any other open submenu first
-      document.querySelectorAll('.nav-dropdown-menu.mobile-dd-open').forEach(function(other) {
+      document.querySelectorAll('nav .nav-dropdown-menu.mobile-dd-open').forEach(function(other) {
         if (other === menu) return;
         other.classList.remove('mobile-dd-open');
-        other.style.cssText = '';
         const t = other.parentElement && other.parentElement.querySelector(':scope > a');
         if (t) t.setAttribute('aria-expanded', 'false');
       });
 
       const isOpen = menu.classList.toggle('mobile-dd-open');
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      menu.style.display = isOpen ? 'block' : 'none';
-      menu.style.position = 'static';
-      menu.style.background = 'rgba(255,255,255,0.05)';
-      menu.style.padding = isOpen ? '0.5rem 0 0.5rem 1rem' : '';
-      menu.style.marginBottom = isOpen ? '0.5rem' : '';
-      menu.style.borderLeft = isOpen ? '1px solid rgba(200,169,110,0.2)' : '';
     });
 
     menu.querySelectorAll('a').forEach(function(a) {
       a.addEventListener('click', function() {
         menu.classList.remove('mobile-dd-open');
-        menu.style.cssText = '';
         toggle.setAttribute('aria-expanded', 'false');
       });
     });

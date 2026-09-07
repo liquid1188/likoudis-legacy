@@ -353,12 +353,6 @@ footer {
   .give-method-card { padding: 1.25rem 0.75rem !important; }
   .give-method-card img { width: 48px !important; height: 48px !important; }
 
-  /* Mobile dropdown submenu fix */
-  .nav-links.mobile-open .nav-dropdown-menu.mobile-dd-open {
-    display: block !important;
-    position: static !important;
-  }
-
   /* Section padding tighter */
   section { padding: 2.5rem 1.25rem !important; }
 
@@ -496,10 +490,14 @@ footer {
    rule lived in a 768px query, leaving 769-900px broken. This matches
    the rule to the JS breakpoint.
    ------------------------------------------------------------------ */
+
+/* ── MOBILE DROPDOWN SUBMENU ── */
 @media (max-width: 900px) {
-  .nav-links.mobile-open .nav-dropdown-menu.mobile-dd-open {
-    display: block !important;
-    position: static !important;
+  .nav-links.mobile-open > li { width: 100%; text-align: center; }
+  .nav-links.mobile-open .nav-search-li { justify-content: center; padding: .75rem 0; }
+  .nav-links.mobile-open > li:last-child { border-bottom: 0; }
+  .nav-links.mobile-open .nav-dropdown > a {
+    display: flex; justify-content: center; align-items: center; gap: .5rem;
   }
   .nav-links.mobile-open .nav-dropdown > a::after {
     content: '';
@@ -508,12 +506,36 @@ footer {
     border-right: 4px solid transparent;
     border-top: 5px solid currentColor;
     opacity: .65;
-    margin-left: .5rem;
     transition: transform .2s ease;
   }
-  .nav-links.mobile-open .nav-dropdown > a[aria-expanded="true"]::after {
-    transform: rotate(180deg);
+  .nav-links.mobile-open .nav-dropdown > a[aria-expanded="true"]::after { transform: rotate(180deg); }
+
+  .nav-links.mobile-open .nav-dropdown-menu {
+    display: none !important;
+    position: static !important;
+    min-width: 0; width: 100%;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 0 .75rem !important;
+    margin: -.25rem 0 0 !important;
   }
+  .nav-links.mobile-open .nav-dropdown-menu.mobile-dd-open { display: block !important; }
+  .nav-links.mobile-open .nav-dropdown-menu a {
+    display: block; text-align: center;
+    padding: .55rem 0 !important;
+    font-size: .9rem !important;
+    letter-spacing: .06em;
+    color: rgba(244,237,224,.72) !important;
+    background: none !important;
+  }
+  .nav-links.mobile-open .nav-dropdown-menu a:hover,
+  .nav-links.mobile-open .nav-dropdown-menu a.nav-active { color: var(--gold-light, #d9c39a) !important; }
+
+  /* footer: dropdown markup renders as plain links */
+  footer .nav-dropdown > a::after { content: none; }
+  footer .nav-dropdown-menu { display: block !important; position: static; border: 0; background: none; padding: 0; min-width: 0; }
+  footer .nav-dropdown-menu a { font-size: inherit !important; padding: 0 !important; color: inherit !important; }
+  footer .nav-dropdown-menu a:first-child { display: none; } /* parent link already reads Fellows & Grants */
 }
 
 /* audit: contrast */
