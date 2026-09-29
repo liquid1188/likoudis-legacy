@@ -1,3 +1,7 @@
+// Web3Forms access key. Paste the key from the Web3Forms email between the quotes.
+window.W3F_KEY = "";
+window.w3fBody=function(o){var out={};for(var k in o){var v=o[k];if(k==='_subject')out.subject=v;else if(k==='_replyto')out.replyto=v;else if(k==='_honey'||k==='_gotcha'){if(v)out.botcheck=v;}else if(k.charAt(0)!=='_')out[k]=v;}if(window.W3F_KEY)out.access_key=window.W3F_KEY;return JSON.stringify(out);};
+document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('input[name=access_key]').forEach(function(i){if(window.W3F_KEY)i.value=window.W3F_KEY;});});
 /* ─── LLF MAIN.JS ─── */
 
 /* ─── CLEAN URL: strip .html from the address bar (no reload) ─── */
