@@ -343,3 +343,42 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 });
+
+/* Web3Forms: send in the background and confirm on the page. The JSON request
+   leaves out "redirect" so Web3Forms answers with JSON instead of a page. If
+   the request fails, the form posts normally and comes back with ?sent=true. */
+(function(){
+  function notice(target, html, replace){
+    var n=document.createElement('div');
+    n.setAttribute('role','status'); n.className='form-sent-notice';
+    n.style.cssText='padding:1.25rem 1.5rem;margin:0 0 1.5rem;border:1px solid var(--gold,#b8963e);background:rgba(184,150,62,.08);color:inherit;font-weight:600;line-height:1.5;';
+    n.innerHTML=html;
+    if(replace) target.parentNode.replaceChild(n,target); else target.parentNode.insertBefore(n,target);
+    n.scrollIntoView({block:'center',behavior:'smooth'});
+  }
+  var forms=document.querySelectorAll('form[action="https://api.web3forms.com/submit"]');
+  forms.forEach(function(form){
+    form.addEventListener('submit',function(ev){
+      if(form.dataset.native) return;
+      ev.preventDefault();
+      var btn=form.querySelector('button[type=submit], input[type=submit]');
+      var label=btn?(btn.textContent||btn.value):'';
+      if(btn){btn.disabled=true; if(btn.tagName==='BUTTON') btn.textContent='Sending...';}
+      var data={}; new FormData(form).forEach(function(v,k){ if(k==='_next'||k==='redirect') return; data[k]=v; });
+      fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+        .then(function(r){return r.json();})
+        .then(function(res){
+          if(!(res && (res.success===true || res.success==='true'))) throw new Error('not accepted');
+          notice(form,'<strong>Thank you.</strong> '+(form.dataset.thanks||'Your message has been sent and we will reply soon.'),true);
+        })
+        .catch(function(){
+          if(btn){btn.disabled=false; if(btn.tagName==='BUTTON') btn.textContent=label;}
+          form.dataset.native='1'; form.submit();
+        });
+    });
+  });
+  var q=new URLSearchParams(location.search);
+  if((q.get('sent')==='true'||q.get('applied')==='true') && forms[0]){
+    notice(forms[0],'<strong>Thank you.</strong> '+(forms[0].dataset.thanks||'Your message has been sent and we will reply soon.'),false);
+  }
+})();

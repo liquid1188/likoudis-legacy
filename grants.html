@@ -277,30 +277,5 @@
 </footer>
 
 <script src="main.js"></script>
-<script>(function(){if(new URLSearchParams(location.search).get('applied')==='true'){var f=document.querySelector('form.contact-form, form.apply-form');if(f){var n=document.createElement('p');n.className='form-sent-notice';n.style.cssText='padding:1rem 1.25rem;margin:0 0 1.5rem;border:1px solid var(--gold,#b8963e);color:var(--navy,#1b2a4a);font-weight:600;';n.textContent='Thank you. Your application has been received.';f.parentNode.insertBefore(n,f);n.scrollIntoView({block:'center'});}}})();</script>
-<script>
-(function(){
-  document.querySelectorAll('form[action="https://api.web3forms.com/submit"]').forEach(function(form){
-    form.addEventListener('submit',function(ev){
-      ev.preventDefault();
-      var btn=form.querySelector('button[type=submit], input[type=submit]'); if(btn){btn.disabled=true; btn.dataset.label=btn.textContent||btn.value; if(btn.tagName==='BUTTON') btn.textContent='Sending...';}
-      var data={}; new FormData(form).forEach(function(v,k){ if(k==='_next') return; data[k]=v; });
-      var url=form.action;
-      fetch(url,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:w3fBody(data)})
-        .then(function(r){return r.json();})
-        .then(function(res){
-          if(res && (res.success==='true' || res.success===true)){
-            var n=document.createElement('div');
-            n.setAttribute('role','status');
-            n.style.cssText='padding:1.25rem 1.5rem;border:1px solid var(--gold,#b8963e);color:var(--navy,#1b2a4a);font-weight:600;line-height:1.5;';
-            n.innerHTML='<strong>Thank you.</strong> '+(form.dataset.thanks||'Your message has been sent and we will reply soon.');
-            form.parentNode.replaceChild(n,form); n.scrollIntoView({block:'center'});
-          } else { throw new Error('not accepted'); }
-        })
-        .catch(function(){ if(btn){btn.disabled=false; if(btn.tagName==='BUTTON') btn.textContent=btn.dataset.label;} form.removeEventListener('submit',arguments.callee); form.submit(); });
-    });
-  });
-})();
-</script>
 </body>
 </html>
