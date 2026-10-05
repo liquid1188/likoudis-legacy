@@ -212,7 +212,12 @@ document.addEventListener('DOMContentLoaded', () => {
       b.addEventListener('click', function () { suppress(60); }); // engaged → suppress longer
     });
 
-    setTimeout(function () {
+    // Show later in the visit: once the reader is halfway down the page,
+    // or after 30 seconds on the page, whichever comes first (never before 8s).
+    var shown = false, ready = false, start = Date.now();
+    function show() {
+      if (shown) return; shown = true;
+      window.removeEventListener('scroll', onScroll);
       document.body.appendChild(overlay);
       try { sessionStorage.setItem(SS, '1'); } catch (e) {}
       document.addEventListener('keydown', onKey);
@@ -220,7 +225,15 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('llf-promo-visible');
         document.body.style.overflow = 'hidden';
       });
-    }, 4000);
+    }
+    function scrolledHalf() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      return h > 0 && (window.scrollY / h) >= 0.5;
+    }
+    function onScroll() { if (ready && scrolledHalf()) show(); }
+    setTimeout(function () { ready = true; if (scrolledHalf()) show(); }, 8000);
+    setTimeout(show, 30000);
+    window.addEventListener('scroll', onScroll, { passive: true });
   })();
 
 
@@ -381,4 +394,40 @@ document.addEventListener('DOMContentLoaded', () => {
   if((q.get('sent')==='true'||q.get('applied')==='true') && forms[0]){
     notice(forms[0],'<strong>Thank you.</strong> '+(forms[0].dataset.thanks||'Your message has been sent and we will reply soon.'),false);
   }
+})();
+
+/* ─── READABILITY PASS (Oct 2026) ───
+   Gold (#c8a96e) reads well on navy but falls to about 2:1 on ivory and cream.
+   Wherever gold text sits on a light background, switch it to a deeper gold
+   (#866628, about 4.6:1 on cream). Faint cream text on navy is lifted to 82%.
+   Runs once on load; dark sections keep the original gold. */
+(function () {
+  function rgb(c) { var m = c && c.match(/[\d.]+/g); return m ? m.map(Number) : null; }
+  function bgOf(el) {
+    while (el && el !== document.documentElement) {
+      var c = rgb(getComputedStyle(el).backgroundColor);
+      if (c && (c.length < 4 || c[3] > 0.5)) return c;
+      el = el.parentElement;
+    }
+    return [250, 247, 242];
+  }
+  function light(c) { return (0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]) > 150; }
+  function run() {
+    var els = document.body.querySelectorAll('*');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      if (el.closest('.llf-promo-overlay,.llf-s-panel')) continue;
+      var hasText = false;
+      for (var n = el.firstChild; n; n = n.nextSibling) if (n.nodeType === 3 && n.textContent.trim()) { hasText = true; break; }
+      if (!hasText) continue;
+      var c = rgb(getComputedStyle(el).color);
+      if (!c) continue;
+      if (c[0] === 200 && c[1] === 169 && c[2] === 110) {
+        if (light(bgOf(el))) el.classList.add('ink-gold');
+      } else if (c[0] === 244 && c[1] === 237 && c[2] === 224 && c.length === 4 && c[3] < 0.78) {
+        if (!light(bgOf(el))) el.classList.add('ink-cream');
+      }
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();
