@@ -100,7 +100,7 @@
   <div class="header-divider"></div>
 </div>
 
-<!-- CAPITAL CAMPAIGN: update data-raised and the figures below as gifts come in -->
+<!-- CAPITAL CAMPAIGN: the figures below are the fallback; the bar refreshes itself from /.netlify/functions/campaign-total -->
 <section class="campaign on-light" id="campaign">
   <div class="campaign-inner reveal">
     <div class="campaign-text">
@@ -425,6 +425,16 @@
   </div>
   <div class="footer-bottom"><p>&copy; 2026 Likoudis Legacy Foundation &middot; Tax ID: 99-3126276 &middot; Site by <a href="https://lickitysplitweb.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Lickity Split Web Design</a></p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacy" target="_blank" rel="noopener" title="X / Twitter">&#120143;</a><a href="https://www.linkedin.com/in/andrewlikoudis/" target="_blank" rel="noopener" title="LinkedIn" style="font-size:0.75rem;font-weight:600;letter-spacing:0.04em;">in</a><a href="https://traditionandrenewal.substack.com" target="_blank" rel="noopener" title="T&amp;R Substack" style="font-family:Cormorant Garamond,serif;font-style:italic;font-size:0.75rem;letter-spacing:0.05em;">T&amp;R</a><a href="https://andrewlikoudis.com" target="_blank" rel="noopener" title="Andrew Likoudis" style="font-family:Cormorant Garamond,serif;font-size:0.75rem;letter-spacing:0.04em;">AL</a></div></div>
 </footer>
+<script>
+(function(){var c=document.getElementById('campaign');if(!c||!window.fetch)return;
+fetch('/.netlify/functions/campaign-total').then(function(r){return r.ok?r.json():null;}).then(function(d){if(!d||!d.goal)return;
+var f=function(n){return '$'+Math.round(n).toLocaleString('en-US');},p=Math.min(100,d.raised/d.goal*100);
+c.querySelector('.campaign-figs').innerHTML='<strong>'+f(d.raised)+'</strong> raised of '+f(d.goal);
+var t=c.querySelector('.campaign-track');t.setAttribute('aria-valuenow',d.raised);t.setAttribute('aria-valuemax',d.goal);t.setAttribute('aria-valuetext',f(d.raised)+' raised of '+f(d.goal));
+c.querySelector('.campaign-fill').style.setProperty('--pct',p.toFixed(1)+'%');
+var st=c.querySelectorAll('.campaign-steps li');[.25,.5,.75].forEach(function(k,i){if(st[i])st[i].textContent=f(d.goal*k);});
+c.querySelector('.campaign-left').textContent=d.raised>=d.goal?'Goal reached. Thank you!':f(d.goal-d.raised)+' to go. '+Math.round(p)+'% of the goal is in hand.';}).catch(function(){});})();
+</script>
 <script src="main.js?v=20261005"></script>
 </body>
 </html>
