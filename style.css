@@ -553,3 +553,20 @@ footer p, .footer-tagline, .footer-desc{color:rgba(244,237,224,.85)!important;}
 .ink-gold { color: var(--gold-ink) !important; opacity: 1 !important; }
 a.ink-gold:hover { color: #6e521d !important; }
 .ink-cream { color: rgba(244,237,224,0.82) !important; }
+
+/* ===== Capital campaign (donate page) ===== */
+.campaign { background: var(--ivory); padding: 5rem 2rem 4rem; }
+.campaign-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 3.5rem; align-items: center; }
+.campaign-text p { color: var(--muted); line-height: 1.8; margin-top: 1rem; }
+.campaign-meter { background: #fff; border-top: 3px solid var(--gold); padding: 2rem 2.2rem 2.2rem; box-shadow: 0 1px 0 var(--border); }
+.campaign-figs { color: var(--muted); margin: 0 0 1rem; font-size: .95rem; }
+.campaign-figs strong { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 3rem; line-height: 1; color: var(--navy); margin-right: .4rem; }
+.campaign-track { position: relative; height: 16px; background: var(--cream); border: 1px solid var(--border); overflow: hidden; }
+.campaign-fill { position: absolute; inset: 0 auto 0 0; width: var(--pct); background: linear-gradient(90deg, #a8864a, var(--gold)); animation: campaign-grow 1.6s cubic-bezier(.2,.7,.2,1) both; }
+.campaign-track i { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--border); }
+@keyframes campaign-grow { from { width: 0; } to { width: var(--pct); } }
+@media (prefers-reduced-motion: reduce) { .campaign-fill { animation: none; } }
+.campaign-steps { position: relative; list-style: none; margin: .4rem 0 0; padding: 0; height: 1.3rem; font-size: .75rem; color: var(--muted); }
+.campaign-steps li { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.campaign-left { color: var(--muted); margin: 1rem 0 1.4rem; font-size: .95rem; }
+@media (max-width: 800px) { .campaign-inner { grid-template-columns: 1fr; gap: 2rem; } .campaign { padding: 3.5rem 1.25rem 3rem; } .campaign-meter { padding: 1.6rem 1.4rem 1.8rem; } }
