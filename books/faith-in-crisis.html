@@ -153,6 +153,15 @@
     border-radius: 3px;
     flex-shrink: 0;
   }
+  .coverage-item + .coverage-item { margin-top: 1rem; }
+  .coverage-mark {
+    width: 64px; height: 64px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--navy); color: var(--cream);
+    font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600;
+    border-radius: 3px;
+  }
+  .coverage-note { font-size: 0.8rem; opacity: 0.7; }
   .coverage-item span { font-size: 0.95rem; line-height: 1.4; }
   .coverage-item:hover span { color: var(--gold); }
   .endorsement cite {
@@ -242,10 +251,22 @@
       <cite>Odilo Pedro Cardinal Scherer, Archbishop of São Paulo</cite>
     </div>
   </div>
-  <div class="book-coverage"><h3>Reviewed In</h3>
+  <div class="book-coverage"><h3>Reviews &amp; Coverage</h3>
     <a class="coverage-item" href="https://wherepeteris.com/the-traditionalist-in-the-tempest-a-catholic-worker-reviews-faith-in-crisis/" target="_blank" rel="noopener">
       <img src="../lik-wpi.png" alt="Where Peter Is">
       <span><em>Where Peter Is</em><br>James Boll, &ldquo;Traditionalists in the Tempest&rdquo; (June 2026)</span>
+    </a>
+    <a class="coverage-item" href="https://www.catholicculture.org/commentary/fresh-attempt-at-tackling-all-todays-catholic-issues/" target="_blank" rel="noopener">
+      <img src="../images/lik-catholic-culture.png" alt="Catholic Culture">
+      <span><em>Catholic Culture</em><br>Jeff Mirus, &ldquo;A Fresh Attempt at Tackling All of Today&rsquo;s Catholic Issues&rdquo; (October 2025)</span>
+    </a>
+    <a class="coverage-item" href="https://institute.wordonfire.org/" target="_blank" rel="noopener">
+      <span class="coverage-mark" aria-hidden="true">E&amp;C</span>
+      <span><em>Evangelization &amp; Culture</em> (Word on Fire), Spring 2026 issue, in print<br><span class="coverage-note">Available through the Word on Fire Institute</span></span>
+    </a>
+    <a class="coverage-item" href="https://www.youtube.com/watch?v=8rT_Oz8JLdk" target="_blank" rel="noopener">
+      <span class="coverage-mark" aria-hidden="true">&#9654;</span>
+      <span><em>Gospel Simplicity Podcast</em><br>Interview with Austin Suggs (video)</span>
     </a>
   </div>
 </div>
