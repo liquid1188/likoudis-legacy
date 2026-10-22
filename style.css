@@ -172,7 +172,7 @@ footer {
 }
 .footer-brand img { height: 130px; width: 130px; object-fit: contain; margin-bottom: 1rem; }
 .footer-brand p { font-size: 0.8rem; color: rgba(244,237,224,0.45); line-height: 1.75; margin-bottom: 1rem; }
-.footer-brand address { font-style: normal; font-size: 0.78rem; color: rgba(244,237,224,0.4); line-height: 1.8; }
+.footer-brand address { font-style: normal; font-size: 0.78rem; color: rgba(244,237,224,0.6); line-height: 1.8; }
 .footer-col h4 { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; opacity: 0.8; }
 .footer-col ul { list-style: none; }
 .footer-col ul li { margin-bottom: 0.6rem; }
@@ -188,7 +188,7 @@ footer {
 .footer-social a {
   width: 32px; height: 32px; border: 1px solid rgba(200,169,110,0.2);
   display: flex; align-items: center; justify-content: center;
-  color: rgba(244,237,224,0.4); text-decoration: none; font-size: 0.8rem;
+  color: rgba(244,237,224,0.6); text-decoration: none; font-size: 0.8rem;
   transition: border-color 0.2s, color 0.2s;
 }
 .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
