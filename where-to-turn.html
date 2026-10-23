@@ -63,16 +63,13 @@
   .rg-find { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); text-decoration: none; border-bottom: 1.5px solid var(--gold); padding-bottom: 2px; }
   .rg-find:hover { color: var(--gold); }
 
+  .rg-book.rg-featured { background: white; border: 1px solid rgba(200,169,110,0.5); border-left: 3px solid var(--gold); padding: 2rem 2rem 2rem 1.75rem; margin: 1.5rem 0; box-shadow: 0 6px 22px rgba(14,27,46,0.06); }
+  .rg-book.rg-featured:last-child { border-bottom: 1px solid rgba(200,169,110,0.5); }
+  .rg-featured-tag { display: inline-block; font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy); background: rgba(200,169,110,0.2); padding: 0.32rem 0.65rem; margin-bottom: 0.85rem; }
+  .rg-book-cover img.rg-mockup { border: none; box-shadow: none; }
   .rg-shelf-group { margin-top: 2.25rem; }
   .rg-section-blurb + .rg-shelf-group { margin-top: 0; }
   .rg-shelf-group h4 { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.4rem; }
-  .rg-shelf-item { padding: 1.2rem 0; border-bottom: 1px solid rgba(200,169,110,0.18); }
-  .rg-shelf-item:last-child { border-bottom: none; }
-  .rg-shelf-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.22rem; font-weight: 500; color: var(--navy); line-height: 1.3; margin-bottom: 0.3rem; }
-  .rg-shelf-item h3 a { color: inherit; text-decoration: none; }
-  .rg-shelf-item h3 a:hover { color: var(--gold); }
-  .rg-shelf-item .rg-byline { margin-bottom: 0.5rem; }
-  .rg-shelf-item p { font-size: 0.92rem; color: var(--muted); line-height: 1.8; margin: 0; }
 
   .rg-callout { margin-top: 5rem; background: white; border: 1px solid rgba(200,169,110,0.4); padding: 2.5rem 2.75rem; }
   .rg-callout h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: var(--navy); margin: 0.5rem 0 0.9rem; }
@@ -98,6 +95,7 @@
   @media(max-width:640px){
     .rg-book { grid-template-columns: 110px 1fr; gap: 1.4rem; }
     .rg-callout { padding: 1.8rem 1.5rem; }
+    .rg-book.rg-featured { padding: 1.4rem 1.1rem; }
   }
 </style>
 </head>
@@ -141,9 +139,10 @@
       <div class="rg-section-head"><span class="section-label">Start Here</span><div class="rule"></div></div>
       <p class="rg-section-blurb">If you read nothing else, read these three. The first two are classics that have guided the faithful through this crisis for decades: Congar wrote within months of Lefebvre's &ldquo;hot summer&rdquo; of 1976, when the archbishop ordained priests in defiance of Paul VI and incurred suspension <em>a divinis</em>, twelve years before the episcopal consecrations that followed; James Likoudis's book has been answering traditionalist objections since it first appeared in 1981. The third gathers the best of the newer scholarship in one place.</p>
 
-      <div class="rg-book">
+      <div class="rg-book rg-featured">
         <div class="rg-book-cover"><a href="https://enroutebooksandmedia.com/challengetothechurch/" target="_blank" rel="noopener"><img src="newsletter/navigating-schism/challenge.jpg" alt="Challenge to the Church by Yves Congar" loading="lazy"></a></div>
         <div>
+          <span class="rg-featured-tag">Featured Resource</span>
           <h3><a href="https://enroutebooksandmedia.com/challengetothechurch/" target="_blank" rel="noopener">Challenge to the Church: The Case of Archbishop Lefebvre</a></h3>
           <div class="rg-byline">Yves Congar, OP · 50th-Anniversary Edition, Edited by Andrew Likoudis</div>
           <p>Congar, whose work shaped the Second Vatican Council, examined the Lefebvre crisis as it broke in 1976, and his judgment has lost none of its force in the fifty years since. We reissued it this month for precisely this moment.</p>
@@ -151,9 +150,10 @@
         </div>
       </div>
 
-      <div class="rg-book">
+      <div class="rg-book rg-featured">
         <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=The+Pope+the+Council+and+the+Mass+Likoudis+Whitehead" target="_blank" rel="noopener"><img src="newsletter/navigating-schism/pope-council-mass.jpg" alt="The Pope, the Council, and the Mass" loading="lazy"></a></div>
         <div>
+          <span class="rg-featured-tag">Featured Resource</span>
           <h3><a href="https://www.amazon.com/s?k=The+Pope+the+Council+and+the+Mass+Likoudis+Whitehead" target="_blank" rel="noopener">The Pope, the Council, and the Mass</a></h3>
           <div class="rg-byline">James Likoudis &amp; Kenneth D. Whitehead · Revised Edition</div>
           <p>James Likoudis's classic, produced with Kenneth Whitehead through Catholics United for the Faith to stem the tide of dissent that followed the Council, and for decades the standard first reference on traditionalist objections, worked through question by question with the documents in hand. It was hailed by the Vatican's newspaper <em>L'Osservatore Romano</em> and by two Servants of God, John Hardon and Hans Urs von Balthasar, and it is still drawing new readers and reviews, from Michael Lofton of Reason &amp; Theology among others.</p>
@@ -161,9 +161,10 @@
         </div>
       </div>
 
-      <div class="rg-book">
+      <div class="rg-book rg-featured">
         <div class="rg-book-cover"><a href="https://enroutebooksandmedia.com/faithincrisis/" target="_blank" rel="noopener"><img src="newsletter/navigating-schism/faith-in-crisis.jpg" alt="Faith in Crisis" loading="lazy"></a></div>
         <div>
+          <span class="rg-featured-tag">Featured Resource</span>
           <h3><a href="https://enroutebooksandmedia.com/faithincrisis/" target="_blank" rel="noopener">Faith in Crisis: Critical Dialogues in Catholic Traditionalism, Church Authority, and Reform</a></h3>
           <div class="rg-byline">Edited by Andrew Likoudis · Foreword by Rocco Buttiglione</div>
           <p>Forty chapters from more than thirty contributors, Cardinal Robert Sarah, Jimmy Akin, Mike Aquilina, and Robert Fastiggi among them, gathered so that a reader can think through authority, tradition, and reform with the whole picture in view. It carries an imprimatur from Archbishop Lori, was praised in Word on Fire&rsquo;s <em>Evangelization &amp; Culture</em> journal as &ldquo;an impressive labor of love,&rdquo; and has drawn warm reviews from writers as far apart as <em>Catholic Culture</em> and the <em>Catholic Worker</em>.</p>
@@ -229,9 +230,10 @@
       <div class="rg-section-head"><span class="section-label">Authority and Dissent</span><div class="rule"></div></div>
       <p class="rg-section-blurb">Every traditionalist argument eventually comes down to one question: when, if ever, may a Catholic refuse the teaching of the Church? This book takes that question head on.</p>
 
-      <div class="rg-book">
+      <div class="rg-book rg-featured">
         <div class="rg-book-cover"><a href="books/to-his-face"><img src="images/book-to-his-face.jpg" alt="To His Face by Andrew Likoudis" loading="lazy"></a></div>
         <div>
+          <span class="rg-featured-tag">Featured Resource</span>
           <h3><a href="books/to-his-face">To His Face: Indefectibility &amp; the Problem of Dissent</a></h3>
           <div class="rg-byline">Andrew Likoudis · Foreword by Robert Fastiggi · Afterword by Emmett O&rsquo;Regan</div>
           <p>Drawing on <em>Lumen Gentium</em>, <em>Dei Verbum</em>, and <em>Donum Veritatis</em>, alongside Newman, Aquinas, Congar, and Bellarmine, the book examines the authority of the Magisterium, the limits of theological dissent, and the Church&rsquo;s indefectibility as the ground of trust in her teaching office.</p>
@@ -287,91 +289,162 @@
     <!-- FURTHER READING -->
     <div class="rg-section reveal">
       <div class="rg-section-head"><span class="section-label">Further Reading</span><div class="rule"></div></div>
-      <p class="rg-section-blurb">For those who want to go deeper, a wider shelf on the movement, the Council it rejects, and the liturgy at the center of the dispute.</p>
+      <p class="rg-section-blurb">For those who want to go deeper, a wider shelf on Tradition itself, the movement, the Council it rejects, and the liturgy at the center of the dispute.</p>
+
+      <div class="rg-shelf-group">
+        <h4>On Tradition</h4>
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=Congar+Tradition+and+Traditions" target="_blank" rel="noopener"><img src="guides/where-to-turn/tradition-and-traditions.jpg" alt="Tradition and Traditions by Yves Congar" loading="lazy"></a></div>
+          <div>
+          <h3><a href="https://www.amazon.com/s?k=Congar+Tradition+and+Traditions" target="_blank" rel="noopener">Tradition and Traditions</a></h3>
+          <div class="rg-byline">Yves Congar, OP</div>
+          <p>Congar&rsquo;s great historical and theological study of what the Church means by Tradition, and of how the one apostolic Tradition differs from the many customs and traditions that grow up around it. That is precisely the distinction traditionalism tends to blur.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=Congar+Tradition+and+Traditions" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
+        </div>
+      </div>
 
       <div class="rg-shelf-group">
         <h4>On Traditionalism</h4>
-        <div class="rg-shelf-item">
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=The+Council+in+Question+Doorly+Nichols" target="_blank" rel="noopener"><img src="guides/where-to-turn/council-in-question.jpg" alt="The Council in Question: A Dialogue with Catholic Traditionalism" loading="lazy"></a></div>
+          <div>
           <h3><a href="https://www.amazon.com/s?k=The+Council+in+Question+Doorly+Nichols" target="_blank" rel="noopener">The Council in Question: A Dialogue with Catholic Traditionalism</a></h3>
-          <div class="rg-byline">Moyra Doorly &amp; Aidan Nichols, OP</div>
+          <div class="rg-byline">Moyra Doorly &amp; Aidan Nichols, OP · Foreword by Cardinal George Pell</div>
           <p>A traditionalist presses her objections to the Second Vatican Council and Aidan Nichols answers them. A real exchange rather than a polemic, and a model of how this conversation ought to be carried on.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=The+Council+in+Question+Doorly+Nichols" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
         </div>
-        <div class="rg-shelf-item">
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=More+Catholic+Than+the+Pope+Madrid+Vere" target="_blank" rel="noopener"><img src="guides/where-to-turn/more-catholic.jpg" alt="More Catholic Than the Pope: An Inside Look at Extreme Traditionalism" loading="lazy"></a></div>
+          <div>
           <h3><a href="https://www.amazon.com/s?k=More+Catholic+Than+the+Pope+Madrid+Vere" target="_blank" rel="noopener">More Catholic Than the Pope: An Inside Look at Extreme Traditionalism</a></h3>
           <div class="rg-byline">Patrick Madrid &amp; Pete Vere</div>
           <p>Still the standard popular treatment of the SSPX and the groups further out beyond it.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=More+Catholic+Than+the+Pope+Madrid+Vere" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
         </div>
-        <div class="rg-shelf-item">
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=Wounded+Witness+Therrien" target="_blank" rel="noopener"><img src="guides/where-to-turn/wounded-witness.jpg" alt="Wounded Witness: Reclaiming the Churchs Unity in a Time of Crisis" loading="lazy"></a></div>
+          <div>
           <h3><a href="https://www.amazon.com/s?k=Wounded+Witness+Therrien" target="_blank" rel="noopener">Wounded Witness: Reclaiming the Church&rsquo;s Unity in a Time of Crisis</a></h3>
-          <div class="rg-byline">Michel Therrien</div>
+          <div class="rg-byline">Michel Paulding Therrien · Foreword by Fr. James Mallon</div>
           <p>On the unity of the Church, what wounds it, and what it asks of the faithful in a divided moment.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=Wounded+Witness+Therrien" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
         </div>
-        <div class="rg-shelf-item">
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=Reflections+on+Radical+Catholic+Reactionaries+Armstrong" target="_blank" rel="noopener"><img src="guides/where-to-turn/armstrong-reflections.jpg" alt="Reflections on Radical Catholic Reactionaries" loading="lazy"></a></div>
+          <div>
           <h3><a href="https://www.amazon.com/s?k=Reflections+on+Radical+Catholic+Reactionaries+Armstrong" target="_blank" rel="noopener">Reflections on Radical Catholic Reactionaries</a></h3>
           <div class="rg-byline">Dave Armstrong</div>
           <p>A veteran apologist answers the arguments of the movement&rsquo;s more extreme wing one by one.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=Reflections+on+Radical+Catholic+Reactionaries+Armstrong" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
         </div>
-        <div class="rg-shelf-item">
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=My+Grandpa+The+Pope+Tony+Mack" target="_blank" rel="noopener"><img src="guides/where-to-turn/my-grandpa-the-pope.jpg" alt="My Grandpa, The Pope: From Sedevacantist Sect to the Catholic Church" loading="lazy"></a></div>
+          <div>
           <h3><a href="https://www.amazon.com/s?k=My+Grandpa+The+Pope+Tony+Mack" target="_blank" rel="noopener">My Grandpa, The Pope: From Sedevacantist Sect to the Catholic Church</a></h3>
           <div class="rg-byline">Tony Mack · A Memoir</div>
           <p>A memoir of growing up inside a sedevacantist sect and finding the way into full communion.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=My+Grandpa+The+Pope+Tony+Mack" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
         </div>
-        <div class="rg-shelf-item">
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=Confessions+of+a+Traditional+Catholic+Matthew+Arnold" target="_blank" rel="noopener"><img src="guides/where-to-turn/confessions.jpg" alt="Confessions of a Traditional Catholic" loading="lazy"></a></div>
+          <div>
           <h3><a href="https://www.amazon.com/s?k=Confessions+of+a+Traditional+Catholic+Matthew+Arnold" target="_blank" rel="noopener">Confessions of a Traditional Catholic</a></h3>
-          <div class="rg-byline">Matthew Arnold</div>
+          <div class="rg-byline">Matthew Arnold · Foreword by Scott Hahn</div>
           <p>Another first-person account, for readers who need to hear from someone who has been there.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=Confessions+of+a+Traditional+Catholic+Matthew+Arnold" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
         </div>
       </div>
 
       <div class="rg-shelf-group">
         <h4>On the Council</h4>
-        <div class="rg-shelf-item">
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=Theological+Highlights+of+Vatican+II+Ratzinger" target="_blank" rel="noopener"><img src="guides/where-to-turn/theological-highlights.jpg" alt="Theological Highlights of Vatican II" loading="lazy"></a></div>
+          <div>
           <h3><a href="https://www.amazon.com/s?k=Theological+Highlights+of+Vatican+II+Ratzinger" target="_blank" rel="noopener">Theological Highlights of Vatican II</a></h3>
           <div class="rg-byline">Joseph Ratzinger</div>
           <p>The future Pope Benedict XVI&rsquo;s accounts of the Council&rsquo;s sessions, written as they happened by a young theologian who served there as a <em>peritus</em>.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=Theological+Highlights+of+Vatican+II+Ratzinger" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
         </div>
-        <div class="rg-shelf-item">
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=Conciliar+Octet+Nichols" target="_blank" rel="noopener"><img src="guides/where-to-turn/conciliar-octet.jpg" alt="Conciliar Octet: A Concise Commentary on the Eight Key Texts of the Second Vatican Council" loading="lazy"></a></div>
+          <div>
           <h3><a href="https://www.amazon.com/s?k=Conciliar+Octet+Nichols" target="_blank" rel="noopener">Conciliar Octet: A Concise Commentary on the Eight Key Texts of the Second Vatican Council</a></h3>
           <div class="rg-byline">Aidan Nichols, OP</div>
           <p>A short, clear guide to what the Council actually taught, document by document.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=Conciliar+Octet+Nichols" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
         </div>
-        <div class="rg-shelf-item">
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=Vatican+II+Renewal+Within+Tradition+Lamb+Levering" target="_blank" rel="noopener"><img src="guides/where-to-turn/renewal-within-tradition.jpg" alt="Vatican II: Renewal Within Tradition" loading="lazy"></a></div>
+          <div>
           <h3><a href="https://www.amazon.com/s?k=Vatican+II+Renewal+Within+Tradition+Lamb+Levering" target="_blank" rel="noopener">Vatican II: Renewal Within Tradition</a></h3>
           <div class="rg-byline">Edited by Matthew L. Lamb &amp; Matthew Levering</div>
           <p>Leading theologians read each of the Council&rsquo;s documents in continuity with the tradition before it.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=Vatican+II+Renewal+Within+Tradition+Lamb+Levering" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
         </div>
       </div>
 
       <div class="rg-shelf-group">
         <h4>On the Liturgy</h4>
-        <div class="rg-shelf-item">
-          <h3><a href="https://www.amazon.com/s?k=A+Short+History+of+the+Roman+Mass+Lang" target="_blank" rel="noopener">A Short History of the Roman Mass</a></h3>
-          <div class="rg-byline">Uwe Michael Lang</div>
-          <p>A concise history of the Roman Mass from the early Church to the present by a liturgical scholar respected on all sides.</p>
-        </div>
-        <div class="rg-shelf-item">
-          <h3><a href="https://www.amazon.com/s?k=The+Mass+of+the+Roman+Rite+Jungmann" target="_blank" rel="noopener">The Mass of the Roman Rite: Its Origins and Development</a></h3>
-          <div class="rg-byline">Joseph A. Jungmann, SJ</div>
-          <p>The classic history of the Roman Mass, showing how much it changed and grew over the centuries before 1962.</p>
-        </div>
-        <div class="rg-shelf-item">
-          <h3><a href="https://www.amazon.com/s?k=The+History+and+the+Future+of+the+Roman+Liturgy+Crouan" target="_blank" rel="noopener">The History and the Future of the Roman Liturgy</a></h3>
-          <div class="rg-byline">Denis Crouan</div>
-          <p>Crouan argues from the reformed Missal as it is actually written, and shows it standing in continuity with the Roman tradition.</p>
-        </div>
-        <div class="rg-shelf-item">
+        <div class="rg-book rg-featured">
+          <div class="rg-book-cover"><a href="https://www.massexplained.com/product/mass-explained-catholic-mass-book/" target="_blank" rel="noopener"><img src="guides/where-to-turn/mass-explained.jpg" alt="Mass Explained: An Illustrated Guide to the Catholic Mass" loading="lazy" class="rg-mockup"></a></div>
+          <div>
+          <span class="rg-featured-tag">Featured Resource</span>
           <h3><a href="https://www.massexplained.com/product/mass-explained-catholic-mass-book/" target="_blank" rel="noopener">Mass Explained: An Illustrated Guide to the Catholic Mass</a></h3>
           <div class="rg-byline">Dan Gonzalez · Imprimatur, Archdiocese of Miami</div>
           <p>A large illustrated walk through the Mass from beginning to end: where its prayers come from, what its postures mean, and how its vessels and vestments developed, with hundreds of photographs of Church art and architecture. Each of its 43 chapters closes with review and discussion questions, which makes it well suited to parish groups and classrooms.</p>
+          <a class="rg-find" href="https://www.massexplained.com/product/mass-explained-catholic-mass-book/" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
+        </div>
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=A+Short+History+of+the+Roman+Mass+Lang" target="_blank" rel="noopener"><img src="guides/where-to-turn/lang-short-history.jpg" alt="A Short History of the Roman Mass" loading="lazy"></a></div>
+          <div>
+          <h3><a href="https://www.amazon.com/s?k=A+Short+History+of+the+Roman+Mass+Lang" target="_blank" rel="noopener">A Short History of the Roman Mass</a></h3>
+          <div class="rg-byline">Uwe Michael Lang</div>
+          <p>A concise history of the Roman Mass from the early Church to the present by a liturgical scholar respected on all sides.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=A+Short+History+of+the+Roman+Mass+Lang" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
+        </div>
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=The+Mass+of+the+Roman+Rite+Jungmann" target="_blank" rel="noopener"><img src="guides/where-to-turn/jungmann.jpg" alt="The Mass of the Roman Rite: Its Origins and Development" loading="lazy" class="rg-mockup"></a></div>
+          <div>
+          <h3><a href="https://www.amazon.com/s?k=The+Mass+of+the+Roman+Rite+Jungmann" target="_blank" rel="noopener">The Mass of the Roman Rite: Its Origins and Development</a></h3>
+          <div class="rg-byline">Joseph A. Jungmann, SJ</div>
+          <p>The classic history of the Roman Mass, showing how much it changed and grew over the centuries before 1962.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=The+Mass+of+the+Roman+Rite+Jungmann" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
+        </div>
+        <div class="rg-book">
+          <div class="rg-book-cover"><a href="https://www.amazon.com/s?k=The+History+and+the+Future+of+the+Roman+Liturgy+Crouan" target="_blank" rel="noopener"><img src="guides/where-to-turn/crouan.jpg" alt="The History and the Future of the Roman Liturgy" loading="lazy"></a></div>
+          <div>
+          <h3><a href="https://www.amazon.com/s?k=The+History+and+the+Future+of+the+Roman+Liturgy+Crouan" target="_blank" rel="noopener">The History and the Future of the Roman Liturgy</a></h3>
+          <div class="rg-byline">Denis Crouan</div>
+          <p>Crouan argues from the reformed Missal as it is actually written, and shows it standing in continuity with the Roman tradition.</p>
+          <a class="rg-find" href="https://www.amazon.com/s?k=The+History+and+the+Future+of+the+Roman+Liturgy+Crouan" target="_blank" rel="noopener">Find the Book ›</a>
+          </div>
         </div>
       </div>
 
       <div class="rg-shelf-group">
         <h4>To Listen</h4>
-        <div class="rg-shelf-item">
+        <div class="rg-book rg-featured">
+          <div class="rg-book-cover"><a href="https://catholicproductions.com/products/the-mass-of-all-ages-vatican-ii-and-the-novus-ordo-in-scripture-and-tradition" target="_blank" rel="noopener"><img src="guides/where-to-turn/mass-of-all-ages.jpg" alt="The Mass of All Ages: Vatican II and the Novus Ordo in Scripture and Tradition" loading="lazy" class="rg-mockup"></a></div>
+          <div>
+          <span class="rg-featured-tag">Featured Resource</span>
           <h3><a href="https://catholicproductions.com/products/the-mass-of-all-ages-vatican-ii-and-the-novus-ordo-in-scripture-and-tradition" target="_blank" rel="noopener">The Mass of All Ages: Vatican II and the Novus Ordo in Scripture and Tradition</a></h3>
           <div class="rg-byline">Brant Pitre · Catholic Productions · Audio Lectures</div>
           <p>More than twenty hours of lectures on how the 1970 Missal came about and the popes who reformed the liturgy, taking up the disputed points one by one (language, the orientation of the priest, the lectionary, the offertory, the Eucharistic Prayers, Communion, sacred music) in the light of Scripture, the Fathers, and the Doctors of the Church. Pitre sets out to explain the changes rather than argue for or against them, which is exactly what makes it useful here.</p>
+          <a class="rg-find" href="https://catholicproductions.com/products/the-mass-of-all-ages-vatican-ii-and-the-novus-ordo-in-scripture-and-tradition" target="_blank" rel="noopener">Find the Series ›</a>
+          </div>
         </div>
       </div>
     </div>
