@@ -106,6 +106,41 @@
 .video-info a:hover { opacity: 1; }
 @media(max-width: 900px) { .videos-grid { grid-template-columns: repeat(2, 1fr); } }
 @media(max-width: 560px) { .videos-grid { grid-template-columns: 1fr; } }
+.videos-grid { margin-top: 1.4rem; }
+.vgroup { margin-top: 4rem; }
+.vgroup:first-child { margin-top: 0; }
+.vgroup .vfeature { margin-top: 1.4rem; }
+.vgroup .vfeature + .videos-grid { margin-top: 2px; }
+.vgroup-h { font-family: 'Cormorant Garamond', serif; font-weight: 400; color: var(--cream); font-size: 2rem; margin: 0; padding-bottom: .6rem; border-bottom: 1px solid rgba(200,169,110,.3); }
+.vgroup-sub { color: rgba(245,240,230,.65); font-size: .95rem; margin: .7rem 0 0; }
+.vgroup-k { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+.video-src { font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); opacity: .75; }
+.vfeature { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); background: var(--navy-mid); border: 1px solid rgba(200,169,110,.35); }
+.vfeature-txt { padding: 2.2rem; display: flex; flex-direction: column; gap: .6rem; justify-content: center; }
+.vfeature-txt h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; color: var(--cream); font-size: 2.2rem; line-height: 1.1; margin: 0; }
+.vfeature-show { color: var(--gold); font-style: italic; margin: 0; }
+.vfeature-txt p { color: rgba(245,240,230,.8); margin: 0; line-height: 1.6; }
+.vfeature-txt a { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); text-decoration: none; margin-top: .6rem; }
+@media(max-width: 900px) { .vfeature { grid-template-columns: 1fr; } }
+.vcount { text-align: center; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); opacity: .8; margin: 0 0 3rem; }
+.vgroup { margin-top: 5rem; }
+.vgroup-h { text-align: center; border-bottom: 0; padding-bottom: 0; font-size: 2.3rem; }
+.vnum { display: block; font-size: .95rem; letter-spacing: .3em; color: var(--gold); margin-bottom: .5rem; }
+.vgroup-h::after { content: ""; display: block; width: 120px; height: 1px; margin: 1rem auto 0; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.vgroup-sub { text-align: center; max-width: 40rem; margin-left: auto; margin-right: auto; }
+.vgroup .videos-grid { margin-top: 2.2rem; }
+.vgroup .vfeature { margin-top: 2.2rem; }
+.vgroup .vfeature + .videos-grid { margin-top: 2px; }
+.vfeature { box-shadow: inset 0 0 0 1px rgba(200,169,110,.5), inset 0 0 0 6px var(--navy-mid), inset 0 0 0 7px rgba(200,169,110,.25); border: 0; }
+.vfeature .video-thumb { margin: 7px 0 7px 7px; }
+.video-card { border-color: rgba(200,169,110,.2); }
+.video-info h3 { font-size: 1.15rem; }
+.videos-section { padding-top: 1rem; }
+.vgroup:first-of-type .videos-grid { grid-template-columns: repeat(2, 1fr); }
+@media(max-width: 560px) { .vgroup:first-of-type .videos-grid { grid-template-columns: 1fr; } }
+.vclose { text-align: center; margin: 4.5rem 0 0; color: rgba(245,240,230,.65); font-style: italic; }
+.vclose a { color: var(--gold); }
+@media(max-width: 900px) { .vfeature .video-thumb { margin: 7px 7px 0; } }
 </style>
 </head>
 <body>
@@ -131,147 +166,168 @@
 <div class="page-header">
   <span class="eyebrow">Media Archive</span>
   <h1>Video <em>Archive</em></h1>
-  <p>Lectures, debates, and interviews featuring Dr. James Likoudis</p>
+  <p>The collected lectures, debates, and interviews of Dr. James Likoudis</p>
   <div class="header-divider"></div>
 </div>
 
 <section class="videos-section" style="background:var(--navy);">
   <div class="videos-inner">
-    <div class="videos-grid">
-
-      <div class="video-card reveal">
-        <div class="video-thumb">
-          <img class="video-thumb-img" src="https://img.youtube.com/vi/47aHVctgJEU/hqdefault.jpg" alt="The Donation of Constantine and Pope Hadrian at Nicaea II" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/47aHVctgJEU?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
-          <div class="play-btn"></div>
-        </div>
-        <div class="video-info">
-          <h3>The Donation of Constantine and Pope Hadrian at Nicaea II</h3>
-          <a href="https://youtu.be/47aHVctgJEU" target="_blank">Watch on YouTube →</a>
-        </div>
+    <p class="vcount">12 recordings in four parts</p>
+    <div class="vgroup">
+      <h2 class="vgroup-h"><span class="vnum">I</span>Conversion Stories</h2>
+      <p class="vgroup-sub">His own road from Greek Orthodoxy to Rome, and the converts he profiled in <em>Heralds of a Catholic Russia</em></p>
+      <div class="vfeature reveal">
+      <div class="video-thumb"><img class="video-thumb-img" src="https://img.youtube.com/vi/Hwz62uU0K_I/hqdefault.jpg" alt="James Likoudis on The Journey Home" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/Hwz62uU0K_I?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'"><div class="play-btn"></div></div>
+      <div class="vfeature-txt">
+        <span class="vgroup-k">The Journey Home</span>
+        <h2>Former Greek Orthodox</h2>
+        <p class="vfeature-show">EWTN</p>
+        <p>Dr. James Likoudis tells the story of his journey from Greek Orthodoxy into full communion with the Catholic Church.</p>
+        <a href="https://youtu.be/Hwz62uU0K_I" target="_blank">Watch on YouTube →</a>
       </div>
-
-      <div class="video-card reveal reveal-delay-1">
-        <div class="video-thumb">
-          <img class="video-thumb-img" src="https://img.youtube.com/vi/Hwz62uU0K_I/hqdefault.jpg" alt="Former Greek Orthodox - The Journey Home Program" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/Hwz62uU0K_I?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
-          <div class="play-btn"></div>
-        </div>
-        <div class="video-info">
-          <h3>Former Greek Orthodox — The Journey Home Program</h3>
-          <a href="https://youtu.be/Hwz62uU0K_I" target="_blank">Watch on YouTube →</a>
-        </div>
-      </div>
-
-      <div class="video-card reveal reveal-delay-2">
-        <div class="video-thumb">
-          <img class="video-thumb-img" src="https://img.youtube.com/vi/ziHR_8GGKUE/hqdefault.jpg" alt="Dr. James Likoudis on the Orthodox and the Papacy" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/ziHR_8GGKUE?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
-          <div class="play-btn"></div>
-        </div>
-        <div class="video-info">
-          <h3>Dr. James Likoudis on the Orthodox and the Papacy</h3>
-          <a href="https://youtu.be/ziHR_8GGKUE" target="_blank">Watch on YouTube →</a>
-        </div>
-      </div>
-
-      <div class="video-card reveal">
-        <div class="video-thumb">
-          <img class="video-thumb-img" src="https://img.youtube.com/vi/JjwTxIl3CL0/hqdefault.jpg" alt="Joe Indelicato Interviews Jim Likoudis on Catechetics, Sex Ed, and Liturgy" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/JjwTxIl3CL0?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
-          <div class="play-btn"></div>
-        </div>
-        <div class="video-info">
-          <h3>Joe Indelicato Interviews Jim Likoudis on Catechetics, Sex Ed, and Liturgy</h3>
-          <a href="https://youtu.be/JjwTxIl3CL0" target="_blank">Watch on YouTube →</a>
-        </div>
-      </div>
-
-      <div class="video-card reveal reveal-delay-1">
-        <div class="video-thumb">
-          <img class="video-thumb-img" src="https://img.youtube.com/vi/MHV_IyZWvb4/hqdefault.jpg" alt="At the Origins of the Byzantine Greco-Slav Schism" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/MHV_IyZWvb4?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
-          <div class="play-btn"></div>
-        </div>
-        <div class="video-info">
-          <h3>At the Origins of the Byzantine Greco-Slav Schism</h3>
-          <a href="https://youtu.be/MHV_IyZWvb4" target="_blank">Watch on YouTube →</a>
-        </div>
-      </div>
-
-      <div class="video-card reveal reveal-delay-2">
-        <div class="video-thumb">
-          <img class="video-thumb-img" src="https://img.youtube.com/vi/9f5WdbucTWo/hqdefault.jpg" alt="Papacy Debate: Pope St. Agatho, the 6th Ecumenical Council, and Papal Infallibility" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/9f5WdbucTWo?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
-          <div class="play-btn"></div>
-        </div>
-        <div class="video-info">
-          <h3>Papacy Debate: Pope St. Agatho, the 6th EC &amp; Papal Infallibility</h3>
-          <a href="https://youtu.be/9f5WdbucTWo" target="_blank">Watch on YouTube →</a>
-        </div>
-      </div>
-
-      <div class="video-card reveal reveal-delay-2">
-        <div class="video-thumb">
-          <img class="video-thumb-img" src="https://img.youtube.com/vi/_XMT32Gv2nk/hqdefault.jpg" alt="Likoudis/Ubi Papacy Debate Debrief" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/_XMT32Gv2nk?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
-          <div class="play-btn"></div>
-        </div>
-        <div class="video-info">
-          <h3>Likoudis/Ubi Papacy Debate Debrief</h3>
-          <a href="https://youtu.be/_XMT32Gv2nk" target="_blank">Watch on YouTube →</a>
-        </div>
-      </div>
-
+    </div>
+      <div class="videos-grid">
       <div class="video-card reveal">
         <div class="video-thumb">
           <img class="video-thumb-img" src="https://img.youtube.com/vi/cGVct2bD-GA/hqdefault.jpg" alt="Testimony Tuesday with Dr. James Likoudis — Eastern Orthodox to Roman Catholic" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/cGVct2bD-GA?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
           <div class="play-btn"></div>
         </div>
         <div class="video-info">
+          <span class="video-src">Testimony Tuesday, Jim Havens</span>
           <h3>Testimony Tuesday with Dr. James Likoudis — Eastern Orthodox to Roman Catholic</h3>
           <a href="https://youtu.be/cGVct2bD-GA" target="_blank">Watch on YouTube →</a>
         </div>
       </div>
-
-      <div class="video-card reveal reveal-delay-1">
-        <div class="video-thumb">
-          <img class="video-thumb-img" src="https://img.youtube.com/vi/mxhCkdHLbv0/hqdefault.jpg" alt="Debate: Does Nicea 2 Teach Papal Supremacy?" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/mxhCkdHLbv0?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
-          <div class="play-btn"></div>
-        </div>
-        <div class="video-info">
-          <h3>Debate: Does Nicea 2 Teach Papal Supremacy?</h3>
-          <a href="https://youtu.be/mxhCkdHLbv0" target="_blank">Watch on YouTube →</a>
-        </div>
-      </div>
-
-      <div class="video-card reveal reveal-delay-2">
+      <div class="video-card reveal">
         <div class="video-thumb">
           <img class="video-thumb-img" style="object-fit:contain;" src="https://likoudislegacy.com/images/book-heralds-russia.jpg" alt="Heralds of a Catholic Russia" onclick="window.open('https://youtu.be/pfUCIcLUALg','_blank')">
           <div class="play-btn"></div>
         </div>
         <div class="video-info">
+          <span class="video-src">Kresta in the Afternoon, Ave Maria Radio</span>
           <h3>Heralds of a Catholic Russia</h3>
           <a href="https://youtu.be/pfUCIcLUALg" target="_blank">Watch on YouTube →</a>
         </div>
       </div>
-
-      <div class="video-card reveal reveal-delay-1">
+      </div>
+    </div>
+    <div class="vgroup">
+      <h2 class="vgroup-h"><span class="vnum">II</span>The Papacy and the East</h2>
+      <p class="vgroup-sub">Lectures and interviews on the schism and the See of Peter</p>
+      <div class="videos-grid">
+      <div class="video-card reveal">
         <div class="video-thumb">
-          <img class="video-thumb-img" src="https://img.youtube.com/vi/5qtcCm6g-XA/hqdefault.jpg" alt="R&T Round Table on the Motu Proprio" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/5qtcCm6g-XA?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/MHV_IyZWvb4/hqdefault.jpg" alt="At the Origins of the Byzantine Greco-Slav Schism" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/MHV_IyZWvb4?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
           <div class="play-btn"></div>
         </div>
         <div class="video-info">
-          <h3>R&T Round Table on the Motu Proprio</h3>
-          <a href="https://youtu.be/5qtcCm6g-XA" target="_blank">Watch on YouTube →</a>
+          <span class="video-src">Franciscan University of Steubenville</span>
+          <h3>At the Origins of the Byzantine Greco-Slav Schism</h3>
+          <a href="https://youtu.be/MHV_IyZWvb4" target="_blank">Watch on YouTube →</a>
         </div>
       </div>
-
-      <div class="video-card reveal reveal-delay-2">
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/ziHR_8GGKUE/hqdefault.jpg" alt="Dr. James Likoudis on the Orthodox and the Papacy" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/ziHR_8GGKUE?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <span class="video-src">R&amp;T Media</span>
+          <h3>Dr. James Likoudis on the Orthodox and the Papacy</h3>
+          <a href="https://youtu.be/ziHR_8GGKUE" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/47aHVctgJEU/hqdefault.jpg" alt="The Donation of Constantine and Pope Hadrian at Nicaea II" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/47aHVctgJEU?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <span class="video-src">R&amp;T Media</span>
+          <h3>The Donation of Constantine and Pope Hadrian at Nicaea II</h3>
+          <a href="https://youtu.be/47aHVctgJEU" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="vgroup">
+      <h2 class="vgroup-h"><span class="vnum">III</span>Debates</h2>
+      <p class="vgroup-sub">Dr. Likoudis against Orthodox interlocutors Ubi Petrus and Craig Truglia</p>
+      <div class="videos-grid">
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/9f5WdbucTWo/hqdefault.jpg" alt="Papacy Debate: Pope St. Agatho, the 6th Ecumenical Council, and Papal Infallibility" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/9f5WdbucTWo?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <span class="video-src">Ubi Petrus</span>
+          <h3>Papacy Debate: Pope St. Agatho, the 6th EC &amp; Papal Infallibility</h3>
+          <a href="https://youtu.be/9f5WdbucTWo" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/_XMT32Gv2nk/hqdefault.jpg" alt="Likoudis/Ubi Papacy Debate Debrief" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/_XMT32Gv2nk?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <span class="video-src">R&amp;T Media</span>
+          <h3>Likoudis/Ubi Papacy Debate Debrief</h3>
+          <a href="https://youtu.be/_XMT32Gv2nk" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/mxhCkdHLbv0/hqdefault.jpg" alt="Debate: Does Nicea 2 Teach Papal Supremacy?" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/mxhCkdHLbv0?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <span class="video-src">Craig Truglia</span>
+          <h3>Debate: Does Nicea 2 Teach Papal Supremacy?</h3>
+          <a href="https://youtu.be/mxhCkdHLbv0" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="vgroup">
+      <h2 class="vgroup-h"><span class="vnum">IV</span>Catechesis and Liturgy</h2>
+      <div class="videos-grid">
+      <div class="video-card reveal">
         <div class="video-thumb">
           <img class="video-thumb-img" src="https://img.youtube.com/vi/V-c3KCYHsUQ/hqdefault.jpg" alt="Mother Angelica and James Likoudis" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/V-c3KCYHsUQ?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
           <div class="play-btn"></div>
         </div>
         <div class="video-info">
+          <span class="video-src">EWTN, Mother Angelica Live</span>
           <h3>Mother Angelica and James Likoudis</h3>
           <a href="https://youtu.be/V-c3KCYHsUQ" target="_blank">Watch on YouTube →</a>
         </div>
       </div>
-
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/JjwTxIl3CL0/hqdefault.jpg" alt="Joe Indelicato Interviews Jim Likoudis on Catechetics, Sex Ed, and Liturgy" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/JjwTxIl3CL0?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <span class="video-src">Joe Indelicato</span>
+          <h3>Joe Indelicato Interviews Jim Likoudis on Catechetics, Sex Ed, and Liturgy</h3>
+          <a href="https://youtu.be/JjwTxIl3CL0" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img class="video-thumb-img" src="https://img.youtube.com/vi/5qtcCm6g-XA/hqdefault.jpg" alt="R&T Round Table on the Motu Proprio" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/5qtcCm6g-XA?autoplay=1\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <div class="play-btn"></div>
+        </div>
+        <div class="video-info">
+          <span class="video-src">R&amp;T Media</span>
+          <h3>R&T Round Table on the Motu Proprio</h3>
+          <a href="https://youtu.be/5qtcCm6g-XA" target="_blank">Watch on YouTube →</a>
+        </div>
+      </div>
+      </div>
     </div>
+    <p class="vclose">Have a recording of Dr. Likoudis that belongs here? <a href="contact">Tell us about it</a>.</p>
   </div>
 </section>
 
