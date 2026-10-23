@@ -570,3 +570,8 @@ a.ink-gold:hover { color: #6e521d !important; }
 .campaign-steps li { position: absolute; transform: translateX(-50%); white-space: nowrap; }
 .campaign-left { color: var(--muted); margin: 1rem 0 1.4rem; font-size: .95rem; }
 @media (max-width: 800px) { .campaign-inner { grid-template-columns: 1fr; gap: 2rem; } .campaign { padding: 3.5rem 1.25rem 3rem; } .campaign-meter { padding: 1.6rem 1.4rem 1.8rem; } }
+
+/* wallpaper: faint lattice with small gold stars */
+body { background-image: url("images/pattern/ivory.svg"); background-size: 72px 72px; }
+.page-header, footer, section[style*="background:var(--navy)"], section[style*="background: var(--navy)"], .on-dark { background-image: url("images/pattern/navy.svg"); background-size: 72px 72px; }
+section[style*="background:var(--ivory)"], section[style*="background: var(--ivory)"] { background-image: url("images/pattern/ivory.svg"); background-size: 72px 72px; }

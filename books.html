@@ -30,7 +30,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=3">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=3"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css?v=20261005">
+<link rel="stylesheet" href="style.css?v=20261023">
 <style>
   html, body { overflow-x: hidden !important; max-width: 100%; }
   img, video, iframe { max-width: 100% !important; }
@@ -373,34 +373,40 @@
 </section>
 
 <!-- WATCH -->
-<section class="on-light" style="background:#fff;padding:5.5rem 2rem;border-top:1px solid var(--border);">
+<section class="book-watch-sec" style="background:var(--navy);padding:6rem 2rem;">
   <div class="reveal" style="max-width:1100px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:2.5rem;">
-      <span class="section-label">Watch</span>
-      <h2 class="section-title" style="color:var(--navy);">The Books in Conversation</h2>
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="section-label" style="color:var(--gold);">Watch</span>
+      <h2 class="section-title" style="color:var(--cream,#f4ede0);">The Books in Conversation</h2>
+      <div class="bw-rule"></div>
     </div>
     <div class="book-watch">
       <figure>
         <div class="bw-frame"><iframe src="https://www.youtube-nocookie.com/embed/pfUCIcLUALg" title="Heralds of a Catholic Russia" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <figcaption><span class="bw-k">James Likoudis on Kresta in the Afternoon</span><a href="books/heralds-catholic-russia"><em>Heralds of a Catholic Russia</em></a></figcaption>
+        <figcaption><span class="bw-k">James Likoudis on Kresta in the Afternoon</span><a class="bw-t" href="books/heralds-catholic-russia">Heralds of a Catholic Russia</a></figcaption>
       </figure>
       <figure>
         <div class="bw-frame"><iframe src="https://www.youtube-nocookie.com/embed/8rT_Oz8JLdk" title="Andrew Likoudis on the Gospel Simplicity Podcast" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <figcaption><span class="bw-k">Andrew Likoudis with Austin Suggs, Gospel Simplicity</span><a href="books/faith-in-crisis"><em>Faith in Crisis</em></a>, magisterial authority, and the traditionalist movement</figcaption>
+        <figcaption><span class="bw-k">Andrew Likoudis on Gospel Simplicity</span><a class="bw-t" href="books/faith-in-crisis">Faith in Crisis</a><span class="bw-d">Magisterial authority and the traditionalist movement, with Austin Suggs</span></figcaption>
       </figure>
     </div>
-    <p style="text-align:center;margin-top:2rem;"><a href="videos" style="color:var(--navy);font-weight:600;">More videos of James Likoudis &rarr;</a></p>
+    <p style="text-align:center;margin-top:3rem;"><a class="bw-more" href="videos">Explore the Video Archive</a></p>
   </div>
 </section>
 <style>
-.book-watch{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-.book-watch figure{margin:0}
-.bw-frame{position:relative;aspect-ratio:16/9;background:#000;border-radius:4px;overflow:hidden;box-shadow:0 12px 32px rgba(14,27,46,.18)}
+.book-watch{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.book-watch figure{margin:0;text-align:center}
+.bw-frame{position:relative;aspect-ratio:16/9;background:#000;padding:0;box-shadow:0 0 0 1px rgba(200,169,110,.55),0 0 0 7px var(--navy),0 0 0 8px rgba(200,169,110,.28),0 24px 50px -20px rgba(0,0,0,.6)}
 .bw-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.book-watch figcaption{margin-top:.9rem;color:var(--navy);line-height:1.45}
-.book-watch figcaption a{color:inherit}
-.bw-k{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold,#b08d57);font-weight:600;margin-bottom:.25rem}
-@media(max-width:760px){.book-watch{grid-template-columns:1fr}}
+.book-watch figcaption{margin-top:1.8rem;display:flex;flex-direction:column;align-items:center;gap:.35rem}
+.bw-k{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.bw-t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.7rem;line-height:1.15;color:var(--cream,#f4ede0);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.bw-t:hover{border-bottom-color:var(--gold)}
+.bw-d{font-size:.92rem;color:rgba(244,237,224,.7)}
+.bw-rule{width:120px;height:1px;margin:1.2rem auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.bw-more{display:inline-block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(200,169,110,.5);padding:.9rem 1.8rem;transition:background .2s,color .2s}
+.bw-more:hover{background:var(--gold);color:var(--navy)}
+@media(max-width:760px){.book-watch{grid-template-columns:1fr;gap:3.5rem}}
 </style>
 
 <!-- ALL TITLES -->
