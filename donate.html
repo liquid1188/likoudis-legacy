@@ -30,7 +30,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=3">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=3"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css?v=20261023">
+<link rel="stylesheet" href="style.css?v=20261027">
 <style>
   html, body { overflow-x: hidden !important; max-width: 100%; }
   img, video, iframe { max-width: 100% !important; }
@@ -74,7 +74,7 @@
 .tier-card .btn-once:hover { background: rgba(197,148,58,0.12); }
 </style>
 </head>
-<body>
+<body><a class="skip-link" href="#main">Skip to main content</a>
 
 <nav>
   <a href="./" class="nav-logo">
@@ -92,7 +92,7 @@
     <li><a href="get-involved">Get Involved</a></li>
     <li><a href="donate" class="nav-give">Give</a></li>
   </ul>
-</nav>
+</nav><span id="main" tabindex="-1"></span>
 
 <div class="page-header">
   <span class="eyebrow">Support the Foundation</span>
@@ -117,6 +117,24 @@
     </div>
   </div>
 </section>
+<div class="give-paths" role="navigation" aria-label="Ways to give">
+  <a href="#give-now" class="gp-card"><span class="gp-n">I.</span><span class="gp-t">Make a Gift</span><span class="gp-d">One-time or monthly, by card, PayPal, Venmo, or Patreon.</span><span class="gp-go">Give now &rarr;</span></a>
+  <a href="#fund-a-project" class="gp-card"><span class="gp-n">II.</span><span class="gp-t">Fund a Project</span><span class="gp-d">A book for a seminary library, a translated essay, a journal issue, or a conference.</span><span class="gp-go">See projects &rarr;</span></a>
+  <a href="#major-planned" class="gp-card"><span class="gp-n">III.</span><span class="gp-t">Major &amp; Planned Giving</span><span class="gp-d">Gifts of $5,000 or more, stock, IRA distributions, and bequests.</span><span class="gp-go">Learn more &rarr;</span></a>
+</div>
+<style>
+.give-paths{max-width:1040px;margin:-1rem auto 3.5rem;padding:0 1.5rem;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.gp-card{display:flex;flex-direction:column;gap:.45rem;padding:1.6rem 1.5rem;background:#fff;border:1px solid rgba(200,169,110,.4);border-top:3px solid var(--gold,#c8a96e);border-radius:6px;text-decoration:none;color:var(--navy,#0e1b2e);transition:box-shadow .2s,transform .2s}
+.gp-card:hover,.gp-card:focus-visible{box-shadow:0 14px 30px -16px rgba(14,27,46,.4);transform:translateY(-2px)}
+.gp-card:focus-visible{outline:2px solid var(--gold,#c8a96e);outline-offset:3px}
+.gp-n{font-family:'Cormorant Garamond',serif;color:var(--gold,#c8a96e);font-size:1.3rem}
+.gp-t{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;line-height:1.15}
+.gp-d{font-size:.85rem;line-height:1.55;color:#5c564b}
+.gp-go{margin-top:auto;padding-top:.4rem;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dark,#9a7c3f);font-weight:600}
+html{scroll-padding-top:90px}
+@media(max-width:760px){.give-paths{grid-template-columns:1fr;margin-top:0}}
+</style>
+
 
 <!-- INTRO -->
 <section class="donate-intro on-light">
@@ -132,7 +150,7 @@
 </section>
 
 <!-- MONTHLY TIERS -->
-<section class="give-cta on-light" style="background:var(--ivory);">
+<section class="give-cta on-light" id="give-now" style="background:var(--ivory);">
   <div class="give-cta-inner reveal">
     <span class="section-label">Other Ways to Give</span>
     <h2 class="section-title" style="color:var(--navy);">Choose Your Method</h2>
@@ -164,6 +182,30 @@
 </section>
 
 <!-- IMPACT -->
+
+
+<!-- JAMES LIKOUDIS CIRCLE -->
+<section class="tiers on-dark" id="monthly-tiers">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">Recurring Gifts</span>
+      <h2 class="section-title" style="color:var(--cream);">Monthly Gift Tiers</h2>
+      <div class="divider center"></div>
+      <p style="color:rgba(244,237,224,0.85);font-size:0.9rem;margin-top:0.5rem;">Recurring gifts sustain the foundation's work month to month. Every tier makes a direct difference.</p>
+    </div>
+    <div class="tiers-grid">
+<div class="tier-card reveal reveal-delay-1"><div class="tier-amount">$25</div><h3>Journal Patron</h3><p>Supports the publication and distribution of the Kydones Review.</p><div class="tier-btns"><a href="https://buy.stripe.com/5kQ8wH62gaj6gS8ahFa3u02" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/9B67sDaiw62QdFW1L9a3u09" target="_blank" class="btn-once">Give Once</a></div></div>
+      <div class="tier-card reveal reveal-delay-2"><div class="tier-amount">$50</div><h3>Research Patron</h3><p>Funds graduate research grants through the Fellows Program.</p><div class="tier-btns"><a href="https://buy.stripe.com/6oUdR1bmA2QE8lCblJa3u0j" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/4gM00b8aocre9pG4Xla3u07" target="_blank" class="btn-once">Give Once</a></div></div>
+      <div class="tier-card reveal"><div class="tier-amount">$100</div><h3>Media Patron</h3><p>Supports the development of lectures, courses, and parish education materials.</p><div class="tier-btns"><a href="https://buy.stripe.com/eVqaEPfCQ8aYeK04Xla3u03" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/5kQ28j3U8gHu1XeahFa3u0a" target="_blank" class="btn-once">Give Once</a></div></div>
+      <div class="tier-card reveal reveal-delay-1"><div class="tier-amount">$250</div><h3>Conference Patron</h3><p>Supports the foundation's conference and symposia program.</p><div class="tier-btns"><a href="https://buy.stripe.com/3cIdR1aiwbna31icpNa3u04" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/6oUdR14Ycaj61Xe0H5a3u0b" target="_blank" class="btn-once">Give Once</a></div></div>
+      <div class="tier-card reveal reveal-delay-2"><div class="tier-amount">$500</div><h3>Fellows Sponsor</h3><p>Over the course of a year, funds a Fellow's research stipend of $1,000 to $2,000, supporting a graduate scholar doing serious theological work.</p><div class="tier-btns"><a href="https://buy.stripe.com/9B6bIT0HW62QfO475ta3u0k" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/aFa28j1M09f27hy2Pda3u0c" target="_blank" class="btn-once">Give Once</a></div></div>
+      <div class="tier-card reveal"><div class="tier-amount">$1,000</div><h3>Founder's Circle</h3><p>The foundation's highest giving tier. Gifts at this level support the full range of the foundation's work and bring us closer to endowing the James Likoudis Professorial Chair at a Catholic university.</p><div class="tier-btns"><a href="https://buy.stripe.com/9B63cn9es2QEcBS1L9a3u05" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/cNi7sD62g9f20TagG3a3u0d" target="_blank" class="btn-once">Give Once</a></div></div>
+    </div>
+    <p style="color:rgba(244,237,224,0.7);font-size:0.78rem;text-align:center;margin-top:2rem;">All recurring donations are safely handled via Stripe.</p>
+  </div>
+</section>
+
+<!-- SPECIFIC GIFTS -->
 <section class="impact on-light" style="background:var(--cream);">
   <div class="impact-inner">
     <div class="reveal" style="text-align:center;">
@@ -193,30 +235,7 @@
     </div>
   </div>
 </section>
-
-<!-- JAMES LIKOUDIS CIRCLE -->
-<section class="tiers on-dark" id="monthly-tiers">
-  <div class="container">
-    <div class="reveal" style="text-align:center;">
-      <span class="section-label">Recurring Gifts</span>
-      <h2 class="section-title" style="color:var(--cream);">Monthly Gift Tiers</h2>
-      <div class="divider center"></div>
-      <p style="color:rgba(244,237,224,0.85);font-size:0.9rem;margin-top:0.5rem;">Recurring gifts sustain the foundation's work month to month. Every tier makes a direct difference.</p>
-    </div>
-    <div class="tiers-grid">
-<div class="tier-card reveal reveal-delay-1"><div class="tier-amount">$25</div><h3>Journal Patron</h3><p>Supports the publication and distribution of the Kydones Review.</p><div class="tier-btns"><a href="https://buy.stripe.com/5kQ8wH62gaj6gS8ahFa3u02" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/9B67sDaiw62QdFW1L9a3u09" target="_blank" class="btn-once">Give Once</a></div></div>
-      <div class="tier-card reveal reveal-delay-2"><div class="tier-amount">$50</div><h3>Research Patron</h3><p>Funds graduate research grants through the Fellows Program.</p><div class="tier-btns"><a href="https://buy.stripe.com/6oUdR1bmA2QE8lCblJa3u0j" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/4gM00b8aocre9pG4Xla3u07" target="_blank" class="btn-once">Give Once</a></div></div>
-      <div class="tier-card reveal"><div class="tier-amount">$100</div><h3>Media Patron</h3><p>Supports the development of lectures, courses, and parish education materials.</p><div class="tier-btns"><a href="https://buy.stripe.com/eVqaEPfCQ8aYeK04Xla3u03" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/5kQ28j3U8gHu1XeahFa3u0a" target="_blank" class="btn-once">Give Once</a></div></div>
-      <div class="tier-card reveal reveal-delay-1"><div class="tier-amount">$250</div><h3>Conference Patron</h3><p>Supports the foundation's conference and symposia program.</p><div class="tier-btns"><a href="https://buy.stripe.com/3cIdR1aiwbna31icpNa3u04" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/6oUdR14Ycaj61Xe0H5a3u0b" target="_blank" class="btn-once">Give Once</a></div></div>
-      <div class="tier-card reveal reveal-delay-2"><div class="tier-amount">$500</div><h3>Fellows Sponsor</h3><p>Over the course of a year, funds a Fellow's research stipend of $1,000 to $2,000, supporting a graduate scholar doing serious theological work.</p><div class="tier-btns"><a href="https://buy.stripe.com/9B6bIT0HW62QfO475ta3u0k" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/aFa28j1M09f27hy2Pda3u0c" target="_blank" class="btn-once">Give Once</a></div></div>
-      <div class="tier-card reveal"><div class="tier-amount">$1,000</div><h3>Founder's Circle</h3><p>The foundation's highest giving tier. Gifts at this level support the full range of the foundation's work and bring us closer to endowing the James Likoudis Professorial Chair at a Catholic university.</p><div class="tier-btns"><a href="https://buy.stripe.com/9B63cn9es2QEcBS1L9a3u05" target="_blank" class="btn-monthly">Give Monthly</a><a href="https://buy.stripe.com/cNi7sD62g9f20TagG3a3u0d" target="_blank" class="btn-once">Give Once</a></div></div>
-    </div>
-    <p style="color:rgba(244,237,224,0.7);font-size:0.78rem;text-align:center;margin-top:2rem;">All recurring donations are safely handled via Stripe.</p>
-  </div>
-</section>
-
-<!-- SPECIFIC GIFTS -->
-<section class="tiers on-dark" style="background:var(--navy-mid);">
+<section class="tiers on-dark" id="fund-a-project" style="background:var(--navy-mid);">
   <div class="container">
     <div class="reveal" style="text-align:center;">
       <span class="section-label">One-Time Gifts</span>
@@ -292,7 +311,7 @@
 </section>
 
 <!-- OTHER WAYS TO GIVE -->
-<section class="planned-giving on-dark" style="padding:6rem 2rem;">
+<section class="planned-giving on-dark" id="major-planned" style="padding:6rem 2rem;">
   <div class="container" style="max-width:1100px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:3rem;">
       <span class="section-label" style="color:var(--gold);">Major Gifts &amp; Planned Giving</span>
@@ -304,7 +323,7 @@
 
     <div style="background:var(--navy-mid);border:1px solid rgba(200,169,110,0.25);padding:3rem 2.5rem;margin-bottom:3rem;">
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);margin-bottom:1rem;font-weight:400;letter-spacing:0.02em;">Major Gifts</h3>
-      <p style="color:rgba(244,237,224,0.85);line-height:1.85;font-size:0.92rem;">Gifts of $5,000 or more support the Foundation's long-horizon projects: endowing the James Likoudis Professorial Chair at a Catholic university, building the Kydones Review into a journal of record, and sustaining the translation program. Major gifts are acknowledged individually and, where appropriate, named in perpetuity.</p>
+      <p style="color:rgba(244,237,224,0.85);line-height:1.85;font-size:0.92rem;">Gifts of $5,000 or more support the Foundation's long-horizon projects: endowing the James Likoudis Professorial Chair at a Catholic university, building the Kydones Review into a journal of record, and sustaining the translation program. Major gifts are acknowledged individually and, where appropriate and agreed in writing, may carry the donor's name.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem;">
         <div style="padding:1.25rem;border:1px solid rgba(200,169,110,0.18);">
           <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);">$5,000</div>
@@ -334,11 +353,11 @@
     <div class="planned-grid">
       <div class="planned-card reveal">
         <h3>Stock &amp; Appreciated Assets</h3>
-        <p>Donating appreciated stock avoids capital gains tax and deducts the full market value. Contact us at <a href="mailto:alikoudis@likoudislegacy.com" style="color:var(--gold);">alikoudis@likoudislegacy.com</a> for transfer instructions.</p>
+        <p>Giving appreciated stock you have held for more than a year generally means no capital gains tax on the gain, and if you itemize, you can usually deduct its fair market value, within IRS limits. Contact us at <a href="mailto:alikoudis@likoudislegacy.com" style="color:var(--gold);">alikoudis@likoudislegacy.com</a> for transfer instructions.</p>
       </div>
       <div class="planned-card reveal reveal-delay-1">
         <h3>IRA Charitable Rollover</h3>
-        <p>If you are 70½ or older, a qualified charitable distribution from your IRA counts toward your required minimum distribution and is not taxed as income.</p>
+        <p>If you are 70½ or older, a qualified charitable distribution sent directly from your IRA to the Foundation is not counted as taxable income, and once you reach the age for required minimum distributions it can count toward yours. Annual limits apply.</p>
       </div>
       <div class="planned-card reveal reveal-delay-2">
         <h3>Bequest in Your Will</h3>
@@ -346,7 +365,7 @@
       </div>
       <div class="planned-card reveal">
         <h3>Beneficiary Designation</h3>
-        <p>Naming the Foundation as a beneficiary of a retirement account, life insurance policy, or donor-advised fund takes minutes and requires no attorney.</p>
+        <p>Naming the Foundation as a beneficiary of a retirement account, life insurance policy, or donor-advised fund is usually done with a simple form from your plan or policy provider.</p>
       </div>
       <div class="planned-card reveal reveal-delay-1">
         <h3>Donor-Advised Fund</h3>

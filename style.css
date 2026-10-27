@@ -575,3 +575,9 @@ a.ink-gold:hover { color: #6e521d !important; }
 body { background-image: url("images/pattern/ivory.svg"); background-size: 72px 72px; }
 .page-header, footer, section[style*="background:var(--navy)"], section[style*="background: var(--navy)"], .on-dark { background-image: url("images/pattern/navy.svg"); background-size: 72px 72px; }
 section[style*="background:var(--ivory)"], section[style*="background: var(--ivory)"] { background-image: url("images/pattern/ivory.svg"); background-size: 72px 72px; }
+
+/* Keyboard access: open dropdowns when a link inside has focus; skip link */
+@media (min-width: 901px) { .nav-dropdown:focus-within .nav-dropdown-menu { display: block; } }
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 3000; background: var(--navy, #0e1b2e); color: var(--cream, #f4ede0); padding: .6rem 1rem; font-size: .85rem; border-radius: 0 0 6px 0; }
+.skip-link:focus { left: 0; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
