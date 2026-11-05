@@ -74,6 +74,23 @@
   .apply-toggle-btn:hover { background: var(--gold-light); }
   @media(max-width:900px){ .bottle-grid{grid-template-columns:1fr;} .future-grid{grid-template-columns:1fr;} }
   @media(max-width:560px){ .bottle-card{grid-template-columns:1fr;justify-items:center;text-align:center;} .apply-form-grid{grid-template-columns:1fr;} }
+  .pair-lede, .island-lede { max-width: 640px; margin: 0.5rem auto 0; line-height: 1.85; font-size: 0.98rem; }
+  .pair-lede { color: rgba(244,237,224,0.75); }
+  .island-lede { color: var(--muted); }
+  .pair-stage { display: grid; grid-template-columns: auto 1fr; gap: 3.5rem; align-items: center; max-width: 900px; margin: 3.5rem auto 0; background: rgba(255,255,255,0.03); border: 1px solid rgba(200,169,110,0.16); padding: 2.5rem 3rem; }
+  .pair-bottles { display: flex; gap: 0.5rem; align-items: flex-end; }
+  .pair-bottles .bottle { filter: drop-shadow(0 18px 24px rgba(0,0,0,0.45)); height: auto; }
+  .pair-item { margin-bottom: 1.6rem; }
+  .pair-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 400; color: var(--cream); margin: 0.3rem 0 0.5rem; }
+  .pair-item p { color: rgba(244,237,224,0.78); font-size: 0.92rem; line-height: 1.8; }
+  .pair-copy .wine-note { font-style: italic; color: rgba(224,201,146,0.75); font-size: 0.85rem; }
+  .wine-island { padding: 7rem 2rem; background: var(--ivory); }
+  .island-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1000px; margin: 3.5rem auto 0; }
+  .island-card { background: white; border: 1px solid rgba(200,169,110,0.28); border-top: 3px solid var(--gold); padding: 2rem 1.75rem; text-align: center; }
+  .island-card .bottle { height: auto; display: block; margin: 0 auto 1.25rem; filter: drop-shadow(0 12px 16px rgba(14,27,46,0.25)); }
+  .island-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; color: var(--navy); margin: 0.4rem 0 0.6rem; }
+  .island-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.75; }
+  @media(max-width:900px){ .island-grid{grid-template-columns:1fr;} .pair-stage{grid-template-columns:1fr;justify-items:center;padding:2rem 1.5rem;gap:2rem;} .pair-copy{text-align:center;} }
 </style>
 </head>
 <body><a class="skip-link" href="#main">Skip to main content</a>
@@ -109,119 +126,143 @@
 <section class="wine-intro on-light">
   <div class="container wine-narrow reveal">
     <span class="section-label">Why Wine</span>
-    <h2 class="section-title" style="color:var(--navy);">Let the Heavens Rejoice</h2>
+    <h2 class="section-title" style="color:var(--navy);">Two Places, One Table</h2>
     <div class="divider center"></div>
     <p><em>Laetentur caeli</em>, &ldquo;let the heavens rejoice,&rdquo; are the first words of the decree of union read at the Council of Florence in 1439, when Greek and Latin bishops stood together and declared the Church one. The union did not last. The hope did.</p>
-    <p>The Likoudis family came from Kefalonia and settled in the Finger Lakes country of upstate New York, two places where the vine has been tended for generations. The wines come from those two places, and the Foundation&rsquo;s work is the work of that council. These wines are a small way to bring both to the table. Each label tells one story of East and West, and every bottle supports the Foundation&rsquo;s research, the Fellows Program, and <em>The Kydones Review</em>.</p>
+    <p>The Likoudis family came from Kefalonia and settled in the Finger Lakes country of upstate New York. The wines come from those two places. Each label tells one story of East and West, and every bottle supports the Foundation&rsquo;s research, the Fellows Program, and <em>The Kydones Review</em>.</p>
   </div>
 </section>
 
-<!-- THE WINES -->
+<!-- FIRST RELEASE: THE PAIR -->
 <section class="wine-pair on-dark">
   <div class="container">
     <div class="reveal" style="text-align:center;">
-      <span class="section-label">The First Release</span>
-      <h2 class="section-title" style="color:var(--cream);">A Red and a White</h2>
+      <span class="section-label">First Release &middot; Finger Lakes</span>
+      <h2 class="section-title" style="color:var(--cream);">The Brothers of Thessaloniki</h2>
       <div class="divider center"></div>
+      <p class="pair-lede">Saints Cyril and Methodius, born in Thessaloniki, carried the Gospel to the Slavs in their own language and were honored in Rome and Constantinople alike. Their wines are sold together, a white and a red in one box.</p>
     </div>
-    <div class="bottle-grid">
-
-      <article class="bottle-card reveal">
-        <svg class="bottle" viewBox="0 0 160 420" role="img" aria-label="Bottle of Florence 1439 red wine">
-          <defs>
-            <linearGradient id="glassRed" x1="0" x2="1">
-              <stop offset="0" stop-color="#1c1410"/><stop offset="0.35" stop-color="#3a2a22"/><stop offset="0.55" stop-color="#241a15"/><stop offset="1" stop-color="#120d0a"/>
-            </linearGradient>
-          </defs>
-          <path d="M66 10 h28 v8 h-2 v62 c0 22 34 40 34 78 v236 c0 12 -8 18 -20 18 h-52 c-12 0 -20 -6 -20 -18 v-236 c0 -38 34 -56 34 -78 v-62 h-2 z" fill="url(#glassRed)"/>
-          <rect x="64" y="8" width="32" height="26" rx="2" fill="#7a1f2b"/>
-          <rect x="64" y="30" width="32" height="3" fill="#c8a96e"/>
-          <path d="M50 120 c4 -10 14 -18 16 -26" stroke="#ffffff" stroke-opacity="0.08" stroke-width="5" fill="none"/>
-          <!-- label -->
-          <rect x="34" y="214" width="92" height="132" fill="#f4ede0"/>
-          <rect x="38" y="218" width="84" height="124" fill="none" stroke="#c8a96e" stroke-width="0.8"/>
-          <g transform="translate(80 240)" fill="none" stroke="#7a1f2b" stroke-width="1.1">
-            <circle r="9"/><path d="M0 -9 V9 M-9 0 H9"/><circle r="3" fill="#7a1f2b"/>
-          </g>
-          <text x="80" y="268" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="13" fill="#0e1b2e" letter-spacing="1">FLORENCE</text>
-          <text x="80" y="285" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="17" font-style="italic" fill="#7a1f2b">1439</text>
-          <line x1="58" y1="293" x2="102" y2="293" stroke="#c8a96e" stroke-width="0.6"/>
-          <text x="80" y="305" text-anchor="middle" font-family="Jost, sans-serif" font-size="5.2" fill="#574f46" letter-spacing="1.2">LAETENTUR CAELI</text>
-          <text x="80" y="322" text-anchor="middle" font-family="Jost, sans-serif" font-size="5.6" fill="#0e1b2e" letter-spacing="1.4">RED WINE</text>
-          <text x="80" y="335" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="5.6" fill="#574f46" font-style="italic">Likoudis Legacy Foundation</text>
-        </svg>
-        <div class="bottle-copy">
-          <span class="wine-kind">Red</span>
-          <h3>Florence 1439</h3>
-          <p>For the Council of Florence, where East and West signed one decree of union and read it aloud in Greek and Latin. A red for the long table, made to be opened with people you disagree with and love anyway.</p>
-          <p class="wine-note">From the Finger Lakes, likely a Cabernet Franc, or from Kefalonia, a Mavrodaphne.</p>
-        </div>
-      </article>
-
-      <article class="bottle-card reveal reveal-delay-1">
-        <svg class="bottle" viewBox="0 0 160 420" role="img" aria-label="Bottle of Kydones white wine">
-          <defs>
-            <linearGradient id="glassWhite" x1="0" x2="1">
-              <stop offset="0" stop-color="#8f8a55"/><stop offset="0.35" stop-color="#d9d3a0"/><stop offset="0.55" stop-color="#b9b27a"/><stop offset="1" stop-color="#6f6a3f"/>
-            </linearGradient>
-          </defs>
-          <path d="M66 10 h28 v8 h-2 v62 c0 22 34 40 34 78 v236 c0 12 -8 18 -20 18 h-52 c-12 0 -20 -6 -20 -18 v-236 c0 -38 34 -56 34 -78 v-62 h-2 z" fill="url(#glassWhite)" fill-opacity="0.9"/>
-          <rect x="64" y="8" width="32" height="26" rx="2" fill="#c8a96e"/>
-          <rect x="64" y="30" width="32" height="3" fill="#0e1b2e"/>
+    <div class="pair-stage reveal">
+      <div class="pair-bottles"><svg class="bottle" style="width:150px" viewBox="0 0 160 420" role="img" aria-label="Bottle of Cyril white wine">
+          <defs><linearGradient id="gcy" x1="0" x2="1"><stop offset="0" stop-color="#8f8a55"/><stop offset="0.35" stop-color="#d9d3a0"/><stop offset="0.55" stop-color="#b9b27a"/><stop offset="1" stop-color="#6f6a3f"/></linearGradient></defs>
+          <path d="M66 10 h28 v8 h-2 v62 c0 22 34 40 34 78 v236 c0 12 -8 18 -20 18 h-52 c-12 0 -20 -6 -20 -18 v-236 c0 -38 34 -56 34 -78 v-62 h-2 z" fill="url(#gcy)"/>
+          <rect x="64" y="8" width="32" height="26" rx="2" fill="#c8a96e"/><rect x="64" y="30" width="32" height="3" fill="#0e1b2e"/>
           <path d="M50 120 c4 -10 14 -18 16 -26" stroke="#ffffff" stroke-opacity="0.35" stroke-width="5" fill="none"/>
-          <!-- label -->
           <rect x="34" y="214" width="92" height="132" fill="#0e1b2e"/>
           <rect x="38" y="218" width="84" height="124" fill="none" stroke="#c8a96e" stroke-width="0.8"/>
-          <g transform="translate(80 240)" fill="none" stroke="#c8a96e" stroke-width="1">
-            <path d="M-10 4 L0 -8 L10 4 Z"/><path d="M-6 4 V9 M0 4 V9 M6 4 V9"/><line x1="-11" y1="10" x2="11" y2="10"/>
-          </g>
-          <text x="80" y="268" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="13" fill="#f4ede0" letter-spacing="1">KYDONES</text>
-          <text x="80" y="285" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="#e0c992">Κυδώνης</text>
+          <g transform="translate(80 240)" fill="none" stroke="#e0c992" stroke-width="1.05"><path d="M-10 -6 h9 v14 h-9 z M1 -6 h9 v14 h-9 z"/><path d="M-1 -6 v14"/></g>
+          <text x="80" y="268" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12.5" fill="#f4ede0" letter-spacing="1">CYRIL</text>
+          <text x="80" y="284" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8.5" font-style="italic" fill="#e0c992">Saint · Κύριλλος</text>
           <line x1="58" y1="293" x2="102" y2="293" stroke="#c8a96e" stroke-width="0.6"/>
-          <text x="80" y="305" text-anchor="middle" font-family="Jost, sans-serif" font-size="5.2" fill="#e0c992" letter-spacing="1.2">THESSALONIKI</text>
+          <text x="80" y="305" text-anchor="middle" font-family="Jost, sans-serif" font-size="5" fill="#e0c992" letter-spacing="1.2">THESSALONIKI · 869</text>
           <text x="80" y="322" text-anchor="middle" font-family="Jost, sans-serif" font-size="5.6" fill="#f4ede0" letter-spacing="1.4">WHITE WINE</text>
           <text x="80" y="335" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="5.6" fill="#e0c992" font-style="italic">Likoudis Legacy Foundation</text>
-        </svg>
-        <div class="bottle-copy">
+        </svg><svg class="bottle" style="width:150px" viewBox="0 0 160 420" role="img" aria-label="Bottle of Methodius red wine">
+          <defs><linearGradient id="gme" x1="0" x2="1"><stop offset="0" stop-color="#1c1410"/><stop offset="0.35" stop-color="#3a2a22"/><stop offset="0.55" stop-color="#241a15"/><stop offset="1" stop-color="#120d0a"/></linearGradient></defs>
+          <path d="M66 10 h28 v8 h-2 v62 c0 22 34 40 34 78 v236 c0 12 -8 18 -20 18 h-52 c-12 0 -20 -6 -20 -18 v-236 c0 -38 34 -56 34 -78 v-62 h-2 z" fill="url(#gme)"/>
+          <rect x="64" y="8" width="32" height="26" rx="2" fill="#7a1f2b"/><rect x="64" y="30" width="32" height="3" fill="#c8a96e"/>
+          <path d="M50 120 c4 -10 14 -18 16 -26" stroke="#ffffff" stroke-opacity="0.08" stroke-width="5" fill="none"/>
+          <rect x="34" y="214" width="92" height="132" fill="#f4ede0"/>
+          <rect x="38" y="218" width="84" height="124" fill="none" stroke="#c8a96e" stroke-width="0.8"/>
+          <g transform="translate(80 240)" fill="none" stroke="#7a1f2b" stroke-width="1.05"><path d="M-8 -8 L8 8 M8 -8 L-8 8"/><path d="M0 -10 V10"/></g>
+          <text x="80" y="268" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12" fill="#0e1b2e" letter-spacing="1">METHODIUS</text>
+          <text x="80" y="284" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8.5" font-style="italic" fill="#7a1f2b">Saint · Μεθόδιος</text>
+          <line x1="58" y1="293" x2="102" y2="293" stroke="#c8a96e" stroke-width="0.6"/>
+          <text x="80" y="305" text-anchor="middle" font-family="Jost, sans-serif" font-size="5" fill="#7a1f2b" letter-spacing="1.2">THESSALONIKI · 885</text>
+          <text x="80" y="322" text-anchor="middle" font-family="Jost, sans-serif" font-size="5.6" fill="#0e1b2e" letter-spacing="1.4">RED WINE</text>
+          <text x="80" y="335" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="5.6" fill="#7a1f2b" font-style="italic">Likoudis Legacy Foundation</text>
+        </svg></div>
+      <div class="pair-copy">
+        <div class="pair-item">
           <span class="wine-kind">White</span>
-          <h3>Kydones</h3>
-          <p>For Demetrios Kydones of Thessaloniki, the Byzantine statesman who translated Thomas Aquinas into Greek so that East and West could read each other. A bright white for the start of a long conversation.</p>
-          <p class="wine-note">From the Finger Lakes, likely a dry Riesling, or from Kefalonia, a Robola.</p>
+          <h3>St. Cyril</h3>
+          <p>A dry Finger Lakes Riesling. Bright, mineral, and clear, for the brother who gave the Slavs an alphabet and died in Rome in 869.</p>
         </div>
-      </article>
-
+        <div class="pair-item">
+          <span class="wine-kind">Red</span>
+          <h3>St. Methodius</h3>
+          <p>A Finger Lakes Cabernet Franc. Firm and patient, for the brother who carried the mission on for sixteen more years as archbishop.</p>
+        </div>
+        <p class="wine-note">Made, sold, and shipped by a Finger Lakes winery partner.</p>
+      </div>
     </div>
     <div class="buy-row reveal">
-      <a href="#list" class="apply-toggle-btn">Join the List for the First Release</a>
+      <a href="#list" class="apply-toggle-btn">Reserve the First Pair</a>
       <p>Wines will be sold and shipped by a licensed winery partner to adults 21 and older, where state law allows.</p>
     </div>
   </div>
 </section>
 
-<!-- FUTURE LABELS -->
-<section class="wine-future on-light">
+<!-- SECOND RELEASE: KEFALONIA -->
+<section class="wine-island on-light">
   <div class="container">
     <div class="reveal" style="text-align:center;">
-      <span class="section-label">Future Labels</span>
-      <h2 class="section-title" style="color:var(--navy);">The Rest of the Cellar</h2>
+      <span class="section-label">Second Release &middot; Kefalonia</span>
+      <h2 class="section-title" style="color:var(--navy);">From the Family&rsquo;s Island</h2>
       <div class="divider center"></div>
+      <p class="island-lede">Three wines from the island&rsquo;s own grapes: Robola, its signature white, and Mavrodaphne, which Kefalonian growers make into a dry red and a dry ros&eacute;.</p>
     </div>
-    <div class="future-grid">
-      <div class="future-card reveal">
-        <span class="wine-kind">In planning</span>
-        <h3>Cyril &amp; Methodius</h3>
-        <p>The brothers from Thessaloniki who carried the Gospel to the Slavs, honored in Rome and Constantinople alike, and named co-patrons of Europe.</p>
-      </div>
-      <div class="future-card reveal reveal-delay-1">
-        <span class="wine-kind">In planning</span>
-        <h3>St. Leopold Mandić</h3>
-        <p>The Capuchin confessor of Castelnovo who offered his whole life for the reunion of the Eastern Churches with Rome, and spent it in the confessional instead.</p>
-      </div>
-      <div class="future-card reveal reveal-delay-2">
-        <span class="wine-kind">In planning</span>
-        <h3>Kefalonia</h3>
-        <p>A wine from the family&rsquo;s own island, where the Robola grape grows on the slopes of Mount Ainos.</p>
-      </div>
+    <div class="island-grid">
+      <article class="island-card reveal">
+        <svg class="bottle" style="width:120px" viewBox="0 0 160 420" role="img" aria-label="Bottle of Kydones white wine">
+          <defs><linearGradient id="gky" x1="0" x2="1"><stop offset="0" stop-color="#8f8a55"/><stop offset="0.35" stop-color="#d9d3a0"/><stop offset="0.55" stop-color="#b9b27a"/><stop offset="1" stop-color="#6f6a3f"/></linearGradient></defs>
+          <path d="M66 10 h28 v8 h-2 v62 c0 22 34 40 34 78 v236 c0 12 -8 18 -20 18 h-52 c-12 0 -20 -6 -20 -18 v-236 c0 -38 34 -56 34 -78 v-62 h-2 z" fill="url(#gky)"/>
+          <rect x="64" y="8" width="32" height="26" rx="2" fill="#c8a96e"/><rect x="64" y="30" width="32" height="3" fill="#0e1b2e"/>
+          <path d="M50 120 c4 -10 14 -18 16 -26" stroke="#ffffff" stroke-opacity="0.35" stroke-width="5" fill="none"/>
+          <rect x="34" y="214" width="92" height="132" fill="#0e1b2e"/>
+          <rect x="38" y="218" width="84" height="124" fill="none" stroke="#c8a96e" stroke-width="0.8"/>
+          <g transform="translate(80 240)" fill="none" stroke="#e0c992" stroke-width="1.05"><path d="M-10 4 L0 -8 L10 4 Z"/><path d="M-6 4 V9 M0 4 V9 M6 4 V9"/><line x1="-11" y1="10" x2="11" y2="10"/></g>
+          <text x="80" y="268" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12.5" fill="#f4ede0" letter-spacing="1">KYDONES</text>
+          <text x="80" y="284" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8.5" font-style="italic" fill="#e0c992">Robola</text>
+          <line x1="58" y1="293" x2="102" y2="293" stroke="#c8a96e" stroke-width="0.6"/>
+          <text x="80" y="305" text-anchor="middle" font-family="Jost, sans-serif" font-size="5" fill="#e0c992" letter-spacing="1.2">KEFALONIA</text>
+          <text x="80" y="322" text-anchor="middle" font-family="Jost, sans-serif" font-size="5.6" fill="#f4ede0" letter-spacing="1.4">WHITE WINE</text>
+          <text x="80" y="335" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="5.6" fill="#e0c992" font-style="italic">Likoudis Legacy Foundation</text>
+        </svg>
+        <span class="wine-kind">White &middot; Robola</span>
+        <h3>Kydones</h3>
+        <p>For Demetrios Kydones of Thessaloniki, who translated Thomas Aquinas into Greek so East and West could read each other.</p>
+      </article>
+      <article class="island-card reveal reveal-delay-1">
+        <svg class="bottle" style="width:120px" viewBox="0 0 160 420" role="img" aria-label="Bottle of Florence red wine">
+          <defs><linearGradient id="gfl" x1="0" x2="1"><stop offset="0" stop-color="#1c1410"/><stop offset="0.35" stop-color="#3a2a22"/><stop offset="0.55" stop-color="#241a15"/><stop offset="1" stop-color="#120d0a"/></linearGradient></defs>
+          <path d="M66 10 h28 v8 h-2 v62 c0 22 34 40 34 78 v236 c0 12 -8 18 -20 18 h-52 c-12 0 -20 -6 -20 -18 v-236 c0 -38 34 -56 34 -78 v-62 h-2 z" fill="url(#gfl)"/>
+          <rect x="64" y="8" width="32" height="26" rx="2" fill="#7a1f2b"/><rect x="64" y="30" width="32" height="3" fill="#c8a96e"/>
+          <path d="M50 120 c4 -10 14 -18 16 -26" stroke="#ffffff" stroke-opacity="0.08" stroke-width="5" fill="none"/>
+          <rect x="34" y="214" width="92" height="132" fill="#f4ede0"/>
+          <rect x="38" y="218" width="84" height="124" fill="none" stroke="#c8a96e" stroke-width="0.8"/>
+          <g transform="translate(80 240)" fill="none" stroke="#7a1f2b" stroke-width="1.05"><circle r="9"/><path d="M0 -9 V9 M-9 0 H9"/><circle r="3" fill="#7a1f2b" stroke="none"/></g>
+          <text x="80" y="268" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12.5" fill="#0e1b2e" letter-spacing="1">FLORENCE</text>
+          <text x="80" y="284" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8.5" font-style="italic" fill="#7a1f2b">1439</text>
+          <line x1="58" y1="293" x2="102" y2="293" stroke="#c8a96e" stroke-width="0.6"/>
+          <text x="80" y="305" text-anchor="middle" font-family="Jost, sans-serif" font-size="5" fill="#7a1f2b" letter-spacing="1.2">LAETENTUR CAELI</text>
+          <text x="80" y="322" text-anchor="middle" font-family="Jost, sans-serif" font-size="5.6" fill="#0e1b2e" letter-spacing="1.4">RED WINE</text>
+          <text x="80" y="335" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="5.6" fill="#7a1f2b" font-style="italic">Likoudis Legacy Foundation</text>
+        </svg>
+        <span class="wine-kind">Red &middot; Mavrodaphne</span>
+        <h3>Florence 1439</h3>
+        <p>For the Council of Florence, where Greek and Latin bishops signed one decree of union and read it aloud in both tongues.</p>
+      </article>
+      <article class="island-card reveal reveal-delay-2">
+        <svg class="bottle" style="width:120px" viewBox="0 0 160 420" role="img" aria-label="Bottle of Leopold rosé wine">
+          <defs><linearGradient id="gle" x1="0" x2="1"><stop offset="0" stop-color="#a8606a"/><stop offset="0.35" stop-color="#e8b4b0"/><stop offset="0.55" stop-color="#d0938f"/><stop offset="1" stop-color="#8a4c55"/></linearGradient></defs>
+          <path d="M66 10 h28 v8 h-2 v62 c0 22 34 40 34 78 v236 c0 12 -8 18 -20 18 h-52 c-12 0 -20 -6 -20 -18 v-236 c0 -38 34 -56 34 -78 v-62 h-2 z" fill="url(#gle)"/>
+          <rect x="64" y="8" width="32" height="26" rx="2" fill="#c8a96e"/><rect x="64" y="30" width="32" height="3" fill="#7a1f2b"/>
+          <path d="M50 120 c4 -10 14 -18 16 -26" stroke="#ffffff" stroke-opacity="0.35" stroke-width="5" fill="none"/>
+          <rect x="34" y="214" width="92" height="132" fill="#f4ede0"/>
+          <rect x="38" y="218" width="84" height="124" fill="none" stroke="#c8a96e" stroke-width="0.8"/>
+          <g transform="translate(80 240)" fill="none" stroke="#9b4a55" stroke-width="1.05"><circle cx="-5" cy="0" r="4.5"/><path d="M-0.5 0 H10 M6 0 V4 M9 0 V3"/></g>
+          <text x="80" y="268" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12.5" fill="#0e1b2e" letter-spacing="1">LEOPOLD</text>
+          <text x="80" y="284" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8.5" font-style="italic" fill="#9b4a55">Saint · Mandić</text>
+          <line x1="58" y1="293" x2="102" y2="293" stroke="#c8a96e" stroke-width="0.6"/>
+          <text x="80" y="305" text-anchor="middle" font-family="Jost, sans-serif" font-size="5" fill="#9b4a55" letter-spacing="1.2">KEFALONIA</text>
+          <text x="80" y="322" text-anchor="middle" font-family="Jost, sans-serif" font-size="5.6" fill="#0e1b2e" letter-spacing="1.4">ROSÉ WINE</text>
+          <text x="80" y="335" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="5.6" fill="#9b4a55" font-style="italic">Likoudis Legacy Foundation</text>
+        </svg>
+        <span class="wine-kind">Ros&eacute; &middot; Mavrodaphne</span>
+        <h3>St. Leopold Mandi&#263;</h3>
+        <p>For the Capuchin confessor from the Adriatic coast who offered his whole life for the reunion of the Eastern Churches with Rome.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -232,8 +273,8 @@
     <span class="section-label">How It Works</span>
     <h2 class="section-title" style="color:var(--navy);">Our Name, Their Cellar</h2>
     <div class="divider center"></div>
-    <p>The wines come from two places the family knows: the Finger Lakes of upstate New York and the island of Kefalonia. The Foundation does not make, sell, or ship wine. A licensed winery makes and bottles each wine under the Foundation&rsquo;s labels, sells it from its own store, and ships it directly to you. The Foundation licenses its name and artwork to the winery, and the winery pays a royalty on every bottle back to the Foundation&rsquo;s mission.</p>
-    <p>Purchases are not tax-deductible donations. They are a way to keep the conversation going at your own table.</p>
+    <p>The Foundation does not make, sell, or ship wine. A licensed Finger Lakes winery makes and bottles the first release under the Foundation&rsquo;s labels, sells it from its own store, and ships it directly to you. The Kefalonian wines will come through a licensed importer and its retail partners.</p>
+    <p>For every bottle sold, the winery sends a set amount to the Foundation&rsquo;s mission. Purchases are not tax-deductible donations. They are a way to keep the conversation going at your own table.</p>
   </div>
 </section>
 
@@ -241,7 +282,7 @@
 <section class="apply on-light" id="list">
   <div class="apply-inner reveal">
     <span class="section-label">First Release</span>
-    <h2 class="section-title" style="color:var(--navy);">Save a Bottle</h2>
+    <h2 class="section-title" style="color:var(--navy);">Save a Pair</h2>
     <p>Add your name and we will write when the first release is ready, with an early order window for those on the list.</p>
     <form class="apply-form" action="https://api.web3forms.com/submit" method="POST" data-thanks="Thank you. We will write when the first release is ready.">
       <input type="hidden" name="access_key" value="706388d6-65c6-4dee-bc02-a0f3a23cbb85">
@@ -252,7 +293,7 @@
         <div class="form-group"><label for="w-name">Name<span class="req">*</span></label><input id="w-name" name="name" required></div>
         <div class="form-group"><label for="w-email">Email<span class="req">*</span></label><input id="w-email" name="email" type="email" required></div>
         <div class="form-group"><label for="w-state">State<span class="field-note">for shipping</span></label><input id="w-state" name="state"></div>
-        <div class="form-group"><label for="w-want">Interested in</label><select id="w-want" name="interest"><option>Both</option><option>Florence 1439 (red)</option><option>Kydones (white)</option><option>Gift boxes</option></select></div>
+        <div class="form-group"><label for="w-want">Interested in</label><select id="w-want" name="interest"><option>Cyril and Methodius pair</option><option>Kefalonia wines</option><option>Both</option><option>Gift boxes for a parish or event</option></select></div>
         <div class="form-group apply-form-full"><label class="check"><input type="checkbox" name="age_21" value="yes" required> I am 21 or older<span class="req">*</span></label></div>
       </div>
       <button type="submit" class="apply-toggle-btn" style="margin-top:2rem;">Add Me to the List</button>
