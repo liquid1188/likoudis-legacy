@@ -9,7 +9,7 @@ Run from the repo root after adding, removing, or editing content:
 """
 import re, os, json, html, glob
 
-SKIP_PAGES = {"essays.html"}          # its rows are the essays, indexed individually
+SKIP_PAGES = {"essays.html", "pilgrimage.html"}  # essays: rows indexed individually; pilgrimage: unannounced, hidden
 
 def visible(fragment):
     fragment = re.sub(r"<(script|style|nav|footer)\b.*?</\1>", " ", fragment, flags=re.S | re.I)
