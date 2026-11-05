@@ -5,9 +5,3 @@
   for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
-
-# Unannounced pages: keep out of search engines and AI crawlers
-[[headers]]
-  for = "/pilgrimage*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow, noarchive"
