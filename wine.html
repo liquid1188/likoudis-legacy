@@ -31,7 +31,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=3">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=3"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css?v=20261105">
+<link rel="stylesheet" href="style.css?v=20261105b">
 <style>
   html, body { overflow-x: hidden !important; max-width: 100%; }
   body, .on-light { background-image: none !important; }
@@ -91,6 +91,8 @@
   .island-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; color: var(--navy); margin: 0.4rem 0 0.6rem; }
   .island-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.75; }
   @media(max-width:900px){ .island-grid{grid-template-columns:1fr;} .pair-stage{grid-template-columns:1fr;justify-items:center;padding:2rem 1.5rem;gap:2rem;} .pair-copy{text-align:center;} }
+  .wine-fine { background: var(--ivory); padding: 0 2rem 3rem !important; }
+  .wine-disclaimer { max-width: 640px; margin: 0 auto; text-align: center; font-size: 0.7rem; line-height: 1.7; color: rgba(14,27,46,0.5); }
 </style>
 </head>
 <body><a class="skip-link" href="#main">Skip to main content</a>
@@ -183,12 +185,10 @@
           <h3>St. Methodius</h3>
           <p>A Finger Lakes Cabernet Franc. Firm and patient, for the brother who carried the mission on for sixteen more years as archbishop.</p>
         </div>
-        <p class="wine-note">Made, sold, and shipped by a Finger Lakes winery partner.</p>
       </div>
     </div>
     <div class="buy-row reveal">
       <a href="#list" class="apply-toggle-btn">Reserve the First Pair</a>
-      <p>Wines will be sold and shipped by a licensed winery partner to adults 21 and older, where state law allows.</p>
     </div>
   </div>
 </section>
@@ -267,16 +267,6 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="wine-how on-light" style="background:var(--cream);">
-  <div class="container wine-narrow reveal">
-    <span class="section-label">How It Works</span>
-    <h2 class="section-title" style="color:var(--navy);">Our Name, Their Cellar</h2>
-    <div class="divider center"></div>
-    <p>The Foundation does not make, sell, or ship wine. A licensed Finger Lakes winery makes and bottles the first release under the Foundation&rsquo;s labels, sells it from its own store, and ships it directly to you. The Kefalonian wines will come through a licensed importer and its retail partners.</p>
-    <p>For every bottle sold, the winery sends a set amount to the Foundation&rsquo;s mission. Purchases are not tax-deductible donations. They are a way to keep the conversation going at your own table.</p>
-  </div>
-</section>
 
 <!-- LIST -->
 <section class="apply on-light" id="list">
@@ -299,6 +289,11 @@
       <button type="submit" class="apply-toggle-btn" style="margin-top:2rem;">Add Me to the List</button>
     </form>
   </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="wine-fine on-light">
+  <p class="wine-disclaimer">The Likoudis Legacy Foundation does not make, sell, or ship wine. A licensed Finger Lakes winery makes, bottles, sells, and ships the first release under the Foundation&rsquo;s labels, and the Kefalonian wines will come through a licensed importer and its retail partners. For every bottle sold, the winery sends a set amount to the Foundation. Purchases are not tax-deductible donations. You must be 21 or older to buy wine.</p>
 </section>
 
 <footer>
