@@ -89,7 +89,7 @@
 <div class="page-header">
   <span class="eyebrow">Media Archive</span>
   <h1>Essay <em>Archive</em></h1>
-  <p>82 essays by James Likoudis on Catholic theology, ecumenism, liturgy, and the defense of the magisterium</p>
+  <p><span id="essayCount">287</span> essays by James Likoudis on Catholic theology, ecumenism, liturgy, and the defense of the magisterium</p>
   <div class="header-divider"></div>
 </div>
 
@@ -1690,5 +1690,6 @@ searchInput.addEventListener('input', function(){
   }, 120);
 });
 </script>
+<script>(function(){var s=new Set();document.querySelectorAll('a.essay-row[href^="essays/"]').forEach(function(a){s.add(a.getAttribute("href"))});var c=document.getElementById("essayCount");if(c&&s.size)c.textContent=s.size})();</script>
 </body>
 </html>
