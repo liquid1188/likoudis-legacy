@@ -20,12 +20,9 @@ NAV = '''<nav>
   </a>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="{P}about">About</a><div class="nav-dropdown-menu"><a href="{P}about">About</a><a href="{P}james-likoudis">James Likoudis</a><a href="{P}team">Team</a><a href="{P}events">Events</a><a href="{P}contact">Contact</a></div></li>
-    <li><a href="{P}kydones">Kydones Review</a></li>
-    <li><a href="{P}books">Books</a></li>
-    <li><a href="{P}fellows">Fellows Program</a></li>
-    <li><a href="{P}bookclub">Book Club</a></li>
-    <li><a href="{P}consulting">Consulting</a></li>
-    <li class="nav-dropdown"><a href="#">Media</a><div class="nav-dropdown-menu"><a href="{P}resources">Resources</a><a href="{P}videos">Video Archive</a><a href="{P}essays">Essay Archive</a><a href="{P}photos">Photo Archive</a></div></li>
+    <li><a href="{P}kydones">Journal</a></li>
+    <li class="nav-dropdown"><a href="{P}books">Library</a><div class="nav-dropdown-menu"><a href="{P}books">Books &amp; Editions</a><a href="{P}essays">Essay Archive</a><a href="{P}videos">Video Archive</a><a href="{P}photos">Photo Archive</a><a href="{P}resources">Research Resources</a></div></li>
+    <li class="nav-dropdown"><a href="{P}fellows">Programs</a><div class="nav-dropdown-menu"><a href="{P}fellows">Fellows Program</a><a href="{P}grants">Grants</a><a href="{P}bookclub">Reading Circle</a><a href="{P}consulting">Consulting</a></div></li>
     <li><a href="{P}get-involved">Get Involved</a></li>
     <li><a href="{P}donate" class="nav-give">Give</a></li>
   </ul>
@@ -38,9 +35,9 @@ FOOTER = '''<footer>
       <p>A 501(c)(3) research and educational foundation dedicated to ecumenical scholarship, Christian unity, and the promotion of religious liberty worldwide.</p>
       <address>Est. 2023 &middot; Baltimore, MD</address>
     </div>
-    <div class="footer-col"><h4>Foundation</h4><ul><li><a href="{P}about">About</a></li><li><a href="{P}james-likoudis">James Likoudis</a></li><li><a href="{P}team">Team</a></li><li><a href="{P}events">Events</a></li><li><a href="{P}fellows">Fellows Program</a></li><li><a href="{P}bookclub">Book Club</a></li><li><a href="{P}contact">Contact</a></li><li><a href="https://andrewlikoudis.com" target="_blank" rel="noopener">Chairman&rsquo;s Site</a></li></ul></div>
+    <div class="footer-col"><h4>Foundation</h4><ul><li><a href="{P}about">About</a></li><li><a href="{P}james-likoudis">James Likoudis</a></li><li><a href="{P}team">Team</a></li><li><a href="{P}events">Events</a></li><li><a href="{P}fellows">Fellows Program</a></li><li><a href="{P}grants">Grants</a></li><li><a href="{P}bookclub">Book Club</a></li><li><a href="{P}contact">Contact</a></li><li><a href="https://andrewlikoudis.com" target="_blank" rel="noopener">Chairman&rsquo;s Site</a></li></ul></div>
     <div class="footer-col"><h4>Publications</h4><ul><li><a href="{P}resources">Resources</a></li><li><a href="{P}kydones">The Kydones Review</a></li><li><a href="{P}essays">Essay Archive</a></li><li><a href="{P}videos">Video Archive</a></li><li><a href="{P}photos">Photo Archive</a></li><li><a href="{P}books">Books</a></li></ul></div>
-    <div class="footer-col"><h4>Support</h4><ul><li><a href="{P}donate">Give</a></li><li><a href="{P}get-involved">Get Involved</a></li><li><a href="{P}consulting">Consulting</a></li><li><a href="https://www.patreon.com/profile/creators?u=34254725" target="_blank" rel="noopener">Patreon</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="{P}donate">Give</a></li><li><a href="{P}get-involved">Get Involved</a></li><li><a href="{P}consulting">Consulting</a></li><li><a href="https://www.patreon.com/user?u=34254725" target="_blank" rel="noopener">Patreon</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p>&copy; 2026 Likoudis Legacy Foundation &middot; Tax ID: 99-3126276 &middot; Site by <a href="https://lickitysplitweb.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Lickity Split Web Design</a></p><div class="footer-social"><a href="https://twitter.com/LikoudisLegacy" target="_blank" rel="noopener" title="X / Twitter">&#120143;</a><a href="https://www.linkedin.com/in/andrewlikoudis/" target="_blank" rel="noopener" title="LinkedIn" style="font-size:0.75rem;font-weight:600;letter-spacing:0.04em;">in</a><a href="https://traditionandrenewal.substack.com" target="_blank" rel="noopener" title="T&amp;R Substack" style="font-family:Cormorant Garamond,serif;font-style:italic;font-size:0.75rem;letter-spacing:0.05em;">T&amp;R</a><a href="https://andrewlikoudis.com" target="_blank" rel="noopener" title="Andrew Likoudis" style="font-family:Cormorant Garamond,serif;font-size:0.75rem;letter-spacing:0.04em;">AL</a></div></div>
 </footer>'''
